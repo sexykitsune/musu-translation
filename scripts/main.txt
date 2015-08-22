@@ -3,7 +3,7 @@
 
 @bg_black
 
-#select sel,"ƒ?ƒCƒ“","ƒvƒ?ƒ??[ƒO","’²‹³","’²‹³2","ƒVƒ…?[ƒeƒBƒ“ƒO"
+#select sel,"ƒƒCƒ“","ƒvƒƒ[ƒO","’²‹³","’²‹³2","ƒVƒ…[ƒeƒBƒ“ƒO"
 #if sel=0 then goto main
 #if sel=1 then goto youzyo_00
 #if sel=2 then goto training
@@ -23,12 +23,12 @@ if global(130)=1 then goto skip_prologue1
 gosub youzyo_00
 goto	skip_prologue2
 label	skip_prologue1
-#select sel,"ƒvƒ?ƒ??[ƒO‚ğŒ©‚é","ƒvƒ?ƒ??[ƒO‚ğŒ©‚È‚¢"
+#select sel,"ƒvƒƒ[ƒO‚ğŒ©‚é","ƒvƒƒ[ƒO‚ğŒ©‚È‚¢"
 select sel,"Start Prologue","Skip Prologue"
 if sel=0 then gosub youzyo_00
 label	skip_prologue2
 global(130)=1
-#?à–¾
+#à–¾
 gosub schedule_setsumei
 
 label	skip
@@ -61,7 +61,7 @@ debug		=	0
 
 if debug=1 then money_set	300000000,0	#ƒfƒoƒbƒO—p
 
-#ƒ?ƒCƒ“ƒ‹?[ƒv#################################################################
+#ƒƒCƒ“ƒ‹[ƒv#################################################################
 label	mainloop
 item_go		= 0
 
@@ -74,15 +74,15 @@ label	mainloop2
 date_open
 minimoney_close
 
-# ƒXƒPƒWƒ…?[ƒ‹‘O‚Ì‘I‘ğˆ #####################################################
+# ƒXƒPƒWƒ…[ƒ‹‘O‚Ì‘I‘ğˆ #####################################################
 money_open
 
 @hensai_text
 
 if debug=1 then goto	debug_skip01			#ƒfƒoƒbƒO—p
 
-#“ú—j“ú‚¾?B‰½‚ğ‚µ‚æ‚¤‚©?H
-?@It's Sunday. What to do...?
+#“ú—j“ú‚¾B‰½‚ğ‚µ‚æ‚¤‚©H
+@It's Sunday. What to do...?
 
 label	mainloop2_0
 
@@ -91,7 +91,7 @@ money_close
 minimoney_open
 
 clearbutton
-#	# setbutton ƒ{ƒ^ƒ“”Ô?†,X,Y,ƒGƒtƒFƒNƒg
+#	# setbutton ƒ{ƒ^ƒ“”Ô†,X,Y,ƒGƒtƒFƒNƒg
 setbutton 5,150,82,0,"system\Schedule\select_save.png","system\Schedule\select_save.png"
 setbutton 6,457,82,0,"system\Schedule\select_load.png","system\Schedule\select_load.png"
 
@@ -114,7 +114,7 @@ if sel=6 then 	loadwindow
 
 goto	mainloop2_0
 
-#ƒXƒe?[ƒ^ƒX‚ğ‚İ‚é1 #######
+#ƒXƒe[ƒ^ƒX‚ğ‚İ‚é1 #######
 label	mainloop2_status
 
 minimoney_close
@@ -137,7 +137,7 @@ if sel=3 then gosub	mainloop2_status_karin
 @bg_itsuki_n
 goto	mainloop2_0
 
-#ƒXƒe?[ƒ^ƒX?@‚İ‚©‚ñ###########################################################
+#ƒXƒe[ƒ^ƒX@‚İ‚©‚ñ###########################################################
 label	mainloop2_status_mikan
 #@bg_black
 @status_open_mikan
@@ -146,7 +146,7 @@ keywait
 #@bg_black
 goto	mainloop2_status
 
-#ƒXƒe?[ƒ^ƒX?@‚¢‚¿‚²###########################################################
+#ƒXƒe[ƒ^ƒX@‚¢‚¿‚²###########################################################
 label	mainloop2_status_ichigo
 #@bg_black
 @status_open_ichigo
@@ -155,7 +155,7 @@ keywait
 #@bg_black
 goto	mainloop2_status
 
-#ƒXƒe?[ƒ^ƒX?@‚©‚è‚ñ###########################################################
+#ƒXƒe[ƒ^ƒX@‚©‚è‚ñ###########################################################
 label	mainloop2_status_karin
 #@bg_black
 @status_open_karin
@@ -178,7 +178,7 @@ if _ITEM(500)=1 and suika_item_flag2=0 then gosub suika_05
 
 goto	mainloop2
 
-# ƒXƒPƒWƒ…?[ƒ‹ ##############################################################
+# ƒXƒPƒWƒ…[ƒ‹ ##############################################################
 label	mainloop2_skip
 minimoney_close
 
@@ -186,9 +186,9 @@ money_open
 
 if mikan_on=0 then goto schedule_mikan_skip
 
-#‚İ‚©‚ñ‚ÌƒXƒPƒWƒ…?[ƒ‹?İ’è######################################################
-#—ˆ?T‚Ì‚İ‚©‚ñ‚ÌƒXƒPƒWƒ…?[ƒ‹‚ğŒˆ‚ß‚é‚©
-?@What will Mikan's schedule be next week?
+#‚İ‚©‚ñ‚ÌƒXƒPƒWƒ…[ƒ‹İ’è######################################################
+#—ˆT‚Ì‚İ‚©‚ñ‚ÌƒXƒPƒWƒ…[ƒ‹‚ğŒˆ‚ß‚é‚©
+@What will Mikan's schedule be next week?
 
 window_close
 @mikan_set
@@ -197,7 +197,7 @@ window_close
 
 voice	"A02524"
 schedule	mikan_study_level,mikan_work_level,mikan_reception_level,mikan_rest_level,mikan_special_level
-#‚İ‚©‚ñ‚ÌƒXƒPƒWƒ…?[ƒ‹‚ğ‘Ò”ğ‚·‚é
+#‚İ‚©‚ñ‚ÌƒXƒPƒWƒ…[ƒ‹‚ğ‘Ò”ğ‚·‚é
 for j=0 to 4
 _mikan_command(j)=_schedule_command(j)
 next
@@ -207,9 +207,9 @@ wait	500
 label	schedule_mikan_skip
 if ichigo_on=0 then goto schedule_ichigo_skip
 
-#‚¢‚¿‚²‚ÌƒXƒPƒWƒ…?[ƒ‹?İ’è#####################################################
-#—ˆ?T‚Ì‚¢‚¿‚²‚ÌƒXƒPƒWƒ…?[ƒ‹‚ğŒˆ‚ß‚é‚©
-?@What will Ichigo's schedule be next week?
+#‚¢‚¿‚²‚ÌƒXƒPƒWƒ…[ƒ‹İ’è#####################################################
+#—ˆT‚Ì‚¢‚¿‚²‚ÌƒXƒPƒWƒ…[ƒ‹‚ğŒˆ‚ß‚é‚©
+@What will Ichigo's schedule be next week?
 
 window_close
 @ichigo_set
@@ -218,7 +218,7 @@ window_close
 
 voice	"O03710"
 schedule	ichigo_study_level,ichigo_work_level,ichigo_reception_level,ichigo_rest_level,ichigo_special_level
-#‚İ‚©‚ñ‚ÌƒXƒPƒWƒ…?[ƒ‹‚ğ‘Ò”ğ‚·‚é
+#‚İ‚©‚ñ‚ÌƒXƒPƒWƒ…[ƒ‹‚ğ‘Ò”ğ‚·‚é
 for j=0 to 4
 _ichigo_command(j)=_schedule_command(j)
 next
@@ -229,9 +229,9 @@ label	schedule_ichigo_skip
 
 if karin_on=0 then goto schedule_karin_skip
 
-#‚©‚è‚ñ‚ÌƒXƒPƒWƒ…?[ƒ‹?İ’è#####################################################
-#—ˆ?T‚Ì‚©‚è‚ñ‚ÌƒXƒPƒWƒ…?[ƒ‹‚ğŒˆ‚ß‚é‚©
-?@What will Karin's schedule be next week?
+#‚©‚è‚ñ‚ÌƒXƒPƒWƒ…[ƒ‹İ’è#####################################################
+#—ˆT‚Ì‚©‚è‚ñ‚ÌƒXƒPƒWƒ…[ƒ‹‚ğŒˆ‚ß‚é‚©
+@What will Karin's schedule be next week?
 
 window_close
 @karin_set
@@ -240,7 +240,7 @@ window_close
 
 voice	"P03574"
 schedule	karin_study_level,karin_work_level,karin_reception_level,karin_rest_level,karin_special_level
-#‚©‚è‚ñ‚ÌƒXƒPƒWƒ…?[ƒ‹‚ğ‘Ò”ğ‚·‚é
+#‚©‚è‚ñ‚ÌƒXƒPƒWƒ…[ƒ‹‚ğ‘Ò”ğ‚·‚é
 for j=0 to 4
 _karin_command(j)=_schedule_command(j)
 next
@@ -253,13 +253,13 @@ label	debug_skip01
 
 #@mikan_plate_close
 
-#‚¢‚¿‚²‚ÌƒXƒPƒWƒ…?[ƒ‹
-#‚©‚è‚ñ‚ÌƒXƒPƒWƒ…?[ƒ‹
+#‚¢‚¿‚²‚ÌƒXƒPƒWƒ…[ƒ‹
+#‚©‚è‚ñ‚ÌƒXƒPƒWƒ…[ƒ‹
 
 @bg_black
 wait	1000
 
-#ƒXƒPƒWƒ…?[ƒ‹À?s-------------------------------------------------------------
+#ƒXƒPƒWƒ…[ƒ‹Às-------------------------------------------------------------
 
 #•½“ú
 @bgm04
@@ -272,7 +272,7 @@ schedule_on=1
 
 date_add	1
 
-#	gosub	dayevent2		#“ú•tŒÅ’èƒCƒxƒ“ƒgŒÄ‚Ñ?o‚µ
+#	gosub	dayevent2		#“ú•tŒÅ’èƒCƒxƒ“ƒgŒÄ‚Ño‚µ
 
 chara_count=mikan_on+ichigo_on+karin_on
 layer_move	0,3500*chara_count,0,-1500,0,0,passtype_tcb
@@ -280,18 +280,18 @@ layer_move	0,3500*chara_count,0,-1500,0,0,passtype_tcb
 
 if debug=1 then goto	debug_skip02			#ƒfƒoƒbƒO—p
 
-# ‚İ‚©‚ñ‚ÌƒXƒPƒWƒ…?[ƒ‹À?s--------------------------------------------
+# ‚İ‚©‚ñ‚ÌƒXƒPƒWƒ…[ƒ‹Às--------------------------------------------
 if mikan_on=0 then goto mikan_schedule_skip
 schedule_chara	=	1	#‚İ‚©‚ñ
 @mikan_plate_open
-@mikan_set				#‚İ‚©‚ñ‚Ìƒpƒ‰ƒ??[ƒ^ƒZƒbƒg
+@mikan_set				#‚İ‚©‚ñ‚Ìƒpƒ‰ƒ[ƒ^ƒZƒbƒg
 @lifebar_fullopen
 #wait	500
 command = _mikan_command(j)
 gosub work
 # ‚İ‚©‚ñ‘Ì—Íƒ`ƒFƒbƒN
 gosub mikan_status_check
-#‚İ‚©‚ñƒGƒsƒ\?[ƒh
+#‚İ‚©‚ñƒGƒsƒ\[ƒh
 if mikan_karada_levelup_flag>0 then gosub	mikan_karada_ep
 if mikan_kokoro_levelup_flag>0 then gosub	mikan_kokoro_ep
 if mikan_atama_levelup_flag>0 then gosub	mikan_atama_ep
@@ -300,18 +300,18 @@ if chara_count>1 then @lifebar_fullclose
 if chara_count>1 then wait	500
 label	mikan_schedule_skip
 
-# ‚¢‚¿‚²‚ÌƒXƒPƒWƒ…?[ƒ‹À?s--------------------------------------------
+# ‚¢‚¿‚²‚ÌƒXƒPƒWƒ…[ƒ‹Às--------------------------------------------
 if ichigo_on=0 then goto ichigo_schedule_skip
 schedule_chara	=	2	#‚¢‚¿‚²
 @ichigo_plate_open
-@ichigo_set				#‚¢‚¿‚²‚Ìƒpƒ‰ƒ??[ƒ^ƒZƒbƒg
+@ichigo_set				#‚¢‚¿‚²‚Ìƒpƒ‰ƒ[ƒ^ƒZƒbƒg
 @lifebar_fullopen
 #	wait	500
 command = _ichigo_command(j)
 gosub work
 # ‚¢‚¿‚²‘Ì—Íƒ`ƒFƒbƒN
 gosub ichigo_status_check
-# ‚¢‚¿‚²ƒGƒsƒ\?[ƒh
+# ‚¢‚¿‚²ƒGƒsƒ\[ƒh
 if ichigo_karada_levelup_flag>0 then gosub	ichigo_karada_ep
 if ichigo_kokoro_levelup_flag>0 then gosub	ichigo_kokoro_ep
 if ichigo_atama_levelup_flag>0 then gosub	ichigo_atama_ep
@@ -322,18 +322,18 @@ rand rnd,0,5
 if _ITEM(401)=1 and command=33 and rnd=0 then gosub settai_ichigo_buruma
 label	ichigo_schedule_skip
 
-# ‚©‚è‚ñ‚ÌƒXƒPƒWƒ…?[ƒ‹À?s--------------------------------------------
+# ‚©‚è‚ñ‚ÌƒXƒPƒWƒ…[ƒ‹Às--------------------------------------------
 if karin_on=0 then goto karin_schedule_skip
 schedule_chara	=	3	#‚©‚è‚ñ
 @karin_plate_open
-@karin_set				#‚©‚è‚ñ‚Ìƒpƒ‰ƒ??[ƒ^ƒZƒbƒg
+@karin_set				#‚©‚è‚ñ‚Ìƒpƒ‰ƒ[ƒ^ƒZƒbƒg
 @lifebar_fullopen
 #	wait	500
 command = _karin_command(j)
 gosub work
 # ‚©‚è‚ñ‘Ì—Íƒ`ƒFƒbƒN
 gosub karin_status_check
-# ‚©‚è‚ñƒGƒsƒ\?[ƒh
+# ‚©‚è‚ñƒGƒsƒ\[ƒh
 if karin_karada_levelup_flag>0 then gosub	karin_karada_ep
 if karin_kokoro_levelup_flag>0 then gosub	karin_kokoro_ep
 if karin_atama_levelup_flag>0 then gosub	karin_atama_ep
@@ -348,16 +348,16 @@ label	debug_skip02			#ƒfƒoƒbƒO—p
 
 if j<4 then gosub dayevent
 
-gosub	hensai			#•Ô?Ïƒ`ƒFƒbƒN
+gosub	hensai			#•ÔÏƒ`ƒFƒbƒN
 
 schedule_on=0
-day_count=day_count+1		#?T–¾‚¯‚©‚ç‚Ì“ú?”
+day_count=day_count+1		#T–¾‚¯‚©‚ç‚Ì“ú”
 next
 money_close
 @mikan_plate_close
 @lifebar_fullclose
 
-gosub	dayevent		#“ú•tŒÅ’èƒCƒxƒ“ƒgŒÄ‚Ñ?o‚µ
+gosub	dayevent		#“ú•tŒÅ’èƒCƒxƒ“ƒgŒÄ‚Ño‚µ
 
 date_close
 wait	1000
@@ -365,21 +365,21 @@ date_add	1
 #“y—j“ú
 @calendar
 
-gosub	dayevent		#“ú•tŒÅ’èƒCƒxƒ“ƒgŒÄ‚Ñ?o‚µ
+gosub	dayevent		#“ú•tŒÅ’èƒCƒxƒ“ƒgŒÄ‚Ño‚µ
 
-#	if dayevent_flag=0 then 	#“ú•tŒÅ’èƒCƒxƒ“ƒg‚ª‰½‚à‚È‚©‚Á‚½?ê?‡
+#	if dayevent_flag=0 then 	#“ú•tŒÅ’èƒCƒxƒ“ƒg‚ª‰½‚à‚È‚©‚Á‚½ê‡
 
-if _MONTH=4 and _DAY=14  then goto main_satday_skip	#‹C?â‚Ìˆ×’²‹³‚µ‚È‚µ
+if _MONTH=4 and _DAY=14  then goto main_satday_skip	#‹Câ‚Ìˆ×’²‹³‚µ‚È‚µ
 if _MONTH=12 and _DAY>=1 and route_chara=3 then goto main_satday_skip #‚©‚è‚ñ‚¨‚»‚í‚ê‚Ìˆ×’²‹³–³‚µ
 
 if _MONTH=12 and _DAY=29 and route_chara=4 then goto main_satday_skip #‚Ğ‚©‚è‚¨‚»‚í‚ê‚Ìˆ×’²‹³–³‚µ
 
-if _MONTH=11 and _DAY=24 and route_chara=1 then goto main_satday_skip #‚İ‚©‚ñ‚Æ?Q‚Ä‚¢‚éˆ×’²‹³–³‚µ
+if _MONTH=11 and _DAY=24 and route_chara=1 then goto main_satday_skip #‚İ‚©‚ñ‚ÆQ‚Ä‚¢‚éˆ×’²‹³–³‚µ
 
 
 gosub	training		#’²‹³
 
-gosub	hensai			#•Ô?Ïƒ`ƒFƒbƒN
+gosub	hensai			#•ÔÏƒ`ƒFƒbƒN
 
 label	main_satday_skip
 
@@ -390,11 +390,11 @@ label	main_sunday
 #“ú—j“ú ---------------------------------------------------------------------
 @calendar
 
-gosub	dayevent		#“ú•tŒÅ’èƒCƒxƒ“ƒgŒÄ‚Ñ?o‚µ
-#	if dayevent_flag=0 then 	#“ú•tŒÅ’èƒCƒxƒ“ƒg‚ª‰½‚à‚È‚©‚Á‚½?ê?‡
+gosub	dayevent		#“ú•tŒÅ’èƒCƒxƒ“ƒgŒÄ‚Ño‚µ
+#	if dayevent_flag=0 then 	#“ú•tŒÅ’èƒCƒxƒ“ƒg‚ª‰½‚à‚È‚©‚Á‚½ê‡
 
-gosub	hensai			#•Ô?Ïƒ`ƒFƒbƒN
+gosub	hensai			#•ÔÏƒ`ƒFƒbƒN
 
-turn = turn + 1			#ƒ^?[ƒ“‚ğ’Ç‰Á
+turn = turn + 1			#ƒ^[ƒ“‚ğ’Ç‰Á
 
 goto	mainloop

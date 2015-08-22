@@ -3,7 +3,7 @@ label training_mikan_02
 @bgm10
 date_close
 @all_layerrelease
-#-- ?‰Šú‰» --------------------------------------------------------------------
+#-- ‰Šú‰» --------------------------------------------------------------------
 mva_op=0
 mva_ki=0
 mva_ma=0
@@ -38,8 +38,8 @@ lifebar_open	life_seishin
 lifebar_setauto	life_tairyoku,tairyoku
 lifebar_setauto	life_seishin,seishin
 
-if mikan_command_cnt<15 then voice "A02544"	#?u‚¨ŒZ‚¿‚á‚ñ?c?c—D‚µ‚­‚µ‚Ä‚Ë?c?c?v
-if mikan_command_cnt>=15 then voice "A02546"	#?u‚Á?A‚Ó?c?c‚¨ŒZ‚¿‚á‚ñ?c?c?v
+if mikan_command_cnt<15 then voice "A02544"	#u‚¨ŒZ‚¿‚á‚ñcc—D‚µ‚­‚µ‚Ä‚Ëccv
+if mikan_command_cnt>=15 then voice "A02546"	#u‚ÁA‚Ócc‚¨ŒZ‚¿‚á‚ñccv
 
 window_close
 
@@ -50,28 +50,28 @@ if seishin<=0 then goto t_mikan_end
 
 #-- ƒAƒCƒRƒ“‘I‘ğ --------------------------------------------------------------
 window_close
-#ƒJ?[ƒ\ƒ‹‚ğƒfƒtƒHƒ‹ƒg‚É
+#ƒJ[ƒ\ƒ‹‚ğƒfƒtƒHƒ‹ƒg‚É
 mousecursor_set "system\TrainingSystem\cur_aibu.png",25,30
 layer_lockmouse_set	l_eye,_ON
 select_icon_init
 select_icon_add		0,"system\iconselect\icon_quit.png","’²‹³‚ğ‚â‚ß‚é"
-#select_icon_add	1,"system\iconselect\icon_aibu.png","ˆ¤•?‚·‚é"
+#select_icon_add	1,"system\iconselect\icon_aibu.png","ˆ¤•‚·‚é"
 select_icon_add		2,"system\iconselect\icon_nikubou.png","“÷–_‚ğg‚¤"
 #SCRIPT IGNORE
 if _TRANSLATOR_OPTION_DISABLE_SM=0 then select_icon_add		3,"system\iconselect\icon_spanking.png","ƒXƒpƒ“ƒLƒ“ƒO‚·‚é"
 #SCRIPT SKIP JAPANESE LINES 1
 #SCRIPT IGNORE END
 if _ITEM(206)=1 then select_icon_add		4,"system\iconselect\icon_vibe.png","‘å‚«‚ÈƒoƒCƒu‚Åƒ}ƒ“ƒR‚ğŠJ”­‚·‚é"
-if _ITEM(202)=1 then select_icon_add		5,"system\iconselect\icon_analbeads.png","ƒAƒiƒ‹ƒr?[ƒY‚ÅƒAƒiƒ‹‚ğŠJ”­‚·‚é"
+if _ITEM(202)=1 then select_icon_add		5,"system\iconselect\icon_analbeads.png","ƒAƒiƒ‹ƒr[ƒY‚ÅƒAƒiƒ‹‚ğŠJ”­‚·‚é"
 if _ITEM(210)=1 then 	 select_icon_add		6,"system\iconselect\icon_analexpand.png","ƒAƒiƒ‹Šg’£ƒxƒ‹ƒg‚ÅƒAƒiƒ‹‚ğŠJ”­‚·‚é"
-if _ITEM(203)=1 then 	 select_icon_add		7,"system\iconselect\icon_rousoku.png","˜X?C‚ğg‚¤"
+if _ITEM(203)=1 then 	 select_icon_add		7,"system\iconselect\icon_rousoku.png","˜XC‚ğg‚¤"
 
 if _ITEM(200)=1 then	select_icon_add		8,"system\iconselect\icon_muchi.png","•Ú‚ğg‚¤"
 
-if t_mikan_bondage_flag=0 and _ITEM(303)=1 then select_icon_add	9,"system\iconselect\icon_bondage.png","ƒ{ƒ“ƒf?[ƒW•‚ğ’…‚¹‚é"
+if t_mikan_bondage_flag=0 and _ITEM(303)=1 then select_icon_add	9,"system\iconselect\icon_bondage.png","ƒ{ƒ“ƒf[ƒW•‚ğ’…‚¹‚é"
 if t_mikan_bondage_flag=1 and _ITEM(303)=1 then select_icon_add	9,"system\iconselect\icon_nude.png","—‡‚É‚·‚é"
 
-if _ITEM(208)=1 then select_icon_add		10,"system\iconselect\icon_schoolware.png","ƒXƒN?[ƒ‹?…’…‚ğg‚¤"
+if _ITEM(208)=1 then select_icon_add		10,"system\iconselect\icon_schoolware.png","ƒXƒN[ƒ‹…’…‚ğg‚¤"
 
 label t_mikan_loop_a
 #ƒRƒ}ƒ“ƒh‘I‘ğ
@@ -94,32 +94,32 @@ if command=9 then goto t_mikan_bondage
 if command=10 then goto t_mikan_mizugi
 
 #-- ƒAƒCƒRƒ“‘I‘ğ --------------------------------------------------------------
-select_icon_add		0,"system\iconselect\icon_back.png","ƒAƒCƒRƒ“‘I‘ğ‚É–ß‚é"#-- ƒ‹?[ƒv --------------------------------------------------------------------
+select_icon_add		0,"system\iconselect\icon_back.png","ƒAƒCƒRƒ“‘I‘ğ‚É–ß‚é"#-- ƒ‹[ƒv --------------------------------------------------------------------
 label t_mikan_loop_b
 #SCRIPT IGNORE
 select_icon_init
-select_icon_add		0,"system\iconselect\icon_back.png","ƒAƒCƒRƒ“‘I‘ğ‚É–ß‚é"#-- ƒ‹?[ƒv
+select_icon_add		0,"system\iconselect\icon_back.png","ƒAƒCƒRƒ“‘I‘ğ‚É–ß‚é"#-- ƒ‹[ƒv
 #SCRIPT IGNORE END
-#-- ƒJ?[ƒ\ƒ‹‚Ì•Ï?X ------------------------------------------------------------
+#-- ƒJ[ƒ\ƒ‹‚Ì•ÏX ------------------------------------------------------------
 if command=2 then mousecursor_set "system\TrainingSystem\cur_nikubou.png",25,30
 if command=3 then mousecursor_set "system\TrainingSystem\cur_hand.png",25,30
-if command=7 then @command_mikan_rousoku		#˜X?C
+if command=7 then @command_mikan_rousoku		#˜XC
 if command=8 then @command_mikan_baramuchi		#ƒoƒ‰•Ú
 
-#–Ú?ü
+#–Úü
 
 #SCRIPT IGNORE
 select_icon_init
-select_icon_add		0,"system\iconselect\icon_back.png","ƒAƒCƒRƒ“‘I‘ğ‚É–ß‚é"#-- ƒ‹?[ƒv
+select_icon_add		0,"system\iconselect\icon_back.png","ƒAƒCƒRƒ“‘I‘ğ‚É–ß‚é"#-- ƒ‹[ƒv
 #SCRIPT IGNORE END
 
 select_mouseclick	"event\ev_mik_050\EV_MIK_050_mask.png"
 if _SELECT=0 then goto t_mikan_loop
 
-#if command=1 then gosub t_mikan_aibu		#ˆ¤•?
+#if command=1 then gosub t_mikan_aibu		#ˆ¤•
 if command=2 then gosub t_mikan_chinpo		#‚¿‚ñ‚Û
 if command=3 then gosub t_mikan_spanking		#ƒXƒpƒ“ƒLƒ“ƒO
-if command=7 then gosub t_mikan_rousoku		#˜X?C
+if command=7 then gosub t_mikan_rousoku		#˜XC
 if command=8 then gosub t_mikan_baramuchi		#ƒoƒ‰•Ú
 
 if tairyoku<=0 then goto t_mikan_end
@@ -127,7 +127,7 @@ if seishin<=0 then goto t_mikan_end
 
 goto t_mikan_loop_b
 
-#-- ?¡ˆ¤•??¡ ----------------------------------------------------------------
+#-- ¡ˆ¤•¡ ----------------------------------------------------------------
 label t_mikan_aibu
 if _COLOR=0 then return
 se		0,"sound\se\ƒvƒCƒb.WAV",play_once
@@ -139,10 +139,10 @@ if _COLOR=228 then @mikan_voice_aibu_kiss
 if _COLOR=249 then @mikan_voice_aibu_oshiri
 return
 
-#-- ?¡‚¿‚ñ‚Û?¡ ----------------------------------------------------------------
+#-- ¡‚¿‚ñ‚Û¡ ----------------------------------------------------------------
 label t_mikan_chinpo
 if _COLOR=0 then return
-#ƒJ?[ƒ\ƒ‹‚ğ?Á‚·
+#ƒJ[ƒ\ƒ‹‚ğÁ‚·
 mousecursor_reset
 
 if _COLOR=228 then gosub training_mikan_fellatio	#ƒtƒFƒ‰
@@ -157,18 +157,18 @@ if _COLOR=145 or _COLOR=69 or _COLOR=249 then gosub t_mikan_aibu
 window_close
 return
 
-#-- ?¡ƒXƒpƒ“ƒLƒ“ƒO?¡ ---------------------------------------------------------
+#-- ¡ƒXƒpƒ“ƒLƒ“ƒO¡ ---------------------------------------------------------
 label t_mikan_spanking
-#-- ‘Ì‚Å‚Í‚È‚¢ƒŒƒCƒ„?[‚©‚Ç‚¤‚©”»’è‚·‚é ----------------------------------------
+#-- ‘Ì‚Å‚Í‚È‚¢ƒŒƒCƒ„[‚©‚Ç‚¤‚©”»’è‚·‚é ----------------------------------------
 if _LAYER < 25 then return
-#ƒJ?[ƒ\ƒ‹‚ğ?Á‚·
+#ƒJ[ƒ\ƒ‹‚ğÁ‚·
 mousecursor_reset
 #-- •ÚƒGƒtƒFƒNƒg---------------------------------------------------------------
 @muchi_effect
 #-- •ÚŒã‚ğ‚Â‚¯‚é---------------------------------------------------------------
-#‘å‚«‚¢•Ú?­‚©‚Ç‚¤‚©”»’è‚·‚é
-if _LAYER=l_leg then @spanking_effect_big		# •Ú?­(‘å)
-if _LAYER<>l_leg then @spanking_effect_small		# •Ú?­(?¬)
+#‘å‚«‚¢•Ú­‚©‚Ç‚¤‚©”»’è‚·‚é
+if _LAYER=l_leg then @spanking_effect_big		# •Ú­(‘å)
+if _LAYER<>l_leg then @spanking_effect_small		# •Ú­(¬)
 @mikan_voice_spanking
 @mikan_motion_pain1
 tairyoku=tairyoku-15
@@ -182,18 +182,18 @@ add_miryoku=add_miryoku+1
 wait	500
 return
 
-#-- ?¡ƒoƒ‰•Ú?¡ ----------------------------------------------------------------
+#-- ¡ƒoƒ‰•Ú¡ ----------------------------------------------------------------
 label t_mikan_baramuchi
-#-- ‘Ì‚Å‚Í‚È‚¢ƒŒƒCƒ„?[‚©‚Ç‚¤‚©”»’è‚·‚é ----------------------------------------
+#-- ‘Ì‚Å‚Í‚È‚¢ƒŒƒCƒ„[‚©‚Ç‚¤‚©”»’è‚·‚é ----------------------------------------
 if _LAYER < 25 then return
-#ƒJ?[ƒ\ƒ‹‚ğ?Á‚·
+#ƒJ[ƒ\ƒ‹‚ğÁ‚·
 mousecursor_reset
 #-- •ÚƒGƒtƒFƒNƒg---------------------------------------------------------------
 @muchi_effect
 #-- •ÚŒã‚ğ‚Â‚¯‚é---------------------------------------------------------------
-#‘å‚«‚¢•Ú?­‚©‚Ç‚¤‚©”»’è‚·‚é
-if _LAYER=l_leg then @muchiato_effect_big		# •Ú?­(‘å)
-if _LAYER<>l_leg then @muchiato_effect_small		# •Ú?­(?¬)
+#‘å‚«‚¢•Ú­‚©‚Ç‚¤‚©”»’è‚·‚é
+if _LAYER=l_leg then @muchiato_effect_big		# •Ú­(‘å)
+if _LAYER<>l_leg then @muchiato_effect_small		# •Ú­(¬)
 @mikan_voice_itai
 @mikan_motion_pain1
 tairyoku=tairyoku-35
@@ -206,16 +206,16 @@ add_miryoku=add_miryoku+2
 wait	500
 return
 
-#-- ?¡˜X?C?¡ ------------------------------------------------------------------
+#-- ¡˜XC¡ ------------------------------------------------------------------
 label t_mikan_rousoku
-#-- ‘Ì‚Å‚Í‚È‚¢ƒŒƒCƒ„?[‚©‚Ç‚¤‚©”»’è‚·‚é
+#-- ‘Ì‚Å‚Í‚È‚¢ƒŒƒCƒ„[‚©‚Ç‚¤‚©”»’è‚·‚é
 if _LAYER < 25 then return
-#ƒJ?[ƒ\ƒ‹‚ğ?Á‚·
+#ƒJ[ƒ\ƒ‹‚ğÁ‚·
 mousecursor_reset
 wait	500
-#-- ˜X?CƒGƒtƒFƒNƒg
+#-- ˜XCƒGƒtƒFƒNƒg
 @rousoku_effect
-#-- ˜X?CŒã‚ğ‚Â‚¯‚é
+#-- ˜XCŒã‚ğ‚Â‚¯‚é
 @mikan_voice_atsui
 @mikan_motion_pain1
 tairyoku=tairyoku-20
@@ -231,8 +231,8 @@ _x=_x+rnd-64
 rand rnd,0,128
 _y=_y+rnd-64
 
-if _LAYER=l_leg then @rousoku_effect_big		# ˜X?C?­(‘å)
-if _LAYER<>l_leg then @rousoku_effect_small		# ˜X?C?­(?¬)
+if _LAYER=l_leg then @rousoku_effect_big		# ˜XC­(‘å)
+if _LAYER<>l_leg then @rousoku_effect_small		# ˜XC­(¬)
 wait	50
 next
 
@@ -241,28 +241,28 @@ next
 wait	500
 return
 
-#-- ?¡ƒAƒiƒ‹?¡ ---------------------------------------------------------
+#-- ¡ƒAƒiƒ‹¡ ---------------------------------------------------------
 label	t_mikan_anal
 gosub	training_mikan_anal
 goto	t_mikan_loop
-#-- ?¡ƒAƒiƒ‹ƒoƒCƒu?¡ ---------------------------------------------------------
+#-- ¡ƒAƒiƒ‹ƒoƒCƒu¡ ---------------------------------------------------------
 label	t_mikan_analvibe
 gosub	training_mikan_analpearl
 goto	t_mikan_loop
-#-- ?¡ƒoƒCƒu?¡ ---------------------------------------------------------
+#-- ¡ƒoƒCƒu¡ ---------------------------------------------------------
 label	t_mikan_vibe
 gosub	training_mikan_vibe
 goto	t_mikan_loop
-#-- ?¡ƒAƒiƒ‹Šg’£ƒxƒ‹ƒg?¡ -----------------------------------------------------
+#-- ¡ƒAƒiƒ‹Šg’£ƒxƒ‹ƒg¡ -----------------------------------------------------
 label t_mikan_hardanal
 gosub	mikan_training_hardanal
 goto	t_mikan_loop
-#-- ?¡ƒXƒN?[ƒ‹?…’…?¡ -----------------------------------------------------
+#-- ¡ƒXƒN[ƒ‹…’…¡ -----------------------------------------------------
 label t_mikan_mizugi
 gosub	mikan_training_mizugi
 goto	t_mikan_loop
 
-#-- ?¡ƒ{ƒ“ƒe?[ƒW•?¡ ---------------------------------------------------------
+#-- ¡ƒ{ƒ“ƒe[ƒW•¡ ---------------------------------------------------------
 label t_mikan_bondage
 @training_anime_release
 if t_mikan_bondage_flag=0 then t_mikan_bondage_flag=1;goto t_mikan_bondage_skip
@@ -271,9 +271,9 @@ label t_mikan_bondage_skip
 @training_mikan_load
 goto	t_mikan_loop
 
-#voice	"A02572"	#?u‚Ğ‚Á?c?c?I?v
-#voice	"A02573"	#?u‚¢‚â‚Ÿ‚Á?I?v
-#voice	"A02574"	#?u‚¤‚Ÿ‚ ‚ñ‚Á?I?I?v
+#voice	"A02572"	#u‚Ğ‚ÁccIv
+#voice	"A02573"	#u‚¢‚â‚Ÿ‚ÁIv
+#voice	"A02574"	#u‚¤‚Ÿ‚ ‚ñ‚ÁIIv
 
 #ƒ‰ƒCƒt‚ÌŒvZ
 tairyoku=tairyoku-4
@@ -282,7 +282,7 @@ seishin=seishin-1
 lifebar_setauto	life_tairyoku,tairyoku
 lifebar_setauto	life_seishin,seishin
 
-#‘Ì—Í‚É‚æ‚Á‚Ä‹““®‚ğ•Ï?X
+#‘Ì—Í‚É‚æ‚Á‚Ä‹““®‚ğ•ÏX
 
 if tairyoku<(tairyoku_max/4) then goto mikan_training_bgv_04
 if tairyoku<(tairyoku_max/3) then goto mikan_training_bgv_03
@@ -314,16 +314,16 @@ wait	300
 
 goto t_mikan_loop1
 
-#-- ‚İ‚©‚ñ?@?uˆ¤•??v--------------------------------------------------------
+#-- ‚İ‚©‚ñ@uˆ¤•v--------------------------------------------------------
 #‚¨‚Á‚Ï‚¢
 macro	mikan_voice_aibu_oppai
-if mva_op=0 then voice "A03592"	#?u‚Í?A‚Í‚í‚Ÿ‚Á?I?H?v
-if mva_op=1 then voice "A03593"	#?u‚Á?c?c‚¨ŒZ‚¿‚á‚ñ?A‚»‚ñ‚È‚Æ‚±‚ë?c?c?v
-if mva_op=2 then voice "A03594"	#?u‚İ‚©‚ñ?A‚ ‚Ü‚è‚È‚¢‚©‚ç?c?c‚Í‚¸‚©‚µ‚¢‚æ?c?c?v
-if mva_op=3 then voice "A03595" #?u‚Ğ‚á‚¤‚ñ‚Á?I‚ç?A—?–\‚É?c?c‚µ‚¿‚á‚ç‚ß‚¥?v
-if mva_op=4 then voice "A03596" #?u‚â‚Á?A‚»‚ñ‚È‚É‚µ‚½‚ç?c?c‚Í‚Á?A‚­‚£‚¤‚¤‚ñ‚Á?I?v
-if mva_op=5 then voice "A03597"	#?u‚ñ‚Á?c?c?I‚ ‚Ÿ‚Á?I?I‚¨‚É‚¢‚¿‚á‚Ÿ‚ñ?I?I?v
-if mva_op=6 then voice "A03598"	#?u‚ñ‚«‚ã‚£‚¤‚ñ‚Á?I‚ ‚Í‚Ÿ‚Á?I‚ ‚ ‚ñ‚Á?I?v
+if mva_op=0 then voice "A03592"	#u‚ÍA‚Í‚í‚Ÿ‚ÁIHv
+if mva_op=1 then voice "A03593"	#u‚Ácc‚¨ŒZ‚¿‚á‚ñA‚»‚ñ‚È‚Æ‚±‚ëccv
+if mva_op=2 then voice "A03594"	#u‚İ‚©‚ñA‚ ‚Ü‚è‚È‚¢‚©‚çcc‚Í‚¸‚©‚µ‚¢‚æccv
+if mva_op=3 then voice "A03595" #u‚Ğ‚á‚¤‚ñ‚ÁI‚çA—–\‚Écc‚µ‚¿‚á‚ç‚ß‚¥v
+if mva_op=4 then voice "A03596" #u‚â‚ÁA‚»‚ñ‚È‚É‚µ‚½‚çcc‚Í‚ÁA‚­‚£‚¤‚¤‚ñ‚ÁIv
+if mva_op=5 then voice "A03597"	#u‚ñ‚ÁccI‚ ‚Ÿ‚ÁII‚¨‚É‚¢‚¿‚á‚Ÿ‚ñIIv
+if mva_op=6 then voice "A03598"	#u‚ñ‚«‚ã‚£‚¤‚ñ‚ÁI‚ ‚Í‚Ÿ‚ÁI‚ ‚ ‚ñ‚ÁIv
 
 mva_op=mva_op+1
 if mva_op>6 then mva_op=0
@@ -332,30 +332,30 @@ endm
 
 #ƒLƒX
 macro	mikan_voice_aibu_kiss
-if mva_ki=0 then voice "A03622"	#?uƒ`ƒ…ƒb?I?iƒLƒX‚Ì‰¹?j?v
-if mva_ki=1 then voice "A03623"	#?u‚Á?c?c‚Ó‚Ÿ‚Á?c?c?v
-if mva_ki=2 then voice "A03624"	#?u‚ ‚Õ‚Á?A‚ñ?c?c‚Á‚Ó?A‚ñ?A‚Í‚Ÿ‚Á?c?c?v
-if mva_ki=3 then voice "A03625"	#?u‚ñ‚¿‚ã?c?c?A‚Ó‚Ÿ‚Á?A‚¿‚ã‚Á?c?c?v
-if mva_ki=4 then voice "A03626"	#?u‚ñ‚Á?A‚Õ‚Ÿ‚Á?c?c?A‚Ó‚£?A‚ñ‚Á?c?c‚¨ŒZ‚¿‚á‚ñ?c?c?v
-if mva_ki=5 then voice "A03627"	#?u‚ñ‚Á?A‚ ‚Õ‚Á?c?c?A‚Í‚Ÿ‚Á?c?cƒhƒLƒhƒL?c?c‚µ‚¿‚á‚¤‚æ‚§?c?c?v
+if mva_ki=0 then voice "A03622"	#uƒ`ƒ…ƒbIiƒLƒX‚Ì‰¹jv
+if mva_ki=1 then voice "A03623"	#u‚Ácc‚Ó‚Ÿ‚Áccv
+if mva_ki=2 then voice "A03624"	#u‚ ‚Õ‚ÁA‚ñcc‚Á‚ÓA‚ñA‚Í‚Ÿ‚Áccv
+if mva_ki=3 then voice "A03625"	#u‚ñ‚¿‚ãccA‚Ó‚Ÿ‚ÁA‚¿‚ã‚Áccv
+if mva_ki=4 then voice "A03626"	#u‚ñ‚ÁA‚Õ‚Ÿ‚ÁccA‚Ó‚£A‚ñ‚Ácc‚¨ŒZ‚¿‚á‚ñccv
+if mva_ki=5 then voice "A03627"	#u‚ñ‚ÁA‚ ‚Õ‚ÁccA‚Í‚Ÿ‚ÁccƒhƒLƒhƒLcc‚µ‚¿‚á‚¤‚æ‚§ccv
 
 mva_ki=mva_ki+1
 if mva_ki>5 then mva_ki=0
 
 endm
 
-#ƒ}ƒ“ƒR?iw‚Åˆ¤•?‚©‚ç)
+#ƒ}ƒ“ƒRiw‚Åˆ¤•‚©‚ç)
 macro	mikan_voice_aibu_manko
-if mva_ma=0 then voice "A03599"	#?u‚Ğ‚á?c?c‚Á?I?H?v
-if mva_ma=1 then voice "A03600"	#?u‚¨?A‚É‚¢?A‚¿‚á?c?c‚»‚ñ‚È‚Æ‚±‚ë?A?G‚Á‚¿‚á?c?c?v
-if mva_ma=2 then voice "A03601"	#?u‚ñ‚Á?A‚­?A‚Ó‚£‚ñ?c?c?v
-if mva_ma=3 then voice "A03602"	#?u‚Ó‚ ‚ ‚ñ‚Á?I‚â‚Ÿ‚ ?c?c‚Á?I?v
-if mva_ma=4 then voice "A03603"	#?u‚¨‚É‚¢?A‚¿‚á‚ñ‚Á?I‚»‚ñ‚È‚Ì‚§?c?c‚ ‚­‚£‚ñ‚Á?I?v
-if mva_ma=5 then voice "A03604"	#?u‚â‚Á?A‚Í?A‚ ‚ ‚ñ‚Á?I‚Ó?A‚ ‚ ‚ ‚Á?I?v
-if mva_ma=6 then voice "A03605"	#?u‚Ó‚Ÿ‚Á?A‚Í‚Á?A‚ ‚Ÿ‚ ‚ ‚ ‚ ‚ ‚Ÿ‚ñ‚Á?I?I?I?v
-if mva_ma=7 then voice "A03606"	#?u‚ñ‚«‚ã‚£‚ñ‚Á?I?I‚Í‚ ‚Ÿ‚ ‚ ‚ ‚ñ‚Á?I?I‚ ‚ ‚ ‚ ‚ ‚Á?I?v
-if mva_ma=8 then voice "A03607"	#?u‚Í?[‚Á?A‚Í?[‚Ÿ‚Á?c?c‚Í?A‚Ÿ‚Ó?c?c?v
-if mva_ma=9 then voice "A03608"	#?u‚¨ŒZ‚¿‚á‚Ÿ?A‚Ÿ?c?c‚Í‚Ÿ‚Á?c?c‚ñ?c?c?v
+if mva_ma=0 then voice "A03599"	#u‚Ğ‚ácc‚ÁIHv
+if mva_ma=1 then voice "A03600"	#u‚¨A‚É‚¢A‚¿‚ácc‚»‚ñ‚È‚Æ‚±‚ëAG‚Á‚¿‚áccv
+if mva_ma=2 then voice "A03601"	#u‚ñ‚ÁA‚­A‚Ó‚£‚ñccv
+if mva_ma=3 then voice "A03602"	#u‚Ó‚ ‚ ‚ñ‚ÁI‚â‚Ÿ‚ cc‚ÁIv
+if mva_ma=4 then voice "A03603"	#u‚¨‚É‚¢A‚¿‚á‚ñ‚ÁI‚»‚ñ‚È‚Ì‚§cc‚ ‚­‚£‚ñ‚ÁIv
+if mva_ma=5 then voice "A03604"	#u‚â‚ÁA‚ÍA‚ ‚ ‚ñ‚ÁI‚ÓA‚ ‚ ‚ ‚ÁIv
+if mva_ma=6 then voice "A03605"	#u‚Ó‚Ÿ‚ÁA‚Í‚ÁA‚ ‚Ÿ‚ ‚ ‚ ‚ ‚ ‚Ÿ‚ñ‚ÁIIIv
+if mva_ma=7 then voice "A03606"	#u‚ñ‚«‚ã‚£‚ñ‚ÁII‚Í‚ ‚Ÿ‚ ‚ ‚ ‚ñ‚ÁII‚ ‚ ‚ ‚ ‚ ‚ÁIv
+if mva_ma=8 then voice "A03607"	#u‚Í[‚ÁA‚Í[‚Ÿ‚Ácc‚ÍA‚Ÿ‚Óccv
+if mva_ma=9 then voice "A03608"	#u‚¨ŒZ‚¿‚á‚ŸA‚Ÿcc‚Í‚Ÿ‚Ácc‚ñccv
 mva_ma=mva_ma+1
 if mva_ma>9 then mva_ma=0
 
@@ -363,50 +363,50 @@ endm
 
 #ƒAƒiƒ‹
 macro	mikan_voice_aibu_anal
-if mva_an=0 then voice "A03615"	#?u‚ñ?A‚ñ‚£‚Á?I?H?v
-if mva_an=1 then voice "A03616"	#?u‚¾‚ß‚¾‚æ‚§?c?c‚Á?A‚­‚Ó‚Á?c?c?v
-if mva_an=2 then voice "A03617"	#?u‚»‚ñ‚È‚Æ‚±‚ë?A’p‚¸‚©‚µ‚¢?A‚æ‚§?c?c?v
-if mva_an=3 then voice "A03618"	#?u‚Í‚Ÿ‚Á?c?c‚Í‚Ÿ?c?c‚Á?c?c?v
-if mva_an=4 then voice "A03619"	#?u‚ñ‚Á?c?c‚­?A‚ ‚ñ‚Á?c?c?I?I?v
-if mva_an=5 then voice "A03620"	#?u‚¾‚ß‚¥?A‚¨‚É‚¢‚¿‚á‚Ÿ‚ñ‚Á?c?c‚¨?K?A•Ï‚É‚È‚Á‚¿‚á‚¤‚æ‚§?I?v
-if mva_an=6 then voice "A03621"	#?u‚Í‚Ÿ‚Á?A‚â?A‚ ‚ ‚ ‚ ‚ñ‚Á?I?v
+if mva_an=0 then voice "A03615"	#u‚ñA‚ñ‚£‚ÁIHv
+if mva_an=1 then voice "A03616"	#u‚¾‚ß‚¾‚æ‚§cc‚ÁA‚­‚Ó‚Áccv
+if mva_an=2 then voice "A03617"	#u‚»‚ñ‚È‚Æ‚±‚ëA’p‚¸‚©‚µ‚¢A‚æ‚§ccv
+if mva_an=3 then voice "A03618"	#u‚Í‚Ÿ‚Ácc‚Í‚Ÿcc‚Áccv
+if mva_an=4 then voice "A03619"	#u‚ñ‚Ácc‚­A‚ ‚ñ‚ÁccIIv
+if mva_an=5 then voice "A03620"	#u‚¾‚ß‚¥A‚¨‚É‚¢‚¿‚á‚Ÿ‚ñ‚Ácc‚¨KA•Ï‚É‚È‚Á‚¿‚á‚¤‚æ‚§Iv
+if mva_an=6 then voice "A03621"	#u‚Í‚Ÿ‚ÁA‚âA‚ ‚ ‚ ‚ ‚ñ‚ÁIv
 mva_an=mva_an+1
 if mva_an>6 then mva_an=0
 endm
 
 #‚¨‚µ‚è
 macro	mikan_voice_aibu_oshiri
-if mva_os=0 then voice "A03609"	#?u‚ñ?A‚«‚ã‚£‚ñ‚Á?I?v
-if mva_os=1 then voice "A03610"	#?u‚¨?A‚É‚¢‚¿‚á‚ñ‚Á?c?c‚­‚Ó‚£‚ñ?c?c?v
-if mva_os=2 then voice "A03611"	#?uƒrƒNƒrƒN‚µ‚¿‚á‚¤‚æ‚§?c?c‚ ‚Ó‚Á?c?c?v
-if mva_os=3 then voice "A03612"	#?u‚Í‚Ÿ‚Á?c?c‚Ó‚Ÿ?c?c‚Á?A‚ ‚Í‚Á?I‚â‚Ÿ‚ ‚ ‚ ‚ñ‚Á?I?v
-if mva_os=4 then voice "A03613"	#?u‚¨?K?A‚»‚ñ‚È‚É‚µ‚¿‚á?c?c‚Á?I‚Ó‚ ‚ ‚ ?I?I?v
-if mva_os=5 then voice "A03614"	#?u‚ñ‚£‚¤‚¤‚¤‚Á?I‚­‚£‚ñ‚Á?I?I‚â‚Ÿ‚ ‚ ‚ ?I?I?v
+if mva_os=0 then voice "A03609"	#u‚ñA‚«‚ã‚£‚ñ‚ÁIv
+if mva_os=1 then voice "A03610"	#u‚¨A‚É‚¢‚¿‚á‚ñ‚Ácc‚­‚Ó‚£‚ñccv
+if mva_os=2 then voice "A03611"	#uƒrƒNƒrƒN‚µ‚¿‚á‚¤‚æ‚§cc‚ ‚Ó‚Áccv
+if mva_os=3 then voice "A03612"	#u‚Í‚Ÿ‚Ácc‚Ó‚Ÿcc‚ÁA‚ ‚Í‚ÁI‚â‚Ÿ‚ ‚ ‚ ‚ñ‚ÁIv
+if mva_os=4 then voice "A03613"	#u‚¨KA‚»‚ñ‚È‚É‚µ‚¿‚ácc‚ÁI‚Ó‚ ‚ ‚ IIv
+if mva_os=5 then voice "A03614"	#u‚ñ‚£‚¤‚¤‚¤‚ÁI‚­‚£‚ñ‚ÁII‚â‚Ÿ‚ ‚ ‚ IIv
 mva_os=mva_os+1
 if mva_os>5 then mva_os=0
 endm
 
 #ƒXƒpƒ“ƒLƒ“ƒO
 macro	mikan_voice_spanking
-#ƒXƒpƒ“ƒLƒ“ƒO?@ˆê’iŠK–Ú
-if mva_sp=0 then voice "A02259"	#?u‚«‚á‚Ÿ‚ñƒb?I?@’É‚¢?cƒb?I?@’É‚¢‚æ‚§?cƒb?I?I?@‚¨ŒZ‚¿‚á‚ñ?A’É‚¢?cƒb?I?I?v
-if mva_sp=1 then voice "A02260"	#?u‚â‚ß‚Ä‚¥?I?@‚È‚ñ‚Å?c?I?H?@‚Ç‚¤‚µ‚Ä‚»‚ñ‚È–‚·‚é‚Ì?c?I?I?@‚¨ŒZ‚¿‚á‚ñ’É‚¢‚æ‚§?cƒb?I?I?@‚â‚ß‚Ä‚¥?cƒb?I?v
-if mva_sp=2 then voice "A02261"	#?u’É‚¢‚Á?I?@‚â‚ß‚Ä‚¥?I?@ƒCƒ„‚¾‚æ‚§?cƒb?I?I?@ƒCƒ„‚Ÿ?I?v
+#ƒXƒpƒ“ƒLƒ“ƒO@ˆê’iŠK–Ú
+if mva_sp=0 then voice "A02259"	#u‚«‚á‚Ÿ‚ñƒbI@’É‚¢cƒbI@’É‚¢‚æ‚§cƒbII@‚¨ŒZ‚¿‚á‚ñA’É‚¢cƒbIIv
+if mva_sp=1 then voice "A02260"	#u‚â‚ß‚Ä‚¥I@‚È‚ñ‚ÅcIH@‚Ç‚¤‚µ‚Ä‚»‚ñ‚È–‚·‚é‚ÌcII@‚¨ŒZ‚¿‚á‚ñ’É‚¢‚æ‚§cƒbII@‚â‚ß‚Ä‚¥cƒbIv
+if mva_sp=2 then voice "A02261"	#u’É‚¢‚ÁI@‚â‚ß‚Ä‚¥I@ƒCƒ„‚¾‚æ‚§cƒbII@ƒCƒ„‚ŸIv
 
-if mva_sp=3 then voice "A02262"	#?u‚Ğ‚¤?I?@‚ ‚¤?I?@‚±‚ñ‚È‚Ì‚Á‚Ä?A‚±‚ñ‚È‚Ì‚Á‚Ä‚¥‚¥?I?I?v
-if mva_sp=4 then voice "A02263"	#?u‚ ‚Ÿ‚ñ?I?I?@‚İ‚©‚ñ‚Ì‚¨?K?A‚à‚¤’@‚©‚È‚¢‚Å‚¥‚¥?I?I?v
-if mva_sp=5 then voice "A02264"	#?u’É‚¢?I?@’É‚¢‚æ‚§?I?@‚¨ŒZ‚¿‚á‚ñ?A‚È‚ñ‚Å‚İ‚©‚ñ‚Ì‚¨?K‚ğ’@‚­‚Ì‚§?c‚Á?I?I?H?H?v
-if mva_sp=6 then voice "A02265"	#?uƒCƒ„‚Ÿ‚Á?I?@‚â‚ß‚Ä‚¥?I?@‚¨?K‚ª‚Ñ‚è‚Ñ‚è’É‚¢‚æ‚§?I?@‚»‚ñ‚È‚É’É‚­‚µ‚È‚¢‚Å?cƒb?I?I?@ƒzƒ“ƒg‚É‚â‚ß‚Ä‚¥?I?v
-if mva_sp=7 then voice "A02266"	#?u‚Í‚®‚¤‚Á?I?@‚¨?A‚¨ŒZ‚¿‚á‚ñ?cƒb?I?@‚Ç‚¤‚µ‚Ä‚â‚ß‚Ä‚­‚ê‚È‚¢‚Ì?cƒb?I?H?@‚İ‚©‚ñ?A‚İ‚©‚ñ?A‚È‚ñ‚É‚à‚µ‚Ä‚È‚¢‚Ì‚É‚¡?I?v
+if mva_sp=3 then voice "A02262"	#u‚Ğ‚¤I@‚ ‚¤I@‚±‚ñ‚È‚Ì‚Á‚ÄA‚±‚ñ‚È‚Ì‚Á‚Ä‚¥‚¥IIv
+if mva_sp=4 then voice "A02263"	#u‚ ‚Ÿ‚ñII@‚İ‚©‚ñ‚Ì‚¨KA‚à‚¤’@‚©‚È‚¢‚Å‚¥‚¥IIv
+if mva_sp=5 then voice "A02264"	#u’É‚¢I@’É‚¢‚æ‚§I@‚¨ŒZ‚¿‚á‚ñA‚È‚ñ‚Å‚İ‚©‚ñ‚Ì‚¨K‚ğ’@‚­‚Ì‚§c‚ÁIIHHv
+if mva_sp=6 then voice "A02265"	#uƒCƒ„‚Ÿ‚ÁI@‚â‚ß‚Ä‚¥I@‚¨K‚ª‚Ñ‚è‚Ñ‚è’É‚¢‚æ‚§I@‚»‚ñ‚È‚É’É‚­‚µ‚È‚¢‚ÅcƒbII@ƒzƒ“ƒg‚É‚â‚ß‚Ä‚¥Iv
+if mva_sp=7 then voice "A02266"	#u‚Í‚®‚¤‚ÁI@‚¨A‚¨ŒZ‚¿‚á‚ñcƒbI@‚Ç‚¤‚µ‚Ä‚â‚ß‚Ä‚­‚ê‚È‚¢‚ÌcƒbIH@‚İ‚©‚ñA‚İ‚©‚ñA‚È‚ñ‚É‚à‚µ‚Ä‚È‚¢‚Ì‚É‚¡Iv
 
-#---?yƒXƒpƒ“ƒLƒ“ƒO?\?”‰ñ–Ú?z
-if mva_sp=0 then voice "A02267"	#?u‚Ğ‚®‚£?cƒb?I?I?@ƒCƒ„ƒb?I?@ƒCƒ„‚Ÿ?I?I?@‚¨ŒZ‚¿‚á‚ñ?A‚â‚ß‚Ä‚¥?cƒb?I?I?v
-if mva_sp=0 then voice "A02268"	#?u‚¢‚â‚Ÿ‚Ÿ‚Ÿ‚ñƒb?I?@’É‚¢ƒb?I?@’É‚¢ƒb?I?I?@‚à‚¤ƒCƒ„‚Á?I?@‚à‚¤ƒCƒ„‚Ÿ‚Ÿ‚Ÿ‚Ÿ‚Ÿ?I?I?v
-if mva_sp=0 then voice "A02269"	#?u‚Ğ‚Ÿ‚Ÿ‚Ÿ‚Ÿ‚Á?I?I?@‚¨?K‚ª?Ô‚­î‚ê‚¿‚á‚¤‚æ?I?@‚¨ŒZ‚¿‚á‚ñ?A‚à‚¤‚â‚ß‚Ä‚¥‚¥‚¥?I?I?v
-if mva_sp=0 then voice "A02270"	#?u‚¢‚â‚Ÿ‚Ÿ‚Ÿ?I?I?@‚±‚ñ‚È‚Ì‚¢‚â‚Ÿ‚Ÿ‚Ÿ?I?I?@‚â‚ß‚Ä‚¥?I?@‚à‚¤’@‚©‚È‚¢‚Å‚¥?I?I?v
-if mva_sp=0 then voice "A02271"	#?u‚Ğ‚¡‚Á?I?I?@‚Ğ‚®‚£‚£‚£‚£‚£?I?I?@‚¨?K‚ª’É‚­‚Ä?Aáƒ‚ê‚Ä‚«‚½‚æ‚§‚§‚§‚§?I?I?@‚â‚ß‚Ä‚¥?I?@‚¨ŒZ‚¿‚á‚ñ?A‚à‚¤‚â‚ß‚Ä‚¥‚¥‚¥?I?I?v
-if mva_sp=0 then voice "A02272"	#?u‚¢‚¬‚¡‚¡‚¡‚¢‚¢‚¡‚¡‚¡?I?I?I?I?@ƒCƒ„‚¾‚æ‚§?I?I?@‚Ğ‚Ç‚¢‚¡‚¡?I?I?@‚¨ŒZ‚¿‚á‚ñ‚Ğ‚Ç‰ß‚¬‚é‚æ‚§‚§‚§?I?I?v
-if mva_sp=0 then voice "A02273"	#?u?c‚Ğ‚Ÿ?cƒb?I?@‚Ğ‚¡?cƒb?I?@?c‚¢‚â?c?A‚â‚ß‚Ä‚¥?c?A‚à‚¤‚¢‚â‚Ÿ?c?B?@‚İ‚©‚ñ?A‚İ‚©‚ñ?cƒb?v
+#---yƒXƒpƒ“ƒLƒ“ƒO\”‰ñ–Úz
+if mva_sp=0 then voice "A02267"	#u‚Ğ‚®‚£cƒbII@ƒCƒ„ƒbI@ƒCƒ„‚ŸII@‚¨ŒZ‚¿‚á‚ñA‚â‚ß‚Ä‚¥cƒbIIv
+if mva_sp=0 then voice "A02268"	#u‚¢‚â‚Ÿ‚Ÿ‚Ÿ‚ñƒbI@’É‚¢ƒbI@’É‚¢ƒbII@‚à‚¤ƒCƒ„‚ÁI@‚à‚¤ƒCƒ„‚Ÿ‚Ÿ‚Ÿ‚Ÿ‚ŸIIv
+if mva_sp=0 then voice "A02269"	#u‚Ğ‚Ÿ‚Ÿ‚Ÿ‚Ÿ‚ÁII@‚¨K‚ªÔ‚­î‚ê‚¿‚á‚¤‚æI@‚¨ŒZ‚¿‚á‚ñA‚à‚¤‚â‚ß‚Ä‚¥‚¥‚¥IIv
+if mva_sp=0 then voice "A02270"	#u‚¢‚â‚Ÿ‚Ÿ‚ŸII@‚±‚ñ‚È‚Ì‚¢‚â‚Ÿ‚Ÿ‚ŸII@‚â‚ß‚Ä‚¥I@‚à‚¤’@‚©‚È‚¢‚Å‚¥IIv
+if mva_sp=0 then voice "A02271"	#u‚Ğ‚¡‚ÁII@‚Ğ‚®‚£‚£‚£‚£‚£II@‚¨K‚ª’É‚­‚ÄAáƒ‚ê‚Ä‚«‚½‚æ‚§‚§‚§‚§II@‚â‚ß‚Ä‚¥I@‚¨ŒZ‚¿‚á‚ñA‚à‚¤‚â‚ß‚Ä‚¥‚¥‚¥IIv
+if mva_sp=0 then voice "A02272"	#u‚¢‚¬‚¡‚¡‚¡‚¢‚¢‚¡‚¡‚¡IIII@ƒCƒ„‚¾‚æ‚§II@‚Ğ‚Ç‚¢‚¡‚¡II@‚¨ŒZ‚¿‚á‚ñ‚Ğ‚Ç‰ß‚¬‚é‚æ‚§‚§‚§IIv
+if mva_sp=0 then voice "A02273"	#uc‚Ğ‚ŸcƒbI@‚Ğ‚¡cƒbI@c‚¢‚âcA‚â‚ß‚Ä‚¥cA‚à‚¤‚¢‚â‚ŸcB@‚İ‚©‚ñA‚İ‚©‚ñcƒbv
 
 mva_sp=mva_sp+1
 
@@ -415,16 +415,16 @@ if mva_sp=5 then voice_bg "A04247"
 if mva_sp>7 then mva_sp=0
 endm
 
-#-- ‚İ‚©‚ñ?@?u’É‚¢?v--------------------------------------------------------
+#-- ‚İ‚©‚ñ@u’É‚¢v--------------------------------------------------------
 macro	mikan_voice_itai
-if mva_it=0 then voice "A03461"	#?u‚Ğ‚Ÿ‚Ÿ‚ ‚ ‚Á?I?@’É‚¢?A’É‚¢‚æ?A‚¨ŒZ‚¿‚á‚ñ?I?H?v
-if mva_it=1 then voice "A03462"	#?u‚¢‚â‚Ÿ?c?c‚Á?A’É‚¢?I?@‚â‚ß‚Ä‚¥?c?c?I?@‚¨ŒZ‚¿‚á‚ñ?A’É‚¢‚æ‚§‚§‚§‚§‚Á?I?v
+if mva_it=0 then voice "A03461"	#u‚Ğ‚Ÿ‚Ÿ‚ ‚ ‚ÁI@’É‚¢A’É‚¢‚æA‚¨ŒZ‚¿‚á‚ñIHv
+if mva_it=1 then voice "A03462"	#u‚¢‚â‚Ÿcc‚ÁA’É‚¢I@‚â‚ß‚Ä‚¥ccI@‚¨ŒZ‚¿‚á‚ñA’É‚¢‚æ‚§‚§‚§‚§‚ÁIv
 
-if mva_it=2 then voice "A03463"	#?u‚Ğ‚®‚£?c?c‚Á?A‚Ğ‚¡‚Ÿ‚ ‚ ?c?c‚Á?I?@‚¢‚â‚Ÿ?c?c‚Á?I?@‚¢‚â‚Ÿ?c?c?A‚â‚ß‚Ä?A‚â‚ß‚Ä‚¦‚Á?v
+if mva_it=2 then voice "A03463"	#u‚Ğ‚®‚£cc‚ÁA‚Ğ‚¡‚Ÿ‚ ‚ cc‚ÁI@‚¢‚â‚Ÿcc‚ÁI@‚¢‚â‚ŸccA‚â‚ß‚ÄA‚â‚ß‚Ä‚¦‚Áv
 
-if mva_it=3 then voice "A03464"	#?u’É‚¢?A’É‚¢‚¡‚¡‚¡‚¡‚¡‚Á?I?@‚â‚ß‚Ä?A‚à‚¤‚â‚ß‚Ä‚¥‚¥‚¥?I?@‚¨ŒZ‚¿‚á‚ñ?A‚¨Šè‚¢?c‚Á?A‚İ‚©‚ñ?A‚à‚¤‚¢‚â‚¾‚æ‚§‚§‚Á?I?v
+if mva_it=3 then voice "A03464"	#u’É‚¢A’É‚¢‚¡‚¡‚¡‚¡‚¡‚ÁI@‚â‚ß‚ÄA‚à‚¤‚â‚ß‚Ä‚¥‚¥‚¥I@‚¨ŒZ‚¿‚á‚ñA‚¨Šè‚¢c‚ÁA‚İ‚©‚ñA‚à‚¤‚¢‚â‚¾‚æ‚§‚§‚ÁIv
 
-if mva_it=4 then voice "A03465"	#?u‚Í‚¤?c?c‚Á?A‚ ‚Ÿ‚£?c?c‚Á?I?@‚¢?A’É‚¢?c?c‚æ‚§?c?c?A’É‚¢‚Ì‚É?A’É‚¢‚Ì‚É‚¡?c?I?I?v
+if mva_it=4 then voice "A03465"	#u‚Í‚¤cc‚ÁA‚ ‚Ÿ‚£cc‚ÁI@‚¢A’É‚¢cc‚æ‚§ccA’É‚¢‚Ì‚ÉA’É‚¢‚Ì‚É‚¡cIIv
 
 mva_it=mva_it+1
 
@@ -432,19 +432,19 @@ if mva_it>4 then mva_it=0
 
 endm
 
-#-- ‚İ‚©‚ñ?@?u”M‚¢?v--------------------------------------------------------
+#-- ‚İ‚©‚ñ@u”M‚¢v--------------------------------------------------------
 macro	mikan_voice_atsui
 
-if mva_at=0 then voice "A03503" #?u‚Ğ‚Á?A‚Ğ‚Ÿ‚Ÿ‚Ÿ‚Á?I?@‚ ?A”M‚¢‚Á?A”M‚¢‚æ?I?H?@‚¨ŒZ‚¿‚á‚ñ‚Á?I?H?v
-if mva_at=1 then voice "A03504" #?u‚¢‚â‚Ÿ‚Á?I?@”M‚¢‚æ‚§‚§‚§?I?@ƒ„ƒPƒh‚µ‚È‚¢‚È‚ñ‚Ä?A‚¤‚»‚¾‚æ‚§‚§‚§?I?@ƒ„ƒPƒh‚µ‚¿‚á‚¤‚Á?A‚İ‚©‚ñ?Aƒ„ƒPƒh‚µ‚¿‚á‚¤‚æ‚§‚§‚§?I?I?v
-if mva_at=2 then voice "A03505" #?u‚«‚á‚¤‚Á?I?@”M‚­‚Ä’É‚¢‚¡‚¡‚Á?I?@‚İ‚©‚ñ‰ä–?‚Å‚«‚È‚¢‚æ‚§‚§‚§‚§‚Á?A‚¨ŒZ‚¿‚á‚ñ?A‚â‚ß‚Ä‚¥‚¥‚¥?I?I?v
-if mva_at=3 then voice "A03506" #?u‚Ğ‚Ÿ‚Ÿ‚ ‚ ‚ ?c‚Á?A‚¢‚â‚Ÿ?c?c‚Á?I?@‚¢‚â?A‚¢‚â‚Ÿ‚ ‚ ‚Á?A”M‚¢‚æ?A”M‚¢‚æ‚§‚§‚§?c‚Á?I?v
-if mva_at=4 then voice "A03507" #?u‚ ‚ ‚Ÿ‚Á?A”M‚¢‚æ‚§‚§‚§?I?@‚¢‚â?A‚¢‚â‚Ÿ‚ ‚ ?c‚Á?I?@”M‚¢?A”M‚¢‚¡‚¡‚¡‚¡‚Á?I?v
-if mva_at=5 then voice "A03508" #?u‚Ğ‚Á?I?@‚Ğ‚¡‚¡‚¢‚¢‚ñ?I?@‚Ç‚¤‚µ‚Ä?A‚È‚ñ‚Å?I?H?@‚±‚ñ‚È–?c?c?A‚±‚ñ‚È–‚§?c?c‚Á?v
-if mva_at=6 then voice "A03509" #?u‚¢‚â‚Ÿ‚Ÿ‚Ÿ‚Ÿ?I?@”M‚¢?A’É‚¢‚æ‚§‚§‚§‚§‚§?I?I?@‚İ‚©‚ñ?A‚à‚¤‚¢‚â?A‚à‚¤‚¢‚â‚Ÿ‚Ÿ‚Ÿ‚ ‚ ‚ ?I?v
-if mva_at=7 then voice "A03510" #?u?c?c‚¢‚â‚Ÿ?c?c?A‚à‚¤‚¢‚â‚Ÿ?c?c‚Á?B?@‚â‚ß‚Ä?c?c?A‚¨ŒZ‚¿‚á‚ñ?c?c‚à‚¤‚â‚ß‚Ä?c?c‚Á?v
-if mva_at=8 then voice "A03511" #?u‚â‚ß‚Ä‚¥?c?c?A”M‚¢‚Ì?c?c‚à‚¤?c?c‚¢‚â‚Ÿ?c?c‚Á?B?@‚¢‚â‚È‚Ì‚§?c?c‚¨ŒZ‚¿‚á‚ñ?c?c?A‚à‚¤‚â‚ß‚Ä?c?c?v
-if mva_at=9 then voice "A03512" #?u”M‚¢‚Ì‚§?c?c?A”M‚­‚Ä’É‚¢‚æ‚§‚§‚§?c?c?A‚â‚ß‚Ä?c?c‚à‚¤‚¢‚â‚Ÿ?c?c‚Á?v
+if mva_at=0 then voice "A03503" #u‚Ğ‚ÁA‚Ğ‚Ÿ‚Ÿ‚Ÿ‚ÁI@‚ A”M‚¢‚ÁA”M‚¢‚æIH@‚¨ŒZ‚¿‚á‚ñ‚ÁIHv
+if mva_at=1 then voice "A03504" #u‚¢‚â‚Ÿ‚ÁI@”M‚¢‚æ‚§‚§‚§I@ƒ„ƒPƒh‚µ‚È‚¢‚È‚ñ‚ÄA‚¤‚»‚¾‚æ‚§‚§‚§I@ƒ„ƒPƒh‚µ‚¿‚á‚¤‚ÁA‚İ‚©‚ñAƒ„ƒPƒh‚µ‚¿‚á‚¤‚æ‚§‚§‚§IIv
+if mva_at=2 then voice "A03505" #u‚«‚á‚¤‚ÁI@”M‚­‚Ä’É‚¢‚¡‚¡‚ÁI@‚İ‚©‚ñ‰ä–‚Å‚«‚È‚¢‚æ‚§‚§‚§‚§‚ÁA‚¨ŒZ‚¿‚á‚ñA‚â‚ß‚Ä‚¥‚¥‚¥IIv
+if mva_at=3 then voice "A03506" #u‚Ğ‚Ÿ‚Ÿ‚ ‚ ‚ c‚ÁA‚¢‚â‚Ÿcc‚ÁI@‚¢‚âA‚¢‚â‚Ÿ‚ ‚ ‚ÁA”M‚¢‚æA”M‚¢‚æ‚§‚§‚§c‚ÁIv
+if mva_at=4 then voice "A03507" #u‚ ‚ ‚Ÿ‚ÁA”M‚¢‚æ‚§‚§‚§I@‚¢‚âA‚¢‚â‚Ÿ‚ ‚ c‚ÁI@”M‚¢A”M‚¢‚¡‚¡‚¡‚¡‚ÁIv
+if mva_at=5 then voice "A03508" #u‚Ğ‚ÁI@‚Ğ‚¡‚¡‚¢‚¢‚ñI@‚Ç‚¤‚µ‚ÄA‚È‚ñ‚ÅIH@‚±‚ñ‚È–ccA‚±‚ñ‚È–‚§cc‚Áv
+if mva_at=6 then voice "A03509" #u‚¢‚â‚Ÿ‚Ÿ‚Ÿ‚ŸI@”M‚¢A’É‚¢‚æ‚§‚§‚§‚§‚§II@‚İ‚©‚ñA‚à‚¤‚¢‚âA‚à‚¤‚¢‚â‚Ÿ‚Ÿ‚Ÿ‚ ‚ ‚ Iv
+if mva_at=7 then voice "A03510" #ucc‚¢‚â‚ŸccA‚à‚¤‚¢‚â‚Ÿcc‚ÁB@‚â‚ß‚ÄccA‚¨ŒZ‚¿‚á‚ñcc‚à‚¤‚â‚ß‚Äcc‚Áv
+if mva_at=8 then voice "A03511" #u‚â‚ß‚Ä‚¥ccA”M‚¢‚Ìcc‚à‚¤cc‚¢‚â‚Ÿcc‚ÁB@‚¢‚â‚È‚Ì‚§cc‚¨ŒZ‚¿‚á‚ñccA‚à‚¤‚â‚ß‚Äccv
+if mva_at=9 then voice "A03512" #u”M‚¢‚Ì‚§ccA”M‚­‚Ä’É‚¢‚æ‚§‚§‚§ccA‚â‚ß‚Äcc‚à‚¤‚¢‚â‚Ÿcc‚Áv
 
 mva_at=mva_at+1
 if mva_at>9 then mva_at=0
@@ -453,7 +453,7 @@ mikan_rousoku_count=mikan_rousoku_count+1
 
 endm
 
-#ƒRƒ}ƒ“ƒh ˜X?C
+#ƒRƒ}ƒ“ƒh ˜XC
 macro	command_mikan_rousoku
 @bgm11
 #	se	0,"system\TrainingSystem\item.wav",play_once
@@ -517,7 +517,7 @@ layer_movepass_push	l_head,2,	PLAY_LOOP
 # -- ‚à‚İ‚ ‚°		ƒZƒbƒg0
 layer_scalepass_push	l_hair_side,2,	PLAY_LOOP
 
-#ƒŒƒCƒ„?[20?@‘O”¯
+#ƒŒƒCƒ„[20@‘O”¯
 layer_movepass_push	l_hair_front,2,	PLAY_LOOP
 
 layer_scalepass_push	l_hair_front,2,	PLAY_LOOP
@@ -532,7 +532,7 @@ layer_movepass_push	l_body,2,	PLAY_LOOP
 
 layer_scalepass_push	l_body,2,	PLAY_LOOP
 
-#ƒŒƒCƒ„?[35 ‘«
+#ƒŒƒCƒ„[35 ‘«
 layer_movepass_push	l_leg,2,	PLAY_LOOP
 
 layer_scalepass_push	l_leg,2,	PLAY_LOOP
@@ -583,7 +583,7 @@ lifebar_setauto	life_seishin,seishin
 
 endm
 
-#-- ‹C?â --------------------------------------------------------------------
+#-- ‹Câ --------------------------------------------------------------------
 label t_mikan_end
 mikan_kenkou=0
 mikan_kiryoku=0
@@ -591,17 +591,17 @@ mikan_kiryoku=0
 lifebar_setauto	life_tairyoku,tairyoku
 lifebar_setauto	life_seishin,seishin
 
-#?u‚à?A‚à‚¤?c?c‚¾‚ß‚¥?c?c?v
-?—‚l‚‰‚‹‚?‚,A02548
-?u‚h?|‚h?@‚ƒ‚?‚?L‚”?D?D?D?@‚?‚‚™‚?‚?‚’‚…?D?D?D?v
+#u‚àA‚à‚¤cc‚¾‚ß‚¥ccv
+—‚l‚‰‚‹‚‚,A02548
+u‚h|‚h@‚ƒ‚‚L‚”DDD@‚‚‚™‚‚‚’‚…DDDv
 
 #screen_blackout	4000
 
-#‚Ç‚¤‚â‚ç‹C‚ğ¸‚Á‚Ä‚µ‚Ü‚Á‚½‚æ‚¤‚¾?B
+#‚Ç‚¤‚â‚ç‹C‚ğ¸‚Á‚Ä‚µ‚Ü‚Á‚½‚æ‚¤‚¾B
 
-#‚±‚êˆÈ?ã‘±‚¯‚é‚±‚Æ‚Í‚Å‚«‚È‚³‚»‚¤‚¾?B
-‚h‚”?@‚„‚?‚…‚“‚?L‚”?@‚Œ‚?‚?‚‹?@‚Œ‚‰‚‹‚…?@‚“‚ˆ‚…?L‚Œ‚Œ?@‚‚‚…?@‚?‚‚‚Œ‚…?@‚”‚?<br>
-‚‹‚…‚…‚??@‚‡‚?‚‰‚‚‡?D
+#‚±‚êˆÈã‘±‚¯‚é‚±‚Æ‚Í‚Å‚«‚È‚³‚»‚¤‚¾B
+‚h‚”@‚„‚‚…‚“‚L‚”@‚Œ‚‚‚‹@‚Œ‚‰‚‹‚…@‚“‚ˆ‚…L‚Œ‚Œ@‚‚‚…@‚‚‚‚Œ‚…@‚”‚<br>
+‚‹‚…‚…‚@‚‡‚‚‰‚‚‡D
 
 add_miryoku=add_miryoku/2
 add_karada=add_karada/2
@@ -612,15 +612,15 @@ mikan_kizetsu_cnt=mikan_kizetsu_cnt+1
 
 goto	t_mikan_exit2
 
-#-- ?I—¹ --------------------------------------------------------------------
+#-- I—¹ --------------------------------------------------------------------
 label t_mikan_exit
 
-#"’²‹³‚ğ?I—¹‚·‚é","‚â‚Á‚Ï‚è‚â‚ß‚é"
+#"’²‹³‚ğI—¹‚·‚é","‚â‚Á‚Ï‚è‚â‚ß‚é"
 select	sel,"End training","On second thought..."
 if sel=1 then goto t_mikan_loop_a
 
-if mikan_command_cnt<15 then voice "A02545"	#?u?c?c‚à‚Á‚Æ?A‚¨ŒZ‚¿‚á‚ñ‚Ì‚¨–ğ‚É—§‚Ä‚é‚æ‚¤‚É‚È‚ê‚é‚Æ‚¢‚¢‚È?c?cŠæ’£‚é‚Ë?v
-if mikan_command_cnt>=15 then voice "A02547"	#?u‚Í‚Ÿ?c?c‚Á?c?c‚à‚Á‚ÆŠæ’£‚é‚©‚ç?A‚Ü‚½?c?c‚İ‚©‚ñ‚É?A‚¢‚Á‚Ï‚¢?c?c‚µ‚Ä‚Ë?c?c?v
+if mikan_command_cnt<15 then voice "A02545"	#ucc‚à‚Á‚ÆA‚¨ŒZ‚¿‚á‚ñ‚Ì‚¨–ğ‚É—§‚Ä‚é‚æ‚¤‚É‚È‚ê‚é‚Æ‚¢‚¢‚ÈccŠæ’£‚é‚Ëv
+if mikan_command_cnt>=15 then voice "A02547"	#u‚Í‚Ÿcc‚Ácc‚à‚Á‚ÆŠæ’£‚é‚©‚çA‚Ü‚½cc‚İ‚©‚ñ‚ÉA‚¢‚Á‚Ï‚¢cc‚µ‚Ä‚Ëccv
 
 #screen_blackout	2000
 wait	2000
@@ -695,7 +695,7 @@ wait		1000
 #--
 all			= -1				# ‚·‚×‚Ä
 
-#-- ƒŒƒCƒ„?[’è‹`
+#-- ƒŒƒCƒ„[’è‹`
 l_back			= 0				# ”wŒi
 l_hair_back		= 5				# Œã‚ë”¯
 l_head			= 10				# “ª
@@ -714,90 +714,90 @@ l_leg			= 35				# ‘«
 l_insert		= 40				# ‚¿‚ñ‚±
 l_effect		= 45				# ƒGƒtƒFƒNƒg
 
-#ƒŒƒCƒ„?[0?@”wŒi
+#ƒŒƒCƒ„[0@”wŒi
 if t_mikan_bondage_flag=0 then layer_load 		l_back,"event\ev_mik_050\ev_mik_050_back.png"
 if t_mikan_bondage_flag=1 then layer_load 		l_back,"event\ev_mik_050\ev_mik_050_back_b.png"
 layer_position_set 	l_back,-64,-48
 
-#ƒŒƒCƒ„?[5?@”¯‚ÌŒã‚ë
+#ƒŒƒCƒ„[5@”¯‚ÌŒã‚ë
 layer_load 		l_hair_back,"event\ev_mik_050\ev_mik_050_hair_back.png"
 layer_position_set 	l_hair_back,-64,-48
 
-#ƒŒƒCƒ„?[10?@“ª
+#ƒŒƒCƒ„[10@“ª
 layer_load 		l_head,"event\ev_mik_050\ev_mik_050_head.png"
 #layer_load_parts	l_head,1,"event\ev_mik_050\ev_mik_050_eye_back.png"
 layer_position_set 	l_head,-64,-48
 
-#ƒŒƒCƒ„?[11?@‚à‚İ‚ ‚°
+#ƒŒƒCƒ„[11@‚à‚İ‚ ‚°
 #layer_load 		l_hair_side,"event\ev_mik_050\ev_mik_050_hair_side.png"
-#layer_reference_set	l_hair_side,l_head		# “ª‚ÌƒŒƒCƒ„?[‚É˜AŒ‹
+#layer_reference_set	l_hair_side,l_head		# “ª‚ÌƒŒƒCƒ„[‚É˜AŒ‹
 
-#ƒŒƒCƒ„?[20?@‘O”¯
+#ƒŒƒCƒ„[20@‘O”¯
 layer_load 		l_hair_front,"event\ev_mik_050\ev_mik_050_hair_front.png"
-layer_reference_set	l_hair_front,l_head		# “ª‚ÌƒŒƒCƒ„?[‚É˜AŒ‹
+layer_reference_set	l_hair_front,l_head		# “ª‚ÌƒŒƒCƒ„[‚É˜AŒ‹
 
-#ƒŒƒCƒ„?[12  “µ
+#ƒŒƒCƒ„[12  “µ
 layer_load 		l_eye,"event\ev_mik_050\ev_mik_050_eye.png"
 layer_position_set	l_eye,0+2,0+2
-layer_reference_set	l_eye,l_head			# “ª‚ÌƒŒƒCƒ„?[‚É˜AŒ‹
+layer_reference_set	l_eye,l_head			# “ª‚ÌƒŒƒCƒ„[‚É˜AŒ‹
 
-#ƒŒƒCƒ„?[13?@“µ‚ÌƒnƒCƒ‰ƒCƒg
+#ƒŒƒCƒ„[13@“µ‚ÌƒnƒCƒ‰ƒCƒg
 layer_load 		l_eye_hi,"event\ev_mik_050\ev_mik_050_eye_hi.png"
-layer_reference_set	l_eye_hi,l_head			# “ª‚ÌƒŒƒCƒ„?[‚É˜AŒ‹
+layer_reference_set	l_eye_hi,l_head			# “ª‚ÌƒŒƒCƒ„[‚É˜AŒ‹
 
-#ƒŒƒCƒ„?[14?@áÙ
+#ƒŒƒCƒ„[14@áÙ
 layer_load 		l_eye_f,"event\ev_mik_050\ev_mik_050_eye_front.png"
 layer_load_parts	l_eye_f,1,"event\ev_mik_050\ev_mik_050_eye_front2.png"
 layer_load_parts	l_eye_f,2,"event\ev_mik_050\ev_mik_050_eye_front3.png"
 layer_load_parts	l_eye_f,3,"event\ev_mik_050\ev_mik_050_eye2_front.png"
-layer_reference_set	l_eye_f,l_head			# “ª‚ÌƒŒƒCƒ„?[‚É˜AŒ‹
+layer_reference_set	l_eye_f,l_head			# “ª‚ÌƒŒƒCƒ„[‚É˜AŒ‹
 
-#ƒŒƒCƒ„?[15?@”û
+#ƒŒƒCƒ„[15@”û
 layer_load 		l_eyeblow,"event\ev_mik_050\ev_mik_050_eyeblow.png"
 layer_load_parts	l_eyeblow,1,"event\ev_mik_050\ev_mik_050_eyeblow2.png"
 layer_load_parts	l_eyeblow,2,"event\ev_mik_050\ev_mik_050_eyeblow3.png"
-layer_reference_set	l_eyeblow,l_head		# “ª‚ÌƒŒƒCƒ„?[‚É˜AŒ‹
+layer_reference_set	l_eyeblow,l_head		# “ª‚ÌƒŒƒCƒ„[‚É˜AŒ‹
 
-#ƒŒƒCƒ„?[16?@Œû
+#ƒŒƒCƒ„[16@Œû
 layer_load 		l_mouth,"event\ev_mik_050\ev_mik_050_mouth.png"
 layer_load_parts	l_mouth,1,"event\ev_mik_050\ev_mik_050_mouth2.png"
 layer_load_parts	l_mouth,2,"event\ev_mik_050\ev_mik_050_mouth3.png"
 layer_load_parts	l_mouth,3,"event\ev_mik_050\ev_mik_050_mouth4.png"
 layer_load_parts	l_mouth,4,"event\ev_mik_050\ev_mik_050_mouth5.png"
 layer_load_parts	l_mouth,5,"event\ev_mik_050\ev_mik_050_mouth6.png"
-layer_reference_set	l_mouth,l_head			# “ª‚ÌƒŒƒCƒ„?[‚É˜AŒ‹
+layer_reference_set	l_mouth,l_head			# “ª‚ÌƒŒƒCƒ„[‚É˜AŒ‹
 
-#ƒŒƒCƒ„?[20?@‘O”¯?d‚Ë
+#ƒŒƒCƒ„[20@‘O”¯d‚Ë
 #layer_load 		20,"event\ev_mik_050\ev_mik_050_hair_front.png"
 #layer_position_set 	20,-64,-48
 
-#ƒŒƒCƒ„?[25?@“·‘Ì
+#ƒŒƒCƒ„[25@“·‘Ì
 if t_mikan_bondage_flag=0 then layer_load 		l_body,"event\ev_mik_050\ev_mik_050_body.png"
 if t_mikan_bondage_flag=1 then layer_load 		l_body,"event\ev_mik_050\ev_mik_050_body_b.png"
 layer_position_set 		l_body,-64,-48
 
-#ƒŒƒCƒ„?[24?@˜r
+#ƒŒƒCƒ„[24@˜r
 if t_mikan_bondage_flag=0 then layer_load 		l_arm_right_back,"event\ev_mik_050\ev_mik_050_arm_right_back.png"
 layer_position_set 	l_arm_right_back,378,126
-layer_reference_set	l_arm_right_back,l_back		# “ª‚ÌƒŒƒCƒ„?[‚É˜AŒ‹
+layer_reference_set	l_arm_right_back,l_back		# “ª‚ÌƒŒƒCƒ„[‚É˜AŒ‹
 
-#ƒŒƒCƒ„?[30?@˜r
+#ƒŒƒCƒ„[30@˜r
 if t_mikan_bondage_flag=0 then layer_load 		l_arm_back,"event\ev_mik_050\ev_mik_050_arm_left_back.png"
 #layer_position_set 	l_arm_back,-64,-48
-layer_reference_set	l_arm_back,l_arm		# “ª‚ÌƒŒƒCƒ„?[‚É˜AŒ‹
+layer_reference_set	l_arm_back,l_arm		# “ª‚ÌƒŒƒCƒ„[‚É˜AŒ‹
 
-#ƒŒƒCƒ„?[31?@˜r
+#ƒŒƒCƒ„[31@˜r
 if t_mikan_bondage_flag=0 then layer_load 		l_arm,"event\ev_mik_050\ev_mik_050_arm_left_front.png"
 layer_position_set 	l_arm,-64,-48
 
-#ƒŒƒCƒ„?[35 ‘«
+#ƒŒƒCƒ„[35 ‘«
 if t_mikan_bondage_flag=0 then layer_load 		l_leg,"event\ev_mik_050\ev_mik_050_leg.png"
 if t_mikan_bondage_flag=1 then layer_load 		l_leg,"event\ev_mik_050\ev_mik_050_leg_b.png"
 layer_position_set 	l_leg,-64,-48
 
 #layer_movepass_clear	all
 
-# -- ƒAƒjƒ??[ƒVƒ‡ƒ“’è‹` ------------------------------------------------------
+# -- ƒAƒjƒ[ƒVƒ‡ƒ“’è‹` ------------------------------------------------------
 # -- áÙ			ƒZƒbƒg0
 layer_anime_add		l_eye_f,0,	5000,	0
 layer_anime_add		l_eye_f,0,	70,	1
@@ -824,8 +824,8 @@ layer_anime_add		l_mouth,0,	100,	5
 layer_anime_add		l_mouth,0,	100,	2
 layer_anime_lipsync	l_mouth,0,	_TRUE
 
-# -- ƒ‚?[ƒVƒ‡ƒ“’è‹` ----------------------------------------------------------
-# -- ƒZƒbƒg0(’Ê?í) -----------------------------------------------------------
+# -- ƒ‚[ƒVƒ‡ƒ“’è‹` ----------------------------------------------------------
+# -- ƒZƒbƒg0(’Êí) -----------------------------------------------------------
 # -- “µ			ƒZƒbƒg0
 layer_movepass_add 	l_eye,0,	5000,	0,	0
 layer_movepass_add 	l_eye,0,	50,	4,	-1
@@ -880,7 +880,7 @@ layer_scalepass_add 	l_hair_side,0,	800,2,-4
 layer_scalepass_add 	l_hair_side,0,	200,0,0
 layer_scalepass_play	l_hair_side,0,	PLAY_LOOP
 
-#ƒŒƒCƒ„?[20?@‘O”¯
+#ƒŒƒCƒ„[20@‘O”¯
 layer_movepass_add 	l_hair_front,0,	700,-2,4
 layer_movepass_add 	l_hair_front,0,	300,0,0
 layer_movepass_add 	l_hair_front,0,	700,2,-4
@@ -919,7 +919,7 @@ layer_scalepass_add	l_body,0,	600,0,-4
 layer_scalepass_add	l_body,0,	400,0,0
 layer_scalepass_play	l_body,0,	PLAY_LOOP
 
-#ƒŒƒCƒ„?[35 ‘«
+#ƒŒƒCƒ„[35 ‘«
 layer_movepass_add	l_leg,0,	500,0,-6
 layer_movepass_add	l_leg,0,	500,0,0
 layer_movepass_add	l_leg,0,	500,0,6
@@ -934,7 +934,7 @@ layer_scalepass_play	l_leg,0,	PLAY_LOOP
 
 #--ƒZƒbƒg1 (’É‚ª‚é)-----------------------------------------------------------
 
-#•\?î
+#•\î
 layer_anime_add		l_eye_f,1,	5000,	3
 layer_anime_add		l_eye_f,1,	500,	1
 layer_anime_add		l_eye_f,1,	100,	0
@@ -988,7 +988,7 @@ layer_scalepass_add	l_leg,1,	200,-5,-4
 layer_scalepass_add	l_leg,1,	300,0,0
 
 # -- ƒZƒbƒg2(“ü‚ê‚ç‚ê‚Ä‚é) ---------------------------------------------------
-#•\?î
+#•\î
 layer_anime_add		l_eye_f,2,	5000,	3
 layer_anime_add		l_eye_f,2,	500,	1
 layer_anime_add		l_eye_f,2,	100,	0
@@ -1032,7 +1032,7 @@ layer_scalepass_add 	l_hair_side,2,	400,4,-4
 layer_scalepass_add 	l_hair_side,2,	100,4,0
 layer_scalepass_play	l_hair_side,2,	PLAY_LOOP
 
-#ƒŒƒCƒ„?[20?@‘O”¯
+#ƒŒƒCƒ„[20@‘O”¯
 layer_movepass_add 	l_hair_front,2,	350,-4,4
 layer_movepass_add 	l_hair_front,2,	150,0,0
 layer_movepass_add 	l_hair_front,2,	350,0,-4
@@ -1071,7 +1071,7 @@ layer_scalepass_add	l_body,2,	300,2,-2
 layer_scalepass_add	l_body,2,	200,2,0
 layer_scalepass_play	l_body,2,	PLAY_LOOP
 
-#ƒŒƒCƒ„?[35 ‘«
+#ƒŒƒCƒ„[35 ‘«
 layer_movepass_add	l_leg,2,	250,4,-6
 layer_movepass_add	l_leg,2,	250,4,0
 layer_movepass_add	l_leg,2,	250,4,6
@@ -1086,7 +1086,7 @@ layer_scalepass_play	l_leg,2,	PLAY_LOOP
 
 #--ƒZƒbƒg3 (Š´‚¶‚Ä‚é)---------------------------------------------------------
 
-#•\?î
+#•\î
 layer_anime_add		l_eye_f,3,	5000,	3
 layer_anime_add		l_eye_f,3,	500,	1
 layer_anime_add		l_eye_f,3,	100,	0
