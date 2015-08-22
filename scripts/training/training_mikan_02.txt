@@ -687,6 +687,8 @@ gosub _training_mikan_load
 
 endm
 
+#want to move this to another file but am having problems
+
 label _training_mikan_load
 
 window_close

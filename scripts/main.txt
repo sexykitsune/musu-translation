@@ -1,26 +1,15 @@
-
-#cgmode
-
+#main
+label	_main
 @bg_black
 
-#select sel,"メイン","プロローグ","調教","調教2","シューティング"
-#if sel=0 then goto main
-#if sel=1 then goto youzyo_00
-#if sel=2 then goto training
-#if sel=3 then goto training_mikan
-#if sel=4 then goto shooting
-#if sel=0 then gosub schedule_setsumei
-
-gosub sk_debug
-gosub translator_intro
+gosub	sk_debug
+gosub	translator_intro
 
 label	main
 turn	=	0
 
-#goto	skip
-
 if global(130)=1 then goto skip_prologue1
-gosub youzyo_00
+gosub	youzyo_00
 goto	skip_prologue2
 label	skip_prologue1
 #select sel,"プロローグを見る","プロローグを見ない"
@@ -43,18 +32,8 @@ karin_on	=	0
 ichigo_on	=	0
 hikari_on	=	0			#ひかり
 shizuku_off	=	0
-###########################################################
-#date_set	2007,9,02			#テスト用
-#karin_kadara=900
-#karin_karada_max=900
-#karin_atama=900
-#karin_atama_max=900
-#karin_kokoro=900
-#karin_karada_max=900
-############################################################
 
 if GLOBAL(110)=1 then hikari_on=1
-
 if GLOBAL(120)=1 then ITEM_GET 113
 
 debug		=	0

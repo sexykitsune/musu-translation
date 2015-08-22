@@ -1,4 +1,4 @@
-label training
+label	training
 
 gosub	training_in		#調教開始前会話
 if training_chara=1 then gosub	training_mikan		#みかん調教
