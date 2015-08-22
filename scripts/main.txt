@@ -3,7 +3,6 @@ label	_main
 @bg_black
 
 gosub	sk_debug
-
 gosub	translator_intro
 
 label	main
