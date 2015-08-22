@@ -1046,15 +1046,16 @@ lifebar_setauto	life_tairyoku,tairyoku
 lifebar_setauto	life_seishin,seishin
 
 #「も、もう……だめぇ……」
-＠Mikan,A02548
-「I-I can't... anymore...」
+＠Ｍｉｋａｎ,A02548
+「Ｉ－Ｉ　ｃａｎ´ｔ．．．　ａｎｙｍｏｒｅ．．．」
 
 #screen_blackout	4000
 
 #どうやら気を失ってしまったようだ。
 
 #これ以上続けることはできなさそうだ。
-　It doesn't look like she'll be able to keep going.
+Ｉｔ　ｄｏｅｓｎ´ｔ　ｌｏｏｋ　ｌｉｋｅ　ｓｈｅ´ｌｌ　ｂｅ　ａｂｌｅ　ｔｏ<br>
+ｋｅｅｐ　ｇｏｉｎｇ．
 
 add_miryoku=add_miryoku/2
 add_karada=add_karada/2
