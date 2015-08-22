@@ -1,4 +1,5 @@
 #sexykitsune's debug stuff
+
 label	sk_debug
 
 select sel,"main","training","debug training"
