@@ -1,0 +1,71 @@
+#sexykitsune's debug stuff
+label sk_debug
+
+#i cannot seem to get this line to work
+#gosub training_mikan_anime
+
+gosub sk_debug_menu
+
+return
+
+label sk_debug_menu
+
+select sel,"main","debug training"
+if sel=0 then return
+if sel=1 then goto training_debug
+
+label training_debug
+
+mikan_on=1
+ichigo_on=1
+karin_on=1
+
+training_mikan_count=1
+training_karin_count=1
+training_ichigo_count=2
+
+_TRANSLATOR_OPTION_DISABLE_SM=0
+_TRANSLATOR_OPTION_DISABLE_FLASHES=0
+
+mikan_kenkou_max = 5000
+mikan_kiryoku_max = 5000
+ichigo_kenkou_max = 5000
+ichigo_kiryoku_max = 5000
+karin_kenkou_max = 5000
+karin_kiryoku_max = 5000
+
+_ITEM(200)=1
+_ITEM(201)=1
+_ITEM(202)=1
+_ITEM(203)=1
+_ITEM(204)=1
+_ITEM(205)=1
+_ITEM(206)=1
+_ITEM(207)=1
+_ITEM(208)=1
+_ITEM(209)=1
+_ITEM(210)=1
+_ITEM(211)=1
+_ITEM(212)=1
+_ITEM(300)=1
+_ITEM(301)=1
+_ITEM(302)=1
+_ITEM(303)=1
+_ITEM(304)=1
+_ITEM(305)=1
+_ITEM(306)=1
+
+
+label training_debug_loop
+
+select sel,"Mikan","Ichigo","Karin"
+
+if sel=0 then gosub training_mikan_02
+if sel=1 then gosub training_ichigo_03
+if sel=2 then gosub training_karin_02
+
+training_count=training_count+1
+
+goto training_debug_loop
+
+return

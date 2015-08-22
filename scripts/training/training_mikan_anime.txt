@@ -1,0 +1,6 @@
+﻿label training_mikan_anime
+
+test_worked=1
+
+return
+
