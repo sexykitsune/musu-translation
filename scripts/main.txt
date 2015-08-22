@@ -378,10 +378,7 @@ if _MONTH=12 and _DAY=29 and route_chara=4 then goto main_satday_skip #‚Ğ‚©‚è‚¨‚
 if _MONTH=11 and _DAY=24 and route_chara=1 then goto main_satday_skip #‚İ‚©‚ñ‚ÆQ‚Ä‚¢‚éˆ×’²‹³–³‚µ
 
 #’²‹³
-gosub	training_in		#’²‹³ŠJn‘O‰ï˜b
-if training_chara=1 then gosub	training_mikan		#‚İ‚©‚ñ’²‹³
-if training_chara=2 then gosub	training_ichigo		#‚¢‚¿‚²’²‹³
-if training_chara=3 then gosub	training_karin		#‚©‚è‚ñ’²‹³
+gosub	training
 
 gosub	hensai			#•ÔÏƒ`ƒFƒbƒN
 

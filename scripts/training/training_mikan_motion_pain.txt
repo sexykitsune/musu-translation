@@ -1,0 +1,29 @@
+﻿label training_mikan_motion_pain
+
+layer_movepass_push	l_back,1,	PLAY_ONCE	#頭
+
+layer_movepass_push	l_head,1,	PLAY_ONCE	#頭
+
+layer_movepass_push	l_arm,1,	PLAY_ONCE	#腕
+layer_scalepass_push	l_arm,1,	PLAY_ONCE	#腕
+
+layer_movepass_push	l_hair_back,1,	PLAY_ONCE	#後ろ髪
+layer_scalepass_push	l_hair_back,1,	PLAY_ONCE
+
+layer_movepass_push	l_hair_side,1,	PLAY_ONCE
+layer_scalepass_push	l_hair_side,1,	PLAY_ONCE
+
+layer_movepass_push	l_hair_front,1,	PLAY_ONCE
+layer_scalepass_push	l_hair_front,1,	PLAY_ONCE
+
+layer_movepass_push	l_body,1,	PLAY_ONCE
+layer_scalepass_push	l_body,1,	PLAY_ONCE
+
+layer_movepass_push	l_leg,1,	PLAY_ONCE
+layer_scalepass_push	l_leg,1,	PLAY_ONCE
+
+layer_anime_push	l_eyeblow,1,	PLAY_ONCE
+layer_anime_push	l_mouth,1,	PLAY_ONCE
+layer_anime_push	l_eye_f,1,	PLAY_ONCE
+
+return
