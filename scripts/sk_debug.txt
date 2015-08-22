@@ -1,7 +1,8 @@
 #sexykitsune's debug stuff
 label sk_debug
 
-gosub training_mikan_anime
+#i cannot seem to get this line to work
+#gosub training_mikan_anime
 
 gosub sk_debug_menu
 
