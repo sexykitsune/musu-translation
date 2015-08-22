@@ -1,7 +1,13 @@
 #sexykitsune's debug stuff
 label sk_debug
 
-gosub sk_temp
+gosub training_mikan_anime
+
+gosub sk_debug_menu
+
+return
+
+label sk_debug_menu
 
 select sel,"main","debug training"
 if sel=0 then return
