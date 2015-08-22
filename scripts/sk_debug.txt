@@ -1,6 +1,8 @@
 #sexykitsune's debug stuff
 label sk_debug
 
+gosub sk_temp
+
 select sel,"main","debug training"
 if sel=0 then return
 if sel=1 then goto training_debug

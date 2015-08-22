@@ -30,6 +30,7 @@ lifebar_setmax	life_tairyoku,tairyoku_max
 lifebar_set	life_seishin,seishin
 lifebar_setmax	life_seishin,seishin_max
 
+gosub training_mikan_anime_load
 @training_mikan_load
 
 lifebar_open	life_tairyoku
@@ -682,11 +683,11 @@ return
 
 macro training_mikan_load
 
-gosub training_mikan_anime_load
+gosub _training_mikan_load
 
 endm
 
-label training_mikan_anime_load
+label _training_mikan_load
 
 window_close
 screen_blackout	1000

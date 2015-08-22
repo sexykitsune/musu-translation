@@ -1,3 +1,0 @@
-﻿label t_mikan_load
-
-return

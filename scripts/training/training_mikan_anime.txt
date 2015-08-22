@@ -1,0 +1,4 @@
+﻿#sk_temp function
+label sk_temp
+
+return
