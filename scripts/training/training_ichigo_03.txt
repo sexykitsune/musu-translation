@@ -6,6 +6,7 @@ date_close
 @all_layerrelease
 
 #-- ‰Šú‰» --------------------------------------------------------------------
+@training_voice_init
 t_ichigo_spanking_cnt_l=0
 t_ichigo_muchi_cnt_l=0
 t_ichigo_rousoku_cnt_l=0
@@ -13,15 +14,6 @@ t_ichigo_aibu_cnt_l=0
 t_ichigo_bondage_flag=0
 t_ichigo_megane_flag=0
 t_ichigo_damagefix=1.2
-
-mva_op=0
-mva_ki=0
-mva_ma=0
-mva_an=0
-mva_os=0
-mva_it=0
-mva_at=0
-mva_sp=0
 
 add_miryoku=0
 add_karada=0

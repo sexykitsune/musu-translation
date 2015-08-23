@@ -25,14 +25,6 @@ l_leg			= 35				# 足
 l_insert		= 40				# ちんこ
 l_effect		= 45				# エフェクト
 
-cl_manko		= 130
-cl_oppai1		= 144
-cl_oppai2		= 69
-cl_anal			= 220
-cl_mouth		= 228
-cl_legs			= 249
-cl_face			= 86 #might actually be hair
-
 #レイヤー0　背景
 if t_mikan_bondage_flag=0 then layer_load 		l_back,"event\ev_mik_050\ev_mik_050_back.png"
 if t_mikan_bondage_flag=1 then layer_load 		l_back,"event\ev_mik_050\ev_mik_050_back_b.png"

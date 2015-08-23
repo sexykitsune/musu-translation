@@ -10,6 +10,22 @@ va_it=0	#voice itai
 va_at=0	#voice atsui
 va_sp=0	#voice spanking
 
+cl_manko		= 130
+cl_oppai1		= 145
+cl_oppai2		= 69
+cl_anal			= 220
+cl_mouth		= 228
+cl_legs			= 249
+cl_face			= 86				#might actually be hair
+
+endm
+
+macro	training_voice_aibu
+if _COLOR=cl_manko then @training_voice_aibu_oppai
+if _COLOR=cl_oppai1 or _COLOR=cl_oppai2 then @training_voice_aibu_oppai
+if _COLOR=cl_anal then @training_voice_aibu_anal
+if _COLOR=cl_mouth then @training_voice_aibu_kiss
+if _COLOR=cl_legs then @training_voice_aibu_oshiri
 endm
 
 #pseudonyms

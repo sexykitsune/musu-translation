@@ -4,9 +4,9 @@ training_chara=TRAINING_KARIN
 @bgm10
 date_close
 @all_layerrelease
-#karin_dere_flag=1		#デバッグ用
 
 #-- 初期化 --------------------------------------------------------------------
+@training_voice_init
 t_karin_spanking_cnt_l=0
 t_karin_muchi_cnt_l=0
 t_karin_rousoku_cnt_l=0
@@ -16,7 +16,6 @@ t_karin_megane_flag=0
 t_karin_damagefix=1.2
 
 add_miryoku=0
-
 add_karada=0
 add_atama=0
 add_kokoro=0
@@ -35,8 +34,7 @@ lifebar_setmax	life_seishin,seishin_max
 
 lifebar_open	life_tairyoku
 lifebar_open	life_seishin
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
+@reload_lifebar
 
 if karin_command_cnt<15 then voice "P03596"	#
 if karin_command_cnt>=15 then voice "P03598"	#
@@ -147,12 +145,7 @@ label t_karin_aibu
 if _COLOR=0 then return
 se		0,"sound\se\プイッ.WAV",play_once
 @karin_motion_normal1
-
-if _COLOR=130 then voicetable t_karin_aibu_cnt_l,"P03816","P03817","P03818","P03819","P03820","P03821","P03822","P03823","P03824","P03825"
-if _COLOR=145 or _COLOR=69 then voicetable t_karin_aibu_cnt_l,"P03809","P03810","P03811","P03812","P03813","P03814","P03815"
-if _COLOR=220 then voicetable t_karin_aibu_cnt_l,"P03832","P03833","P03834","P03835","P03836","P03837","P03838"
-if _COLOR=228 then voicetable t_karin_aibu_cnt_l,"P03839","P03840","P03841","P03842","P03845","P03846","P03847"
-if _COLOR=249 then voicetable t_karin_aibu_cnt_l,"P03826","P03827","P03828","P03829","P03830","P03831"
+@training_voice_aibu
 
 t_karin_aibu_cnt_l=t_karin_aibu_cnt_l+1
 #t_karin_damagefix=t_karin_damagefix-0.01
@@ -164,14 +157,14 @@ if _COLOR=0 then return
 #カーソルを消す
 mousecursor_reset
 
-if _COLOR=228 then gosub training_karin_fera		#フェラ
-if _COLOR=86  then gosub training_karin_fera		#フェラ
+if _COLOR=cl_mouth then gosub training_karin_fera		#フェラ
+if _COLOR=cl_face  then gosub training_karin_fera		#フェラ
 
-if _COLOR=220 then gosub training_karin_anal		#アナル
+if _COLOR=cl_anal then gosub training_karin_anal		#アナル
 
-if _COLOR=130 then gosub training_karin_insert		#挿入
+if _COLOR=cl_manko then gosub training_karin_insert		#挿入
 
-if _COLOR=145 or _COLOR=69 or _COLOR=249 then gosub t_karin_aibu
+if _COLOR=cl_oppai1 or _COLOR=cl_oppai2 or _COLOR=cl_legs then gosub t_karin_aibu
 
 t_karin_damagefix=t_karin_damagefix-0.01
 
@@ -191,10 +184,7 @@ mousecursor_reset
 if _LAYER=l_leg then @spanking_effect_big		# 鞭痕(大)
 if _LAYER<>l_leg then @spanking_effect_small		# 鞭痕(小)
 
-#1段階目
-if t_karin_maso_flag=0 then voicetable	t_karin_spanking_cnt_l,"P04869","P04870","P04871","P04872","P04873","P04874","P04875","P04876","P04877","P04878","P04879","P04880","P04881"
-#2段階目
-if t_karin_maso_flag=1 then voicetable	t_karin_spanking_cnt,"P04882","P04883","P04884","P04885","P04886","P04887","P04888","P04889","P04890","P04891","P04892","P04893"
+@training_voice_spanking
 
 t_karin_spanking_cnt_l=t_karin_spanking_cnt_l+1
 t_karin_spanking_cnt=t_karin_spanking_cnt+1
@@ -203,8 +193,7 @@ t_karin_maso_cnt=t_karin_maso_cnt+1
 @karin_motion_pain1
 tairyoku=tairyoku-15*t_karin_damagefix
 seishin=seishin-20*t_karin_damagefix
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
+@reload_lifebar
 
 add_karada=add_karada+1
 add_miryoku=add_miryoku+1
@@ -226,13 +215,8 @@ mousecursor_reset
 if _LAYER=l_leg then @muchiato_effect_big		# 鞭痕(大)
 if _LAYER<>l_leg then @muchiato_effect_small		# 鞭痕(小)
 
-#1段階目
-if t_karin_maso_flag=0 then voicetable	t_karin_muchi_cnt_l,"P04898","P04899","P04900","P04901","P04905","P04906","P04907","P04908","P04912","P04913","P04914","P04915"
-#2段階目
-if t_karin_maso_flag=1 then voicetable	t_karin_muchi_cnt_l,"P04919","P04920","P04921","P04922","P04926","P04927","P04928","P04929","P04933","P04934","P04935","P04936","P04937"
-
-if _COLOR=130 then voicetable	t_karin_muchi_cnt_l,"P03649","P03660","P03661","P03662","P03663","P03664"
-if _COLOR=130 then screen_vibration 500,16,16,16
+@training_voice_itai
+if _COLOR=cl_manko then screen_vibration 500,16,16,16
 
 t_karin_muchi_cnt_l=t_karin_muchi_cnt_l+1
 t_karin_muchi_cnt=t_karin_muchi_cnt+1
@@ -242,11 +226,10 @@ t_karin_maso_cnt=t_karin_maso_cnt+1
 tairyoku=tairyoku-35*t_karin_damagefix
 seishin=seishin-20*t_karin_damagefix
 
-if _COLOR=130 then tairyoku=tairyoku-35*t_karin_damagefix
-if _COLOR=130 then seishin=seishin-20*t_karin_damagefix
+if _COLOR=cl_manko then tairyoku=tairyoku-35*t_karin_damagefix
+if _COLOR=cl_manko then seishin=seishin-20*t_karin_damagefix
 
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
+@reload_lifebar
 
 add_karada=add_karada+2
 add_miryoku=add_miryoku+2
@@ -255,7 +238,7 @@ wait	500
 
 voice_bg	"P04706"
 
-#if _COLOR=130 then voice_bg	"P04710"
+#if _COLOR=cl_manko then voice_bg	"P04710"
 
 passspeed=200
 @set_motion_speed
@@ -285,13 +268,8 @@ mousecursor_reset
 #-- 蝋燭エフェクト
 @rousoku_effect
 
-#1段階目
-if t_karin_maso_flag=0 then voicetable	t_karin_rousoku_cnt_l,"P04945","P04946","P04947","P04948","P04949","P04950","P04951","P04952","P04953","P04954","P04955","P04956","P04957"
-#2段階目
-if t_karin_maso_flag=1 then voicetable	t_karin_rousoku_cnt_l,"P04960","P04961","P04962","P04963","P04964","P04965","P04966","P04967","P04968","P04969","P04970","P04971"
-
-if _COLOR=130 then voicetable	t_karin_rousoku_cnt_l,"P03649","P03653","P03654","P03655","P03656","P03657","P03658"
-if _COLOR=130 then screen_vibration 500,16,16,16
+@training_voice_atsui
+if _COLOR=cl_manko then screen_vibration 500,16,16,16
 
 for j=0 to 5
 rand rnd,0,128
@@ -312,11 +290,10 @@ t_karin_maso_cnt=t_karin_maso_cnt+1
 tairyoku=tairyoku-20*t_karin_damagefix
 seishin=seishin-35*t_karin_damagefix
 
-if _COLOR=130 then tairyoku=tairyoku-20*t_karin_damagefix
-if _COLOR=130 then seishin=seishin-35*t_karin_damagefix
+if _COLOR=cl_manko then tairyoku=tairyoku-20*t_karin_damagefix
+if _COLOR=cl_manko then seishin=seishin-35*t_karin_damagefix
 
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
+@reload_lifebar
 
 add_karada=add_karada+3
 add_miryoku=add_miryoku+3
@@ -325,7 +302,7 @@ wait	500
 
 voice_bg	"P04706"
 
-if _COLOR=130 then voice_bg	"P04710"
+if _COLOR=cl_manko then voice_bg	"P04710"
 
 passspeed=200
 @set_motion_speed
@@ -412,102 +389,46 @@ label t_karin_video
 gosub	training_karin_video
 goto t_karin_loop
 
-#-- 鞭後をつける---------------------------------------------------------------
-rnd=rnd+1
+#move these out of the file eventualy
 
-#大きい鞭痕かどうか判定する
-if _LAYER=l_leg then goto kar070_muchi_large
-
-if rnd=0 then goto kar070_muchi01
-if rnd=1 then goto kar070_muchi02
-if rnd=2 then goto kar070_muchi03
-if rnd=3 then goto kar070_muchi04
-
-#-- 鞭痕(小)
-label kar070_muchi_small
-label kar070_muchi01
-layer_load_paste	_LAYER,"system\TrainingSystem\muchi_ato01s.png",_X-25,_Y-32
-goto kar070_muchi_skip
-label kar070_muchi02
-layer_load_paste	_LAYER,"system\TrainingSystem\muchi_ato02s.png",_X-25,_Y-32
-goto kar070_muchi_skip
-label kar070_muchi03
-layer_load_paste	_LAYER,"system\TrainingSystem\muchi_ato03s.png",_X-25,_Y-32
-goto kar070_muchi_skip
-label kar070_muchi04
-layer_load_paste	_LAYER,"system\TrainingSystem\muchi_ato04s.png",_X-25,_Y-32
-rnd=0
-goto kar070_muchi_skip
-
-#-- 鞭痕(大)
-label kar070_muchi_large
-
-if rnd=0 then goto kar070_muchi05
-if rnd=1 then goto kar070_muchi06
-if rnd=2 then goto kar070_muchi07
-if rnd=3 then goto kar070_muchi08
-
-label kar070_muchi05
-layer_load_paste	_LAYER,"system\TrainingSystem\muchi_ato01l.png",_X-50,_Y-75
-goto kar070_muchi_skip
-label kar070_muchi06
-layer_load_paste	_LAYER,"system\TrainingSystem\muchi_ato02l.png",_X-50,_Y-75
-goto kar070_muchi_skip
-label kar070_muchi07
-layer_load_paste	_LAYER,"system\TrainingSystem\muchi_ato03l.png",_X-50,_Y-75
-goto kar070_muchi_skip
-label kar070_muchi08
-layer_load_paste	_LAYER,"system\TrainingSystem\muchi_ato04l.png",_X-50,_Y-75
-rnd=0
-goto kar070_muchi_skip
-
-label kar070_muchi_skip
-#if rnd>4 then rnd=0
-
-#------------------------------------------------------------------------------
-
-# 痛がるモーション #########################################################
 macro	karin_motion_pain1
-
 @training_anime_motion_pain
+@motion_pain_effect_karin
+endm
 
+macro	motion_pain_effect_karin
 tairyoku=tairyoku-3*t_karin_damagefix
 seishin=seishin-5*t_karin_damagefix
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
-
+@reload_lifebar
 endm
 
 macro	karin_motion_insert1
-
 @training_anime_motion_insert
-
-tairyoku=tairyoku-10*t_karin_damagefix
-seishin=seishin-15*t_karin_damagefix
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
-
+@motion_insert_effect_karin
 endm
 
-#-- 感じる --------------------------------------------------------------------
+macro	motion_insert_effect_karin
+tairyoku=tairyoku-10*t_karin_damagefix
+seishin=seishin-15*t_karin_damagefix
+@reload_lifebar
+endm
+
 macro	karin_motion_normal1
-
 @training_anime_motion_normal
+@motion_normal_effect_karin
+endm
 
+macro	motion_normal_effect_karin
 tairyoku=tairyoku-3*t_karin_damagefix
 seishin=seishin-5*t_karin_damagefix
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
-
+@reload_lifebar
 endm
 
 #-- 気絶 --------------------------------------------------------------------
 label t_karin_end
 karin_kenkou=0
 karin_kiryoku=0
-
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
+@reload_lifebar
 
 #「もう……無理だわ……」
 ＠Karin,P03604

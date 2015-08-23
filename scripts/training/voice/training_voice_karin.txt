@@ -1,0 +1,45 @@
+
+macro	training_voice_aibu_oppai_karin
+voicetable va_op,"P03809","P03810","P03811","P03812","P03813","P03814","P03815"
+va_op=va_op+1
+endm
+
+macro	training_voice_aibu_kiss_karin
+voicetable va_ki,"P03839","P03840","P03841","P03842","P03845","P03846","P03847"
+va_ki=va_ki+1
+endm
+
+macro	training_voice_aibu_manko_karin
+voicetable va_ma,"P03816","P03817","P03818","P03819","P03820","P03821","P03822","P03823","P03824","P03825"
+va_ma=va_ma+1
+endm
+
+macro	training_voice_aibu_anal_karin
+voicetable va_an,"P03832","P03833","P03834","P03835","P03836","P03837","P03838"
+va_an=va_an+1
+endm
+
+macro	training_voice_aibu_oshiri_karin
+voicetable va_os,"P03826","P03827","P03828","P03829","P03830","P03831"
+va_os=va_os+1
+endm
+
+macro	training_voice_spanking_karin
+if t_karin_maso_flag=0 then voicetable	va_sp,"P04869","P04870","P04871","P04872","P04873","P04874","P04875","P04876","P04877","P04878","P04879","P04880","P04881"
+if t_karin_maso_flag=1 then voicetable	va_sp,"P04882","P04883","P04884","P04885","P04886","P04887","P04888","P04889","P04890","P04891","P04892","P04893"
+va_sp=va_sp+1
+endm
+
+macro	training_voice_itai_karin
+if t_karin_maso_flag=0 then voicetable	va_it,"P04898","P04899","P04900","P04901","P04905","P04906","P04907","P04908","P04912","P04913","P04914","P04915"
+if t_karin_maso_flag=1 then voicetable	va_it,"P04919","P04920","P04921","P04922","P04926","P04927","P04928","P04929","P04933","P04934","P04935","P04936","P04937"
+if _COLOR=cl_manko then voicetable	va_it,"P03649","P03660","P03661","P03662","P03663","P03664"
+va_it=va_it+1
+endm
+
+macro	training_voice_atsui_karin
+if t_karin_maso_flag=0 then voicetable	va_at,"P04945","P04946","P04947","P04948","P04949","P04950","P04951","P04952","P04953","P04954","P04955","P04956","P04957"
+if t_karin_maso_flag=1 then voicetable	va_at,"P04960","P04961","P04962","P04963","P04964","P04965","P04966","P04967","P04968","P04969","P04970","P04971"
+if _COLOR=cl_manko then voicetable	va_at,"P03649","P03653","P03654","P03655","P03656","P03657","P03658"
+va_at=va_at+1
+endm

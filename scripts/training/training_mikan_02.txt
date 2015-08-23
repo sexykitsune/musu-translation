@@ -4,12 +4,13 @@ training_chara=TRAINING_MIKAN
 @bgm10
 date_close
 @all_layerrelease
+
 #-- èâä˙âª --------------------------------------------------------------------
 @training_voice_init
 
-add_miryoku=0
 mikan_bondage_flag=0
 
+add_miryoku=0
 add_karada=0
 add_atama=0
 add_kokoro=0
@@ -124,11 +125,7 @@ label t_mikan_aibu
 if _COLOR=0 then return
 se		0,"sound\se\ÉvÉCÉb.WAV",play_once
 @mikan_motion_normal1
-if _COLOR=cl_manko then @training_voice_aibu_oppai
-if _COLOR=cl_oppai1 or _COLOR=cl_oppai2 then @training_voice_aibu_oppai
-if _COLOR=cl_anal then @training_voice_aibu_anal
-if _COLOR=cl_mouth then @training_voice_aibu_kiss
-if _COLOR=cl_legs then @training_voice_aibu_oshiri
+@training_voice_aibu
 return
 
 #-- Å°ÇøÇÒÇ€Å° ----------------------------------------------------------------
@@ -278,6 +275,8 @@ macro	command_mikan_baramuchi
 mousecursor_set "system\TrainingSystem\cur_muchi.png",420,40
 gosub mikan_training_baramuchi
 endm
+
+#move these out of the file eventualy
 
 macro	mikan_motion_pain1
 @training_anime_motion_pain
