@@ -5,14 +5,7 @@ training_chara=TRAINING_MIKAN
 date_close
 @all_layerrelease
 #-- 初期化 --------------------------------------------------------------------
-mva_op=0
-mva_ki=0
-mva_ma=0
-mva_an=0
-mva_os=0
-mva_it=0
-mva_at=0
-mva_sp=0
+@training_voice_init
 
 add_miryoku=0
 mikan_bondage_flag=0
@@ -35,8 +28,7 @@ lifebar_setmax	life_seishin,seishin_max
 
 lifebar_open	life_tairyoku
 lifebar_open	life_seishin
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
+@reload_lifebar
 
 if mikan_command_cnt<15 then voice "A02544"	#「お兄ちゃん……優しくしてね……」
 if mikan_command_cnt>=15 then voice "A02546"	#「っ、ふ……お兄ちゃん……」
@@ -132,11 +124,11 @@ label t_mikan_aibu
 if _COLOR=0 then return
 se		0,"sound\se\プイッ.WAV",play_once
 @mikan_motion_normal1
-if _COLOR=130 then @mikan_voice_aibu_manko
-if _COLOR=145 or _COLOR=69 then @mikan_voice_aibu_oppai
-if _COLOR=220 then @mikan_voice_aibu_anal
-if _COLOR=228 then @mikan_voice_aibu_kiss
-if _COLOR=249 then @mikan_voice_aibu_oshiri
+if _COLOR=cl_manko then @training_voice_aibu_oppai
+if _COLOR=cl_oppai1 or _COLOR=cl_oppai2 then @training_voice_aibu_oppai
+if _COLOR=cl_anal then @training_voice_aibu_anal
+if _COLOR=cl_mouth then @training_voice_aibu_kiss
+if _COLOR=cl_legs then @training_voice_aibu_oshiri
 return
 
 #-- ■ちんぽ■ ----------------------------------------------------------------
@@ -145,14 +137,14 @@ if _COLOR=0 then return
 #カーソルを消す
 mousecursor_reset
 
-if _COLOR=228 then gosub training_mikan_fellatio	#フェラ
-if _COLOR=86  then gosub training_mikan_fellatio	#フェラ
+if _COLOR=cl_mouth then gosub training_mikan_fellatio	#フェラ
+if _COLOR=cl_face  then gosub training_mikan_fellatio	#フェラ
 
-if _COLOR=220 then gosub training_mikan_anal		#アナル
+if _COLOR=cl_anal then gosub training_mikan_anal		#アナル
 
-if _COLOR=130 then gosub training_mikan_insert		#挿入
+if _COLOR=cl_manko then gosub training_mikan_insert		#挿入
 
-if _COLOR=145 or _COLOR=69 or _COLOR=249 then gosub t_mikan_aibu
+if _COLOR=cl_oppai1 or _COLOR=cl_oppai2 or _COLOR=cl_legs then gosub t_mikan_aibu
 
 window_close
 return
@@ -169,12 +161,11 @@ mousecursor_reset
 #大きい鞭痕かどうか判定する
 if _LAYER=l_leg then @spanking_effect_big		# 鞭痕(大)
 if _LAYER<>l_leg then @spanking_effect_small		# 鞭痕(小)
-@mikan_voice_spanking
+@training_voice_spanking
 @mikan_motion_pain1
 tairyoku=tairyoku-15
 seishin=seishin-20
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
+@reload_lifebar
 
 add_karada=add_karada+1
 add_miryoku=add_miryoku+1
@@ -194,12 +185,11 @@ mousecursor_reset
 #大きい鞭痕かどうか判定する
 if _LAYER=l_leg then @muchiato_effect_big		# 鞭痕(大)
 if _LAYER<>l_leg then @muchiato_effect_small		# 鞭痕(小)
-@mikan_voice_itai
+@training_voice_itai
 @mikan_motion_pain1
 tairyoku=tairyoku-35
 seishin=seishin-20
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
+@reload_lifebar
 
 add_miryoku=add_miryoku+2
 
@@ -216,12 +206,13 @@ wait	500
 #-- 蝋燭エフェクト
 @rousoku_effect
 #-- 蝋燭後をつける
-@mikan_voice_atsui
+@training_voice_atsui
 @mikan_motion_pain1
 tairyoku=tairyoku-20
 seishin=seishin-35
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
+@reload_lifebar
+
+mikan_rousoku_count=mikan_rousoku_count+1
 
 add_miryoku=add_miryoku+3
 
@@ -271,187 +262,6 @@ label t_mikan_bondage_skip
 @training_anime_load
 goto	t_mikan_loop
 
-#voice	"A02572"	#「ひっ……！」
-#voice	"A02573"	#「いやぁっ！」
-#voice	"A02574"	#「うぁあんっ！！」
-
-#ライフの計算
-tairyoku=tairyoku-4
-seishin=seishin-1
-
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
-
-#体力によって挙動を変更
-
-if tairyoku<(tairyoku_max/4) then goto mikan_training_bgv_04
-if tairyoku<(tairyoku_max/3) then goto mikan_training_bgv_03
-if tairyoku<(tairyoku_max/2) then goto mikan_training_bgv_02
-
-label	mikan_training_bgv_01
-voice_bg "A02559"
-passspeed=100
-goto	mikan_training_bgv_05
-label	mikan_training_bgv_02
-voice_bg "A02559_A"
-passspeed=130
-goto	mikan_training_bgv_05
-label	mikan_training_bgv_03
-voice_bg "A02559_B"
-passspeed=160
-goto	mikan_training_bgv_05
-label	mikan_training_bgv_04
-voice_bg "A02559_C"
-passspeed=190
-goto	mikan_training_bgv_05
-label	mikan_training_bgv_05
-layer_allpass_speed	l_body,passspeed
-layer_allpass_speed	l_arm,passspeed
-layer_allpass_speed	l_head,passspeed
-layer_allpass_speed	l_leg,passspeed
-
-wait	300
-
-goto t_mikan_loop1
-
-#-- みかん　「愛撫」--------------------------------------------------------
-#おっぱい
-macro	mikan_voice_aibu_oppai
-if mva_op=0 then voice "A03592"	#「は、はわぁっ！？」
-if mva_op=1 then voice "A03593"	#「っ……お兄ちゃん、そんなところ……」
-if mva_op=2 then voice "A03594"	#「みかん、あまりないから……はずかしいよ……」
-if mva_op=3 then voice "A03595" #「ひゃうんっ！ら、乱暴に……しちゃらめぇ」
-if mva_op=4 then voice "A03596" #「やっ、そんなにしたら……はっ、くぅううんっ！」
-if mva_op=5 then voice "A03597"	#「んっ……！あぁっ！！おにいちゃぁん！！」
-if mva_op=6 then voice "A03598"	#「んきゅぅうんっ！あはぁっ！ああんっ！」
-
-mva_op=mva_op+1
-if mva_op>6 then mva_op=0
-
-endm
-
-#キス
-macro	mikan_voice_aibu_kiss
-if mva_ki=0 then voice "A03622"	#「チュッ！（キスの音）」
-if mva_ki=1 then voice "A03623"	#「っ……ふぁっ……」
-if mva_ki=2 then voice "A03624"	#「あぷっ、ん……っふ、ん、はぁっ……」
-if mva_ki=3 then voice "A03625"	#「んちゅ……、ふぁっ、ちゅっ……」
-if mva_ki=4 then voice "A03626"	#「んっ、ぷぁっ……、ふぅ、んっ……お兄ちゃん……」
-if mva_ki=5 then voice "A03627"	#「んっ、あぷっ……、はぁっ……ドキドキ……しちゃうよぉ……」
-
-mva_ki=mva_ki+1
-if mva_ki>5 then mva_ki=0
-
-endm
-
-#マンコ（指で愛撫から)
-macro	mikan_voice_aibu_manko
-if mva_ma=0 then voice "A03599"	#「ひゃ……っ！？」
-if mva_ma=1 then voice "A03600"	#「お、にい、ちゃ……そんなところ、触っちゃ……」
-if mva_ma=2 then voice "A03601"	#「んっ、く、ふぅん……」
-if mva_ma=3 then voice "A03602"	#「ふああんっ！やぁあ……っ！」
-if mva_ma=4 then voice "A03603"	#「おにい、ちゃんっ！そんなのぉ……あくぅんっ！」
-if mva_ma=5 then voice "A03604"	#「やっ、は、ああんっ！ふ、あああっ！」
-if mva_ma=6 then voice "A03605"	#「ふぁっ、はっ、あぁあああああぁんっ！！！」
-if mva_ma=7 then voice "A03606"	#「んきゅぅんっ！！はあぁあああんっ！！あああああっ！」
-if mva_ma=8 then voice "A03607"	#「はーっ、はーぁっ……は、ぁふ……」
-if mva_ma=9 then voice "A03608"	#「お兄ちゃぁ、ぁ……はぁっ……ん……」
-mva_ma=mva_ma+1
-if mva_ma>9 then mva_ma=0
-
-endm
-
-#アナル
-macro	mikan_voice_aibu_anal
-if mva_an=0 then voice "A03615"	#「ん、んぅっ！？」
-if mva_an=1 then voice "A03616"	#「だめだよぉ……っ、くふっ……」
-if mva_an=2 then voice "A03617"	#「そんなところ、恥ずかしい、よぉ……」
-if mva_an=3 then voice "A03618"	#「はぁっ……はぁ……っ……」
-if mva_an=4 then voice "A03619"	#「んっ……く、あんっ……！！」
-if mva_an=5 then voice "A03620"	#「だめぇ、おにいちゃぁんっ……お尻、変になっちゃうよぉ！」
-if mva_an=6 then voice "A03621"	#「はぁっ、や、ああああんっ！」
-mva_an=mva_an+1
-if mva_an>6 then mva_an=0
-endm
-
-#おしり
-macro	mikan_voice_aibu_oshiri
-if mva_os=0 then voice "A03609"	#「ん、きゅぅんっ！」
-if mva_os=1 then voice "A03610"	#「お、にいちゃんっ……くふぅん……」
-if mva_os=2 then voice "A03611"	#「ビクビクしちゃうよぉ……あふっ……」
-if mva_os=3 then voice "A03612"	#「はぁっ……ふぁ……っ、あはっ！やぁあああんっ！」
-if mva_os=4 then voice "A03613"	#「お尻、そんなにしちゃ……っ！ふあああ！！」
-if mva_os=5 then voice "A03614"	#「んぅうううっ！くぅんっ！！やぁあああ！！」
-mva_os=mva_os+1
-if mva_os>5 then mva_os=0
-endm
-
-#スパンキング
-macro	mikan_voice_spanking
-#スパンキング　一段階目
-if mva_sp=0 then voice "A02259"	#「きゃぁんッ！　痛い…ッ！　痛いよぉ…ッ！！　お兄ちゃん、痛い…ッ！！」
-if mva_sp=1 then voice "A02260"	#「やめてぇ！　なんで…！？　どうしてそんな事するの…！！　お兄ちゃん痛いよぉ…ッ！！　やめてぇ…ッ！」
-if mva_sp=2 then voice "A02261"	#「痛いっ！　やめてぇ！　イヤだよぉ…ッ！！　イヤぁ！」
-
-if mva_sp=3 then voice "A02262"	#「ひう！　あう！　こんなのって、こんなのってぇぇ！！」
-if mva_sp=4 then voice "A02263"	#「あぁん！！　みかんのお尻、もう叩かないでぇぇ！！」
-if mva_sp=5 then voice "A02264"	#「痛い！　痛いよぉ！　お兄ちゃん、なんでみかんのお尻を叩くのぉ…っ！！？？」
-if mva_sp=6 then voice "A02265"	#「イヤぁっ！　やめてぇ！　お尻がびりびり痛いよぉ！　そんなに痛くしないで…ッ！！　ホントにやめてぇ！」
-if mva_sp=7 then voice "A02266"	#「はぐうっ！　お、お兄ちゃん…ッ！　どうしてやめてくれないの…ッ！？　みかん、みかん、なんにもしてないのにぃ！」
-
-#---【スパンキング十数回目】
-if mva_sp=0 then voice "A02267"	#「ひぐぅ…ッ！！　イヤッ！　イヤぁ！！　お兄ちゃん、やめてぇ…ッ！！」
-if mva_sp=0 then voice "A02268"	#「いやぁぁぁんッ！　痛いッ！　痛いッ！！　もうイヤっ！　もうイヤぁぁぁぁぁ！！」
-if mva_sp=0 then voice "A02269"	#「ひぁぁぁぁっ！！　お尻が赤く腫れちゃうよ！　お兄ちゃん、もうやめてぇぇぇ！！」
-if mva_sp=0 then voice "A02270"	#「いやぁぁぁ！！　こんなのいやぁぁぁ！！　やめてぇ！　もう叩かないでぇ！！」
-if mva_sp=0 then voice "A02271"	#「ひぃっ！！　ひぐぅぅぅぅぅ！！　お尻が痛くて、痺れてきたよぉぉぉぉ！！　やめてぇ！　お兄ちゃん、もうやめてぇぇぇ！！」
-if mva_sp=0 then voice "A02272"	#「いぎぃぃぃいいぃぃぃ！！！！　イヤだよぉ！！　ひどいぃぃ！！　お兄ちゃんひど過ぎるよぉぉぉ！！」
-if mva_sp=0 then voice "A02273"	#「…ひぁ…ッ！　ひぃ…ッ！　…いや…、やめてぇ…、もういやぁ…。　みかん、みかん…ッ」
-
-mva_sp=mva_sp+1
-
-if mva_sp=5 then voice_bg "A04247"
-
-if mva_sp>7 then mva_sp=0
-endm
-
-#-- みかん　「痛い」--------------------------------------------------------
-macro	mikan_voice_itai
-if mva_it=0 then voice "A03461"	#「ひぁぁああっ！　痛い、痛いよ、お兄ちゃん！？」
-if mva_it=1 then voice "A03462"	#「いやぁ……っ、痛い！　やめてぇ……！　お兄ちゃん、痛いよぉぉぉぉっ！」
-
-if mva_it=2 then voice "A03463"	#「ひぐぅ……っ、ひぃぁああ……っ！　いやぁ……っ！　いやぁ……、やめて、やめてえっ」
-
-if mva_it=3 then voice "A03464"	#「痛い、痛いぃぃぃぃぃっ！　やめて、もうやめてぇぇぇ！　お兄ちゃん、お願い…っ、みかん、もういやだよぉぉっ！」
-
-if mva_it=4 then voice "A03465"	#「はう……っ、あぁぅ……っ！　い、痛い……よぉ……、痛いのに、痛いのにぃ…！！」
-
-mva_it=mva_it+1
-
-if mva_it>4 then mva_it=0
-
-endm
-
-#-- みかん　「熱い」--------------------------------------------------------
-macro	mikan_voice_atsui
-
-if mva_at=0 then voice "A03503" #「ひっ、ひぁぁぁっ！　あ、熱いっ、熱いよ！？　お兄ちゃんっ！？」
-if mva_at=1 then voice "A03504" #「いやぁっ！　熱いよぉぉぉ！　ヤケドしないなんて、うそだよぉぉぉ！　ヤケドしちゃうっ、みかん、ヤケドしちゃうよぉぉぉ！！」
-if mva_at=2 then voice "A03505" #「きゃうっ！　熱くて痛いぃぃっ！　みかん我慢できないよぉぉぉぉっ、お兄ちゃん、やめてぇぇぇ！！」
-if mva_at=3 then voice "A03506" #「ひぁぁあああ…っ、いやぁ……っ！　いや、いやぁああっ、熱いよ、熱いよぉぉぉ…っ！」
-if mva_at=4 then voice "A03507" #「ああぁっ、熱いよぉぉぉ！　いや、いやぁああ…っ！　熱い、熱いぃぃぃぃっ！」
-if mva_at=5 then voice "A03508" #「ひっ！　ひぃぃいいん！　どうして、なんで！？　こんな事……、こんな事ぉ……っ」
-if mva_at=6 then voice "A03509" #「いやぁぁぁぁ！　熱い、痛いよぉぉぉぉぉ！！　みかん、もういや、もういやぁぁぁあああ！」
-if mva_at=7 then voice "A03510" #「……いやぁ……、もういやぁ……っ。　やめて……、お兄ちゃん……もうやめて……っ」
-if mva_at=8 then voice "A03511" #「やめてぇ……、熱いの……もう……いやぁ……っ。　いやなのぉ……お兄ちゃん……、もうやめて……」
-if mva_at=9 then voice "A03512" #「熱いのぉ……、熱くて痛いよぉぉぉ……、やめて……もういやぁ……っ」
-
-mva_at=mva_at+1
-if mva_at>9 then mva_at=0
-
-mikan_rousoku_count=mikan_rousoku_count+1
-
-endm
 
 #コマンド 蝋燭
 macro	command_mikan_rousoku
@@ -469,48 +279,44 @@ mousecursor_set "system\TrainingSystem\cur_muchi.png",420,40
 gosub mikan_training_baramuchi
 endm
 
-#-- 痛がる --------------------------------------------------------------------
 macro	mikan_motion_pain1
-
 @training_anime_motion_pain
+@motion_pain_effect_mikan
+endm
 
+macro	motion_pain_effect_mikan
 tairyoku=tairyoku-3
 seishin=seishin-5
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
-
+@reload_lifebar
 endm
 
 macro	mikan_motion_insert1
-
 @training_anime_motion_insert
-
-tairyoku=tairyoku-10
-seishin=seishin-15
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
-
+@motion_insert_effect_mikan
 endm
 
-#-- 感じる --------------------------------------------------------------------
+macro	motion_insert_effect_mikan
+tairyoku=tairyoku-10
+seishin=seishin-15
+@reload_lifebar
+endm
+
 macro	mikan_motion_normal1
-
 @training_anime_motion_normal
+@motion_normal_effect_mikan
+endm
 
+macro	motion_normal_effect_mikan
 tairyoku=tairyoku-3
 seishin=seishin-5
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
-
+@reload_lifebar
 endm
 
 #-- 気絶 --------------------------------------------------------------------
 label t_mikan_end
 mikan_kenkou=0
 mikan_kiryoku=0
-
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
+@reload_lifebar
 
 #「も、もう……だめぇ……」
 ＠Ｍｉｋａｎ,A02548

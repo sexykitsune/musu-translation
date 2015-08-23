@@ -7,3 +7,79 @@ if training_chara=TRAINING_KARIN	then gosub training_karin		#‚©‚è‚ñ’²‹³
 
 return
 
+macro	reload_lifebar
+lifebar_setauto	life_tairyoku,tairyoku
+lifebar_setauto	life_seishin,seishin
+endm
+
+macro	training_init
+
+@training_paramget
+aibu_count_l=0
+spanking_count_l=0
+whip_count_l=0
+candle_count_l=0
+
+
+bondage_flag=0
+megane_flag=0
+damagefix=1.2
+
+add_miryoku=0
+add_karada=0
+add_kokoro=0
+add_atama=0
+
+endm
+
+macro	training_cleanup
+@training_paramset
+endm
+
+macro	training_paramget
+if training_chara=TRAINING_MIKAN	then @training_paramget_mikan
+if training_chara=TRAINING_ICHIGO	then @training_paramget_ichigo
+if training_chara=TRAINING_KARIN	then @training_paramget_karin
+endm
+
+macro	training_paramset
+if training_chara=TRAINING_MIKAN	then @training_paramset_mikan
+if training_chara=TRAINING_ICHIGO	then @training_paramset_ichigo
+if training_chara=TRAINING_KARIN	then @training_paramset_karin
+endm
+
+macro	training_paramget_mikan
+
+
+
+endm
+
+macro	training_paramset_mikan
+
+
+
+endm
+
+macro	training_paramget_ichigo
+
+
+
+endm
+
+macro	training_paramset_ichigo
+
+
+
+endm
+
+macro	training_paramget_karin
+
+
+
+endm
+
+macro	training_paramset_karin
+
+
+
+endm

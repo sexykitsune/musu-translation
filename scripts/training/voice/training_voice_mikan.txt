@@ -1,0 +1,157 @@
+
+macro	training_voice_aibu_oppai_mikan
+
+if va_op=0 then voice "A03592"	#「は、はわぁっ！？」
+if va_op=1 then voice "A03593"	#「っ……お兄ちゃん、そんなところ……」
+if va_op=2 then voice "A03594"	#「みかん、あまりないから……はずかしいよ……」
+if va_op=3 then voice "A03595" #「ひゃうんっ！ら、乱暴に……しちゃらめぇ」
+if va_op=4 then voice "A03596" #「やっ、そんなにしたら……はっ、くぅううんっ！」
+if va_op=5 then voice "A03597"	#「んっ……！あぁっ！！おにいちゃぁん！！」
+if va_op=6 then voice "A03598"	#「んきゅぅうんっ！あはぁっ！ああんっ！」
+
+#voicetable va_op,"A03592","A03593","A03594","A03595","A03596","A03597","A03598"
+
+va_op=va_op+1
+if va_op>6 then va_op=0
+
+endm
+
+macro	training_voice_aibu_kiss_mikan
+
+if va_ki=0 then voice "A03622"	#「チュッ！（キスの音）」
+if va_ki=1 then voice "A03623"	#「っ……ふぁっ……」
+if va_ki=2 then voice "A03624"	#「あぷっ、ん……っふ、ん、はぁっ……」
+if va_ki=3 then voice "A03625"	#「んちゅ……、ふぁっ、ちゅっ……」
+if va_ki=4 then voice "A03626"	#「んっ、ぷぁっ……、ふぅ、んっ……お兄ちゃん……」
+if va_ki=5 then voice "A03627"	#「んっ、あぷっ……、はぁっ……ドキドキ……しちゃうよぉ……」
+
+#voicetable va_ki,"A03622","A03623","A03624","A03625","A03626","A03627"
+
+va_ki=va_ki+1
+if va_ki>5 then va_ki=0
+
+endm
+
+macro	training_voice_aibu_manko_mikan
+
+if va_ma=0 then voice "A03599"	#「ひゃ……っ！？」
+if va_ma=1 then voice "A03600"	#「お、にい、ちゃ……そんなところ、触っちゃ……」
+if va_ma=2 then voice "A03601"	#「んっ、く、ふぅん……」
+if va_ma=3 then voice "A03602"	#「ふああんっ！やぁあ……っ！」
+if va_ma=4 then voice "A03603"	#「おにい、ちゃんっ！そんなのぉ……あくぅんっ！」
+if va_ma=5 then voice "A03604"	#「やっ、は、ああんっ！ふ、あああっ！」
+if va_ma=6 then voice "A03605"	#「ふぁっ、はっ、あぁあああああぁんっ！！！」
+if va_ma=7 then voice "A03606"	#「んきゅぅんっ！！はあぁあああんっ！！あああああっ！」
+if va_ma=8 then voice "A03607"	#「はーっ、はーぁっ……は、ぁふ……」
+if va_ma=9 then voice "A03608"	#「お兄ちゃぁ、ぁ……はぁっ……ん……」
+
+#voicetable va_ma,"A03599","A03600","A03601","A03602","A03603","A03604","A03605","A03606","A03607","A03608"
+
+va_ma=va_ma+1
+if va_ma>9 then va_ma=0
+
+endm
+
+macro	training_voice_aibu_anal_mikan
+
+if va_an=0 then voice "A03615"	#「ん、んぅっ！？」
+if va_an=1 then voice "A03616"	#「だめだよぉ……っ、くふっ……」
+if va_an=2 then voice "A03617"	#「そんなところ、恥ずかしい、よぉ……」
+if va_an=3 then voice "A03618"	#「はぁっ……はぁ……っ……」
+if va_an=4 then voice "A03619"	#「んっ……く、あんっ……！！」
+if va_an=5 then voice "A03620"	#「だめぇ、おにいちゃぁんっ……お尻、変になっちゃうよぉ！」
+if va_an=6 then voice "A03621"	#「はぁっ、や、ああああんっ！」
+
+#voicetable va_an,"A03615","A03616","A03617","A03618","A03619","A03620","A03621"
+
+va_an=va_an+1
+if va_an>6 then va_an=0
+
+endm
+
+macro	training_voice_aibu_oshiri_mikan
+
+if va_os=0 then voice "A03609"	#「ん、きゅぅんっ！」
+if va_os=1 then voice "A03610"	#「お、にいちゃんっ……くふぅん……」
+if va_os=2 then voice "A03611"	#「ビクビクしちゃうよぉ……あふっ……」
+if va_os=3 then voice "A03612"	#「はぁっ……ふぁ……っ、あはっ！やぁあああんっ！」
+if va_os=4 then voice "A03613"	#「お尻、そんなにしちゃ……っ！ふあああ！！」
+if va_os=5 then voice "A03614"	#「んぅうううっ！くぅんっ！！やぁあああ！！」
+
+#voicetable va_os,"A03609","A03610","A03611","A03612","A03613","A03614"
+
+va_os=va_os+1
+if va_os>5 then va_os=0
+
+endm
+
+macro	training_voice_spanking_mikan
+
+#スパンキング　一段階目 first stage
+if va_sp=0 then voice "A02259"	#「きゃぁんッ！　痛い…ッ！　痛いよぉ…ッ！！　お兄ちゃん、痛い…ッ！！」
+if va_sp=1 then voice "A02260"	#「やめてぇ！　なんで…！？　どうしてそんな事するの…！！　お兄ちゃん痛いよぉ…ッ！！　やめてぇ…ッ！」
+if va_sp=2 then voice "A02261"	#「痛いっ！　やめてぇ！　イヤだよぉ…ッ！！　イヤぁ！」
+if va_sp=3 then voice "A02262"	#「ひう！　あう！　こんなのって、こんなのってぇぇ！！」
+if va_sp=4 then voice "A02263"	#「あぁん！！　みかんのお尻、もう叩かないでぇぇ！！」
+if va_sp=5 then voice "A02264"	#「痛い！　痛いよぉ！　お兄ちゃん、なんでみかんのお尻を叩くのぉ…っ！！？？」
+if va_sp=6 then voice "A02265"	#「イヤぁっ！　やめてぇ！　お尻がびりびり痛いよぉ！　そんなに痛くしないで…ッ！！　ホントにやめてぇ！」
+if va_sp=7 then voice "A02266"	#「はぐうっ！　お、お兄ちゃん…ッ！　どうしてやめてくれないの…ッ！？　みかん、みかん、なんにもしてないのにぃ！」
+
+#voicetable va_sp,"A02259","A02260","A02261","A02262","A02263","A02264","A02265","A02266"
+
+#---【スパンキング十数回目】 spank many times
+#im not sure why these are here
+#they do not play consecutively, only the last one plays
+#original had va_sp=0
+if va_sp=8 then voice "A02267"	#「ひぐぅ…ッ！！　イヤッ！　イヤぁ！！　お兄ちゃん、やめてぇ…ッ！！」
+if va_sp=9 then voice "A02268"	#「いやぁぁぁんッ！　痛いッ！　痛いッ！！　もうイヤっ！　もうイヤぁぁぁぁぁ！！」
+if va_sp=10 then voice "A02269"	#「ひぁぁぁぁっ！！　お尻が赤く腫れちゃうよ！　お兄ちゃん、もうやめてぇぇぇ！！」
+if va_sp=11 then voice "A02270"	#「いやぁぁぁ！！　こんなのいやぁぁぁ！！　やめてぇ！　もう叩かないでぇ！！」
+if va_sp=12 then voice "A02271"	#「ひぃっ！！　ひぐぅぅぅぅぅ！！　お尻が痛くて、痺れてきたよぉぉぉぉ！！　やめてぇ！　お兄ちゃん、もうやめてぇぇぇ！！」
+if va_sp=13 then voice "A02272"	#「いぎぃぃぃいいぃぃぃ！！！！　イヤだよぉ！！　ひどいぃぃ！！　お兄ちゃんひど過ぎるよぉぉぉ！！」
+if va_sp=14 then voice "A02273"	#「…ひぁ…ッ！　ひぃ…ッ！　…いや…、やめてぇ…、もういやぁ…。　みかん、みかん…ッ」
+
+#voicetable va_sp,"A02259","A02260","A02261","A02262","A02263","A02264","A02265","A02266","A02267","A02268","A02269","A02270","A02271","A02272","A02273"
+
+if va_sp=4 then voice_bg "A04247"
+
+va_sp=va_sp+1
+if va_sp>7 then va_sp=0
+#if va_sp>14 then va_sp=0
+
+endm
+
+macro	training_voice_itai_mikan
+
+if va_it=0 then voice "A03461"	#「ひぁぁああっ！　痛い、痛いよ、お兄ちゃん！？」
+if va_it=1 then voice "A03462"	#「いやぁ……っ、痛い！　やめてぇ……！　お兄ちゃん、痛いよぉぉぉぉっ！」
+if va_it=2 then voice "A03463"	#「ひぐぅ……っ、ひぃぁああ……っ！　いやぁ……っ！　いやぁ……、やめて、やめてえっ」
+if va_it=3 then voice "A03464"	#「痛い、痛いぃぃぃぃぃっ！　やめて、もうやめてぇぇぇ！　お兄ちゃん、お願い…っ、みかん、もういやだよぉぉっ！」
+if va_it=4 then voice "A03465"	#「はう……っ、あぁぅ……っ！　い、痛い……よぉ……、痛いのに、痛いのにぃ…！！」
+
+#voicetable va_it,"A03461","A03462","A03463","A03464","A03465"
+
+va_it=va_it+1
+if va_it>4 then va_it=0
+
+endm
+
+macro	training_voice_atsui_mikan
+
+if va_at=0 then voice "A03503" #「ひっ、ひぁぁぁっ！　あ、熱いっ、熱いよ！？　お兄ちゃんっ！？」
+if va_at=1 then voice "A03504" #「いやぁっ！　熱いよぉぉぉ！　ヤケドしないなんて、うそだよぉぉぉ！　ヤケドしちゃうっ、みかん、ヤケドしちゃうよぉぉぉ！！」
+if va_at=2 then voice "A03505" #「きゃうっ！　熱くて痛いぃぃっ！　みかん我慢できないよぉぉぉぉっ、お兄ちゃん、やめてぇぇぇ！！」
+if va_at=3 then voice "A03506" #「ひぁぁあああ…っ、いやぁ……っ！　いや、いやぁああっ、熱いよ、熱いよぉぉぉ…っ！」
+if va_at=4 then voice "A03507" #「ああぁっ、熱いよぉぉぉ！　いや、いやぁああ…っ！　熱い、熱いぃぃぃぃっ！」
+if va_at=5 then voice "A03508" #「ひっ！　ひぃぃいいん！　どうして、なんで！？　こんな事……、こんな事ぉ……っ」
+if va_at=6 then voice "A03509" #「いやぁぁぁぁ！　熱い、痛いよぉぉぉぉぉ！！　みかん、もういや、もういやぁぁぁあああ！」
+if va_at=7 then voice "A03510" #「……いやぁ……、もういやぁ……っ。　やめて……、お兄ちゃん……もうやめて……っ」
+if va_at=8 then voice "A03511" #「やめてぇ……、熱いの……もう……いやぁ……っ。　いやなのぉ……お兄ちゃん……、もうやめて……」
+if va_at=9 then voice "A03512" #「熱いのぉ……、熱くて痛いよぉぉぉ……、やめて……もういやぁ……っ」
+
+#voicetable would go here
+
+va_at=va_at+1
+if va_at>9 then va_at=0
+
+endm

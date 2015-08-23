@@ -1,0 +1,96 @@
+
+macro	training_voice_init
+
+va_op=0	#voice aibu oppai
+va_ki=0	#voice aibu kiss
+va_ma=0	#voice aibu manko
+va_an=0	#voice aibu anal
+va_os=0	#voice aibu oshiri
+va_it=0	#voice itai
+va_at=0	#voice atsui
+va_sp=0	#voice spanking
+
+endm
+
+#pseudonyms
+macro	mikan_voice_aibu_oppai
+@training_voice_aibu_oppai
+endm
+
+macro	mikan_voice_aibu_kiss
+@training_voice_aibu_kiss
+endm
+
+macro	mikan_voice_aibu_manko
+@training_voice_aibu_manko
+endm
+
+macro	mikan_voice_aibu_anal
+@training_voice_aibu_anal
+endm
+
+macro	mikan_voice_aibu_oshiri
+@training_voice_aibu_oshiri
+endm
+
+macro	mikan_voice_spanking
+@training_voice_spanking
+endm
+
+macro	mikan_voice_itai
+@training_voice_itai
+endm
+
+macro	mikan_voice_atsui
+@training_voice_atsui
+endm
+
+#generic versions
+macro	training_voice_aibu_oppai
+if training_chara=TRAINING_MIKAN	then @training_voice_aibu_oppai_mikan
+if training_chara=TRAINING_ICHIGO	then @training_voice_aibu_oppai_ichigo
+if training_chara=TRAINING_KARIN	then @training_voice_aibu_oppai_karin
+endm
+
+macro	training_voice_aibu_kiss
+if training_chara=TRAINING_MIKAN	then @training_voice_aibu_kiss_mikan
+if training_chara=TRAINING_ICHIGO	then @training_voice_aibu_kiss_ichigo
+if training_chara=TRAINING_KARIN	then @training_voice_aibu_kiss_karin
+endm
+
+macro	training_voice_aibu_manko
+if training_chara=TRAINING_MIKAN	then @training_voice_aibu_manko_mikan
+if training_chara=TRAINING_ICHIGO	then @training_voice_aibu_manko_ichigo
+if training_chara=TRAINING_KARIN	then @training_voice_aibu_manko_karin
+endm
+
+macro	training_voice_aibu_anal
+if training_chara=TRAINING_MIKAN	then @training_voice_aibu_anal_mikan
+if training_chara=TRAINING_ICHIGO	then @training_voice_aibu_anal_ichigo
+if training_chara=TRAINING_KARIN	then @training_voice_aibu_anal_karin
+endm
+
+macro	training_voice_aibu_oshiri
+if training_chara=TRAINING_MIKAN	then @training_voice_aibu_oshiri_mikan
+if training_chara=TRAINING_ICHIGO	then @training_voice_aibu_oshiri_ichigo
+if training_chara=TRAINING_KARIN	then @training_voice_aibu_oshiri_karin
+endm
+
+macro	training_voice_spanking
+if training_chara=TRAINING_MIKAN	then @training_voice_spanking_mikan
+if training_chara=TRAINING_ICHIGO	then @training_voice_spanking_ichigo
+if training_chara=TRAINING_KARIN	then @training_voice_spanking_karin
+endm
+
+macro	training_voice_itai
+if training_chara=TRAINING_MIKAN	then @training_voice_itai_mikan
+if training_chara=TRAINING_ICHIGO	then @training_voice_itai_ichigo
+if training_chara=TRAINING_KARIN	then @training_voice_itai_karin
+endm
+
+macro	training_voice_atsui
+if training_chara=TRAINING_MIKAN	then @training_voice_atsui_mikan
+if training_chara=TRAINING_ICHIGO	then @training_voice_atsui_ichigo
+if training_chara=TRAINING_KARIN	then @training_voice_atsui_karin
+endm
+
