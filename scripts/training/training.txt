@@ -1,9 +1,5 @@
 label	training
 
-TRAINING_MIKAN	=	1
-TRAINING_ICHIGO	=	2
-TRAINING_KARIN	=	3
-
 gosub	training_in		#調教開始前会話
 if training_chara=TRAINING_MIKAN	then gosub training_mikan		#みかん調教
 if training_chara=TRAINING_ICHIGO	then gosub training_ichigo		#いちご調教

@@ -1,5 +1,5 @@
 
-macro	training_anime_load_ichigo
+label	training_anime_load_ichigo
 window_close
 screen_blackout	1000
 wait		1000
@@ -467,4 +467,4 @@ layer_scalepass_add	l_leg,3,	300,0,0
 screen_blackin		1000
 
 #-- ’è‹`‚±‚±‚Ü‚Å --------------------------------------------------------------
-endm
+return

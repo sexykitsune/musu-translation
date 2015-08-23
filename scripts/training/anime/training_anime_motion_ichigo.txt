@@ -1,0 +1,96 @@
+
+label	training_anime_motion_pain_ichigo
+
+layer_movepass_push	l_back,1,	PLAY_ONCE	#頭
+
+layer_movepass_push	l_head,1,	PLAY_ONCE	#頭
+
+layer_movepass_push	l_arm,1,	PLAY_ONCE	#腕
+layer_scalepass_push	l_arm,1,	PLAY_ONCE	#腕
+
+layer_movepass_push	l_hair_back,1,	PLAY_ONCE	#後ろ髪
+layer_scalepass_push	l_hair_back,1,	PLAY_ONCE
+
+layer_movepass_push	l_hair_side,1,	PLAY_ONCE
+layer_scalepass_push	l_hair_side,1,	PLAY_ONCE
+
+layer_movepass_push	l_hair_front,1,	PLAY_ONCE
+layer_scalepass_push	l_hair_front,1,	PLAY_ONCE
+
+layer_movepass_push	l_body_back,1,	PLAY_ONCE
+layer_scalepass_push	l_body_back,1,	PLAY_ONCE
+
+layer_movepass_push	l_leg,1,	PLAY_ONCE
+layer_scalepass_push	l_leg,1,	PLAY_ONCE
+
+return
+
+label	training_anime_motion_insert_ichigo
+
+# -- 背景		セット0
+layer_movepass_push	l_back,2,	PLAY_LOOP
+
+# -- 髪の後ろ		セット0
+layer_movepass_push	l_hair_back,2,	PLAY_LOOP
+
+# -- 頭			セット0
+layer_movepass_push	l_head,2,	PLAY_LOOP
+
+# -- もみあげ		セット0
+layer_scalepass_push	l_hair_side,2,	PLAY_LOOP
+
+#レイヤー20　前髪
+layer_movepass_push	l_hair_front,2,	PLAY_LOOP
+
+layer_scalepass_push	l_hair_front,2,	PLAY_LOOP
+
+# -- 腕			セット0
+layer_movepass_push	l_arm,2,	PLAY_LOOP
+
+layer_scalepass_push	l_arm,2,	PLAY_LOOP
+
+# -- 胴体
+layer_movepass_push	l_body_back,2,	PLAY_LOOP
+
+layer_scalepass_push	l_body_back,2,	PLAY_LOOP
+
+#レイヤー35 足
+layer_movepass_push	l_leg,2,	PLAY_LOOP
+
+layer_scalepass_push	l_leg,2,	PLAY_LOOP
+
+layer_anime_push	l_eyeblow,2,	PLAY_LOOP
+layer_anime_push	l_mouth,2,	PLAY_ONCE
+layer_anime_push	l_eye_f,2,	PLAY_LOOP
+
+return
+
+label	training_anime_motion_normal_ichigo
+
+layer_movepass_push	l_back,3,	PLAY_ONCE	#頭
+
+layer_movepass_push	l_head,3,	PLAY_ONCE	#頭
+
+layer_movepass_push	l_arm,3,	PLAY_ONCE	#腕
+layer_scalepass_push	l_arm,3,	PLAY_ONCE	#腕
+
+layer_movepass_push	l_hair_back,3,	PLAY_ONCE	#後ろ髪
+layer_scalepass_push	l_hair_back,3,	PLAY_ONCE
+
+layer_movepass_push	l_hair_side,3,	PLAY_ONCE
+layer_scalepass_push	l_hair_side,3,	PLAY_ONCE
+
+layer_movepass_push	l_hair_front,3,	PLAY_ONCE
+layer_scalepass_push	l_hair_front,3,	PLAY_ONCE
+
+layer_movepass_push	l_body_back,3,	PLAY_ONCE
+layer_scalepass_push	l_body_back,3,	PLAY_ONCE
+
+layer_movepass_push	l_leg,3,	PLAY_ONCE
+layer_scalepass_push	l_leg,3,	PLAY_ONCE
+
+layer_anime_push	l_eyeblow,3,	PLAY_ONCE
+layer_anime_push	l_mouth,3,	PLAY_ONCE
+layer_anime_push	l_eye_f,3,	PLAY_ONCE
+
+return
