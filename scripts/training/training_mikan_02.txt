@@ -30,7 +30,7 @@ lifebar_setmax	life_tairyoku,tairyoku_max
 lifebar_set	life_seishin,seishin
 lifebar_setmax	life_seishin,seishin_max
 
-@training_mikan_load
+@training_anime_load
 
 lifebar_open	life_tairyoku
 lifebar_open	life_seishin
@@ -267,7 +267,7 @@ label t_mikan_bondage
 if t_mikan_bondage_flag=0 then t_mikan_bondage_flag=1;goto t_mikan_bondage_skip
 if t_mikan_bondage_flag=1 then t_mikan_bondage_flag=0
 label t_mikan_bondage_skip
-@training_mikan_load
+@training_anime_load
 goto	t_mikan_loop
 
 #voice	"A02572"	#「ひっ……！」
@@ -599,13 +599,6 @@ label	t_mikan_up
 mikan_reception_level=mikan_reception_level+1
 
 return
-
-
-macro training_mikan_load
-
-gosub	anime_mikan_load
-
-endm
 
 label	mikan_motion_pain
 

@@ -1,7 +1,5 @@
-#function to call
 
-label	anime_mikan_load
-
+macro	training_anime_load_mikan
 window_close
 screen_blackout	1000
 wait		1000
@@ -454,6 +452,4 @@ layer_scalepass_add	l_leg,3,	300,0,0
 screen_blackin		1000
 
 #-- ’è‹`‚±‚±‚Ü‚Å --------------------------------------------------------------
-
-return
-
+endm

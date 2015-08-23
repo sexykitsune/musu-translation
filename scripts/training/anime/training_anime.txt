@@ -1,0 +1,12 @@
+
+macro	training_mikan_load
+@training_anime_load_mikan
+endm
+
+macro	training_ichigo_load
+@training_anime_load_ichigo
+endm
+
+macro	training_karin_load
+@training_anime_load_karin
+endm
