@@ -196,8 +196,8 @@ return
 #-- ■バラ鞭■ ----------------------------------------------------------------
 label	t_mikan_command_barmuchi
 @bgm11
-#	se	0,"system\TrainingSystem\item.wav",play_once
 mousecursor_set "system\TrainingSystem\cur_muchi.png",420,40
+#初回
 if mikan_baramuchi_count=0 then @training_dialogue_whip
 mikan_baramuchi_count=mikan_baramuchi_count+1
 return
@@ -241,8 +241,8 @@ return
 #-- ■蝋燭■ ----------------------------------------------------------------
 label t_mikan_command_rousoku
 @bgm11
-#	se	0,"system\TrainingSystem\item.wav",play_once
 mousecursor_set "system\TrainingSystem\cur_rousoku.png",100,160
+#初回
 if mikan_rousoku_count=0 then @training_dialogue_candle
 mikan_rousoku_count=mikan_rousoku_count+1
 return
@@ -339,9 +339,6 @@ if sel=1 then goto t_mikan_loop_a
 if mikan_command_cnt<15 then voice "A02545"	#「……もっと、お兄ちゃんのお役に立てるようになれるといいな……頑張るね」
 if mikan_command_cnt>=15 then voice "A02547"	#「はぁ……っ……もっと頑張るから、また……みかんに、いっぱい……してね……」
 
-#screen_blackout	2000
-wait	2000
-
 label t_mikan_exit2
 
 select_icon_init
@@ -355,8 +352,6 @@ mousecursor_reset
 voice_bg_stop
 
 @training_anime_release
-
-if add_miryoku>10 then mikan_command_cnt=mikan_command_cnt+1
 
 #--------------------------------------------------------------------------
 @mikan_set
@@ -381,6 +376,7 @@ lifebar_close	life_kokoro
 wait	500
 #------------------------------------------------------------------------
 
+if add_miryoku>10 then mikan_command_cnt=mikan_command_cnt+1
 if add_miryoku>0 then @mikan_add_miryoku
 
 if mikan_reception_level=1 and t_mikan_fellatio_cnt1>3 then gosub t_mikan_up

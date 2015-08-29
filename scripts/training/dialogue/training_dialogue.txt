@@ -1,19 +1,25 @@
 
 #generic versions
 macro	training_dialogue_whip
+select_icon_init
 if training_chara=TRAINING_MIKAN	then gosub training_dialogue_whip_mikan
 if training_chara=TRAINING_ICHIGO	then gosub training_dialogue_whip_ichigo
 if training_chara=TRAINING_KARIN	then gosub training_dialogue_whip_karin
+window_close
 endm
 
 macro	training_dialogue_candle
+select_icon_init
 if training_chara=TRAINING_MIKAN	then gosub training_dialogue_candle_mikan
 if training_chara=TRAINING_ICHIGO	then gosub training_dialogue_candle_ichigo
 if training_chara=TRAINING_KARIN	then gosub training_dialogue_candle_karin
+window_close
 endm
 
 macro	training_dialogue_faint
+select_icon_init
 if training_chara=TRAINING_MIKAN	then gosub training_dialogue_faint_mikan
 if training_chara=TRAINING_ICHIGO	then gosub training_dialogue_faint_ichigo
 if training_chara=TRAINING_KARIN	then gosub training_dialogue_faint_karin
+window_close
 endm

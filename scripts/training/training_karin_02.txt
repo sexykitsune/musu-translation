@@ -249,7 +249,7 @@ return
 label t_karin_command_baramuchi
 @bgm11
 mousecursor_set "system\TrainingSystem\cur_muchi.png",420,40
-@training_dialogue_whip
+#@training_dialogue_whip
 #‰‰ñ
 if t_karin_muchi_cnt_l=0 and t_karin_muchi_cnt=0 then voice "P03607";return
 #1-50‰ñ–Ú
@@ -315,17 +315,8 @@ label t_karin_command_rousoku
 @bgm11
 mousecursor_set "system\TrainingSystem\cur_rousoku.png",100,160
 #‰‰ñ
-if t_karin_rousoku_cnt_l=0 and t_karin_rousoku_cnt=0 then goto t_karin_command_rousoku_1
-return
-
-label t_karin_command_rousoku_1
-
+if t_karin_rousoku_cnt_l=0 and t_karin_rousoku_cnt=0 then @training_dialogue_candle
 t_karin_rousoku_cnt=t_karin_rousoku_cnt+1
-
-@training_dialogue_candle
-
-window_close
-
 return
 
 #-- ¡ƒoƒCƒu¡ -----------------------------------------------

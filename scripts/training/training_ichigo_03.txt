@@ -239,21 +239,8 @@ label t_ichigo_command_baramuchi
 @bgm11
 mousecursor_set "system\TrainingSystem\cur_muchi.png",420,40
 #èââÒ
-if t_ichigo_muchi_cnt_l=0 and t_ichigo_muchi_cnt=0 then goto t_ichigo_command_baramuchi_1
-
-return
-label t_ichigo_command_baramuchi_1
-
-#SCRIPT IGNORE
-select_icon_init
-#SCRIPT IGNORE END
-
+if t_ichigo_muchi_cnt_l=0 and t_ichigo_muchi_cnt=0 then @training_dialogue_whip
 t_ichigo_muchi_cnt=t_ichigo_muchi_cnt+1
-
-@training_dialogue_whip
-
-window_close
-
 return
 
 #-- Å°òXêCÅ° ----------------------------------------------------------------
@@ -312,21 +299,8 @@ label t_ichigo_command_rousoku
 @bgm11
 mousecursor_set "system\TrainingSystem\cur_rousoku.png",100,160
 #èââÒ
-if t_ichigo_rousoku_cnt_l=0 and t_ichigo_rousoku_cnt=0 then goto t_ichigo_command_rousoku_1
-
-return
-label t_ichigo_command_rousoku_1
-
-#SCRIPT IGNORE
-select_icon_init
-#SCRIPT IGNORE END
-
+if t_ichigo_rousoku_cnt_l=0 and t_ichigo_rousoku_cnt=0 then @training_dialogue_candle
 t_ichigo_rousoku_cnt=t_ichigo_rousoku_cnt+1
-
-@training_dialogue_candle
-
-window_close
-
 return
 
 #-- Å°ÉAÉiÉãÅ° -----------------------------------------------
@@ -402,9 +376,7 @@ endm
 label t_ichigo_end
 ichigo_kenkou=0
 ichigo_kiryoku=0
-
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
+@reload_lifebar
 
 @training_dialogue_faint
 
