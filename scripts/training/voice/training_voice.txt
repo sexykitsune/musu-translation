@@ -16,7 +16,7 @@ cl_breast2		= 69
 cl_anal			= 220
 cl_mouth		= 228
 cl_legs			= 249
-cl_face			= 86				#might actually be hair
+cl_face			= 86
 
 endm
 

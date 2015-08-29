@@ -1,9 +1,5 @@
-label	training_karin_hanasya
+label	training_dialogue_nosehook_karin
 @remove_this_line_when_translating
-
-#SCRIPT IGNORE
-@training_anime_release
-#SCRIPT IGNORE END
 
 scene_start	"‚©‚è‚ñ•@ŽË"
 

@@ -1,4 +1,34 @@
 
+macro	training_dialogue_whip
+select_icon_init
+if training_chara=TRAINING_MIKAN	then gosub training_dialogue_whip_mikan
+if training_chara=TRAINING_ICHIGO	then gosub training_dialogue_whip_ichigo
+if training_chara=TRAINING_KARIN	then gosub training_dialogue_whip_karin
+window_close
+endm
+
+label	training_dialogue_whip_mikan
+
+＠Mikan,A03459
+「な、なに……っ？　お兄ちゃん、それ何なの……っ」
+
+オレの取り出したムチを見てみかんが叫ぶ。
+
+＠Itsuki
+「ムチだよ、みかん。　客の中にはこういう趣味があるヤツもいるからな。　慣れておくに越した事はないだろう」
+
+＠Mikan,A03460
+「た、叩くの？　それでみかんを叩くの……？」
+
+＠Itsuki
+「ああ、そうだ。　覚悟しろよ、みかん」
+
+return
+
+label	training_dialogue_whip_karin
+
+return
+
 label	training_dialogue_whip_ichigo
 
 ＠Ichigo,O04150
@@ -67,50 +97,5 @@ label training_dialogue_whip_ichigo2
 「でも、いちごが止めてって言ったら、やめてね」
 
 形だけ頷いておいて、スッと手を上げムチを振り上げた。
-
-return
-
-label	training_dialogue_candle_ichigo
-
-ろうそくを目にした瞬間、いちごの顔色がサッと蒼くなった。
-
-＠Ichigo,O04198
-「それ……どうするの？」
-
-いつもの元気がなく、明らかに怯えているのが見てとれる。
-
-俺もあまりやりたくないが、これも調教だからな。
-
-＠Itsuki
-「もちろん、ロウをいちごの体に垂らすんだよ」
-
-ハッキリ言葉にすると、いちごの体はビクッと大きく揺れた。
-
-大きな瞳には涙が浮かび、今にも泣き出してしまいそうだ。
-
-＠Ichigo,O04199
-「熱く…ない、よね？　大丈夫、だよね…？」
-
-縋るように見つめてくるが、返事をせずに押し黙る。
-
-経験したことがない俺が、余計なことを言わない方がいいだろう。
-
-＠Ichigo,O04200
-「ねぇ、パパぁ…それ、やめよう？　いちご、怖いよぉ」
-
-ほとんど半ベソかいてるが、仕方ない。
-
-俺は意を決すると、ゆっくりとろうそくをいちごの体へと傾けた。
-
-return
-
-label	training_dialogue_faint_ichigo
-
-＠Ichigo,O03734
-「はうぅ～、もうギブアップ～」
-
-どうやら気を失ってしまったようだ。
-
-これ以上続けることはできない。
 
 return

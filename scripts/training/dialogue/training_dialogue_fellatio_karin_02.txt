@@ -1,12 +1,8 @@
-label	training_karin_bukkake
+label	training_dialogue_bukkake_karin
 
 #// 08/10/01
 #// Kobayashi
 #// ‚©‚è‚ñƒVƒiƒŠƒI_‚Ô‚Á‚©‚¯
-
-#SCRIPT IGNORE
-@training_anime_release
-#SCRIPT IGNORE END
 
 scene_start	"‚©‚è‚ñ‚Ô‚Á‚©‚¯"
 @bgm11

@@ -1,37 +1,6 @@
-label	training_ichigo_fera
-#SCRIPT IGNORE
-#@training_anime_release
-#SCRIPT SKIP JAPANESE LINES 1
-select_icon_init
-#SCRIPT IGNORE END
 
-skip_untranslated_training=0
-if t_ichigo_fera_cnt=0 then gosub training_ichigo_fera1
-if t_ichigo_fera_cnt=1 then gosub training_ichigo_fera2
-if t_ichigo_fera_cnt=2 then gosub training_ichigo_fera3
-if t_ichigo_fera_cnt>2 then gosub training_ichigo_fera4
-
-if skip_untranslated_training=1 then return
-t_ichigo_fera_cnt=t_ichigo_fera_cnt+1
-
-add_karada=3*t_ichigo_fera_cnt
-add_kokoro=5*t_ichigo_fera_cnt
-add_miryoku=10*t_ichigo_fera_cnt
-
-tairyoku=tairyoku-30*t_ichigo_fera_cnt
-seishin=seishin-40*t_ichigo_fera_cnt
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
-
-@training_ichigo_load
-
-return
-
-label	training_ichigo_fera1
+label	training_dialogue_fellatio_ichigo_01
 @remove_this_line_when_translating
-#SCRIPT IGNORE
-@training_anime_release
-#SCRIPT IGNORE END
 
 #EV_ICH_150 いちごフェラチオ調教
 #条件：調教の「おくち」コマンド実行
@@ -46,7 +15,7 @@ scene_start	"いちごフェラチオ調教１"
 if t_ichigo_bondage_flag=0 then event	"event\ev_ich_150-00.png"
 if t_ichigo_bondage_flag=1 then event	"event\ev_ich_151-00.png"
 
-if ichigo_bondage_flag=0 then goto training_ichigo_fera1_01
+if ichigo_bondage_flag=0 then goto training_dialogue_fellatio_ichigo_01a
 #ボンデージここから##########################################################
 @seh07
 ＠Ichigo,O02329
@@ -60,7 +29,7 @@ if ichigo_bondage_flag=0 then goto training_ichigo_fera1_01
 #（首輪の鎖を引いて、いちごの顔をペニスの方へ向かせる？）
 
 #ボンデージここまで#########################################################
-label	training_ichigo_fera1_01
+label	training_dialogue_fellatio_ichigo_01a
 
 ＠Ichigo,O02330
 「えへへ……パパのおチンチン、すごく近いよ」

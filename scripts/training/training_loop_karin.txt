@@ -157,8 +157,8 @@ if _COLOR=0 then return
 #カーソルを消す
 mousecursor_reset
 
-if _COLOR=cl_mouth then gosub training_karin_fera		#フェラ
-if _COLOR=cl_face  then gosub training_karin_fera		#フェラ
+if _COLOR=cl_mouth then gosub training_fellatio_karin		#フェラ
+if _COLOR=cl_face  then gosub training_fellatio_karin		#フェラ
 
 if _COLOR=cl_anal then gosub training_karin_anal		#アナル
 
@@ -356,6 +356,21 @@ goto t_karin_loop
 label t_karin_video
 gosub	training_karin_video
 goto t_karin_loop
+
+label	training_fellatio_karin
+@training_anime_release
+@training_dialogue_fellatio
+t_karin_fera_cnt=t_karin_fera_cnt+1
+
+add_karada=3*t_karin_fera_cnt
+add_kokoro=5*t_karin_fera_cnt
+add_miryoku=10*t_karin_fera_cnt
+
+tairyoku=tairyoku-30*t_karin_fera_cnt
+seishin=seishin-40*t_karin_fera_cnt
+@reload_lifebar
+@training_anime_load
+return
 
 #move these out of the file eventualy
 

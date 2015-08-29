@@ -1,8 +1,5 @@
-label	training_ichigo_fera2
+label	training_dialogue_fellatio_ichigo_02
 @remove_this_line_when_translating
-#SCRIPT IGNORE
-@training_anime_release
-#SCRIPT IGNORE END
 
 #EV_ICH_150 いちごフェラチオ調教
 #条件：調教の「おくち」コマンド実行
@@ -37,7 +34,7 @@ if t_ichigo_bondage_flag=1 then event	"event\ev_ich_151-00.png"
 ＠Ichigo,O02446
 「んぅ、はふぅっ……この先っぽが雁首で……えぇと、裏筋？　がこっち側……？　はぅ、んぅうっ……」
 
-if t_ichigo_bondage_flag=0 then goto training_ichigo_fera2_01
+if t_ichigo_bondage_flag=0 then goto training_dialogue_fellatio_ichigo_02a
 #ボンデージここから##########################################################
 @seh07
 
@@ -65,7 +62,7 @@ if t_ichigo_bondage_flag=0 then goto training_ichigo_fera2_01
 膨らみの乏しい身体でも、隷属を思わせるその姿に、ドキドキさせられる。
 
 #ボンデージここまで######################################################
-label	training_ichigo_fera2_01
+label	training_dialogue_fellatio_ichigo_02a
 
 いちごは小さく鼻を鳴らし、オレに寄り添っていた。
 包皮の様子を窺いつつ、陰茎の匂いを嗅ぎまわる。

@@ -1,8 +1,5 @@
-label	training_ichigo_fera4
+label	training_dialogue_fellatio_ichigo_04
 @remove_this_line_when_translating
-#SCRIPT IGNORE
-@training_anime_release
-#SCRIPT IGNORE END
 
 #EV_ICH_150 いちごフェラチオ調教
 #条件：調教の「おくち」コマンド実行

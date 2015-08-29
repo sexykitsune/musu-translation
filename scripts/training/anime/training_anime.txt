@@ -1,15 +1,15 @@
 
 #pseudonyms
 macro	training_mikan_load
-gosub	training_anime_load_mikan
+gosub	training_anime_load
 endm
 
 macro	training_ichigo_load
-gosub	training_anime_load_ichigo
+gosub	training_anime_load
 endm
 
 macro	training_karin_load
-gosub	training_anime_load_karin
+gosub	training_anime_load
 endm
 
 #generic macros

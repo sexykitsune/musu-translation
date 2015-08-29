@@ -1,0 +1,47 @@
+
+macro	training_dialogue_faint
+select_icon_init
+if training_chara=TRAINING_MIKAN	then gosub training_dialogue_faint_mikan
+if training_chara=TRAINING_ICHIGO	then gosub training_dialogue_faint_ichigo
+if training_chara=TRAINING_KARIN	then gosub training_dialogue_faint_karin
+window_close
+endm
+
+label	training_dialogue_faint_mikan
+
+#「も、もう……だめぇ……」
+＠Ｍｉｋａｎ,A02548
+「Ｉ－Ｉ　ｃａｎ´ｔ．．．　ａｎｙｍｏｒｅ．．．」
+
+#どうやら気を失ってしまったようだ。
+
+#これ以上続けることはできなさそうだ。
+Ｉｔ　ｄｏｅｓｎ´ｔ　ｌｏｏｋ　ｌｉｋｅ　ｓｈｅ´ｌｌ　ｂｅ　ａｂｌｅ　ｔｏ<br>
+ｋｅｅｐ　ｇｏｉｎｇ．
+
+return
+
+label	training_dialogue_faint_karin
+
+#「もう……無理だわ……」
+＠Karin,P03604
+「It's... just too much...」
+
+#どうやら気を失ってしまったようだ。
+　She seems to have lost consciousness.
+
+#これ以上続けることはできない。
+　She can't go on for today.
+
+return
+
+label	training_dialogue_faint_ichigo
+
+＠Ichigo,O03734
+「はうぅ～、もうギブアップ～」
+
+どうやら気を失ってしまったようだ。
+
+これ以上続けることはできない。
+
+return

@@ -1,65 +1,11 @@
 #TLSTATUS File is edited by RaurosFalls 12/09/14
 # みかんフェラチオ調教まとめ
 # For Mikan fellatio training
-label	training_mikan_fellatio
-sel=0
 
-#SCRIPT IGNORE
-select_icon_init
-#SCRIPT IGNORE END
-
-if _COLOR=228 then sel=0	#口
-if _COLOR=86  then sel=1	#顔
-
-skip_untranslated_training=0
-if t_mikan_fellatio_cnt1=0 then gosub training_mikan_fellatio_01
-if t_mikan_fellatio_cnt1=1 then gosub training_mikan_fellatio_02
-if t_mikan_fellatio_cnt1=2 then gosub training_mikan_fellatio_03
-if t_mikan_fellatio_cnt1>2 then gosub training_mikan_fellatio_04
-
-if skip_untranslated_training=1 then return
-t_mikan_fellatio_cnt1=t_mikan_fellatio_cnt1+1
-
-add_karada=3*t_mikan_fellatio_cnt1
-add_kokoro=5*t_mikan_fellatio_cnt1
-add_miryoku=10*t_mikan_fellatio_cnt1
-
-tairyoku=tairyoku-30*t_mikan_fellatio_cnt1
-seishin=seishin-40*t_mikan_fellatio_cnt1
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
-
-@training_mikan_load
-
-return
-
-macro	t_mikan_fera_sub
-if sel=1 then goto training_mikan_fellatio_mouth
-if sel=0 then goto training_mikan_fellatio_face
-
-#口の中に射精する
-label	training_mikan_fellatio_mouth
-if t_mikan_fellatio_cnt2=0 then gosub training_mikan_fellatio_a01
-if t_mikan_fellatio_cnt2=1 then gosub training_mikan_fellatio_a02
-if t_mikan_fellatio_cnt2=2 then gosub training_mikan_fellatio_a03
-if t_mikan_fellatio_cnt2>2 then gosub training_mikan_fellatio_a04
-t_mikan_fellatio_cnt2=t_mikan_fellatio_cnt2+1
-
-goto	training_mikan_fellatio_skip
-#顔に射精する
-label	training_mikan_fellatio_face
-if t_mikan_fellatio_cnt3=0 then gosub training_mikan_fellatio_b01
-if t_mikan_fellatio_cnt3=1 then gosub training_mikan_fellatio_b02
-if t_mikan_fellatio_cnt3=2 then gosub training_mikan_fellatio_b03
-if t_mikan_fellatio_cnt3>2 then gosub training_mikan_fellatio_b04
-t_mikan_fellatio_cnt3=t_mikan_fellatio_cnt3+1
-label	training_mikan_fellatio_skip
-
-endm
 
 # みかんフェラチオ調教初回 #######################################################
 # Mikan fellatio training first time #######################################################
-label	training_mikan_fellatio_01
+label	training_dialogue_fellatio_mikan_01
 #■初めて
 #■First time
 #【00】
@@ -494,7 +440,7 @@ return
 
 # みかんフェラチオ調教一段階目 ###################################################
 # Mikan fellatio training grade 1 ###################################################
-label	training_mikan_fellatio_02
+label	training_dialogue_fellatio_mikan_02
 
 @training_anime_release
 scene_start	"みかんフェラチオ調教２"
@@ -986,7 +932,7 @@ scene_end
 return
 
 # みかんフェラチオ調教2段階目 #####################################################
-label	training_mikan_fellatio_03
+label	training_dialogue_fellatio_mikan_03
 
 @training_anime_release
 scene_start	"みかんフェラチオ調教３"
@@ -1354,7 +1300,7 @@ scene_end
 return
 
 # みかんフェラチオ調教3段階目 #####################################################
-label	training_mikan_fellatio_04
+label	training_dialogue_fellatio_mikan_04
 
 @training_anime_release
 scene_start	"みかんフェラチオ調教４"
@@ -1677,7 +1623,7 @@ scene_end
 return
 
 # みかん顔に出す1 ############################################################
-label	training_mikan_fellatio_a01
+label	training_dialogue_fellatio_mikan_a01
 
 #顔にかける　一回目
 #【03】
@@ -1843,7 +1789,7 @@ scene_end
 return
 
 # みかん顔に出す2 ############################################################
-label	training_mikan_fellatio_a02
+label	training_dialogue_fellatio_mikan_a02
 #みかん顔射　二回目
 #【03】
 if t_mikan_bondage_flag=0 then event "event\EV_MIK_060-03.png"
@@ -1956,7 +1902,7 @@ scene_end
 return
 
 # みかん顔に出す3 ############################################################
-label	training_mikan_fellatio_a03
+label	training_dialogue_fellatio_mikan_a03
 #みかん　顔射　３回目
 #【03】
 if t_mikan_bondage_flag=0 then event "event\EV_MIK_060-03.png"
@@ -2043,7 +1989,7 @@ scene_end
 return
 
 # みかん顔に出す4 ############################################################
-label	training_mikan_fellatio_a04
+label	training_dialogue_fellatio_mikan_a04
 #みかん　顔射　4回目
 #【03】
 if t_mikan_bondage_flag=0 then event "event\EV_MIK_060-03.png"
@@ -2133,7 +2079,7 @@ return
 
 # みかん口の中に出す1 ########################################################
 # Come in Mikan's mouth1 ########################################################
-label	training_mikan_fellatio_b01
+label	training_dialogue_fellatio_mikan_b01
 #口の中に出す　一回目
 #Come in mouth, first time
 @effect_iku
@@ -2338,7 +2284,7 @@ return
 
 # みかん口の中に出す2 ########################################################
 # Come in Mikan's mouth2 ########################################################
-label	training_mikan_fellatio_b02
+label	training_dialogue_fellatio_mikan_b02
 @effect_iku
 #みかんの口の中に出す　二回目
 #Come in Mikan's mouth, second time
@@ -2527,7 +2473,7 @@ scene_end
 return
 
 # みかん口の中に出す3 ########################################################
-label	training_mikan_fellatio_b03
+label	training_dialogue_fellatio_mikan_b03
 #みかんフェラ　口の中に出す　３回目
 @effect_iku
 
@@ -2618,7 +2564,7 @@ scene_end
 return
 
 # みかん口の中に出す4 ########################################################
-label	training_mikan_fellatio_b04
+label	training_dialogue_fellatio_mikan_b04
 #みかん　口内射精　4回目
 #【15】
 @effect_iku

@@ -1,8 +1,5 @@
-label	training_ichigo_fera3
+label	training_dialogue_fellatio_ichigo_03
 @remove_this_line_when_translating
-#SCRIPT IGNORE
-@training_anime_release
-#SCRIPT IGNORE END
 
 #EV_ICH_150 いちごフェラチオ調教
 #条件：調教の「おくち」コマンド実行
@@ -38,7 +35,7 @@ voice_bg	"O90004"
 ＠Ichigo,O02551
 「んふぅっ、はふっ……おチンチン、横から舐めてもいいんだよね？　レロレロッ、ちゅばっ……」
 
-if t_ichigo_bondage_flag=0 then goto training_ichigo_fera3_01
+if t_ichigo_bondage_flag=0 then goto training_dialogue_fellatio_ichigo_03a
 #ボンデージここから##########################################################
 @seh07
 
@@ -59,7 +56,7 @@ if t_ichigo_bondage_flag=0 then goto training_ichigo_fera3_01
 「手拍子ね……リズミカルにすればいいってものでも無い気がするけどな？」
 
 #ボンデージここまで##########################################################
-label	training_ichigo_fera3_01
+label	training_dialogue_fellatio_ichigo_03a
 
 舌や唇でしごきつつ、いちごは長い髪を揺らす。
 

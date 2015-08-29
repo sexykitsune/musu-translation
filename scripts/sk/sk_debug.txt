@@ -61,9 +61,9 @@ label	training_debug_loop
 
 select sel,"Mikan","Ichigo","Karin"
 
-if sel=0 then gosub training_mikan_02
-if sel=1 then gosub training_ichigo_03
-if sel=2 then gosub training_karin_02
+if sel=0 then gosub training_loop_mikan
+if sel=1 then gosub training_loop_ichigo
+if sel=2 then gosub training_loop_karin
 
 training_count=training_count+1
 
