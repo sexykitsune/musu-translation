@@ -13,9 +13,9 @@ if ichigo_event=5 then goto ichigo_06
 if ichigo_event=7 then goto ichigo_07				#‚¢‚¿‚²7
 if ichigo_event=10 then goto ichigo_08				#‚¢‚¿‚²8
 
-if training_ichigo_count=0 then gosub	training_ichigo_01
-if training_ichigo_count=1 then gosub	training_ichigo_02
-if training_ichigo_count>1 then gosub	training_ichigo_03
+if training_ichigo_count=0 then gosub	training_dialogue_ichigo_01
+if training_ichigo_count=1 then gosub	training_dialogue_ichigo_02
+if training_ichigo_count>1 then gosub	training_loop_ichigo
 
 training_ichigo_count=training_ichigo_count+1
 

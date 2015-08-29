@@ -1,4 +1,4 @@
-label training_ichigo_03
+label training_loop_ichigo
 
 training_chara=TRAINING_ICHIGO
 @bgm10

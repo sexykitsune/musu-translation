@@ -1,4 +1,4 @@
-label training_karin_02
+label training_loop_karin
 
 training_chara=TRAINING_KARIN
 @bgm10

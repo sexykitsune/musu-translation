@@ -1,4 +1,4 @@
-label	training_ichigo_01
+label	training_dialogue_ichigo_01
 
 #‚¢‚¿‚²’²‹³ˆê‰ñ–Ú
 #First Ichigo training round

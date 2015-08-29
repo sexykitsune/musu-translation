@@ -1,4 +1,4 @@
-label training_mikan_02
+label training_loop_mikan
 
 training_chara=TRAINING_MIKAN
 @bgm10

@@ -1,7 +1,7 @@
 label	training_karin
 
-if training_karin_count=0 then gosub	training_karin_01
-if training_karin_count>0 then gosub	training_karin_02
+if training_karin_count=0 then gosub	training_dialogue_karin_01
+if training_karin_count>0 then gosub	training_loop_karin
 
 training_karin_count=training_karin_count+1
 

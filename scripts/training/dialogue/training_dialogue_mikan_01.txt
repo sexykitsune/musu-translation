@@ -1,5 +1,5 @@
 #TLSTATUS File is edited by RaurosFalls 16/08/14
-label	training_mikan_01
+label	training_dialogue_mikan_01
 scene_start	"‚İ‚©‚ñˆ—‘r¸"
 
 #‚İ‚©‚ñˆ—‘r¸ƒCƒxƒ“ƒg

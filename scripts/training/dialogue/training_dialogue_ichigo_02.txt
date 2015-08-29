@@ -1,4 +1,4 @@
-label	training_ichigo_02
+label	training_dialogue_ichigo_02
 @bgm10
 
 #いちご調教（破瓜イベント）
