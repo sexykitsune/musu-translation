@@ -7,12 +7,7 @@ date_close
 
 #-- 初期化 --------------------------------------------------------------------
 @training_voice_init
-t_ichigo_spanking_cnt_l=0
-t_ichigo_muchi_cnt_l=0
-t_ichigo_rousoku_cnt_l=0
-t_ichigo_aibu_cnt_l=0
 t_ichigo_bondage_flag=0
-t_ichigo_megane_flag=0
 t_ichigo_damagefix=1.2
 
 add_miryoku=0
@@ -128,8 +123,6 @@ goto t_ichigo_loop_b
 #マゾモード-------------------------------------------------------------------
 macro	ichigo_masomode
 t_ichigo_maso_flag=1
-t_ichigo_muchi_cnt_l=0
-t_ichigo_spanking_cnt_l=0
 endm
 
 #-- ■愛撫■ ----------------------------------------------------------------
@@ -139,7 +132,6 @@ se		0,"sound\se\プイッ.WAV",play_once
 @ichigo_motion_normal1
 @training_voice_aibu
 
-t_ichigo_aibu_cnt_l=t_ichigo_aibu_cnt_l+1
 t_ichigo_damagefix=t_ichigo_damagefix-0.01
 return
 
@@ -178,8 +170,6 @@ if _LAYER<>l_leg then @spanking_effect_small		# 鞭痕(小)
 
 @training_voice_spanking
 
-t_ichigo_spanking_cnt_l=t_ichigo_spanking_cnt_l+1
-t_ichigo_spanking_cnt=t_ichigo_spanking_cnt+1
 t_ichigo_maso_cnt=t_ichigo_maso_cnt+1
 
 @ichigo_motion_pain1
@@ -211,7 +201,6 @@ if _LAYER<>l_leg then @muchiato_effect_small		# 鞭痕(小)
 
 @training_voice_pain
 
-t_ichigo_muchi_cnt_l=t_ichigo_muchi_cnt_l+1
 t_ichigo_muchi_cnt=t_ichigo_muchi_cnt+1
 t_ichigo_maso_cnt=t_ichigo_maso_cnt+1
 
@@ -239,7 +228,7 @@ label t_ichigo_command_baramuchi
 @bgm11
 mousecursor_set "system\TrainingSystem\cur_muchi.png",420,40
 #初回
-if t_ichigo_muchi_cnt_l=0 and t_ichigo_muchi_cnt=0 then @training_dialogue_whip
+if t_ichigo_muchi_cnt=0 then @training_dialogue_whip
 t_ichigo_muchi_cnt=t_ichigo_muchi_cnt+1
 return
 
@@ -266,7 +255,6 @@ if _LAYER<>l_leg then @rousoku_effect_small		# 蝋燭痕(小)
 wait	50
 next
 
-t_ichigo_rousoku_cnt_l=t_ichigo_rousoku_cnt_l+1
 t_ichigo_rousoku_cnt=t_ichigo_rousoku_cnt+1
 t_ichigo_maso_cnt=t_ichigo_maso_cnt+1
 
@@ -299,7 +287,7 @@ label t_ichigo_command_rousoku
 @bgm11
 mousecursor_set "system\TrainingSystem\cur_rousoku.png",100,160
 #初回
-if t_ichigo_rousoku_cnt_l=0 and t_ichigo_rousoku_cnt=0 then @training_dialogue_candle
+if t_ichigo_rousoku_cnt=0 then @training_dialogue_candle
 t_ichigo_rousoku_cnt=t_ichigo_rousoku_cnt+1
 return
 

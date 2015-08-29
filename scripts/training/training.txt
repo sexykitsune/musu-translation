@@ -28,8 +28,6 @@ lifebar_setmax	life_seishin,seishin_max
 lifebar_open	life_tairyoku
 lifebar_open	life_seishin
 
-aibu_count_l=0
-spanking_count_l=0
 whip_count_l=0
 candle_count_l=0
 
