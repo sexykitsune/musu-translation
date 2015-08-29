@@ -2,6 +2,8 @@
 label	_main
 @bg_black
 
+@training_stats_init
+
 gosub	sk_debug
 gosub	translator_intro
 

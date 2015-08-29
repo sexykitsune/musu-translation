@@ -1,0 +1,21 @@
+
+macro	training_dialogue_insert
+select_icon_init
+if training_chara=TRAINING_MIKAN	then gosub training_dialogue_insert_mikan
+if training_chara=TRAINING_ICHIGO	then gosub training_dialogue_insert_ichigo
+if training_chara=TRAINING_KARIN	then gosub training_dialogue_insert_karin
+window_close
+endm
+
+label	training_dialogue_insert_mikan
+
+skip_untranslated_training=0
+if mikan_insert_count=0 then gosub	training_dialogue_insert_mikan_01
+if mikan_insert_count=1 then gosub	training_dialogue_insert_mikan_02
+if mikan_insert_count=2 then gosub	training_dialogue_insert_mikan_03
+if mikan_insert_count>2 then gosub	training_dialogue_insert_mikan_04
+
+if skip_untranslated_training=1 then return
+
+return
+

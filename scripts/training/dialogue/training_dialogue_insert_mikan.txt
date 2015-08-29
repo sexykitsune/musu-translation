@@ -1,33 +1,6 @@
-#‚İ‚©‚ñ@‘}“ü
-label	training_mikan_insert
-
-#SCRIPT IGNORE
-select_icon_init
-#SCRIPT IGNORE END
-
-skip_untranslated_training=0
-if mikan_insert_count=0 then gosub	training_mikan_insert_01
-if mikan_insert_count=1 then gosub	training_mikan_insert_02
-if mikan_insert_count=2 then gosub	training_mikan_insert_03
-if mikan_insert_count>2 then gosub	training_mikan_insert_04
-
-if skip_untranslated_training=1 then return
-mikan_insert_count=mikan_insert_count+1
-
-window_close
-
-add_karada=10*mikan_insert_count
-add_miryoku=20*mikan_insert_count
-
-tairyoku=tairyoku-40*mikan_insert_count
-seishin=seishin-30*mikan_insert_count
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
-
-return
 
 # ‚İ‚©‚ñ‘}“ü‰‰ñ ############################################################
-label	training_mikan_insert_01
+label	training_dialogue_insert_mikan_01
 
 #‘}“üE‰‰ñŠOo‚µ
 #y00z
@@ -446,7 +419,7 @@ voice_bg	"A04244"
 return
 
 # ‚İ‚©‚ñ‘}“ü2‰ñ ############################################################
-label	training_mikan_insert_02
+label	training_dialogue_insert_mikan_02
 #‘}“ü@“ñ‰ñ–Ú@’†o‚µ
 
 #y00z
@@ -826,7 +799,7 @@ voice_bg	"A04244"
 return
 
 # ‚İ‚©‚ñ‘}“ü3‰ñ ############################################################
-label	training_mikan_insert_03
+label	training_dialogue_insert_mikan_03
 @remove_this_line_when_translating
 #3’iŠK–Ú@‚İ‚©‚ñ@’†‚¾‚µ
 #y00z
@@ -1084,7 +1057,7 @@ voice_bg	"A04244"
 return
 
 # ‚İ‚©‚ñ‘}“ü4‰ñ ############################################################
-label	training_mikan_insert_04
+label	training_dialogue_insert_mikan_04
 @remove_this_line_when_translating
 #‘}“ü@ÅI’iŠK@’†‚¾‚µ
 #y00z

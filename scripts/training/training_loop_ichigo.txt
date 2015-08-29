@@ -12,8 +12,8 @@ t_ichigo_damagefix=1.2
 
 add_miryoku=0
 add_karada=0
-add_kokoro=0
 add_atama=0
+add_kokoro=0
 
 #-- ライフ -------------------------------------------------------------------
 tairyoku=ichigo_kenkou_max
@@ -77,10 +77,7 @@ mousecursor_reset
 #-- クリックしないコマンド ----------------------------------------------------
 if command=4 then 	goto t_ichigo_vibe
 if command=5 then 	goto t_ichigo_analvibe
-if command=6 then 	goto t_ichigo_facemask
 if command=9 then 	goto t_ichigo_bondage
-if command=10 then	goto t_ichigo_megane
-if command=11 then	goto t_ichigo_video
 
 #-- アイコン選択 --------------------------------------------------------------
 select_icon_add		0,"system\iconselect\icon_back.png","アイコン選択に戻る"#-- ループ --------------------------------------------------------------------
@@ -304,11 +301,6 @@ goto t_ichigo_loop
 #-- ■アナルバイブ■ -----------------------------------------------
 label t_ichigo_analvibe
 gosub	training_ichigo_analvibe
-goto t_ichigo_loop
-
-#-- ■フィイスクラッチマスク■ -----------------------------------------------
-label t_ichigo_facemask
-gosub	training_ichigo_facemask
 goto t_ichigo_loop
 
 #-- ■ボンデージ■ ---------------------------------------------------------
