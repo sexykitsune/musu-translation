@@ -46,8 +46,6 @@ t_mikan_fellatio_cnt3=t_mikan_fellatio_cnt3+1
 label	training_dialogue_fellatio_mikan_skip
 endm
 
-label	training_dialogue_fellatio_karin
-
 label	training_dialogue_fellatio_ichigo
 
 skip_untranslated_training=0
@@ -59,6 +57,8 @@ if t_ichigo_fera_cnt>2 then gosub training_dialogue_fellatio_ichigo_04
 if skip_untranslated_training=1 then return
 
 return
+
+label	training_dialogue_fellatio_karin
 
 skip_untranslated_training=0
 if t_karin_fera_cnt=0 then gosub training_dialogue_bukkake_karin
