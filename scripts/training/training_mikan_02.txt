@@ -96,8 +96,8 @@ select_icon_add		0,"system\iconselect\icon_back.png","ƒAƒCƒRƒ“‘I‘ğ‚É–ß‚é"#-- ƒ‹
 #-- ƒJ[ƒ\ƒ‹‚Ì•ÏX ------------------------------------------------------------
 if command=2 then mousecursor_set "system\TrainingSystem\cur_nikubou.png",25,30
 if command=3 then mousecursor_set "system\TrainingSystem\cur_hand.png",25,30
-if command=7 then @command_mikan_rousoku		#˜XC
-if command=8 then @command_mikan_baramuchi		#ƒoƒ‰•Ú
+if command=7 then gosub	t_mikan_command_rousoku		#˜XC
+if command=8 then gosub	t_mikan_command_barmuchi		#ƒoƒ‰•Ú
 
 #–Úü
 
@@ -139,9 +139,9 @@ if _COLOR=cl_face  then gosub training_mikan_fellatio	#ƒtƒFƒ‰
 
 if _COLOR=cl_anal then gosub training_mikan_anal		#ƒAƒiƒ‹
 
-if _COLOR=cl_manko then gosub training_mikan_insert		#‘}“ü
+if _COLOR=cl_pussy then gosub training_mikan_insert		#‘}“ü
 
-if _COLOR=cl_oppai1 or _COLOR=cl_oppai2 or _COLOR=cl_legs then gosub t_mikan_aibu
+if _COLOR=cl_breast1 or _COLOR=cl_breast2 or _COLOR=cl_legs then gosub t_mikan_aibu
 
 window_close
 return
@@ -182,7 +182,7 @@ mousecursor_reset
 #‘å‚«‚¢•Ú­‚©‚Ç‚¤‚©”»’è‚·‚é
 if _LAYER=l_leg then @muchiato_effect_big		# •Ú­(‘å)
 if _LAYER<>l_leg then @muchiato_effect_small		# •Ú­(¬)
-@training_voice_itai
+@training_voice_pain
 @mikan_motion_pain1
 tairyoku=tairyoku-35
 seishin=seishin-20
@@ -191,6 +191,15 @@ seishin=seishin-20
 add_miryoku=add_miryoku+2
 
 wait	500
+return
+
+#-- ¡ƒoƒ‰•Ú¡ ----------------------------------------------------------------
+label	t_mikan_command_barmuchi
+@bgm11
+#	se	0,"system\TrainingSystem\item.wav",play_once
+mousecursor_set "system\TrainingSystem\cur_muchi.png",420,40
+if mikan_baramuchi_count=0 then @training_dialogue_whip
+mikan_baramuchi_count=mikan_baramuchi_count+1
 return
 
 #-- ¡˜XC¡ ------------------------------------------------------------------
@@ -203,7 +212,7 @@ wait	500
 #-- ˜XCƒGƒtƒFƒNƒg
 @rousoku_effect
 #-- ˜XCŒã‚ğ‚Â‚¯‚é
-@training_voice_atsui
+@training_voice_hot
 @mikan_motion_pain1
 tairyoku=tairyoku-20
 seishin=seishin-35
@@ -227,6 +236,15 @@ next
 #-- ƒ{ƒCƒX
 
 wait	500
+return
+
+#-- ¡˜XC¡ ----------------------------------------------------------------
+label t_mikan_command_rousoku
+@bgm11
+#	se	0,"system\TrainingSystem\item.wav",play_once
+mousecursor_set "system\TrainingSystem\cur_rousoku.png",100,160
+if mikan_rousoku_count=0 then @training_dialogue_candle
+mikan_rousoku_count=mikan_rousoku_count+1
 return
 
 #-- ¡ƒAƒiƒ‹¡ ---------------------------------------------------------
@@ -258,23 +276,6 @@ if t_mikan_bondage_flag=1 then t_mikan_bondage_flag=0
 label t_mikan_bondage_skip
 @training_anime_load
 goto	t_mikan_loop
-
-
-#ƒRƒ}ƒ“ƒh ˜XC
-macro	command_mikan_rousoku
-@bgm11
-#	se	0,"system\TrainingSystem\item.wav",play_once
-mousecursor_set "system\TrainingSystem\cur_rousoku.png",100,160
-gosub mikan_training_rousoku
-endm
-
-#ƒRƒ}ƒ“ƒh ƒoƒ‰•Ú
-macro	command_mikan_baramuchi
-@bgm11
-#	se	0,"system\TrainingSystem\item.wav",play_once
-mousecursor_set "system\TrainingSystem\cur_muchi.png",420,40
-gosub mikan_training_baramuchi
-endm
 
 #move these out of the file eventualy
 
@@ -317,17 +318,7 @@ mikan_kenkou=0
 mikan_kiryoku=0
 @reload_lifebar
 
-#u‚àA‚à‚¤cc‚¾‚ß‚¥ccv
-—‚l‚‰‚‹‚‚,A02548
-u‚h|‚h@‚ƒ‚‚L‚”DDD@‚‚‚™‚‚‚’‚…DDDv
-
-#screen_blackout	4000
-
-#‚Ç‚¤‚â‚ç‹C‚ğ¸‚Á‚Ä‚µ‚Ü‚Á‚½‚æ‚¤‚¾B
-
-#‚±‚êˆÈã‘±‚¯‚é‚±‚Æ‚Í‚Å‚«‚È‚³‚»‚¤‚¾B
-‚h‚”@‚„‚‚…‚“‚L‚”@‚Œ‚‚‚‹@‚Œ‚‰‚‹‚…@‚“‚ˆ‚…L‚Œ‚Œ@‚‚‚…@‚‚‚‚Œ‚…@‚”‚<br>
-‚‹‚…‚…‚@‚‡‚‚‰‚‚‡D
+@training_dialogue_faint
 
 add_miryoku=add_miryoku/2
 add_karada=add_karada/2

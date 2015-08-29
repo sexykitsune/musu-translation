@@ -1,25 +1,25 @@
 
-macro	training_voice_aibu_oppai_ichigo
+macro	training_voice_caress_breasts_ichigo
 voicetable va_op,"O03924","O03925","O03926","O03927","O03928","O03939","O03930"
 va_op=va_op+1
 endm
 
-macro	training_voice_aibu_kiss_ichigo
+macro	training_voice_caress_kiss_ichigo
 voicetable va_ki,"O03954","O03955","O03956","O03957","O03958","O03959","O03960","O03961","O03962","O03963","O03964"
 va_ki=va_ki+1
 endm
 
-macro	training_voice_aibu_manko_ichigo
+macro	training_voice_caress_pussy_ichigo
 voicetable va_ma,"O03931","O03932","O03933","O03934","O03935","O03936","O03937","O03938","O03939","O03940"
 va_ma=va_ma+1
 endm
 
-macro	training_voice_aibu_anal_ichigo
+macro	training_voice_caress_anal_ichigo
 voicetable va_an,"O03947","O03948","O03949","O03950","O03951","O03951","O03952","O03953"
 va_an=va_an+1
 endm
 
-macro	training_voice_aibu_oshiri_ichigo
+macro	training_voice_caress_legs_ichigo
 voicetable va_os,"O03941","O03942","O03943","O03944","O03955","O03956"
 va_os=va_os+1
 endm
@@ -30,16 +30,16 @@ if t_ichigo_maso_flag=1 then voicetable	va_sp,"O04305","O04309","O04312","O04313
 va_sp=va_sp+1
 endm
 
-macro	training_voice_itai_ichigo
+macro	training_voice_pain_ichigo
 if t_ichigo_maso_flag=0 then voicetable	va_it,"O04156","O04160","O04161","O04162","O04166","O04167","O04168","O04169"
 if t_ichigo_maso_flag=1 then voicetable	va_it,"O04177","O04178","O04182","O04183","O04184","O04185","O04189","O04190","O04192"
-if _COLOR=cl_manko then voicetable	va_it,"O03764","O03765","O03766","O03767"
+if _COLOR=cl_pussy then voicetable	va_it,"O03764","O03765","O03766","O03767"
 va_it=va_it+1
 endm
 
-macro	training_voice_atsui_ichigo
+macro	training_voice_hot_ichigo
 if t_ichigo_maso_flag=0 then voicetable	va_at,"O04241","O04205","O04206","O04207","O04211","O04212","O04213"
 if t_ichigo_maso_flag=1 then voicetable	va_at,"O04222","O04255","O04226","O04227","O04228","O04223","O04235"
-if _COLOR=cl_manko then voicetable	va_at,"O03769","O03770","O03771","O03772","O03773"
+if _COLOR=cl_pussy then voicetable	va_at,"O03769","O03770","O03771","O03772","O03773"
 va_at=va_at+1
 endm

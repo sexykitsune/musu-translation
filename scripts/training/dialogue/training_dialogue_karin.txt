@@ -1,0 +1,48 @@
+
+label	training_dialogue_whip_karin
+
+return
+
+label	training_dialogue_candle_karin
+
+＠Karin,P04941
+「な、なに、それろうそくじゃない。　それもそんな大きい……っ」
+
+＠Itsuki
+「そう、ろうそく。　今日はコレを使おうと思ってな」
+
+＠Karin,P04942
+「まさか、それを挿れるんじゃ……っ」
+
+＠Itsuki
+「うーん、残念。　ちょっと違う。　ろうそくの本来の使い方をするのさ」
+
+＠Karin,P04943
+「え……、それってまさか……。　火をつけてって……、事……？」
+
+＠Itsuki
+「ご名答。　火をつけて使う」
+
+オレはろうそくに火をつけ、かりんの目の前にその火をかざしてみせる。
+
+＠Karin,P04944
+「ちょ、ちょっとっ、冗談じゃないわっ。　まさかろうそくの火で、私をあぶる気じゃないでしょうねっ！」
+
+＠Itsuki
+「まさか！　これはそんな風に使うんじゃないよ……こうやって……」
+
+return
+
+label	training_dialogue_faint_karin
+
+#「もう……無理だわ……」
+＠Karin,P03604
+「It's... just too much...」
+
+#どうやら気を失ってしまったようだ。
+　She seems to have lost consciousness.
+
+#これ以上続けることはできない。
+　She can't go on for today.
+
+return

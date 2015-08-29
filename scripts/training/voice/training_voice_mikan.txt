@@ -1,25 +1,25 @@
 
-macro	training_voice_aibu_oppai_mikan
+macro	training_voice_caress_breasts_mikan
 voicetable va_op,"A03592","A03593","A03594","A03595","A03596","A03597","A03598"
 va_op=va_op+1
 endm
 
-macro	training_voice_aibu_kiss_mikan
+macro	training_voice_caress_kiss_mikan
 voicetable va_ki,"A03622","A03623","A03624","A03625","A03626","A03627"
 va_ki=va_ki+1
 endm
 
-macro	training_voice_aibu_manko_mikan
+macro	training_voice_caress_pussy_mikan
 voicetable va_ma,"A03599","A03600","A03601","A03602","A03603","A03604","A03605","A03606","A03607","A03608"
 va_ma=va_ma+1
 endm
 
-macro	training_voice_aibu_anal_mikan
+macro	training_voice_caress_anal_mikan
 voicetable va_an,"A03615","A03616","A03617","A03618","A03619","A03620","A03621"
 va_an=va_an+1
 endm
 
-macro	training_voice_aibu_oshiri_mikan
+macro	training_voice_caress_legs_mikan
 voicetable va_os,"A03609","A03610","A03611","A03612","A03613","A03614"
 va_os=va_os+1
 endm
@@ -31,12 +31,12 @@ va_sp=va_sp+1
 if va_sp>14 then va_sp=0
 endm
 
-macro	training_voice_itai_mikan
+macro	training_voice_pain_mikan
 voicetable va_it,"A03461","A03462","A03463","A03464","A03465"
 va_it=va_it+1
 endm
 
-macro	training_voice_atsui_mikan
+macro	training_voice_hot_mikan
 voicetable va_at,"A03503","A03504","A03505","A03506","A03507","A03508","A03509","A03510","A03511","A03512"
 va_at=va_at+1
 endm

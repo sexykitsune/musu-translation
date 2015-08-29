@@ -149,14 +149,14 @@ if _COLOR=0 then return
 #カーソルを消す
 mousecursor_reset
 
-if _COLOR=228 then gosub training_ichigo_fera		#フェラ
-if _COLOR=86  then gosub training_ichigo_fera		#フェラ
+if _COLOR=cl_mouth then gosub training_ichigo_fera		#フェラ
+if _COLOR=cl_face  then gosub training_ichigo_fera		#フェラ
 
-if _COLOR=220 then gosub training_ichigo_anal		#アナル
+if _COLOR=cl_anal then gosub training_ichigo_anal		#アナル
 
-if _COLOR=130 then gosub training_ichigo_insert		#挿入
+if _COLOR=cl_pussy then gosub training_ichigo_insert		#挿入
 
-if _COLOR=145 or _COLOR=69 or _COLOR=249 then goto t_ichigo_aibu
+if _COLOR=cl_breast1 or _COLOR=cl_breast2 or _COLOR=cl_legs then goto t_ichigo_aibu
 
 t_ichigo_damagefix=t_ichigo_damagefix-0.1
 
@@ -209,7 +209,7 @@ mousecursor_reset
 if _LAYER=l_leg then @muchiato_effect_big		# 鞭痕(大)
 if _LAYER<>l_leg then @muchiato_effect_small		# 鞭痕(小)
 
-@training_voice_itai
+@training_voice_pain
 
 t_ichigo_muchi_cnt_l=t_ichigo_muchi_cnt_l+1
 t_ichigo_muchi_cnt=t_ichigo_muchi_cnt+1
@@ -218,8 +218,8 @@ t_ichigo_maso_cnt=t_ichigo_maso_cnt+1
 @ichigo_motion_pain1
 tairyoku=tairyoku-35*t_ichigo_damagefix
 seishin=seishin-20*t_ichigo_damagefix
-if _COLOR=130 then tairyoku=tairyoku-35*t_ichigo_damagefix
-if _COLOR=130 then seishin=seishin-20*t_ichigo_damagefix
+if _COLOR=cl_pussy then tairyoku=tairyoku-35*t_ichigo_damagefix
+if _COLOR=cl_pussy then seishin=seishin-20*t_ichigo_damagefix
 
 lifebar_setauto	life_tairyoku,tairyoku
 lifebar_setauto	life_seishin,seishin
@@ -250,72 +250,7 @@ select_icon_init
 
 t_ichigo_muchi_cnt=t_ichigo_muchi_cnt+1
 
-＠Ichigo,O04150
-「え…！？　パパ、それって…」
-
-眉間に皺を寄せ、明らかな嫌悪感を示している。
-
-まあ、普通はそういう反応だよな。
-
-＠Itsuki
-「ムチだよ。これで今からいちごを…」
-
-＠Ichigo,O04151
-「嫌だよ！」
-
-言葉を遮る大声に耳を塞ぎ、こちらを睨みつけるいちごを見下ろした。
-
-＠Ichigo,O04152
-「それって、叩くやつでしょ。いちご、叩かれるの嫌！」
-
-今にも逃げ出す覚悟はある、とばかりの態度に、思わず溜め息が漏れる。
-
-####################ここからボンデージ装着時テキスト
-if t_ichigo_bondage_flag=0 then goto t_ichigo_command_baramuchi_2
-
-まあ鎖で首を繋がれたいちごに、それは出来ないけどな。
-
-だけど鎖を引き千切りそうな強気の目に、困り果ててしまう。
-
-label t_ichigo_command_baramuchi_2
-####################ここまでボンデージ装着時テキスト
-
-あまり強引な調教は、したくないんだけどなあ。
-
-＠Itsuki
-「確かに最初は痛いかもしれないけど…気持ちよくなる人もいるらしいぞ」
-
-気持ちいい、という単語に、いちごの表情が和らいだ。
-
-＠Ichigo,O04153
-「……本当？」
-
-疑いと好奇心がいちごの心を動かした！
-よし！　今のうちに畳み掛けるしかない！
-
-かなり強引ながら、ムチを手にしたまま満面の笑みを浮かべてみせた。
-
-＠Itsuki
-「ああ、本当さ。もっと叩いて下さいー、なんて言う人もいるくらいだからな」
-
-嫌悪は一転、いちごの顔はすっかり好奇心に満ちている。
-
-自分の知らないこと、自分の知らない快感に、興味惹かれるようだ。
-
-＠Itsuki
-「いちごがすごく痛がったら止めてやるから…１回、やってみよう」
-
-＠Ichigo,O04154
-「うーん……分かった！　パパがそんなに言うなら、いちごやってみるよ」
-
-ふう、なんとか同意の上で調教出来そうだ。
-
-聞こえないようにホッと息を吐き出し、ムチの柄を握り直した。
-
-＠Ichigo,O04155
-「でも、いちごが止めてって言ったら、やめてね」
-
-形だけ頷いておいて、スッと手を上げムチを振り上げた。
+@training_dialogue_whip
 
 window_close
 
@@ -330,8 +265,8 @@ mousecursor_reset
 #-- 蝋燭エフェクト
 @rousoku_effect
 
-@training_voice_atsui
-if _COLOR=130 then screen_vibration 500,16,16,16
+@training_voice_hot
+if _COLOR=cl_pussy then screen_vibration 500,16,16,16
 
 for j=0 to 5
 rand rnd,0,128
@@ -352,8 +287,8 @@ t_ichigo_maso_cnt=t_ichigo_maso_cnt+1
 tairyoku=tairyoku-20*t_ichigo_damagefix
 seishin=seishin-35*t_ichigo_damagefix
 
-if _COLOR=130 then tairyoku=tairyoku-20*t_ichigo_damagefix
-if _COLOR=130 then seishin=seishin-35*t_ichigo_damagefix
+if _COLOR=cl_pussy then tairyoku=tairyoku-20*t_ichigo_damagefix
+if _COLOR=cl_pussy then seishin=seishin-35*t_ichigo_damagefix
 
 lifebar_setauto	life_tairyoku,tairyoku
 lifebar_setauto	life_seishin,seishin
@@ -365,7 +300,7 @@ wait	500
 
 voice_bg	"O03967"
 
-if _COLOR=130 then voice_bg	"O03971"
+if _COLOR=cl_pussy then voice_bg	"O03971"
 
 passspeed=200
 @set_motion_speed
@@ -388,35 +323,7 @@ select_icon_init
 
 t_ichigo_rousoku_cnt=t_ichigo_rousoku_cnt+1
 
-ろうそくを目にした瞬間、いちごの顔色がサッと蒼くなった。
-
-＠Ichigo,O04198
-「それ……どうするの？」
-
-いつもの元気がなく、明らかに怯えているのが見てとれる。
-
-俺もあまりやりたくないが、これも調教だからな。
-
-＠Itsuki
-「もちろん、ロウをいちごの体に垂らすんだよ」
-
-ハッキリ言葉にすると、いちごの体はビクッと大きく揺れた。
-
-大きな瞳には涙が浮かび、今にも泣き出してしまいそうだ。
-
-＠Ichigo,O04199
-「熱く…ない、よね？　大丈夫、だよね…？」
-
-縋るように見つめてくるが、返事をせずに押し黙る。
-
-経験したことがない俺が、余計なことを言わない方がいいだろう。
-
-＠Ichigo,O04200
-「ねぇ、パパぁ…それ、やめよう？　いちご、怖いよぉ」
-
-ほとんど半ベソかいてるが、仕方ない。
-
-俺は意を決すると、ゆっくりとろうそくをいちごの体へと傾けた。
+@training_dialogue_candle
 
 window_close
 
@@ -499,14 +406,7 @@ ichigo_kiryoku=0
 lifebar_setauto	life_tairyoku,tairyoku
 lifebar_setauto	life_seishin,seishin
 
-＠Ichigo,O03734
-「はうぅ～、もうギブアップ～」
-
-@training_anime_release
-
-どうやら気を失ってしまったようだ。
-
-これ以上続けることはできない。
+@training_dialogue_faint
 
 add_miryoku=add_miryoku/2
 add_karada=add_karada/2
@@ -527,7 +427,6 @@ if sel=1 then goto t_ichigo_loop
 if ichigo_command_cnt<15 then voice "O03731"	#「はぁっ…………こんなこと……おかしいわよ……」
 if ichigo_command_cnt>=15 then voice "O03733"	#「っふ……なんで……わたし……こんなに……あぁっ……」
 
-@training_anime_release
 label t_ichigo_exit2
 
 select_icon_init
@@ -539,6 +438,8 @@ lifebar_close	life_seishin
 mousecursor_reset
 
 voice_bg_stop
+
+@training_anime_release
 
 #--------------------------------------------------------------------------
 @ichigo_set

@@ -162,9 +162,9 @@ if _COLOR=cl_face  then gosub training_karin_fera		#フェラ
 
 if _COLOR=cl_anal then gosub training_karin_anal		#アナル
 
-if _COLOR=cl_manko then gosub training_karin_insert		#挿入
+if _COLOR=cl_pussy then gosub training_karin_insert		#挿入
 
-if _COLOR=cl_oppai1 or _COLOR=cl_oppai2 or _COLOR=cl_legs then gosub t_karin_aibu
+if _COLOR=cl_breast1 or _COLOR=cl_breast2 or _COLOR=cl_legs then gosub t_karin_aibu
 
 t_karin_damagefix=t_karin_damagefix-0.01
 
@@ -215,8 +215,8 @@ mousecursor_reset
 if _LAYER=l_leg then @muchiato_effect_big		# 鞭痕(大)
 if _LAYER<>l_leg then @muchiato_effect_small		# 鞭痕(小)
 
-@training_voice_itai
-if _COLOR=cl_manko then screen_vibration 500,16,16,16
+@training_voice_pain
+if _COLOR=cl_pussy then screen_vibration 500,16,16,16
 
 t_karin_muchi_cnt_l=t_karin_muchi_cnt_l+1
 t_karin_muchi_cnt=t_karin_muchi_cnt+1
@@ -226,8 +226,8 @@ t_karin_maso_cnt=t_karin_maso_cnt+1
 tairyoku=tairyoku-35*t_karin_damagefix
 seishin=seishin-20*t_karin_damagefix
 
-if _COLOR=cl_manko then tairyoku=tairyoku-35*t_karin_damagefix
-if _COLOR=cl_manko then seishin=seishin-20*t_karin_damagefix
+if _COLOR=cl_pussy then tairyoku=tairyoku-35*t_karin_damagefix
+if _COLOR=cl_pussy then seishin=seishin-20*t_karin_damagefix
 
 @reload_lifebar
 
@@ -238,7 +238,7 @@ wait	500
 
 voice_bg	"P04706"
 
-#if _COLOR=cl_manko then voice_bg	"P04710"
+#if _COLOR=cl_pussy then voice_bg	"P04710"
 
 passspeed=200
 @set_motion_speed
@@ -249,6 +249,7 @@ return
 label t_karin_command_baramuchi
 @bgm11
 mousecursor_set "system\TrainingSystem\cur_muchi.png",420,40
+@training_dialogue_whip
 #初回
 if t_karin_muchi_cnt_l=0 and t_karin_muchi_cnt=0 then voice "P03607";return
 #1-50回目
@@ -268,8 +269,8 @@ mousecursor_reset
 #-- 蝋燭エフェクト
 @rousoku_effect
 
-@training_voice_atsui
-if _COLOR=cl_manko then screen_vibration 500,16,16,16
+@training_voice_hot
+if _COLOR=cl_pussy then screen_vibration 500,16,16,16
 
 for j=0 to 5
 rand rnd,0,128
@@ -290,8 +291,8 @@ t_karin_maso_cnt=t_karin_maso_cnt+1
 tairyoku=tairyoku-20*t_karin_damagefix
 seishin=seishin-35*t_karin_damagefix
 
-if _COLOR=cl_manko then tairyoku=tairyoku-20*t_karin_damagefix
-if _COLOR=cl_manko then seishin=seishin-35*t_karin_damagefix
+if _COLOR=cl_pussy then tairyoku=tairyoku-20*t_karin_damagefix
+if _COLOR=cl_pussy then seishin=seishin-35*t_karin_damagefix
 
 @reload_lifebar
 
@@ -302,7 +303,7 @@ wait	500
 
 voice_bg	"P04706"
 
-if _COLOR=cl_manko then voice_bg	"P04710"
+if _COLOR=cl_pussy then voice_bg	"P04710"
 
 passspeed=200
 @set_motion_speed
@@ -321,31 +322,7 @@ label t_karin_command_rousoku_1
 
 t_karin_rousoku_cnt=t_karin_rousoku_cnt+1
 
-＠Karin,P04941
-「な、なに、それろうそくじゃない。　それもそんな大きい……っ」
-
-＠Itsuki
-「そう、ろうそく。　今日はコレを使おうと思ってな」
-
-＠Karin,P04942
-「まさか、それを挿れるんじゃ……っ」
-
-＠Itsuki
-「うーん、残念。　ちょっと違う。　ろうそくの本来の使い方をするのさ」
-
-＠Karin,P04943
-「え……、それってまさか……。　火をつけてって……、事……？」
-
-＠Itsuki
-「ご名答。　火をつけて使う」
-
-オレはろうそくに火をつけ、かりんの目の前にその火をかざしてみせる。
-
-＠Karin,P04944
-「ちょ、ちょっとっ、冗談じゃないわっ。　まさかろうそくの火で、私をあぶる気じゃないでしょうねっ！」
-
-＠Itsuki
-「まさか！　これはそんな風に使うんじゃないよ……こうやって……」
+@training_dialogue_candle
 
 window_close
 
@@ -430,17 +407,7 @@ karin_kenkou=0
 karin_kiryoku=0
 @reload_lifebar
 
-#「もう……無理だわ……」
-＠Karin,P03604
-「It's... just too much...」
-
-@training_anime_release
-
-#どうやら気を失ってしまったようだ。
-　She seems to have lost consciousness.
-
-#これ以上続けることはできない。
-　She can't go on for today.
+@training_dialogue_faint
 
 add_miryoku=add_miryoku/2
 add_karada=add_karada/2
@@ -461,7 +428,6 @@ if sel=1 then goto t_karin_loop
 if karin_command_cnt<15 then voice "P03595"	#「はぁっ…………こんなこと……おかしいわよ……」
 if karin_command_cnt>=15 then voice "P03597"	#「っふ……なんで……わたし……こんなに……あぁっ……」
 
-@training_anime_release
 label t_karin_exit2
 
 select_icon_init
@@ -473,6 +439,8 @@ lifebar_close	life_seishin
 mousecursor_reset
 
 voice_bg_stop
+
+@training_anime_release
 
 #--------------------------------------------------------------------------
 @karin_set
