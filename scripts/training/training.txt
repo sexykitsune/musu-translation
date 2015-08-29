@@ -15,14 +15,24 @@ endm
 macro	training_init
 
 @training_paramget
+@training_voice_init
+bondage_flag=0
+megane_flag=0
+tairyoku_max=tairyoku
+seishin_max=seishin
+lifebar_set	life_tairyoku,tairyoku
+lifebar_setmax	life_tairyoku,tairyoku_max
+lifebar_set	life_seishin,seishin
+lifebar_setmax	life_seishin,seishin_max
+@training_anime_load
+lifebar_open	life_tairyoku
+lifebar_open	life_seishin
+
 aibu_count_l=0
 spanking_count_l=0
 whip_count_l=0
 candle_count_l=0
 
-
-bondage_flag=0
-megane_flag=0
 damagefix=1.2
 
 add_miryoku=0
@@ -49,7 +59,8 @@ if training_chara=TRAINING_KARIN	then @training_paramset_karin
 endm
 
 macro	training_paramget_mikan
-
+tairyoku=mikan_kenkou_max
+seishin=mikan_kiryoku_max
 
 
 endm
@@ -61,7 +72,8 @@ macro	training_paramset_mikan
 endm
 
 macro	training_paramget_ichigo
-
+tairyoku=ichigo_kenkou_max
+seishin=ichigo_kiryoku_max
 
 
 endm
@@ -73,7 +85,8 @@ macro	training_paramset_ichigo
 endm
 
 macro	training_paramget_karin
-
+tairyoku=karin_kenkou_max
+seishin=karin_kiryoku_max
 
 
 endm
