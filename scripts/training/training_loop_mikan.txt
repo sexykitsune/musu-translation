@@ -81,7 +81,7 @@ select_icon_init
 mousecursor_reset
 #-- クリックしないコマンド ----------------------------------------------------
 if command=4 then goto t_mikan_vibe
-if command=5 then goto t_mikan_analvibe
+if command=5 then goto t_mikan_analpearl
 if command=6 then goto t_mikan_hardanal
 if command=9 then goto t_mikan_bondage
 if command=10 then goto t_mikan_mizugi
@@ -248,8 +248,8 @@ mikan_rousoku_count=mikan_rousoku_count+1
 return
 
 #-- ■アナルバイブ■ ---------------------------------------------------------
-label	t_mikan_analvibe
-gosub	training_mikan_analpearl
+label	t_mikan_analpearl
+gosub	training_analpearl_mikan
 goto	t_mikan_loop
 #-- ■バイブ■ ---------------------------------------------------------
 label	t_mikan_vibe
@@ -274,7 +274,6 @@ label t_mikan_bondage_skip
 goto	t_mikan_loop
 
 label	training_fellatio_mikan
-@training_anime_release
 @training_dialogue_fellatio
 t_mikan_fellatio_cnt1=t_mikan_fellatio_cnt1+1
 
@@ -285,7 +284,6 @@ add_miryoku=10*t_mikan_fellatio_cnt1
 tairyoku=tairyoku-30*t_mikan_fellatio_cnt1
 seishin=seishin-40*t_mikan_fellatio_cnt1
 @reload_lifebar
-@training_anime_load
 return
 
 label	training_insert_mikan
@@ -321,6 +319,18 @@ add_miryoku=20*t_mikan_vibe_cnt
 
 tairyoku=tairyoku-90*t_mikan_vibe_cnt
 seishin=seishin-60*t_mikan_vibe_cnt
+@reload_lifebar
+return
+
+label	training_analpearl_mikan
+@training_dialogue_analpearl
+t_mikan_analpearl_cnt=t_mikan_analpearl_cnt+1
+
+add_karada=10*t_mikan_analpearl_cnt
+add_miryoku=20*t_mikan_analpearl_cnt
+
+tairyoku=tairyoku-60*t_mikan_analpearl_cnt
+seishin=seishin-80*t_mikan_analpearl_cnt
 @reload_lifebar
 return
 

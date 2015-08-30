@@ -350,7 +350,6 @@ gosub	training_karin_video
 goto t_karin_loop
 
 label	training_fellatio_karin
-@training_anime_release
 @training_dialogue_fellatio
 t_karin_fera_cnt=t_karin_fera_cnt+1
 
@@ -361,7 +360,6 @@ add_miryoku=10*t_karin_fera_cnt
 tairyoku=tairyoku-30*t_karin_fera_cnt
 seishin=seishin-40*t_karin_fera_cnt
 @reload_lifebar
-@training_anime_load
 return
 
 label	training_insert_karin

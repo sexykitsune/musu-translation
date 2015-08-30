@@ -313,7 +313,6 @@ gosub	training_ichigo_video
 goto t_ichigo_loop
 
 label	training_fellatio_ichigo
-@training_anime_release
 @training_dialogue_fellatio
 t_ichigo_fera_cnt=t_ichigo_fera_cnt+1
 
@@ -324,7 +323,6 @@ add_miryoku=10*t_ichigo_fera_cnt
 tairyoku=tairyoku-30*t_ichigo_fera_cnt
 seishin=seishin-40*t_ichigo_fera_cnt
 @reload_lifebar
-@training_anime_load
 return
 
 label	training_insert_ichigo
