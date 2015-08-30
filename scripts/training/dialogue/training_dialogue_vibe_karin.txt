@@ -1,29 +1,5 @@
-label	training_karin_vibe
 
-#SCRIPT IGNORE
-#mousecursor_set "event\ev_kar_070\ev_kar_070_vive.png",75,170
-#SCRIPT SKIP JAPANESE LINES 1
-#SCRIPT IGNORE END
-
-skip_untranslated_training=0
-if t_karin_vibe_cnt=0 then gosub training_karin_vibe_01
-if t_karin_vibe_cnt=1 then gosub training_karin_vibe_02
-if t_karin_vibe_cnt>1 then gosub training_karin_vibe_03
-
-if skip_untranslated_training=1 then return
-t_karin_vibe_cnt=t_karin_vibe_cnt+1
-
-add_karada=30*t_karin_vibe_cnt
-add_miryoku=10*t_karin_vibe_cnt
-
-tairyoku=tairyoku-60*t_karin_vibe_cnt
-seishin=seishin-45*t_karin_vibe_cnt
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
-
-return
-
-label	training_karin_vibe_01
+label	training_dialogue_vibe_karin_01
 @remove_this_line_when_translating
 #SCRIPT IGNORE
 mousecursor_set "event\ev_kar_070\ev_kar_070_vive.png",75,170
@@ -36,12 +12,12 @@ mousecursor_set "event\ev_kar_070\ev_kar_070_vive.png",75,170
 「な、なによっ、それっ」
 
 ############ ここから眼鏡
-if t_karin_megane_flag=0 then goto training_karin_vibe_01_b
+if t_karin_megane_flag=0 then goto training_dialogue_vibe_karin_01_b
 
 ＠Karin,P05088
 「わ、私ちゃんと眼鏡、かけてるわよね？　これは目の錯覚じゃないのよね」
 
-label	training_karin_vibe_01_b
+label	training_dialogue_vibe_karin_01_b
 ############ ここまで眼鏡
 
 かりんが驚いたのも無理はない。
@@ -54,14 +30,14 @@ label	training_karin_vibe_01_b
 「つ、使う？　使うって、まさかそんな極悪な代物、私に挿れるとか言うんじゃないでしょうね！？」
 
 ############ ここからボンテージ
-if t_karin_bondage_flag=0 then goto training_karin_vibe_01_a
+if t_karin_bondage_flag=0 then goto training_dialogue_vibe_karin_01_a
 
 かりんはこの極太のバイブから逃れようと必死だ。
 
 ＠Karin,P05090
 「もうっ、なによ、これっ！　まるで身動きとれないじゃないっ！　ここの大人たちはみんな変態よっ！　変態っ！」
 
-label	training_karin_vibe_01_a
+label	training_dialogue_vibe_karin_01_a
 ############ ここまでボンテージ
 
 ＠Itsuki
@@ -165,7 +141,7 @@ voice_bg_stop
 
 return
 
-label	training_karin_vibe_02
+label	training_dialogue_vibe_karin_02
 @remove_this_line_when_translating
 #2段階目
 #■
@@ -266,12 +242,12 @@ voice_bg	"P90002"
 「ひ、ひぃぃぃんっ！　こんな……こんな下品なモノだなんて……っ、知らなかったわよ……っ。　イヤぁぁぁっ……っ、抜いてっ、抜いてよ、樹！」
 
 ############ ここからボンテージ
-if t_karin_bondage_flag=0 then goto training_karin_vibe_02_a
+if t_karin_bondage_flag=0 then goto training_dialogue_vibe_karin_02_a
 
 ＠Karin,P05111
 「イヤぁあっ、少しも動けないし、ボンテージはきついし、もう最低っ！」
 
-label	training_karin_vibe_02_a
+label	training_dialogue_vibe_karin_02_a
 ############ ここまでボンテージ
 
 voice_bg	"P90003"
@@ -336,7 +312,7 @@ voice_bg_stop
 
 return
 
-label	training_karin_vibe_03
+label	training_dialogue_vibe_karin_03
 @remove_this_line_when_translating
 
 #SCRIPT IGNORE
@@ -449,11 +425,11 @@ se 2,"sound\se\SEH27_手マン遅い.wav",play_loop
 かりんは羞恥に体を桜色に染め、快楽にのたうちまわる。
 
 ############ ここからボンテージ
-if t_karin_bondage_flag=0 then goto training_karin_vibe_03_a
+if t_karin_bondage_flag=0 then goto training_dialogue_vibe_karin_03_a
 
 かりんの動きと、ボンテージの軋み、そして鎖の鳴る音が部屋中に響き渡る。
 
-label	training_karin_vibe_03_a
+label	training_dialogue_vibe_karin_03_a
 ############ ここまでボンテージ
 
 @effect_iku

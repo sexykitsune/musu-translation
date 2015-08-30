@@ -313,7 +313,7 @@ return
 
 #-- ■バイブ■ -----------------------------------------------
 label t_karin_vibe
-gosub	training_karin_vibe
+gosub	training_vibe_karin
 goto t_karin_loop
 
 #-- ■アナルバイブ■ -----------------------------------------------
@@ -385,6 +385,18 @@ add_miryoku=10*t_karin_anal_cnt
 
 tairyoku=tairyoku-45*t_karin_anal_cnt
 seishin=seishin-60*t_karin_anal_cnt
+@reload_lifebar
+return
+
+label	training_vibe_karin
+@training_dialogue_vibe
+t_karin_vibe_cnt=t_karin_vibe_cnt+1
+
+add_karada=30*t_karin_vibe_cnt
+add_miryoku=10*t_karin_vibe_cnt
+
+tairyoku=tairyoku-60*t_karin_vibe_cnt
+seishin=seishin-45*t_karin_vibe_cnt
 @reload_lifebar
 return
 

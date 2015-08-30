@@ -253,7 +253,7 @@ gosub	training_mikan_analpearl
 goto	t_mikan_loop
 #-- ■バイブ■ ---------------------------------------------------------
 label	t_mikan_vibe
-gosub	training_mikan_vibe
+gosub	training_vibe_mikan
 goto	t_mikan_loop
 #-- ■アナル拡張ベルト■ -----------------------------------------------------
 label t_mikan_hardanal
@@ -309,6 +309,18 @@ add_miryoku=20*t_mikan_anal_cnt
 
 tairyoku=tairyoku-70*t_mikan_anal_cnt
 seishin=seishin-90*t_mikan_anal_cnt
+@reload_lifebar
+return
+
+label	training_vibe_mikan
+@training_dialogue_vibe
+t_mikan_anal_cnt=t_mikan_anal_cnt+1
+
+add_karada=10*t_mikan_vibe_cnt
+add_miryoku=20*t_mikan_vibe_cnt
+
+tairyoku=tairyoku-90*t_mikan_vibe_cnt
+seishin=seishin-60*t_mikan_vibe_cnt
 @reload_lifebar
 return
 

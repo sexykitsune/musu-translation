@@ -290,7 +290,7 @@ return
 
 #-- ■バイブ■ -----------------------------------------------
 label t_ichigo_vibe
-gosub	training_ichigo_vibe
+gosub	training_vibe_ichigo
 goto t_ichigo_loop
 
 #-- ■アナルバイブ■ -----------------------------------------------
@@ -349,6 +349,19 @@ add_miryoku=10*t_ichigo_anal_cnt
 
 tairyoku=tairyoku-30*t_ichigo_anal_cnt
 seishin=seishin-40*t_ichigo_anal_cnt
+@reload_lifebar
+return
+
+label	training_vibe_ichigo
+@training_dialogue_vibe
+t_ichigo_vibe_cnt=t_ichigo_vibe_cnt+1
+
+add_karada=3*t_ichigo_vibe_cnt
+add_kokoro=5*t_ichigo_vibe_cnt
+add_miryoku=10*t_ichigo_vibe_cnt
+
+tairyoku=tairyoku-30*t_ichigo_vibe_cnt
+seishin=seishin-40*t_ichigo_vibe_cnt
 @reload_lifebar
 return
 

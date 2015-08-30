@@ -1,31 +1,5 @@
-label	training_ichigo_vibe
 
-#SCRIPT IGNORE
-#mousecursor_set "event\ev_kar_070\ev_kar_070_vive.png",75,170
-#SCRIPT SKIP JAPANESE LINES 1
-select_icon_init
-#SCRIPT IGNORE END
-
-skip_untranslated_training=0
-if t_ichigo_vibe_cnt=0 then gosub training_ichigo_vibe1
-if t_ichigo_vibe_cnt=1 then gosub training_ichigo_vibe2
-if t_ichigo_vibe_cnt>1 then gosub training_ichigo_vibe3
-
-if skip_untranslated_training=1 then return
-t_ichigo_vibe_cnt=t_ichigo_vibe_cnt+1
-
-add_karada=3*t_ichigo_vibe_cnt
-add_kokoro=5*t_ichigo_vibe_cnt
-add_miryoku=10*t_ichigo_vibe_cnt
-
-tairyoku=tairyoku-30*t_ichigo_vibe_cnt
-seishin=seishin-40*t_ichigo_vibe_cnt
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
-
-return
-
-label	training_ichigo_vibe1
+label	training_dialogue_vibe_ichigo1
 @remove_this_line_when_translating
 #SCRIPT IGNORE
 mousecursor_set "event\ev_kar_070\ev_kar_070_vive.png",75,170
@@ -73,7 +47,7 @@ mousecursor_set "event\ev_kar_070\ev_kar_070_vive.png",75,170
 そっと手を伸ばして、小さく細い指で恐る恐るバイブに触れる。
 
 ####################ここからボンデージ装着時テキスト
-if ichigo_bondage_flag=0 then goto training_ichigo_vibe1_a
+if ichigo_bondage_flag=0 then goto training_dialogue_vibe_ichigo1_a
 
 もっと顔を近づけようとしたいちごだったが、首を繋いでいた鎖によってグッと後ろへ引かれてしまう。
 
@@ -90,7 +64,7 @@ if ichigo_bondage_flag=0 then goto training_ichigo_vibe1_a
 ＠Ichigo,O04082
 「ふぁーい」
 
-label	training_ichigo_vibe1_a
+label	training_dialogue_vibe_ichigo1_a
 ####################ここまでボンデージ装着時テキスト
 
 ＠Ichigo,O04083
@@ -197,7 +171,7 @@ voice_bg	"O03966"
 voice_bg	"O03965"
 return
 
-label	training_ichigo_vibe2
+label	training_dialogue_vibe_ichigo2
 @remove_this_line_when_translating
 #SCRIPT IGNORE
 mousecursor_set "event\ev_kar_070\ev_kar_070_vive.png",75,170
@@ -399,7 +373,7 @@ voice_bg	"O90002"
 もっと気持ちよくさせようとバイブを奥へ差し込むと、いちごは股を閉じてきた。
 
 ####################ここからボンデージ装着時テキスト
-if ichigo_bondage_flag=0 then goto training_ichigo_vibe2_a
+if ichigo_bondage_flag=0 then goto training_dialogue_vibe_ichigo2_a
 
 太ももにつけていた輪の金具が触れ、ヒヤリとした感触が伝う。
 
@@ -408,7 +382,7 @@ if ichigo_bondage_flag=0 then goto training_ichigo_vibe2_a
 
 その声に気付いたのか、自分を繋ぐ鎖を強く掴んだまま、荒い息を吐き出してこちらへ視線を向けた。
 
-label	training_ichigo_vibe2_a
+label	training_dialogue_vibe_ichigo2_a
 ####################ここまでボンデージ装着時テキスト
 
 ＠Itsuki
@@ -499,7 +473,7 @@ layer_fadeout	l_insert
 voice_bg	"O03965"
 return
 
-label	training_ichigo_vibe3
+label	training_dialogue_vibe_ichigo3
 @remove_this_line_when_translating
 #SCRIPT IGNORE
 mousecursor_set "event\ev_kar_070\ev_kar_070_vive.png",75,170
@@ -593,13 +567,13 @@ voice_bg	"O03967"
 体を捩りながら、自ら腰を振ってバイブを飲み込もうとし始めた。
 
 ####################ここからボンデージ装着時テキスト
-if ichigo_bondage_flag=0 then goto training_ichigo_vibe3_a
+if ichigo_bondage_flag=0 then goto training_dialogue_vibe_ichigo3_a
 
 鎖はガチャンと大きな音を立てる度、真っ赤なボンテージに皺が寄る。
 
 体にフィットしているから動き辛いのだろう、時折眉を寄せた。
 
-label	training_ichigo_vibe3_a
+label	training_dialogue_vibe_ichigo3_a
 ####################ここまでボンデージ装着時テキスト
 
 ＠Itsuki
