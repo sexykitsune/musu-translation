@@ -1,27 +1,3 @@
-label	training_ichigo_insert
-
-#SCRIPT IGNORE
-select_icon_init
-#SCRIPT IGNORE END
-
-skip_untranslated_training=0
-if t_ichigo_insert_cnt=0 then gosub training_ichigo_insert_01
-if t_ichigo_insert_cnt=1 then gosub training_ichigo_insert_02
-if t_ichigo_insert_cnt=2 then gosub training_ichigo_insert_03
-if t_ichigo_insert_cnt>2 then gosub training_ichigo_insert_04
-
-if skip_untranslated_training=1 then return
-t_ichigo_insert_cnt=t_ichigo_insert_cnt+1
-
-add_karada=10*t_ichigo_insert_cnt
-add_miryoku=20*t_ichigo_insert_cnt
-
-tairyoku=tairyoku-40*t_ichigo_insert_cnt
-seishin=seishin-30*t_ichigo_insert_cnt
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
-
-return
 
 macro	t_ichigo_sotochinpo
 layer_load_overlap	l_insert,"event\EV_ICH_140\EV_ICH_140_soto_chinko.png"
@@ -96,12 +72,12 @@ layer_load_overlap	l_seieki,"event\EV_ICH_140\EV_ICH_140_anal01_naka03.png"
 layer_reference_set	l_seieki,l_body_back	# 頭のレイヤーに連結
 endm
 
-label	training_ichigo_insert_01
+label	training_dialogue_insert_ichigo_01
 @remove_this_line_when_translating
 #挿入ーマンコ（初回）
 
 ####################ここからボンデージ装着時テキスト
-if t_ichigo_bondage_flag=0 then goto training_ichigo_insert_01_a
+if t_ichigo_bondage_flag=0 then goto training_dialogue_insert_ichigo_01_a
 
 @SEH07
 首を繋いだ鎖をジャラリと鳴らし、いちごはこちらに視線を向けた。
@@ -117,7 +93,7 @@ if t_ichigo_bondage_flag=0 then goto training_ichigo_insert_01_a
 ＠Ichigo,O04479
 「うん、大丈夫だよ。わんわん♪」
 
-label	training_ichigo_insert_01_a
+label	training_dialogue_insert_ichigo_01_a
 ####################ここまでボンデージ装着時テキスト
 
 小さな体に、微かだが力が入るのが分かる。
@@ -214,14 +190,14 @@ voice_bg	"O03966"
 するといちごの肢体は、ビクンと大きくしなる。
 
 ####################ここからボンデージ装着時テキスト
-if t_ichigo_bondage_flag=0 then goto training_ichigo_insert_01_b
+if t_ichigo_bondage_flag=0 then goto training_dialogue_insert_ichigo_01_b
 
 @SEH07
 その動きで、繋いでいた鎖がジャラリと大きな音を鳴らした。
 
 着ていたボンテージも、いちごの体をギュッと締め付ける。
 
-label	training_ichigo_insert_01_b
+label	training_dialogue_insert_ichigo_01_b
 ####################ここまでボンデージ装着時テキスト
 
 ＠Ichigo,O04490
@@ -335,13 +311,13 @@ label	training_ichigo_insert_01_b
 「いちご。これを今からいちごの、ココに入れるからな」
 
 ####################ここからボンデージ装着時テキスト
-if t_ichigo_bondage_flag=0 then goto training_ichigo_insert_01_c
+if t_ichigo_bondage_flag=0 then goto training_dialogue_insert_ichigo_01_c
 
 秘裂を覆い隠すラバーを少しずらし、陰茎をグッと押し当てる。
 
 いちごの白い柔肌が食い込むが、今は構ってる余裕はない。
 
-label	training_ichigo_insert_01_c
+label	training_dialogue_insert_ichigo_01_c
 ####################ここまでボンデージ装着時テキスト
 
 @ichigo_motion_pain1
@@ -430,14 +406,14 @@ voice_bg	"O90002"
 ヌヂュッ……ヂュッ、ヂュブッ……グヂュッ、ヂュッ、ヂュッ
 
 ####################ここからボンデージ装着時テキスト
-if t_ichigo_bondage_flag=0 then goto training_ichigo_insert_01_d
+if t_ichigo_bondage_flag=0 then goto training_dialogue_insert_ichigo_01_d
 
 キュッ、という音を響かせながら、いちごの体が締まっていく。
 
 @SEH07
 そして首に繋がった鎖は、ジャラジャラと金属音を響かせた。
 
-label	training_ichigo_insert_01_d
+label	training_dialogue_insert_ichigo_01_d
 ####################ここまでボンデージ装着時テキスト
 
 voice_bg	"O03971"
@@ -627,7 +603,7 @@ voice_bg	"O03965"
 
 layer_fadeout	l_insert
 return
-label	training_ichigo_insert_02
+label	training_dialogue_insert_ichigo_02
 @remove_this_line_when_translating
 #-----------------------------------------------------
 #挿入ーマンコ（２回目）
@@ -976,7 +952,7 @@ voice_bg	"O03965"
 layer_fadeout	l_insert
 return
 
-label	training_ichigo_insert_03
+label	training_dialogue_insert_ichigo_03
 @remove_this_line_when_translating
 #-----------------------------------------------------
 #挿入ーマンコ（３段階目）
@@ -1344,7 +1320,7 @@ voice_bg	"O03965"
 
 layer_fadeout	l_insert
 return
-label	training_ichigo_insert_04
+label	training_dialogue_insert_ichigo_04
 @remove_this_line_when_translating
 #挿入ーマンコ（最終段階）-----------------------------------------------------
 

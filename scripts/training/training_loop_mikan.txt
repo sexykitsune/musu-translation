@@ -137,7 +137,7 @@ mousecursor_reset
 if _COLOR=cl_mouth then gosub training_fellatio_mikan	#フェラ
 if _COLOR=cl_face  then gosub training_fellatio_mikan	#フェラ
 
-if _COLOR=cl_anal then gosub training_mikan_anal		#アナル
+if _COLOR=cl_anal then gosub training_anal_mikan		#アナル
 
 if _COLOR=cl_pussy then gosub training_insert_mikan		#挿入
 
@@ -247,10 +247,6 @@ if mikan_rousoku_count=0 then @training_dialogue_candle
 mikan_rousoku_count=mikan_rousoku_count+1
 return
 
-#-- ■アナル■ ---------------------------------------------------------
-label	t_mikan_anal
-gosub	training_mikan_anal
-goto	t_mikan_loop
 #-- ■アナルバイブ■ ---------------------------------------------------------
 label	t_mikan_analvibe
 gosub	training_mikan_analpearl
@@ -301,6 +297,18 @@ add_miryoku=20*mikan_insert_count
 
 tairyoku=tairyoku-40*mikan_insert_count
 seishin=seishin-30*mikan_insert_count
+@reload_lifebar
+return
+
+label	training_anal_mikan
+@training_dialogue_anal
+t_mikan_anal_cnt=t_mikan_anal_cnt+1
+
+add_karada=10*t_mikan_anal_cnt
+add_miryoku=20*t_mikan_anal_cnt
+
+tairyoku=tairyoku-70*t_mikan_anal_cnt
+seishin=seishin-90*t_mikan_anal_cnt
 @reload_lifebar
 return
 

@@ -1,44 +1,19 @@
 #TLSTATUS File is edited by RaurosFalls 10/09/14
 #みかん　アヌスに挿入
-label	training_mikan_anal
 
-#SCRIPT IGNORE
-select_icon_init
-#SCRIPT IGNORE END
-
-skip_untranslated_training=0
-if t_mikan_anal_cnt=0 then gosub training_mikan_anal_01
-if t_mikan_anal_cnt=1 then gosub training_mikan_anal_02
-if t_mikan_anal_cnt=2 then gosub training_mikan_anal_03
-if t_mikan_anal_cnt>2 then gosub training_mikan_anal_04
-
-if skip_untranslated_training=1 then return
-t_mikan_anal_cnt=t_mikan_anal_cnt+1
-
-window_close
-
-add_karada=10*t_mikan_anal_cnt
-add_miryoku=20*t_mikan_anal_cnt
-
-tairyoku=tairyoku-70*t_mikan_anal_cnt
-seishin=seishin-90*t_mikan_anal_cnt
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
-
-return
 
 # アナル01 ###################################################################
-label	training_mikan_anal_01
+label	training_dialogue_anal_mikan_01
 #【00】
 #################ボンデージ部分ここから
 
-if t_mikan_bondage_flag=0 then goto training_mikan_anal_01_a
+if t_mikan_bondage_flag=0 then goto training_dialogue_anal_mikan_01_a
 
 #「うぅん…、このお洋服、どうしてこんなにきついの…？　ねえお兄ちゃん」
 ＠Mikan,A03276
 「Uunh... why are these clothes so tight...? How come, Onii-chan?」
 
-label	training_mikan_anal_01_a
+label	training_dialogue_anal_mikan_01_a
 #################ボンデージ部分ここまで
 
 layer_load_overlap	l_insert,"event\ev_mik_050\EV_MIK_050_soto_chinko.png"
@@ -150,7 +125,7 @@ layer_reference_set	l_insert,l_leg		# 頭のレイヤーに連結
 #???イヤと言ったところで、みかんの逃げ場はない。
 
 #################ボンデージ部分ここまで
-if t_mikan_bondage_flag=0 then goto training_mikan_anal_01_b
+if t_mikan_bondage_flag=0 then goto training_dialogue_anal_mikan_01_b
 
 ＠Mikan,A03286
 「そ、そんな……もう……挿れちゃうの……？」
@@ -159,7 +134,7 @@ if t_mikan_bondage_flag=0 then goto training_mikan_anal_01_b
 
 イヤと言ったところで、みかんの逃げ場はない。
 
-label	training_mikan_anal_01_b
+label	training_dialogue_anal_mikan_01_b
 
 #################ボンデージ部分ここまで
 
@@ -232,7 +207,7 @@ voice_bg_stop
 return
 
 # アナル02 ###################################################################
-label	training_mikan_anal_02
+label	training_dialogue_anal_mikan_02
 #二回目
 #【00】
 #「じゃあ、みかん。　お尻の穴に挿れるの、またするぞ」
@@ -455,7 +430,7 @@ layer_release		l_insert+1
 「Haa...haa... I'm, I'm...」
 
 #################ボンデージ部分ここから
-if t_mikan_bondage_flag=0 then goto training_mikan_anal_02_a
+if t_mikan_bondage_flag=0 then goto training_dialogue_anal_mikan_02_a
 
 #「はぁ……はぁ……っ、痛かったよ……、みかん痛かったよぉ……！」
 ＠Mikan,A03310
@@ -466,7 +441,7 @@ if t_mikan_bondage_flag=0 then goto training_mikan_anal_02_a
 #がくりと力を失った体が、ボンデージを軋ませ、鎖を鳴らす。
 　She slumped with her strength drained, jarring her bindings, chains clinking.
 
-label	training_mikan_anal_02_a
+label	training_dialogue_anal_mikan_02_a
 #################ボンデージ部分ここまで
 
 #「痛かったのによくがんばったぞ、みかん。　大丈夫か？」
@@ -492,7 +467,7 @@ label	training_mikan_anal_02_a
 return
 
 # アナル03 ###################################################################
-label	training_mikan_anal_03
+label	training_dialogue_anal_mikan_03
 @remove_this_line_when_translating
 #3段階目
 #【00】
@@ -668,10 +643,10 @@ se 2,"sound\se\SEH25_ピストン速い.wav",play_loop
 ジュッ、ニュグヂュッ！ジュブルッ！ジュプッ、ヂュッ！ジュムゥッ、ジュッ、ジュプルゥッ！
 
 ####ここからボンデージ部分
-if t_mikan_bondage_flag=0 then goto training_mikan_anal_03_a
+if t_mikan_bondage_flag=0 then goto training_dialogue_anal_mikan_03_a
 鎖、皮の軋む音。
 
-label	training_mikan_anal_03_a
+label	training_dialogue_anal_mikan_03_a
 ####ここまでボンデージ部分
 肉の打ち付け合う音が響く。
 
@@ -742,13 +717,13 @@ voice_bg	"A04244"
 return
 
 # アナル04 ###################################################################
-label	training_mikan_anal_04
+label	training_dialogue_anal_mikan_04
 @remove_this_line_when_translating
 ##最終段階
 
 #【00】
 #####################ここからボンデージ部分
-if t_mikan_bondage_flag=0 then goto training_mikan_anal_04_a
+if t_mikan_bondage_flag=0 then goto training_dialogue_anal_mikan_04_a
 @SEH07
 
 ＠Mikan,A03342
@@ -761,7 +736,7 @@ if t_mikan_bondage_flag=0 then goto training_mikan_anal_04_a
 「もうっ………お兄ちゃん……　みかん、そんないやらしい子じゃないよぉ……」
 
 #####################ここまでボンデージ部分
-label	training_mikan_anal_04_a
+label	training_dialogue_anal_mikan_04_a
 
 ＠Itsuki
 「さて……と、みかんもだいぶ上手にお尻でイけるようになってきたしな」

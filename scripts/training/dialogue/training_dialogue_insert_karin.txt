@@ -1,26 +1,6 @@
 #かりん汎用調教
-label	training_karin_insert
 
-skip_untranslated_training=0
-if t_karin_insert_cnt=0 then gosub training_karin_insert_01
-if t_karin_insert_cnt=1 then gosub training_karin_insert_02
-if t_karin_insert_cnt=2 then gosub training_karin_insert_03
-if t_karin_insert_cnt>2 then gosub training_karin_insert_04
-
-if skip_untranslated_training=1 then return
-t_karin_insert_cnt=t_karin_insert_cnt+1
-
-add_karada=10*t_karin_insert_cnt
-add_miryoku=20*t_karin_insert_cnt
-
-tairyoku=tairyoku-40*t_karin_insert_cnt
-seishin=seishin-30*t_karin_insert_cnt
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
-
-return
-
-label	training_karin_insert_01
+label	training_dialogue_insert_karin_01
 
 #■挿入
 #「……みかんのため、これはみかんのためよ。　かりん、心を強く持つのよ、大丈夫、大丈夫よ……」
@@ -56,13 +36,13 @@ label	training_karin_insert_01
 「Of course! The truth is... I've wanted to do this kind of thing with Mikan. And yet, it had to end up like this...」
 
 ############ ここからボンテージ
-if t_karin_bondage_flag=0 then goto training_karin_insert_01_a
+if t_karin_bondage_flag=0 then goto training_dialogue_insert_karin_01_a
 
 #「そ、それになによっ、これ！　きつくて息苦しいだけじゃない……っ！　こんなの着て、なんの意味があるのかしら！？　理解に苦しむわっ」
 ＠Karin,P04975
 「Also, what's with this! It's tight and it's hard to breathe...! What point is there to wearing this!? I'm having a hard time understanding it」
 
-label training_karin_insert_01_a
+label training_dialogue_insert_karin_01_a
 ############ ここまでボンテージ
 #「まあ、そういうな。　オレを嫌うのは勝手だけどな、みかんのためを思うなら、オレとの事も納得してくれないとな」
 ＠Itsuki
@@ -363,7 +343,7 @@ wait	2000
 
 return
 
-label	training_karin_insert_02
+label	training_dialogue_insert_karin_02
 @remove_this_line_when_translating
 
 #■二回目####################################################################
@@ -372,14 +352,14 @@ label	training_karin_insert_02
 「うう……、こ、こんな格好……いくら何でもひどすぎるわ……」
 
 ############ ここからボンテージ
-if t_karin_bondage_flag=0 then goto training_karin_insert_02_a
+if t_karin_bondage_flag=0 then goto training_dialogue_insert_karin_02_a
 
 たしかにかりんは両足を高々と吊るされ、腕を拘束されて身動きがとれない。
 
 ＠Karin,P05002
 「そ、それにこのボンデージ……、息苦しいわ……、なんとかならないの……っ」
 
-label	training_karin_insert_02_a
+label	training_dialogue_insert_karin_02_a
 ############ ここまでボンテージ
 
 恥ずかしさと不安で胸が一杯なのだろう、瞳を潤ませながらかりんが言う。
@@ -390,7 +370,7 @@ label	training_karin_insert_02_a
 大きく足を広げ、恥ずかしい所を隠す事も出来ないかりんの格好は、確かに絶景だ。
 
 ############ ここから眼鏡
-if t_karin_megane_flag=0 then goto training_karin_insert_02_b
+if t_karin_megane_flag=0 then goto training_dialogue_insert_karin_02_b
 
 おまけに、かりんがかけている眼鏡がまたイイアクセントになっている。
 
@@ -399,7 +379,7 @@ if t_karin_megane_flag=0 then goto training_karin_insert_02_b
 
 ぶつぶつとかりんは文句を言っていたが。
 
-label	training_karin_insert_02_b
+label	training_dialogue_insert_karin_02_b
 ############ ここまで眼鏡
 
 それが気位の高い（元）お嬢様ならなおさらだった。
@@ -456,7 +436,7 @@ layer_reference_set	l_insert,l_leg		# 頭のレイヤーに連結
 「ひぁあああっ、い、いた……、痛い……っ！　い、樹っ、ヘタクソ！　もっと優しく出来ないの！？」
 
 ############ ここからボンテージ
-if t_karin_bondage_flag=0 then goto training_karin_insert_02_c
+if t_karin_bondage_flag=0 then goto training_dialogue_insert_karin_02_c
 
 身動きがとれないかりんだったが、なんとかその傷みから逃れようと身体を前後に揺すっている。
 
@@ -465,7 +445,7 @@ if t_karin_bondage_flag=0 then goto training_karin_insert_02_c
 
 かりんの拘束する腕の鎖がじゃらりと鳴った。
 
-label	training_karin_insert_02_c
+label	training_dialogue_insert_karin_02_c
 ############ ここまでボンテージ
 
 ヘタクソ、と言われたオレは苦笑いを浮かべながら、ゆるくストロークを開始した。
@@ -615,18 +595,18 @@ layer_release		l_insert
 
 return
 
-label	training_karin_insert_03
+label	training_dialogue_insert_karin_03
 @remove_this_line_when_translating
 #■3段階目##################################################################
 #【00】
 ############ ここからボンテージ
-if t_karin_bondage_flag=0 then goto training_karin_insert_03_a
+if t_karin_bondage_flag=0 then goto training_dialogue_insert_karin_03_a
 
 オレが部屋に入ると、かりんは既にボンデージに身を包み、両腕両足を拘束されていた。
 
 このボンデージはよくかりんに似合っている。
 
-label	training_karin_insert_03_a
+label	training_dialogue_insert_karin_03_a
 ############ ここまでボンテージ
 
 ＠Karin,P05032
@@ -676,14 +656,14 @@ label	training_karin_insert_03_a
 けれどかりんの腰はすこし焦れったそうに揺らめいている。
 
 ############ ここから眼鏡
-if t_karin_megane_flag=0 then goto training_karin_insert_03_b
+if t_karin_megane_flag=0 then goto training_dialogue_insert_karin_03_b
 
 かりんはごまかすように、ぷいと横をむいた。
 
 ＠Karin,P05038
 「だいたいこの眼鏡も、どうしてもってあなたが言うから、かけてきてあげているのよ！？　あなたにこんなフェチ的嗜好があるなんて知らなかったわっ」
 
-label training_karin_insert_03_b
+label training_dialogue_insert_karin_03_b
 
 ############ ここまで眼鏡
 
@@ -870,7 +850,7 @@ layer_release		l_insert
 
 return
 
-label	training_karin_insert_04
+label	training_dialogue_insert_karin_04
 @remove_this_line_when_translating
 #最終段階####################################################################
 #【00】
@@ -885,7 +865,7 @@ label	training_karin_insert_04
 「そうでもないさ。　かりんの反応は毎週毎週新鮮でね。　残念ながら飽きないな」
 
 ############ ここからボンテージ
-if t_karin_bondage_flag=0 then goto training_karin_insert_04_a
+if t_karin_bondage_flag=0 then goto training_dialogue_insert_karin_04_a
 
 ＠Itsuki
 「それにこのボンデージも刺激的でイイ。　実にいいね」
@@ -897,7 +877,7 @@ if t_karin_bondage_flag=0 then goto training_karin_insert_04_a
 ＠Karin,P05064
 「んくぅぅっ、や、やめてよっ、そんな変態的な手つきで触らないでっ」
 
-label training_karin_insert_04_a
+label training_dialogue_insert_karin_04_a
 
 ############ ここまでボンテージ
 

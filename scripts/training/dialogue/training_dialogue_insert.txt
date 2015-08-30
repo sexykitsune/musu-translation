@@ -19,3 +19,26 @@ if skip_untranslated_training=1 then return
 
 return
 
+label	training_dialogue_insert_ichigo
+
+skip_untranslated_training=0
+if t_ichigo_insert_cnt=0 then gosub training_dialogue_insert_ichigo_01
+if t_ichigo_insert_cnt=1 then gosub training_dialogue_insert_ichigo_02
+if t_ichigo_insert_cnt=2 then gosub training_dialogue_insert_ichigo_03
+if t_ichigo_insert_cnt>2 then gosub training_dialogue_insert_ichigo_04
+
+if skip_untranslated_training=1 then return
+
+return
+
+label	training_dialogue_insert_karin
+
+skip_untranslated_training=0
+if t_karin_insert_cnt=0 then gosub training_dialogue_insert_karin_01
+if t_karin_insert_cnt=1 then gosub training_dialogue_insert_karin_02
+if t_karin_insert_cnt=2 then gosub training_dialogue_insert_karin_03
+if t_karin_insert_cnt>2 then gosub training_dialogue_insert_karin_04
+
+if skip_untranslated_training=1 then return
+
+return

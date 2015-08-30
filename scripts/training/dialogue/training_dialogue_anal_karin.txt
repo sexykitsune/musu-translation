@@ -1,32 +1,11 @@
-label	training_karin_anal
-#かりん　アヌスに挿入
 
-skip_untranslated_training=0
-if t_karin_anal_cnt=0 then gosub training_karin_anal_01
-if t_karin_anal_cnt=1 then gosub training_karin_anal_02
-if t_karin_anal_cnt=2 then gosub training_karin_anal_03
-if t_karin_anal_cnt>2 then gosub training_karin_anal_04
-
-if skip_untranslated_training=1 then return
-t_karin_anal_cnt=t_karin_anal_cnt+1
-
-add_kokoro=30*t_karin_anal_cnt
-add_miryoku=10*t_karin_anal_cnt
-
-tairyoku=tairyoku-45*t_karin_anal_cnt
-seishin=seishin-60*t_karin_anal_cnt
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
-
-return
-
-label	training_karin_anal_01
+label	training_dialogue_anal_karin_01
 @remove_this_line_when_translating
 #初回
 #【00】
 
 ############ ここからボンテージ
-if t_karin_bondage_flag=0 then goto training_karin_anal_01_a
+if t_karin_bondage_flag=0 then goto training_dialogue_anal_karin_01_a
 
 ＠Karin,P04747
 「うく……んっ、ほんとにこれ、きついのよ……、それになんだって手足まで拘束されなくちゃいけないのよ……」
@@ -38,7 +17,7 @@ if t_karin_bondage_flag=0 then goto training_karin_anal_01_a
 
 オレが告げた言葉に、かりんは唖然とオレを見た。
 
-label	training_karin_anal_01_a
+label	training_dialogue_anal_karin_01_a
 ############ ここまでボンテージ
 
 ＠Karin,P04748
@@ -47,14 +26,14 @@ label	training_karin_anal_01_a
 かりんがワナワナと震えて、目を大円に見開いている。
 
 ############ ここから眼鏡
-if t_karin_megane_flag=0 then goto training_karin_anal_01_b
+if t_karin_megane_flag=0 then goto training_dialogue_anal_karin_01_b
 
 かりんは眼鏡をかけた顔をオレに向け、ワナワナと震えていた。
 
 ＠Karin,P04749
 「も、もう一度言ってみなさい、樹」
 
-label	training_karin_anal_01_b
+label	training_dialogue_anal_karin_01_b
 ############ ここまで眼鏡
 
 ＠Karin,P04750
@@ -161,7 +140,7 @@ layer_fadeout		l_insert
 voice_bg_stop
 return
 
-label	training_karin_anal_02
+label	training_dialogue_anal_karin_02
 @remove_this_line_when_translating
 #■2回目（外出し）##########################################################
 #【00】
@@ -188,7 +167,7 @@ label	training_karin_anal_02
 「わかっているわよっ！　わかっているけど、イヤなものはイヤなの！」
 
 ############ ここから眼鏡
-#if t_karin_megane_flag=0 then goto training_karin_anal_02_b
+#if t_karin_megane_flag=0 then goto training_dialogue_anal_karin_02_b
 
 #眼鏡を外し、部屋から出て行こうとするかりんをオレは押しとどめた。
 
@@ -200,7 +179,7 @@ label	training_karin_anal_02
 
 #そう言って怒るかりんをオレはどうにかなだめ、ベッドへ戻す。
 
-#label	training_karin_anal_02_b
+#label	training_dialogue_anal_karin_02_b
 ############ ここまで眼鏡
 
 ＠Itsuki
@@ -276,7 +255,7 @@ voice_bg	"P90003"
 「ひぐぅぅぅぅ、ひあああああ！　イヤよ……っ、なんでこんな……っ。　痛い……痛いぃぃぃぃ……っ！」
 
 ############ ここからボンテージ
-if t_karin_bondage_flag=0 then goto training_karin_anal_02_a
+if t_karin_bondage_flag=0 then goto training_dialogue_anal_karin_02_a
 
 かりんは悲鳴を上げ、拘束された手足をなんとか振りほどこうと動かしている。
 
@@ -285,7 +264,7 @@ if t_karin_bondage_flag=0 then goto training_karin_anal_02_a
 ＠Karin,P04775
 「もうっ、いやっ！　なによ、この鎖っ、どうして私が動物みたいに繋がれなきゃいけないの！？」
 
-label	training_karin_anal_02_a
+label	training_dialogue_anal_karin_02_a
 
 ############ ここまでボンテージ
 
@@ -373,13 +352,13 @@ voice_bg	"P04708"
 voice_bg_stop
 return
 
-label	training_karin_anal_03
+label	training_dialogue_anal_karin_03
 @remove_this_line_when_translating
 #3段階目######################################################################
 #【00】
 ############ ここから眼鏡
 #SE06　部屋のドア開く音（ガチャ）
-if t_karin_megane_flag=0 then goto training_karin_anal_03_b
+if t_karin_megane_flag=0 then goto training_dialogue_anal_karin_03_b
 
 #＠樹
 #「かりん、入るぞ」
@@ -401,7 +380,7 @@ if t_karin_megane_flag=0 then goto training_karin_anal_03_b
 ＠Itsuki
 「はは、手厳しいな。　けど、なんかいいんだよな、眼鏡。　……ところで」
 
-label	training_karin_anal_03_b
+label	training_dialogue_anal_karin_03_b
 ############ ここまで眼鏡
 
 ＠Itsuki
@@ -570,7 +549,7 @@ voice_bg	"P04709"
 voice_bg_stop
 return
 
-label	training_karin_anal_04
+label	training_dialogue_anal_karin_04
 @remove_this_line_when_translating
 #最終段階#####################################################################
 #【00】
@@ -584,14 +563,14 @@ voice_bg	"P04705"
 「さ、最初はお尻のするのイヤだったけど……今はそうでもない、わ……。　だからお尻でさせてあげるわ、そう、させてあげるのよ、感謝しなさい、樹」
 
 ############ ここから眼鏡
-if t_karin_megane_flag=0 then goto training_karin_anal_04_b
+if t_karin_megane_flag=0 then goto training_dialogue_anal_karin_04_b
 
 眼鏡をかけたまま、上目遣いにオレを見上げるかりん。
 
 ＠Karin,P04810
 「な、なによ、樹」
 
-label	training_karin_anal_04_b
+label	training_dialogue_anal_karin_04_b
 ############ ここまで眼鏡
 
 相変わらずの物言いっぷりだが、かりんらしいと言えばかりんらしい。
@@ -638,14 +617,14 @@ voice_bg	"P90002"
 
 ############ ここからボンテージ
 
-if t_karin_bondage_flag=0 then goto training_karin_anal_04_a
+if t_karin_bondage_flag=0 then goto training_dialogue_anal_karin_04_a
 
 身を包むボンテージのためか、かりんの呼吸は浅く速い。
 
 ＠Karin,P04815
 「はぁ、はぁっ、はぁあ……っ！　うう、ああ……っ」
 
-label	training_karin_anal_04_a
+label	training_dialogue_anal_karin_04_a
 ############ ここまでボンテージ
 
 ＠Karin,P04816
