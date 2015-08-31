@@ -84,13 +84,13 @@ layer_reference_set	l_mouth,l_head			# 頭のレイヤーに連結
 #layer_position_set 	20,-32,-24
 
 #レイヤー30　胴体
-if t_ichigo_bondage_flag=0 then layer_load l_body_back,"event\ev_ich_140\ev_ich_140_body_back.png"
-if t_ichigo_bondage_flag=1 then layer_load l_body_back,"event\ev_ich_140\ev_ich_140_body_b_back.png"
+if bondage_flag=0 then layer_load l_body_back,"event\ev_ich_140\ev_ich_140_body_back.png"
+if bondage_flag=1 then layer_load l_body_back,"event\ev_ich_140\ev_ich_140_body_b_back.png"
 layer_position_set 		l_body_back,-32,-24
 
 #レイヤー30　胴体
-if t_ichigo_bondage_flag=0 then layer_load l_body,"event\ev_ich_140\ev_ich_140_body_front.png"
-if t_ichigo_bondage_flag=1 then layer_load l_body,"event\ev_ich_140\ev_ich_140_body_b_front.png"
+if bondage_flag=0 then layer_load l_body,"event\ev_ich_140\ev_ich_140_body_front.png"
+if bondage_flag=1 then layer_load l_body,"event\ev_ich_140\ev_ich_140_body_b_front.png"
 layer_reference_set 		l_body,l_body_back
 
 #レイヤー35 足

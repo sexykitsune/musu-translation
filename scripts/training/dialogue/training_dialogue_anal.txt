@@ -1,45 +1,31 @@
 
 macro	training_dialogue_anal
+skip_untranslated_training=0
 select_icon_init
 if training_chara=TRAINING_MIKAN	then gosub training_dialogue_anal_mikan
 if training_chara=TRAINING_ICHIGO	then gosub training_dialogue_anal_ichigo
 if training_chara=TRAINING_KARIN	then gosub training_dialogue_anal_karin
 window_close
+if skip_untranslated_training=1 then return
 endm
 
 label	training_dialogue_anal_mikan
-
-skip_untranslated_training=0
 if t_mikan_anal_cnt=0 then gosub training_dialogue_anal_mikan_01
 if t_mikan_anal_cnt=1 then gosub training_dialogue_anal_mikan_02
 if t_mikan_anal_cnt=2 then gosub training_dialogue_anal_mikan_03
 if t_mikan_anal_cnt>2 then gosub training_dialogue_anal_mikan_04
-
-if skip_untranslated_training=1 then return
-
 return
 
 label	training_dialogue_anal_ichigo
-
-skip_untranslated_training=0
-if t_ichigo_anal_cnt=0 then gosub training_dialogue_anal_ichigo1
-if t_ichigo_anal_cnt=1 then gosub training_dialogue_anal_ichigo2
-if t_ichigo_anal_cnt=2 then gosub training_dialogue_anal_ichigo3
-if t_ichigo_anal_cnt>2 then gosub training_dialogue_anal_ichigo4
-
-if skip_untranslated_training=1 then return
-
+if t_ichigo_anal_cnt=0 then gosub training_dialogue_anal_ichigo_01
+if t_ichigo_anal_cnt=1 then gosub training_dialogue_anal_ichigo_02
+if t_ichigo_anal_cnt=2 then gosub training_dialogue_anal_ichigo_03
+if t_ichigo_anal_cnt>2 then gosub training_dialogue_anal_ichigo_04
 return
 
 label	training_dialogue_anal_karin
-
-skip_untranslated_training=0
 if t_karin_anal_cnt=0 then gosub training_dialogue_anal_karin_01
 if t_karin_anal_cnt=1 then gosub training_dialogue_anal_karin_02
 if t_karin_anal_cnt=2 then gosub training_dialogue_anal_karin_03
 if t_karin_anal_cnt>2 then gosub training_dialogue_anal_karin_04
-
-if skip_untranslated_training=1 then return
-
 return
-

@@ -1,31 +1,5 @@
-label	training_ichigo_analvibe
 
-#SCRIPT IGNORE
-#mousecursor_set "stg\analvive.png",40,100
-#SCRIPT SKIP JAPANESE LINES 1
-select_icon_init
-#SCRIPT IGNORE END
-
-skip_untranslated_training=0
-if t_ichigo_analvibe_cnt=0 then gosub training_ichigo_analvibe1
-if t_ichigo_analvibe_cnt=1 then gosub training_ichigo_analvibe2
-if t_ichigo_analvibe_cnt>1 then gosub training_ichigo_analvibe3
-
-if skip_untranslated_training=1 then return
-t_ichigo_analvibe_cnt=t_ichigo_analvibe_cnt+1
-
-add_karada=3*t_ichigo_analvibe_cnt
-add_kokoro=5*t_ichigo_analvibe_cnt
-add_miryoku=10*t_ichigo_analvibe_cnt
-
-tairyoku=tairyoku-30*t_ichigo_analvibe_cnt
-seishin=seishin-40*t_ichigo_analvibe_cnt
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
-
-return
-
-label	training_ichigo_analvibe1
+label	training_dialogue_analvibe_ichigo_01
 @remove_this_line_when_translating
 #SCRIPT IGNORE
 mousecursor_set "stg\analvive.png",40,100
@@ -119,13 +93,13 @@ voice_bg	"O03971"
 痛みに顔を歪めながら、苦しそうに息を吐き出し首を横へ振る。
 
 ####################ここからボンデージ装着時テキスト
-if ichigo_bondage_flag=0 then goto training_ichigo_analvibe1_a
+if ichigo_bondage_flag=0 then goto training_dialogue_analvibe_ichigo_01_a
 
 鎖がガチャンと音を立て、宙で激しく波打った。
 
 でもいちごはそんなこと気にせず、まだ辛そうに首を振っては鎖を鳴らす。
 
-label	training_ichigo_analvibe1_a
+label	training_dialogue_analvibe_ichigo_01_a
 ####################ここまでボンデージ装着時テキスト
 
 だが、先が入ってしまえば後はスムーズに入るはずだ。
@@ -205,7 +179,7 @@ voice_bg_stop
 
 return
 
-label	training_ichigo_analvibe2
+label	training_dialogue_analvibe_ichigo_02
 @remove_this_line_when_translating
 #SCRIPT IGNORE
 mousecursor_set "stg\analvive.png",40,100
@@ -249,7 +223,7 @@ mousecursor_set "stg\analvive.png",40,100
 「ほら、いちご。もうちょっと足を開くんだ」
 
 ####################ここからボンデージ装着時テキスト
-if ichigo_bondage_flag=0 then goto training_ichigo_analvibe2_a
+if ichigo_bondage_flag=0 then goto training_dialogue_analvibe_ichigo_02_a
 
 太ももを縛るラバーに手を這わせ、グッと左右に開かせる。
 
@@ -257,7 +231,7 @@ if ichigo_bondage_flag=0 then goto training_ichigo_analvibe2_a
 
 息を吐き出しながら太ももを撫でると、いちごの体がビクリと震えた。
 
-label	training_ichigo_analvibe2_a
+label	training_dialogue_analvibe_ichigo_02_a
 ####################ここまでボンデージ装着時テキスト
 
 ＠Ichigo,O04027
@@ -437,7 +411,7 @@ layer_fadeout	l_insert
 
 return
 
-label	training_ichigo_analvibe3
+label	training_dialogue_analvibe_ichigo_03
 @remove_this_line_when_translating
 #SCRIPT IGNORE
 mousecursor_set "stg\analvive.png",40,100
@@ -602,13 +576,13 @@ passspeed=200
 ベッドのスプリングを軋ませながら、いちごの背中がグッと仰け反った。
 
 ####################ここからボンデージ装着時テキスト
-if ichigo_bondage_flag=0 then goto training_ichigo_analvibe3_a
+if ichigo_bondage_flag=0 then goto training_dialogue_analvibe_ichigo_03_a
 
 鎖が耳障りな金属音を鳴らし、ピンッと伸びて細い首を強く引いている。
 
 痛いだろうに、でも今のいちごには快楽の方が先にあるようだ。
 
-label	training_ichigo_analvibe3_a
+label	training_dialogue_analvibe_ichigo_03_a
 ####################ここまでボンデージ装着時テキスト
 
 ＠Ichigo,O04069

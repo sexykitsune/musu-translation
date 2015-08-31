@@ -5,7 +5,7 @@ label	training_dialogue_anal_karin_01
 #【00】
 
 ############ ここからボンテージ
-if t_karin_bondage_flag=0 then goto training_dialogue_anal_karin_01_a
+if bondage_flag=0 then goto training_dialogue_anal_karin_01_a
 
 ＠Karin,P04747
 「うく……んっ、ほんとにこれ、きついのよ……、それになんだって手足まで拘束されなくちゃいけないのよ……」
@@ -255,7 +255,7 @@ voice_bg	"P90003"
 「ひぐぅぅぅぅ、ひあああああ！　イヤよ……っ、なんでこんな……っ。　痛い……痛いぃぃぃぃ……っ！」
 
 ############ ここからボンテージ
-if t_karin_bondage_flag=0 then goto training_dialogue_anal_karin_02_a
+if bondage_flag=0 then goto training_dialogue_anal_karin_02_a
 
 かりんは悲鳴を上げ、拘束された手足をなんとか振りほどこうと動かしている。
 
@@ -617,7 +617,7 @@ voice_bg	"P90002"
 
 ############ ここからボンテージ
 
-if t_karin_bondage_flag=0 then goto training_dialogue_anal_karin_04_a
+if bondage_flag=0 then goto training_dialogue_anal_karin_04_a
 
 身を包むボンテージのためか、かりんの呼吸は浅く速い。
 

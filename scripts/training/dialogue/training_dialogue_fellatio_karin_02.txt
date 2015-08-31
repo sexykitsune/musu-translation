@@ -1,4 +1,5 @@
 label	training_dialogue_bukkake_karin
+@training_anime_release
 
 #// 08/10/01
 #// Kobayashi
@@ -7,10 +8,10 @@ label	training_dialogue_bukkake_karin
 scene_start	"かりんぶっかけ"
 @bgm11
 
-if t_karin_bondage_flag=0 and t_karin_megane_flag=0 then event "event\EV_KAR_080-00.png"
-if t_karin_bondage_flag=0 and t_karin_megane_flag=1 then event "event\EV_KAR_081-00.png"
-if t_karin_bondage_flag=1 and t_karin_megane_flag=0 then event "event\EV_KAR_082-00.png"
-if t_karin_bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083-00.png"
+if bondage_flag=0 and t_karin_megane_flag=0 then event "event\EV_KAR_080-00.png"
+if bondage_flag=0 and t_karin_megane_flag=1 then event "event\EV_KAR_081-00.png"
+if bondage_flag=1 and t_karin_megane_flag=0 then event "event\EV_KAR_082-00.png"
+if bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083-00.png"
 
 #「うぅ……」
 ＠Karin,P04092
@@ -417,10 +418,10 @@ if t_karin_bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083
 
 @SEH08
 @effect_iku
-if t_karin_bondage_flag=0 and t_karin_megane_flag=0 then event "event\EV_KAR_080-01.png"
-if t_karin_bondage_flag=0 and t_karin_megane_flag=1 then event "event\EV_KAR_081-01.png"
-if t_karin_bondage_flag=1 and t_karin_megane_flag=0 then event "event\EV_KAR_082-01.png"
-if t_karin_bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083-01.png"
+if bondage_flag=0 and t_karin_megane_flag=0 then event "event\EV_KAR_080-01.png"
+if bondage_flag=0 and t_karin_megane_flag=1 then event "event\EV_KAR_081-01.png"
+if bondage_flag=1 and t_karin_megane_flag=0 then event "event\EV_KAR_082-01.png"
+if bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083-01.png"
 
 #「！！！！」
 ＠Karin,P04123
@@ -429,10 +430,10 @@ if t_karin_bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083
 #絶頂。白濁の液がかりんの可愛らしい顔や美しい髪の毛を汚す。
 　I climax, the cloudy white liquid dirtying Karin's sweet face and beautiful hair.
 
-if t_karin_bondage_flag=0 and t_karin_megane_flag=0 then event "event\EV_KAR_080-02.png"
-if t_karin_bondage_flag=0 and t_karin_megane_flag=1 then event "event\EV_KAR_081-02.png"
-if t_karin_bondage_flag=1 and t_karin_megane_flag=0 then event "event\EV_KAR_082-02.png"
-if t_karin_bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083-02.png"
+if bondage_flag=0 and t_karin_megane_flag=0 then event "event\EV_KAR_080-02.png"
+if bondage_flag=0 and t_karin_megane_flag=1 then event "event\EV_KAR_081-02.png"
+if bondage_flag=1 and t_karin_megane_flag=0 then event "event\EV_KAR_082-02.png"
+if bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083-02.png"
 
 #どろどろとした精液は頬を伝い床へとぽたぽたと落ちていく。だがその大部分はまだ彼女の顔を汚したままだ。
 　The plastered semen runs down her cheeks and drips down to the bed. But most of it remains sullying her face.

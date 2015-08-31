@@ -1,4 +1,4 @@
-label	training_karin_facemask2
+label	training_dialogue_facemask_karin_02
 @remove_this_line_when_translating
 
 #u‚©‚è‚ñŒû•@‹sv “ñ‰ñ–ÚFEV_KAR_091

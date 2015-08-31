@@ -36,7 +36,7 @@ label	training_dialogue_insert_karin_01
 「Of course! The truth is... I've wanted to do this kind of thing with Mikan. And yet, it had to end up like this...」
 
 ############ ここからボンテージ
-if t_karin_bondage_flag=0 then goto training_dialogue_insert_karin_01_a
+if bondage_flag=0 then goto training_dialogue_insert_karin_01_a
 
 #「そ、それになによっ、これ！　きつくて息苦しいだけじゃない……っ！　こんなの着て、なんの意味があるのかしら！？　理解に苦しむわっ」
 ＠Karin,P04975
@@ -176,8 +176,8 @@ wait	500
 
 ############ ここからボンテージ
 
-#if t_karin_bondage_flag=1 then ぎしっ、ぎしっ、とかりんを拘束しているボンデージが軋んでいる。
-if t_karin_bondage_flag=1 then Ｔｈｅ　ｂｏｎｄａｇｅ　ｒｅｓｔｒａｉｎｔｓ　ｏｎ　Ｋａｒｉｎ　ｇｒａｔｅ　ａｎｄ　ｃｒｅａｋ．
+#if bondage_flag=1 then ぎしっ、ぎしっ、とかりんを拘束しているボンデージが軋んでいる。
+if bondage_flag=1 then Ｔｈｅ　ｂｏｎｄａｇｅ　ｒｅｓｔｒａｉｎｔｓ　ｏｎ　Ｋａｒｉｎ　ｇｒａｔｅ　ａｎｄ　ｃｒｅａｋ．
 
 ############ ここまでボンテージ
 
@@ -352,7 +352,7 @@ label	training_dialogue_insert_karin_02
 「うう……、こ、こんな格好……いくら何でもひどすぎるわ……」
 
 ############ ここからボンテージ
-if t_karin_bondage_flag=0 then goto training_dialogue_insert_karin_02_a
+if bondage_flag=0 then goto training_dialogue_insert_karin_02_a
 
 たしかにかりんは両足を高々と吊るされ、腕を拘束されて身動きがとれない。
 
@@ -436,7 +436,7 @@ layer_reference_set	l_insert,l_leg		# 頭のレイヤーに連結
 「ひぁあああっ、い、いた……、痛い……っ！　い、樹っ、ヘタクソ！　もっと優しく出来ないの！？」
 
 ############ ここからボンテージ
-if t_karin_bondage_flag=0 then goto training_dialogue_insert_karin_02_c
+if bondage_flag=0 then goto training_dialogue_insert_karin_02_c
 
 身動きがとれないかりんだったが、なんとかその傷みから逃れようと身体を前後に揺すっている。
 
@@ -600,7 +600,7 @@ label	training_dialogue_insert_karin_03
 #■3段階目##################################################################
 #【00】
 ############ ここからボンテージ
-if t_karin_bondage_flag=0 then goto training_dialogue_insert_karin_03_a
+if bondage_flag=0 then goto training_dialogue_insert_karin_03_a
 
 オレが部屋に入ると、かりんは既にボンデージに身を包み、両腕両足を拘束されていた。
 
@@ -865,7 +865,7 @@ label	training_dialogue_insert_karin_04
 「そうでもないさ。　かりんの反応は毎週毎週新鮮でね。　残念ながら飽きないな」
 
 ############ ここからボンテージ
-if t_karin_bondage_flag=0 then goto training_dialogue_insert_karin_04_a
+if bondage_flag=0 then goto training_dialogue_insert_karin_04_a
 
 ＠Itsuki
 「それにこのボンデージも刺激的でイイ。　実にいいね」

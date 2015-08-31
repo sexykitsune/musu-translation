@@ -1,29 +1,5 @@
-label	training_karin_analvibe
 
-#SCRIPT IGNORE
-#mousecursor_set "stg\analvive.png",40,100
-#SCRIPT SKIP JAPANESE LINES 1
-#SCRIPT IGNORE END
-
-skip_untranslated_training=0
-if t_karin_analvibe_cnt=0 then gosub training_karin_analvibe_01
-if t_karin_analvibe_cnt=1 then gosub training_karin_analvibe_02
-if t_karin_analvibe_cnt>1 then gosub training_karin_analvibe_03
-
-if skip_untranslated_training=1 then return
-t_karin_analvibe_cnt=t_karin_analvibe_cnt+1
-
-add_kokoro=30*t_karin_analvibe_cnt
-add_miryoku=10*t_karin_analvibe_cnt
-
-tairyoku=tairyoku-45*t_karin_analvibe_cnt
-seishin=seishin-60*t_karin_analvibe_cnt
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
-
-return
-
-label	training_karin_analvibe_01
+label	training_dialogue_analvibe_karin_01
 @remove_this_line_when_translating
 
 #SCRIPT IGNORE
@@ -48,14 +24,14 @@ mousecursor_set "stg\analvive.png",40,100
 きっ、とオレを睨むかりん。
 
 ############ ここから眼鏡
-if t_karin_megane_flag=0 then goto training_karin_analvibe_01_b
+if t_karin_megane_flag=0 then goto training_dialogue_analvibe_karin_01_b
 
 #眼鏡をかけ直すのは動揺した時の癖なのだろうか、頻繁につるを弄っている。
 
 ＠Karin,P04831
 「何を言い出すかとおもったら……っ、そんな事……っ！　これだからフェチ男はイヤなのよっ」
 
-label	training_karin_analvibe_01_b
+label	training_dialogue_analvibe_karin_01_b
 ############ ここまで眼鏡
 
 ＠Karin,P04832
@@ -134,7 +110,7 @@ voice_bg	"P04710"
 voice_bg_stop
 return
 
-label	training_karin_analvibe_02
+label	training_dialogue_analvibe_karin_02
 @remove_this_line_when_translating
 
 #SCRIPT IGNORE
@@ -225,17 +201,17 @@ voice_bg	"P04704"
 手を払われるかと思ったが、かりんは珍しくされるがままにしていたのだった。
 
 ############ ここから眼鏡
-if t_karin_megane_flag=0 then goto training_karin_analvibe_02_b
+if t_karin_megane_flag=0 then goto training_dialogue_analvibe_karin_02_b
 
 ぽたりと眼鏡のレンズに涙が落ちたのは、見なかった事にしておこう。
 
-label	training_karin_analvibe_02_b
+label	training_dialogue_analvibe_karin_02_b
 ############ ここまで眼鏡
 
 voice_bg_stop
 return
 
-label	training_karin_analvibe_03
+label	training_dialogue_analvibe_karin_03
 @remove_this_line_when_translating
 
 #SCRIPT IGNORE
@@ -251,14 +227,14 @@ mousecursor_set "stg\analvive.png",40,100
 「あ、アナルバイブ……っ。　樹はそういうオモチャ大好きね。　いつも使いたがるわ」
 
 ############ ここから眼鏡
-if t_karin_megane_flag=0 then goto training_karin_analvibe_03_b
+if t_karin_megane_flag=0 then goto training_dialogue_analvibe_karin_03_b
 
 ＠Karin,P04853
 「それにこの眼鏡も、そうよね。　あなたこういう小道具大好きみたい」
 
 つんと顔を反らしてかりんが言う。
 
-label	training_karin_analvibe_03_b
+label	training_dialogue_analvibe_karin_03_b
 ############ ここまで眼鏡
 
 ＠Itsuki

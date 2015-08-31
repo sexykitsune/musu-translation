@@ -1,0 +1,15 @@
+
+macro	training_dialogue_facemask
+skip_untranslated_training=0
+select_icon_init
+if training_chara=TRAINING_KARIN	then gosub training_dialogue_facemask_karin
+window_close
+if skip_untranslated_training=1 then return
+@training_anime_load
+endm
+
+label	training_dialogue_facemask_karin
+if training_karin_facemask_cnt=0 then gosub training_dialogue_facemask_karin_01
+if training_karin_facemask_cnt=1 then gosub training_dialogue_facemask_karin_02
+if training_karin_facemask_cnt>1 then gosub training_dialogue_facemask_karin_03
+return

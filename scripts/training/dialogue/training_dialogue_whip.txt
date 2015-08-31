@@ -52,7 +52,7 @@ label	training_dialogue_whip_ichigo
 今にも逃げ出す覚悟はある、とばかりの態度に、思わず溜め息が漏れる。
 
 ####################ここからボンデージ装着時テキスト
-if t_ichigo_bondage_flag=0 then goto training_dialogue_whip_ichigo2
+if bondage_flag=0 then goto training_dialogue_whip_ichigo2
 
 まあ鎖で首を繋がれたいちごに、それは出来ないけどな。
 

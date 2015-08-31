@@ -1,5 +1,6 @@
 label	training_dialogue_fellatio_ichigo_03
 @remove_this_line_when_translating
+@training_anime_release
 
 #EV_ICH_150 いちごフェラチオ調教
 #条件：調教の「おくち」コマンド実行
@@ -11,8 +12,8 @@ label	training_dialogue_fellatio_ichigo_03
 scene_start	"いちごフェラチオ調教３"
 @bgm10
 #■EVCG(EV_ICH_150-01：舐め)
-if t_ichigo_bondage_flag=0 then event	"event\ev_ich_150-01.png"
-if t_ichigo_bondage_flag=1 then event	"event\ev_ich_151-01.png"
+if bondage_flag=0 then event	"event\ev_ich_150-01.png"
+if bondage_flag=1 then event	"event\ev_ich_151-01.png"
 voice_bg	"O90004"
 
 ＠Ichigo,O02548
@@ -35,7 +36,7 @@ voice_bg	"O90004"
 ＠Ichigo,O02551
 「んふぅっ、はふっ……おチンチン、横から舐めてもいいんだよね？　レロレロッ、ちゅばっ……」
 
-if t_ichigo_bondage_flag=0 then goto training_dialogue_fellatio_ichigo_03a
+if bondage_flag=0 then goto training_dialogue_fellatio_ichigo_03a
 #ボンデージここから##########################################################
 @seh07
 
@@ -107,8 +108,8 @@ label	training_dialogue_fellatio_ichigo_03a
 「ぺろっ、れろ……はふ、またピクってしてる……ん、んふぅうっ……ちゅぷ、んぷっ」
 
 #■EVCG(EV_ICH_150-02：裏筋舐め)
-if t_ichigo_bondage_flag=0 then event	"event\ev_ich_150-02.png"
-if t_ichigo_bondage_flag=1 then event	"event\ev_ich_151-02.png"
+if bondage_flag=0 then event	"event\ev_ich_150-02.png"
+if bondage_flag=1 then event	"event\ev_ich_151-02.png"
 
 ＠Ichigo,O02560
 「はふ、んふぅっ……皮のへりに、何かついてる……チュウゥッ……ペロペロッ、れろっ……」
@@ -206,8 +207,8 @@ if t_ichigo_bondage_flag=1 then event	"event\ev_ich_151-02.png"
 
 #03：咥えさせる←05：咥えさせる？
 #■EVCG(EV_ICH_150-05：咥えさせる)
-if t_ichigo_bondage_flag=0 then event	"event\ev_ich_150-05.png"
-if t_ichigo_bondage_flag=1 then event	"event\ev_ich_151-05.png"
+if bondage_flag=0 then event	"event\ev_ich_150-05.png"
+if bondage_flag=1 then event	"event\ev_ich_151-05.png"
 
 ＠Ichigo,O02572
 「おチンチン、中に入れるね？　はむっ……んちゅ、じゅるるっ、チュブブッ」
@@ -483,8 +484,8 @@ if t_ichigo_bondage_flag=1 then event	"event\ev_ich_151-05.png"
 #■EVCG(EV_ICH_150-06：口内射精)
 if _TRANSLATOR_OPTION_DISABLE_FLASHES=0 then screen_flash	1000
 voice_bg_stop
-if t_ichigo_bondage_flag=0 then event	"event\ev_ich_150-06.png"
-if t_ichigo_bondage_flag=1 then event	"event\ev_ich_151-06.png"
+if bondage_flag=0 then event	"event\ev_ich_150-06.png"
+if bondage_flag=1 then event	"event\ev_ich_151-06.png"
 #//フラッシュ
 
 ＠Ichigo,O02610
@@ -577,8 +578,8 @@ if t_ichigo_bondage_flag=1 then event	"event\ev_ich_151-06.png"
 頬や、喉が何度かふるえていたが、肝心の中身が減る気配はなかった。
 
 #■EVCG(EV_ICH_150-09：飲めと命令・おいしくないけどガマンして飲む)
-if t_ichigo_bondage_flag=0 then event	"event\ev_ich_150-09.png"
-if t_ichigo_bondage_flag=1 then event	"event\ev_ich_151-09.png"
+if bondage_flag=0 then event	"event\ev_ich_150-09.png"
+if bondage_flag=1 then event	"event\ev_ich_151-09.png"
 
 ＠Ichigo,O02622
 「んっ……んぅううっ、ぅくっ……」
@@ -652,8 +653,8 @@ if t_ichigo_bondage_flag=1 then event	"event\ev_ich_151-09.png"
 「全部飲めたか？　ほらいちご、見せてごらん」
 
 #■EVCG(EV_ICH_150-10：あーんさせて確認・苦しいけど頑張ったよ的な表情)
-if t_ichigo_bondage_flag=0 then event	"event\ev_ich_150-10.png"
-if t_ichigo_bondage_flag=1 then event	"event\ev_ich_151-10.png"
+if bondage_flag=0 then event	"event\ev_ich_150-10.png"
+if bondage_flag=1 then event	"event\ev_ich_151-10.png"
 
 ＠Ichigo,O02630
 「ぅば、ふはぁっ……」

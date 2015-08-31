@@ -4,18 +4,21 @@ training_chara=TRAINING_MIKAN
 @bgm10
 date_close
 @all_layerrelease
-
-#-- 初期化 --------------------------------------------------------------------
+#@training_paramget
 @training_voice_init
-
-mikan_bondage_flag=0
+bondage_flag=0
+megane_flag=0
+damagefix=1.0
+training_caress_count_l=0
+training_spank_count_l=0
+training_whip_count_l=0
+training_candle_count_l=0
 
 add_miryoku=0
 add_karada=0
 add_atama=0
 add_kokoro=0
 
-#-- ライフ -------------------------------------------------------------------
 tairyoku=mikan_kenkou_max
 seishin=mikan_kiryoku_max
 tairyoku_max=tairyoku
@@ -24,15 +27,13 @@ lifebar_set	life_tairyoku,tairyoku
 lifebar_setmax	life_tairyoku,tairyoku_max
 lifebar_set	life_seishin,seishin
 lifebar_setmax	life_seishin,seishin_max
-
 @training_anime_load
-
 lifebar_open	life_tairyoku
 lifebar_open	life_seishin
 @reload_lifebar
 
-if mikan_command_cnt<15 then voice "A02544"	#「お兄ちゃん……優しくしてね……」
-if mikan_command_cnt>=15 then voice "A02546"	#「っ、ふ……お兄ちゃん……」
+if training_command_count_mikan<15 then voice "A02544"	#「お兄ちゃん……優しくしてね……」
+if training_command_count_mikan>=15 then voice "A02546"	#「っ、ふ……お兄ちゃん……」
 
 window_close
 
@@ -61,8 +62,8 @@ if _ITEM(203)=1 then 	 select_icon_add		7,"system\iconselect\icon_rousoku.png","
 
 if _ITEM(200)=1 then	select_icon_add		8,"system\iconselect\icon_muchi.png","鞭を使う"
 
-if t_mikan_bondage_flag=0 and _ITEM(303)=1 then select_icon_add	9,"system\iconselect\icon_bondage.png","ボンデージ服を着せる"
-if t_mikan_bondage_flag=1 and _ITEM(303)=1 then select_icon_add	9,"system\iconselect\icon_nude.png","裸にする"
+if bondage_flag=0 and _ITEM(303)=1 then select_icon_add	9,"system\iconselect\icon_bondage.png","ボンデージ服を着せる"
+if bondage_flag=1 and _ITEM(303)=1 then select_icon_add	9,"system\iconselect\icon_nude.png","裸にする"
 
 if _ITEM(208)=1 then select_icon_add		10,"system\iconselect\icon_schoolware.png","スクール水着を使う"
 
@@ -257,7 +258,7 @@ gosub	training_vibe_mikan
 goto	t_mikan_loop
 #-- ■アナル拡張ベルト■ -----------------------------------------------------
 label t_mikan_hardanal
-gosub	mikan_training_hardanal
+gosub	training_hardanal_mikan
 goto	t_mikan_loop
 #-- ■スクール水着■ -----------------------------------------------------
 label t_mikan_mizugi
@@ -267,8 +268,8 @@ goto	t_mikan_loop
 #-- ■ボンテージ服■ ---------------------------------------------------------
 label t_mikan_bondage
 @training_anime_release
-if t_mikan_bondage_flag=0 then t_mikan_bondage_flag=1;goto t_mikan_bondage_skip
-if t_mikan_bondage_flag=1 then t_mikan_bondage_flag=0
+if bondage_flag=0 then bondage_flag=1;goto t_mikan_bondage_skip
+if bondage_flag=1 then bondage_flag=0
 label t_mikan_bondage_skip
 @training_anime_load
 goto	t_mikan_loop
@@ -334,40 +335,31 @@ seishin=seishin-80*t_mikan_analpearl_cnt
 @reload_lifebar
 return
 
-#move these out of the file eventualy
+label	training_hardanal_mikan
+@training_dialogue_hardanal
+t_mikan_hardanal_cnt=t_mikan_hardanal_cnt+1
 
-macro	mikan_motion_pain1
-@training_anime_motion_pain
-@motion_pain_effect_mikan
-endm
+add_karada=10*t_mikan_hardanal_cnt
+add_kokoro=20*t_mikan_hardanal_cnt
+add_miryoku=40*t_mikan_hardanal_cnt
 
-macro	motion_pain_effect_mikan
-tairyoku=tairyoku-3
-seishin=seishin-5
+tairyoku=tairyoku-600*t_mikan_hardanal_cnt
+seishin=seishin-500*t_mikan_hardanal_cnt
 @reload_lifebar
-endm
+return
 
-macro	mikan_motion_insert1
-@training_anime_motion_insert
-@motion_insert_effect_mikan
-endm
+label	training_swimsuit_mikan
+@training_dialogue_swimsuit
+t_mikan_mizugi_cnt=t_mikan_mizugi_cnt+1
 
-macro	motion_insert_effect_mikan
-tairyoku=tairyoku-10
-seishin=seishin-15
+add_karada=15*t_mikan_mizugi_cnt
+add_kokoro=25*t_mikan_mizugi_cnt
+add_miryoku=35*t_mikan_mizugi_cnt
+
+tairyoku=tairyoku-500*t_mikan_mizugi_cnt
+seishin=seishin-500*t_mikan_mizugi_cnt
 @reload_lifebar
-endm
-
-macro	mikan_motion_normal1
-@training_anime_motion_normal
-@motion_normal_effect_mikan
-endm
-
-macro	motion_normal_effect_mikan
-tairyoku=tairyoku-3
-seishin=seishin-5
-@reload_lifebar
-endm
+return
 
 #-- 気絶 --------------------------------------------------------------------
 label t_mikan_end
@@ -393,8 +385,8 @@ label t_mikan_exit
 select	sel,"End training","On second thought..."
 if sel=1 then goto t_mikan_loop_a
 
-if mikan_command_cnt<15 then voice "A02545"	#「……もっと、お兄ちゃんのお役に立てるようになれるといいな……頑張るね」
-if mikan_command_cnt>=15 then voice "A02547"	#「はぁ……っ……もっと頑張るから、また……みかんに、いっぱい……してね……」
+if training_command_count_mikan<15 then voice "A02545"	#「……もっと、お兄ちゃんのお役に立てるようになれるといいな……頑張るね」
+if training_command_count_mikan>=15 then voice "A02547"	#「はぁ……っ……もっと頑張るから、また……みかんに、いっぱい……してね……」
 
 label t_mikan_exit2
 
@@ -433,7 +425,7 @@ lifebar_close	life_kokoro
 wait	500
 #------------------------------------------------------------------------
 
-if add_miryoku>10 then mikan_command_cnt=mikan_command_cnt+1
+if add_miryoku>=10 then training_command_count_mikan=training_command_count_mikan+1
 if add_miryoku>0 then @mikan_add_miryoku
 
 if mikan_reception_level=1 and t_mikan_fellatio_cnt1>3 then gosub t_mikan_up

@@ -1,0 +1,65 @@
+
+label	training_loop
+if training_chara=TRAINING_MIKAN	then gosub	training_loop_mikan
+if training_chara=TRAINING_ICHIGO	then gosub	training_loop_ichigo
+if training_chara=TRAINING_KARIN	then gosub	training_loop_karin
+return
+
+#pseudonyms
+macro	mikan_motion_pain1
+@motion_effect_pain
+endm
+
+macro	mikan_motion_insert1
+@motion_effect_insert
+endm
+
+macro	mikan_motion_normal1
+@motion_effect_normal
+endm
+
+macro	ichigo_motion_pain1
+@motion_effect_pain
+endm
+
+macro	ichigo_motion_insert1
+@motion_effect_insert
+endm
+
+macro	ichigo_motion_normal1
+@motion_effect_normal
+endm
+
+macro	karin_motion_pain1
+@motion_effect_pain
+endm
+
+macro	karin_motion_insert1
+@motion_effect_insert
+endm
+
+macro	karin_motion_normal1
+@motion_effect_normal
+endm
+
+#generic versions
+macro	motion_effect_pain
+@training_anime_motion_pain
+tairyoku=tairyoku-3*damagefix
+seishin=seishin-5*damagefix
+@reload_lifebar
+endm
+
+macro	motion_effect_insert
+@training_anime_motion_insert
+tairyoku=tairyoku-10*damagefix
+seishin=seishin-15*damagefix
+@reload_lifebar
+endm
+
+macro	motion_effect_normal
+@training_anime_motion_normal
+tairyoku=tairyoku-3*damagefix
+seishin=seishin-5*damagefix
+@reload_lifebar
+endm

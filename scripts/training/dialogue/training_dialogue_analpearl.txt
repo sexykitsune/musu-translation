@@ -1,17 +1,14 @@
 
 macro	training_dialogue_analpearl
+skip_untranslated_training=0
 select_icon_init
 if training_chara=TRAINING_MIKAN	then gosub training_dialogue_analpearl_mikan
 window_close
+if skip_untranslated_training=1 then return
 endm
 
 label	training_dialogue_analpearl_mikan
-
-skip_untranslated_training=0
 if t_mikan_analpearl_cnt=0 then gosub	training_dialogue_analpearl_mikan_01
 if t_mikan_analpearl_cnt=1 then gosub	training_dialogue_analpearl_mikan_02
 if t_mikan_analpearl_cnt>1 then gosub	training_dialogue_analpearl_mikan_03
-
-if skip_untranslated_training=1 then return
-
 return

@@ -1,7 +1,7 @@
-label	training_karin_facemask3
+label	training_dialogue_facemask_karin_03
 @remove_this_line_when_translating
 
-if karin_dere_flag=1 then goto training_karin_facemask3b
+if karin_dere_flag=1 then goto training_dialogue_facemask_karin_03b
 
 #「かりん口鼻虐」 三回目：EV_KAR_092
 #人物：かりん(ボンデージ、フェイスクラッチマスク）、樹（裸）
@@ -10,7 +10,7 @@ if karin_dere_flag=1 then goto training_karin_facemask3b
 #通常(ツン)とデレの２パターンあり
 #------------------------------------------------------------
 #######　ここから通常シナリオ #######
-label	training_karin_facemask3a
+label	training_dialogue_facemask_karin_03a
 
 #■BG（調教部屋）
 
@@ -382,7 +382,7 @@ scene_end
 return
 
 #######　ここからデレシナリオ #######
-label	training_karin_facemask3b
+label	training_dialogue_facemask_karin_03b
 
 #■BG（調教部屋）
 

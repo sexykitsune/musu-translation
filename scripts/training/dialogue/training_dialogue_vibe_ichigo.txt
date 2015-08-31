@@ -1,5 +1,5 @@
 
-label	training_dialogue_vibe_ichigo1
+label	training_dialogue_vibe_ichigo_01
 @remove_this_line_when_translating
 #SCRIPT IGNORE
 mousecursor_set "event\ev_kar_070\ev_kar_070_vive.png",75,170
@@ -47,7 +47,7 @@ mousecursor_set "event\ev_kar_070\ev_kar_070_vive.png",75,170
 そっと手を伸ばして、小さく細い指で恐る恐るバイブに触れる。
 
 ####################ここからボンデージ装着時テキスト
-if ichigo_bondage_flag=0 then goto training_dialogue_vibe_ichigo1_a
+if ichigo_bondage_flag=0 then goto training_dialogue_vibe_ichigo_01_a
 
 もっと顔を近づけようとしたいちごだったが、首を繋いでいた鎖によってグッと後ろへ引かれてしまう。
 
@@ -64,7 +64,7 @@ if ichigo_bondage_flag=0 then goto training_dialogue_vibe_ichigo1_a
 ＠Ichigo,O04082
 「ふぁーい」
 
-label	training_dialogue_vibe_ichigo1_a
+label	training_dialogue_vibe_ichigo_01_a
 ####################ここまでボンデージ装着時テキスト
 
 ＠Ichigo,O04083
@@ -171,7 +171,7 @@ voice_bg	"O03966"
 voice_bg	"O03965"
 return
 
-label	training_dialogue_vibe_ichigo2
+label	training_dialogue_vibe_ichigo_02
 @remove_this_line_when_translating
 #SCRIPT IGNORE
 mousecursor_set "event\ev_kar_070\ev_kar_070_vive.png",75,170
@@ -373,7 +373,7 @@ voice_bg	"O90002"
 もっと気持ちよくさせようとバイブを奥へ差し込むと、いちごは股を閉じてきた。
 
 ####################ここからボンデージ装着時テキスト
-if ichigo_bondage_flag=0 then goto training_dialogue_vibe_ichigo2_a
+if ichigo_bondage_flag=0 then goto training_dialogue_vibe_ichigo_02_a
 
 太ももにつけていた輪の金具が触れ、ヒヤリとした感触が伝う。
 
@@ -382,7 +382,7 @@ if ichigo_bondage_flag=0 then goto training_dialogue_vibe_ichigo2_a
 
 その声に気付いたのか、自分を繋ぐ鎖を強く掴んだまま、荒い息を吐き出してこちらへ視線を向けた。
 
-label	training_dialogue_vibe_ichigo2_a
+label	training_dialogue_vibe_ichigo_02_a
 ####################ここまでボンデージ装着時テキスト
 
 ＠Itsuki
@@ -473,7 +473,7 @@ layer_fadeout	l_insert
 voice_bg	"O03965"
 return
 
-label	training_dialogue_vibe_ichigo3
+label	training_dialogue_vibe_ichigo_03
 @remove_this_line_when_translating
 #SCRIPT IGNORE
 mousecursor_set "event\ev_kar_070\ev_kar_070_vive.png",75,170
@@ -567,13 +567,13 @@ voice_bg	"O03967"
 体を捩りながら、自ら腰を振ってバイブを飲み込もうとし始めた。
 
 ####################ここからボンデージ装着時テキスト
-if ichigo_bondage_flag=0 then goto training_dialogue_vibe_ichigo3_a
+if ichigo_bondage_flag=0 then goto training_dialogue_vibe_ichigo_03_a
 
 鎖はガチャンと大きな音を立てる度、真っ赤なボンテージに皺が寄る。
 
 体にフィットしているから動き辛いのだろう、時折眉を寄せた。
 
-label	training_dialogue_vibe_ichigo3_a
+label	training_dialogue_vibe_ichigo_03_a
 ####################ここまでボンデージ装着時テキスト
 
 ＠Itsuki

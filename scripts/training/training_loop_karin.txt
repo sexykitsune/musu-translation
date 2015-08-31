@@ -4,20 +4,21 @@ training_chara=TRAINING_KARIN
 @bgm10
 date_close
 @all_layerrelease
-
-#-- ‰Šú‰» --------------------------------------------------------------------
+#@training_paramget
 @training_voice_init
-t_karin_muchi_cnt_l=0
-t_karin_bondage_flag=0
-t_karin_megane_flag=0
-t_karin_damagefix=1.2
+bondage_flag=0
+megane_flag=0
+damagefix=1.2
+training_caress_count_l=0
+training_spank_count_l=0
+training_whip_count_l=0
+training_candle_count_l=0
 
 add_miryoku=0
 add_karada=0
 add_atama=0
 add_kokoro=0
 
-#-- ƒ‰ƒCƒt -------------------------------------------------------------------
 tairyoku=karin_kenkou_max
 seishin=karin_kiryoku_max
 tairyoku_max=tairyoku
@@ -33,8 +34,8 @@ lifebar_open	life_tairyoku
 lifebar_open	life_seishin
 @reload_lifebar
 
-if karin_command_cnt<15 then voice "P03596"	#
-if karin_command_cnt>=15 then voice "P03598"	#
+if training_command_count_karin<15 then voice "P03596"	#
+if training_command_count_karin>=15 then voice "P03598"	#
 
 window_close
 
@@ -65,10 +66,10 @@ if _ITEM(211)=1  then select_icon_add	6,"system\iconselect\icon_facemask.png","ƒ
 if _ITEM(203)=1 then select_icon_add	7,"system\iconselect\icon_rousoku.png","˜XC‚ğg‚¤"
 if _ITEM(200)=1 then select_icon_add	8,"system\iconselect\icon_muchi.png","•Ú‚ğg‚¤"
 
-if t_karin_bondage_flag=0 and _ITEM(305)=1 then select_icon_add	9,"system\iconselect\icon_bondage.png","ƒ{ƒ“ƒf[ƒW•‚ğ’…‚¹‚é"
-if t_karin_bondage_flag=1 and _ITEM(305)=1 then select_icon_add	9,"system\iconselect\icon_nude.png","—‡‚É‚·‚é"
-if t_karin_megane_flag=0 and _ITEM(306)=1 then select_icon_add	10,"system\iconselect\icon_glass.png","Šá‹¾‚ğ‚©‚¯‚é"
-if t_karin_megane_flag=1 and _ITEM(306)=1 then select_icon_add	10,"system\iconselect\icon_glass.png","Šá‹¾‚ğŠO‚·"
+if bondage_flag=0 and _ITEM(305)=1 then select_icon_add	9,"system\iconselect\icon_bondage.png","ƒ{ƒ“ƒf[ƒW•‚ğ’…‚¹‚é"
+if bondage_flag=1 and _ITEM(305)=1 then select_icon_add	9,"system\iconselect\icon_nude.png","—‡‚É‚·‚é"
+if megane_flag=0 and _ITEM(306)=1 then select_icon_add	10,"system\iconselect\icon_glass.png","Šá‹¾‚ğ‚©‚¯‚é"
+if megane_flag=1 and _ITEM(306)=1 then select_icon_add	10,"system\iconselect\icon_glass.png","Šá‹¾‚ğŠO‚·"
 if _ITEM(207)=1 then select_icon_add	11,"system\iconselect\icon_video.png","ƒrƒfƒIƒJƒƒ‰‚ğg‚¤"
 
 label t_karin_loop_a
@@ -123,7 +124,7 @@ if command=8 then gosub t_karin_baramuchi		#ƒoƒ‰•Ú
 
 if tairyoku<=0 then goto t_karin_end
 if seishin<=0 then goto t_karin_end
-if t_karin_damagefix<0.5 then t_karin_damagefix=0.5
+if damagefix<0.5 then damagefix=0.5
 
 #ƒ}ƒ]‚É‚È‚é‚©H
 if t_karin_maso_cnt=80 then @karin_masomode
@@ -133,7 +134,7 @@ goto t_karin_loop_b
 #ƒ}ƒ]ƒ‚[ƒh-------------------------------------------------------------------
 macro	karin_masomode
 t_karin_maso_flag=1
-t_karin_muchi_cnt_l=0
+training_whip_count_l=0
 endm
 
 #-- ¡ˆ¤•¡ ----------------------------------------------------------------
@@ -143,7 +144,7 @@ se		0,"sound\se\ƒvƒCƒb.WAV",play_once
 @karin_motion_normal1
 @training_voice_aibu
 
-#t_karin_damagefix=t_karin_damagefix-0.01
+#damagefix=damagefix-0.01
 return
 
 #-- ¡‚¿‚ñ‚Û¡ ----------------------------------------------------------------
@@ -161,7 +162,7 @@ if _COLOR=cl_pussy then gosub training_insert_karin			#‘}“ü
 
 if _COLOR=cl_breast1 or _COLOR=cl_breast2 or _COLOR=cl_legs then gosub t_karin_aibu
 
-t_karin_damagefix=t_karin_damagefix-0.01
+damagefix=damagefix-0.01
 
 window_close
 return
@@ -184,8 +185,8 @@ if _LAYER<>l_leg then @spanking_effect_small		# •Ú­(¬)
 t_karin_maso_cnt=t_karin_maso_cnt+1
 
 @karin_motion_pain1
-tairyoku=tairyoku-15*t_karin_damagefix
-seishin=seishin-20*t_karin_damagefix
+tairyoku=tairyoku-15*damagefix
+seishin=seishin-20*damagefix
 @reload_lifebar
 
 add_karada=add_karada+1
@@ -211,16 +212,16 @@ if _LAYER<>l_leg then @muchiato_effect_small		# •Ú­(¬)
 @training_voice_pain
 if _COLOR=cl_pussy then screen_vibration 500,16,16,16
 
-t_karin_muchi_cnt_l=t_karin_muchi_cnt_l+1
+training_whip_count_l=training_whip_count_l+1
 t_karin_muchi_cnt=t_karin_muchi_cnt+1
 t_karin_maso_cnt=t_karin_maso_cnt+1
 
 @karin_motion_pain1
-tairyoku=tairyoku-35*t_karin_damagefix
-seishin=seishin-20*t_karin_damagefix
+tairyoku=tairyoku-35*damagefix
+seishin=seishin-20*damagefix
 
-if _COLOR=cl_pussy then tairyoku=tairyoku-35*t_karin_damagefix
-if _COLOR=cl_pussy then seishin=seishin-20*t_karin_damagefix
+if _COLOR=cl_pussy then tairyoku=tairyoku-35*damagefix
+if _COLOR=cl_pussy then seishin=seishin-20*damagefix
 
 @reload_lifebar
 
@@ -242,15 +243,15 @@ return
 label t_karin_command_baramuchi
 @bgm11
 mousecursor_set "system\TrainingSystem\cur_muchi.png",420,40
-#@training_dialogue_whip
+@training_dialogue_whip
 #‰‰ñ
-if t_karin_muchi_cnt_l=0 and t_karin_muchi_cnt=0 then voice "P03607";return
+if training_whip_count_l=0 and t_karin_muchi_cnt=0 then voice "P03607";return
 #1-50‰ñ–Ú
-if t_karin_muchi_cnt_l=0 and t_karin_muchi_cnt<50 then voice "P03608";return
+if training_whip_count_l=0 and t_karin_muchi_cnt<50 then voice "P03608";return
 #51-100‰ñ–Ú
-if t_karin_muchi_cnt_l=0 and t_karin_muchi_cnt<100 then voice "P03609";return
+if training_whip_count_l=0 and t_karin_muchi_cnt<100 then voice "P03609";return
 #‚»‚êˆÈ~
-if t_karin_muchi_cnt_l=0 then voice "P03610";return
+if training_whip_count_l=0 then voice "P03610";return
 return
 
 #-- ¡˜XC¡ ----------------------------------------------------------------
@@ -280,11 +281,11 @@ t_karin_rousoku_cnt=t_karin_rousoku_cnt+1
 t_karin_maso_cnt=t_karin_maso_cnt+1
 
 @karin_motion_pain1
-tairyoku=tairyoku-20*t_karin_damagefix
-seishin=seishin-35*t_karin_damagefix
+tairyoku=tairyoku-20*damagefix
+seishin=seishin-35*damagefix
 
-if _COLOR=cl_pussy then tairyoku=tairyoku-20*t_karin_damagefix
-if _COLOR=cl_pussy then seishin=seishin-35*t_karin_damagefix
+if _COLOR=cl_pussy then tairyoku=tairyoku-20*damagefix
+if _COLOR=cl_pussy then seishin=seishin-35*damagefix
 
 @reload_lifebar
 
@@ -318,7 +319,7 @@ goto t_karin_loop
 
 #-- ¡ƒAƒiƒ‹ƒoƒCƒu¡ -----------------------------------------------
 label t_karin_analvibe
-gosub	training_karin_analvibe
+gosub	training_analvibe_karin
 goto t_karin_loop
 
 #-- ¡ƒtƒBƒCƒXƒNƒ‰ƒbƒ`ƒ}ƒXƒN¡ -----------------------------------------------
@@ -329,8 +330,8 @@ goto t_karin_loop
 #-- ¡ƒ{ƒ“ƒf[ƒW¡ ---------------------------------------------------------
 label t_karin_bondage
 @training_anime_release
-if t_karin_bondage_flag=0 then t_karin_bondage_flag=1;goto t_karin_bondage_skip
-if t_karin_bondage_flag=1 then t_karin_bondage_flag=0
+if bondage_flag=0 then bondage_flag=1;goto t_karin_bondage_skip
+if bondage_flag=1 then bondage_flag=0
 label t_karin_bondage_skip
 @training_anime_load
 goto t_karin_loop
@@ -338,8 +339,8 @@ goto t_karin_loop
 #-- ¡Šá‹¾¡ ---------------------------------------------------------
 label t_karin_megane
 @training_anime_release
-if t_karin_megane_flag=0 then t_karin_megane_flag=1;goto t_karin_megane_skip
-if t_karin_megane_flag=1 then t_karin_megane_flag=0
+if megane_flag=0 then megane_flag=1;goto t_karin_megane_skip
+if megane_flag=1 then megane_flag=0
 label t_karin_megane_skip
 @training_anime_load
 goto t_karin_loop
@@ -398,40 +399,43 @@ seishin=seishin-45*t_karin_vibe_cnt
 @reload_lifebar
 return
 
-#move these out of the file eventualy
+label	training_analvibe_karin
+@training_dialogue_analvibe
+t_karin_analvibe_cnt=t_karin_analvibe_cnt+1
 
-macro	karin_motion_pain1
-@training_anime_motion_pain
-@motion_pain_effect_karin
-endm
+add_kokoro=30*t_karin_analvibe_cnt
+add_miryoku=10*t_karin_analvibe_cnt
 
-macro	motion_pain_effect_karin
-tairyoku=tairyoku-3*t_karin_damagefix
-seishin=seishin-5*t_karin_damagefix
+tairyoku=tairyoku-45*t_karin_analvibe_cnt
+seishin=seishin-60*t_karin_analvibe_cnt
 @reload_lifebar
-endm
+return
 
-macro	karin_motion_insert1
-@training_anime_motion_insert
-@motion_insert_effect_karin
-endm
+label	training_facemask_karin
+@training_dialogue_facemask
+training_karin_facemask_cnt=training_karin_facemask_cnt+1
 
-macro	motion_insert_effect_karin
-tairyoku=tairyoku-10*t_karin_damagefix
-seishin=seishin-15*t_karin_damagefix
+add_karada=15*training_karin_facemask_cnt
+add_kokoro=25*training_karin_facemask_cnt
+add_miryoku=30*training_karin_facemask_cnt
+
+tairyoku=tairyoku-200*training_karin_facemask_cnt
+seishin=seishin-300*training_karin_facemask_cnt
 @reload_lifebar
-endm
+return
 
-macro	karin_motion_normal1
-@training_anime_motion_normal
-@motion_normal_effect_karin
-endm
+label	training_video_karin
+@training_dialogue_video
+t_karin_video_cnt=t_karin_video_cnt+1
 
-macro	motion_normal_effect_karin
-tairyoku=tairyoku-3*t_karin_damagefix
-seishin=seishin-5*t_karin_damagefix
+add_karada=15*t_karin_video_cnt
+add_kokoro=25*t_karin_video_cnt
+add_miryoku=30*t_karin_video_cnt
+
+tairyoku=tairyoku-300*t_karin_video_cnt
+seishin=seishin-400*t_karin_video_cnt
 @reload_lifebar
-endm
+return
 
 #-- ‹Câ --------------------------------------------------------------------
 label t_karin_end
@@ -457,8 +461,8 @@ label t_karin_exit
 select	sel,"End training","On second thought..."
 if sel=1 then goto t_karin_loop
 
-if karin_command_cnt<15 then voice "P03595"	#u‚Í‚Ÿ‚Ácccc‚±‚ñ‚È‚±‚Æcc‚¨‚©‚µ‚¢‚í‚æccv
-if karin_command_cnt>=15 then voice "P03597"	#u‚Á‚Ócc‚È‚ñ‚Åcc‚í‚½‚µcc‚±‚ñ‚È‚Écc‚ ‚Ÿ‚Áccv
+if training_command_count_karin<15 then voice "P03595"	#u‚Í‚Ÿ‚Ácccc‚±‚ñ‚È‚±‚Æcc‚¨‚©‚µ‚¢‚í‚æccv
+if training_command_count_karin>=15 then voice "P03597"	#u‚Á‚Ócc‚È‚ñ‚Åcc‚í‚½‚µcc‚±‚ñ‚È‚Écc‚ ‚Ÿ‚Áccv
 
 label t_karin_exit2
 
@@ -497,7 +501,7 @@ lifebar_close	life_kokoro
 wait	500
 #------------------------------------------------------------------------
 
-if add_miryoku>10 then karin_command_cnt=karin_command_cnt+1
+if add_miryoku>=10 then training_command_count_karin=training_command_count_karin+1
 if add_miryoku>0 then @karin_add_miryoku
 
 if karin_reception_level=1 and t_karin_fera_cnt>7 then gosub t_karin_up

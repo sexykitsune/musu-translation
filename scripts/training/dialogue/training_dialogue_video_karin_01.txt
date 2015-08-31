@@ -1,33 +1,5 @@
-label	training_karin_video
 
-#SCRIPT IGNORE
-#@bgm11
-#SCRIPT SKIP JAPANESE LINES 1
-#SCRIPT IGNORE END
-skip_untranslated_training=0
-if t_karin_video_cnt=0 then gosub training_karin_video1
-if t_karin_video_cnt=1 then gosub training_karin_video2
-if t_karin_video_cnt>1 then gosub training_karin_video3
-
-if skip_untranslated_training=1 then return
-t_karin_video_cnt=t_karin_video_cnt+1
-
-@bg_black
-
-add_karada=15*t_karin_video_cnt
-add_kokoro=25*t_karin_video_cnt
-add_miryoku=30*t_karin_video_cnt
-
-tairyoku=tairyoku-300*t_karin_video_cnt
-seishin=seishin-400*t_karin_video_cnt
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
-
-@training_karin_load
-
-return
-
-label	training_karin_video1
+label	training_dialogue_video_karin_01
 @remove_this_line_when_translating
 #SCRIPT IGNORE
 @bgm11
@@ -445,11 +417,11 @@ voice_bg	"P90002"
 #（２．外出し）
 select	sel,"Cum inside","Pull out"
 
-if sel=0 then goto training_karin_video1a
-if sel=1 then goto training_karin_video1b
+if sel=0 then goto training_dialogue_video_karin_01a
+if sel=1 then goto training_dialogue_video_karin_01b
 
 #（中出し）
-label	training_karin_video1a
+label	training_dialogue_video_karin_01a
 ＠Itsuki
 「フフフ、そうだな。それが一番いいな」
 
@@ -587,7 +559,7 @@ scene_end
 return
 
 #（外出し）###################################################################
-label	training_karin_video1b
+label	training_dialogue_video_karin_01b
 
 ＠Itsuki
 「よし、決めた」

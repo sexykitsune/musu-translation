@@ -77,7 +77,7 @@ label	training_dialogue_insert_ichigo_01
 #挿入ーマンコ（初回）
 
 ####################ここからボンデージ装着時テキスト
-if t_ichigo_bondage_flag=0 then goto training_dialogue_insert_ichigo_01_a
+if bondage_flag=0 then goto training_dialogue_insert_ichigo_01_a
 
 @SEH07
 首を繋いだ鎖をジャラリと鳴らし、いちごはこちらに視線を向けた。
@@ -190,7 +190,7 @@ voice_bg	"O03966"
 するといちごの肢体は、ビクンと大きくしなる。
 
 ####################ここからボンデージ装着時テキスト
-if t_ichigo_bondage_flag=0 then goto training_dialogue_insert_ichigo_01_b
+if bondage_flag=0 then goto training_dialogue_insert_ichigo_01_b
 
 @SEH07
 その動きで、繋いでいた鎖がジャラリと大きな音を鳴らした。
@@ -311,7 +311,7 @@ label	training_dialogue_insert_ichigo_01_b
 「いちご。これを今からいちごの、ココに入れるからな」
 
 ####################ここからボンデージ装着時テキスト
-if t_ichigo_bondage_flag=0 then goto training_dialogue_insert_ichigo_01_c
+if bondage_flag=0 then goto training_dialogue_insert_ichigo_01_c
 
 秘裂を覆い隠すラバーを少しずらし、陰茎をグッと押し当てる。
 
@@ -406,7 +406,7 @@ voice_bg	"O90002"
 ヌヂュッ……ヂュッ、ヂュブッ……グヂュッ、ヂュッ、ヂュッ
 
 ####################ここからボンデージ装着時テキスト
-if t_ichigo_bondage_flag=0 then goto training_dialogue_insert_ichigo_01_d
+if bondage_flag=0 then goto training_dialogue_insert_ichigo_01_d
 
 キュッ、という音を響かせながら、いちごの体が締まっていく。
 

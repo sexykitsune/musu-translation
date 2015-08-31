@@ -258,6 +258,6 @@ training_swimsuit_count_mikan=0
 training_facemask_count_karin=0
 training_video_count_karin=0
 
-training_bloomers_count_ichigo=0
-training_bunnygirl_count_karin=0
+service_bloomers_count_ichigo=0
+service_bunnygirl_count_karin=0
 endm

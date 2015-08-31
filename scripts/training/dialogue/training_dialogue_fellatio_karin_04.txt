@@ -1,5 +1,6 @@
 label	training_dialogue_nosehook_karin
 @remove_this_line_when_translating
+@training_anime_release
 
 scene_start	"かりん鼻射"
 
@@ -12,10 +13,10 @@ scene_start	"かりん鼻射"
 ＠Itsuki
 「さてと……」
 
-if t_karin_bondage_flag=0 and t_karin_megane_flag=0 then event "event\EV_KAR_080-17.png"
-if t_karin_bondage_flag=0 and t_karin_megane_flag=1 then event "event\EV_KAR_081-17.png"
-if t_karin_bondage_flag=1 and t_karin_megane_flag=0 then event "event\EV_KAR_082-17.png"
-if t_karin_bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083-17.png"
+if bondage_flag=0 and t_karin_megane_flag=0 then event "event\EV_KAR_080-17.png"
+if bondage_flag=0 and t_karin_megane_flag=1 then event "event\EV_KAR_081-17.png"
+if bondage_flag=1 and t_karin_megane_flag=0 then event "event\EV_KAR_082-17.png"
+if bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083-17.png"
 
 オレはかりんの愛らしい鼻にペニスを押し当てる。
 
@@ -76,10 +77,10 @@ if t_karin_bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083
 ＠Karin,P04174
 「んむっ！　んぐ……！」
 
-if t_karin_bondage_flag=0 and t_karin_megane_flag=0 then event "event\EV_KAR_080-18.png"
-if t_karin_bondage_flag=0 and t_karin_megane_flag=1 then event "event\EV_KAR_081-18.png"
-if t_karin_bondage_flag=1 and t_karin_megane_flag=0 then event "event\EV_KAR_082-18.png"
-if t_karin_bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083-18.png"
+if bondage_flag=0 and t_karin_megane_flag=0 then event "event\EV_KAR_080-18.png"
+if bondage_flag=0 and t_karin_megane_flag=1 then event "event\EV_KAR_081-18.png"
+if bondage_flag=1 and t_karin_megane_flag=0 then event "event\EV_KAR_082-18.png"
+if bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083-18.png"
 
 オレはペニスの先端、カウパー液がゆるゆるとこぼれる亀頭をさらに強くかりんの鼻先にぐりぐりと押し付ける。
 
@@ -255,10 +256,10 @@ if t_karin_bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083
 「――――！」
 
 @effect_iku
-if t_karin_bondage_flag=0 and t_karin_megane_flag=0 then event "event\EV_KAR_080-19.png"
-if t_karin_bondage_flag=0 and t_karin_megane_flag=1 then event "event\EV_KAR_081-19.png"
-if t_karin_bondage_flag=1 and t_karin_megane_flag=0 then event "event\EV_KAR_082-19.png"
-if t_karin_bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083-19.png"
+if bondage_flag=0 and t_karin_megane_flag=0 then event "event\EV_KAR_080-19.png"
+if bondage_flag=0 and t_karin_megane_flag=1 then event "event\EV_KAR_081-19.png"
+if bondage_flag=1 and t_karin_megane_flag=0 then event "event\EV_KAR_082-19.png"
+if bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083-19.png"
 
 ＠Karin,P04196
 「いやあああっ！」
@@ -273,10 +274,10 @@ if t_karin_bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083
 
 ３度震えるようにして精液全てを注ぎ込むと、オレはペニスをかりんの鼻からどかす。
 
-if t_karin_bondage_flag=0 and t_karin_megane_flag=0 then event "event\EV_KAR_080-20.png"
-if t_karin_bondage_flag=0 and t_karin_megane_flag=1 then event "event\EV_KAR_081-20.png"
-if t_karin_bondage_flag=1 and t_karin_megane_flag=0 then event "event\EV_KAR_082-20.png"
-if t_karin_bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083-20.png"
+if bondage_flag=0 and t_karin_megane_flag=0 then event "event\EV_KAR_080-20.png"
+if bondage_flag=0 and t_karin_megane_flag=1 then event "event\EV_KAR_081-20.png"
+if bondage_flag=1 and t_karin_megane_flag=0 then event "event\EV_KAR_082-20.png"
+if bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083-20.png"
 
 ＠Karin,P04199
 「げほっ、ずるっ……！」

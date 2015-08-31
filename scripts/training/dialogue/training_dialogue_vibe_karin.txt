@@ -30,7 +30,7 @@ label	training_dialogue_vibe_karin_01_b
 「つ、使う？　使うって、まさかそんな極悪な代物、私に挿れるとか言うんじゃないでしょうね！？」
 
 ############ ここからボンテージ
-if t_karin_bondage_flag=0 then goto training_dialogue_vibe_karin_01_a
+if bondage_flag=0 then goto training_dialogue_vibe_karin_01_a
 
 かりんはこの極太のバイブから逃れようと必死だ。
 
@@ -242,7 +242,7 @@ voice_bg	"P90002"
 「ひ、ひぃぃぃんっ！　こんな……こんな下品なモノだなんて……っ、知らなかったわよ……っ。　イヤぁぁぁっ……っ、抜いてっ、抜いてよ、樹！」
 
 ############ ここからボンテージ
-if t_karin_bondage_flag=0 then goto training_dialogue_vibe_karin_02_a
+if bondage_flag=0 then goto training_dialogue_vibe_karin_02_a
 
 ＠Karin,P05111
 「イヤぁあっ、少しも動けないし、ボンテージはきついし、もう最低っ！」
@@ -425,7 +425,7 @@ se 2,"sound\se\SEH27_手マン遅い.wav",play_loop
 かりんは羞恥に体を桜色に染め、快楽にのたうちまわる。
 
 ############ ここからボンテージ
-if t_karin_bondage_flag=0 then goto training_dialogue_vibe_karin_03_a
+if bondage_flag=0 then goto training_dialogue_vibe_karin_03_a
 
 かりんの動きと、ボンテージの軋み、そして鎖の鳴る音が部屋中に響き渡る。
 

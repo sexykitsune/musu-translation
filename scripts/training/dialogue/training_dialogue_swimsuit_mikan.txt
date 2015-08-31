@@ -1,41 +1,8 @@
-#みかんスクール水着
-label	mikan_training_mizugi
-
-#SCRIPT IGNORE
-#@training_anime_release
-#SCRIPT SKIP JAPANESE LINES 1
-select_icon_init
-#SCRIPT IGNORE END
-
-skip_untranslated_training=0
-if t_mikan_mizugi_cnt=0 then gosub	mikan_training_schoolware_01
-if t_mikan_mizugi_cnt>0 then gosub	mikan_training_schoolware_02
-#if t_mikan_mizugi_cnt>1 then gosub	mikan_training_schoolware_03
-
-if skip_untranslated_training=1 then return
-t_mikan_mizugi_cnt=t_mikan_mizugi_cnt+1
-
-@bg_black
-
-add_karada=15*t_mikan_mizugi_cnt
-add_kokoro=25*t_mikan_mizugi_cnt
-add_miryoku=35*t_mikan_mizugi_cnt
-
-tairyoku=tairyoku-500*t_mikan_mizugi_cnt
-seishin=seishin-500*t_mikan_mizugi_cnt
-lifebar_setauto	life_tairyoku,tairyoku
-lifebar_setauto	life_seishin,seishin
-
-@training_mikan_load
-
-return
 
 #一段階目####################################################################
-label	mikan_training_schoolware_01
+label	training_dialogue_swimsuit_mikan_01
 @remove_this_line_when_translating
-#SCRIPT IGNORE
 @training_anime_release
-#SCRIPT IGNORE END
 
 scene_start	"みかんスクール水着１"
 @bgm11
@@ -539,11 +506,9 @@ scene_end
 return
 
 #2段階目####################################################################
-label	mikan_training_schoolware_02
+label	training_dialogue_swimsuit_mikan_02
 @remove_this_line_when_translating
-#SCRIPT IGNORE
 @training_anime_release
-#SCRIPT IGNORE END
 #二段階目
 #■12
 scene_start	"みかんスクール水着２"
@@ -1090,10 +1055,10 @@ se_stop	0
 se_stop	1
 voice_bg_stop
 
-if sel=0 then goto mikan_training_schoolware_02a
-if sel=1 then goto mikan_training_schoolware_02b
+if sel=0 then goto training_dialogue_swimsuit_mikan_02a
+if sel=1 then goto training_dialogue_swimsuit_mikan_02b
 
-label	mikan_training_schoolware_02a
+label	training_dialogue_swimsuit_mikan_02a
 
 @effect_iku
 event	"event\EV_MIK_080-17.png"
@@ -1127,7 +1092,7 @@ event	"event\EV_MIK_080-18.png"
 scene_end
 return
 
-label	mikan_training_schoolware_02b
+label	training_dialogue_swimsuit_mikan_02b
 #■19
 @effect_iku
 

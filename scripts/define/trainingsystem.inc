@@ -216,6 +216,11 @@ macro	all_layerrelease
 	next
 endm
 
+macro	reload_lifebar
+	lifebar_setauto	life_tairyoku,tairyoku
+	lifebar_setauto	life_seishin,seishin
+endm
+
 # macro to avoid untranslated training
 # 
 macro	remove_this_line_when_translating

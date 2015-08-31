@@ -26,8 +26,8 @@ l_insert		= 40				# ちんこ
 l_effect		= 45				# エフェクト
 
 #レイヤー0　背景
-if t_mikan_bondage_flag=0 then layer_load 		l_back,"event\ev_mik_050\ev_mik_050_back.png"
-if t_mikan_bondage_flag=1 then layer_load 		l_back,"event\ev_mik_050\ev_mik_050_back_b.png"
+if bondage_flag=0 then layer_load 		l_back,"event\ev_mik_050\ev_mik_050_back.png"
+if bondage_flag=1 then layer_load 		l_back,"event\ev_mik_050\ev_mik_050_back_b.png"
 layer_position_set 	l_back,-64,-48
 
 #レイヤー5　髪の後ろ
@@ -83,27 +83,27 @@ layer_reference_set	l_mouth,l_head			# 頭のレイヤーに連結
 #layer_position_set 	20,-64,-48
 
 #レイヤー25　胴体
-if t_mikan_bondage_flag=0 then layer_load 		l_body,"event\ev_mik_050\ev_mik_050_body.png"
-if t_mikan_bondage_flag=1 then layer_load 		l_body,"event\ev_mik_050\ev_mik_050_body_b.png"
+if bondage_flag=0 then layer_load 		l_body,"event\ev_mik_050\ev_mik_050_body.png"
+if bondage_flag=1 then layer_load 		l_body,"event\ev_mik_050\ev_mik_050_body_b.png"
 layer_position_set 		l_body,-64,-48
 
 #レイヤー24　腕
-if t_mikan_bondage_flag=0 then layer_load 		l_arm_right_back,"event\ev_mik_050\ev_mik_050_arm_right_back.png"
+if bondage_flag=0 then layer_load 		l_arm_right_back,"event\ev_mik_050\ev_mik_050_arm_right_back.png"
 layer_position_set 	l_arm_right_back,378,126
 layer_reference_set	l_arm_right_back,l_back		# 頭のレイヤーに連結
 
 #レイヤー30　腕
-if t_mikan_bondage_flag=0 then layer_load 		l_arm_back,"event\ev_mik_050\ev_mik_050_arm_left_back.png"
+if bondage_flag=0 then layer_load 		l_arm_back,"event\ev_mik_050\ev_mik_050_arm_left_back.png"
 #layer_position_set 	l_arm_back,-64,-48
 layer_reference_set	l_arm_back,l_arm		# 頭のレイヤーに連結
 
 #レイヤー31　腕
-if t_mikan_bondage_flag=0 then layer_load 		l_arm,"event\ev_mik_050\ev_mik_050_arm_left_front.png"
+if bondage_flag=0 then layer_load 		l_arm,"event\ev_mik_050\ev_mik_050_arm_left_front.png"
 layer_position_set 	l_arm,-64,-48
 
 #レイヤー35 足
-if t_mikan_bondage_flag=0 then layer_load 		l_leg,"event\ev_mik_050\ev_mik_050_leg.png"
-if t_mikan_bondage_flag=1 then layer_load 		l_leg,"event\ev_mik_050\ev_mik_050_leg_b.png"
+if bondage_flag=0 then layer_load 		l_leg,"event\ev_mik_050\ev_mik_050_leg.png"
+if bondage_flag=1 then layer_load 		l_leg,"event\ev_mik_050\ev_mik_050_leg_b.png"
 layer_position_set 	l_leg,-64,-48
 
 #layer_movepass_clear	all

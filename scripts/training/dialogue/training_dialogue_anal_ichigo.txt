@@ -5,7 +5,7 @@ layer_reference_set	l_insert,l_body_back	# 頭のレイヤーに連結
 layer_move		l_insert,500,300,0,0,0,passtype_tcb
 endm
 
-label	training_dialogue_anal_ichigo1
+label	training_dialogue_anal_ichigo_01
 @remove_this_line_when_translating
 #挿入ーアナル（初回）--------------------------------------------------------
 ＠Itsuki
@@ -121,13 +121,13 @@ voice_bg	"O90002"
 亀頭の半分も入らないうちに、いちごは激しく首を振る。
 
 ####################ここからボンデージ装着時テキスト
-if t_ichigo_bondage_flag=0 then goto training_dialogue_anal_ichigo1_a
+if bondage_flag=0 then goto training_dialogue_anal_ichigo_01_a
 
 鎖はガチャンと大きな音を立て、彼女の首を傷つけようとした。
 
 慌てて押さえようとしたが、俺が動くといちごはまた首を振って鎖を振り乱す。
 
-label	training_dialogue_anal_ichigo1_a
+label	training_dialogue_anal_ichigo_01_a
 ####################ここまでボンデージ装着時テキスト
 
 よほど痛いのだろう、すでに大きな瞳からは涙が零れていた。
@@ -208,7 +208,7 @@ voice_bg_stop
 return
 
 #挿入ーアナル（2回目）---------------------------------------------------
-label	training_dialogue_anal_ichigo2
+label	training_dialogue_anal_ichigo_02
 @remove_this_line_when_translating
 
 ＠Ichigo,O04346
@@ -300,7 +300,7 @@ voice_bg	"O03967"
 呼吸したそうにパクパクと開閉を繰り返す菊門へ、先端の数ミリを滑り込ませる。
 
 ####################ここからボンデージ装着時テキスト
-if t_ichigo_bondage_flag=0 then goto training_dialogue_anal_ichigo2_a
+if bondage_flag=0 then goto training_dialogue_anal_ichigo_02_a
 
 陰部を隠しているラバーの紐が、怒張の大きさに合わせて押し開かれる。
 
@@ -309,7 +309,7 @@ if t_ichigo_bondage_flag=0 then goto training_dialogue_anal_ichigo2_a
 
 くすぐったそうに身動ぎするいちごの体を撫で、背中にキスを１つ落とした。
 
-label	training_dialogue_anal_ichigo2_a
+label	training_dialogue_anal_ichigo_02_a
 ####################ここまでボンデージ装着時テキスト
 
 ＠Itsuki
@@ -346,13 +346,13 @@ voice_bg	"O90002"
 「はっ、はぁああああっ！　あぐっ！　ぅっ、ぅうぁああんっ！」
 
 ####################ここからボンデージ装着時テキスト
-if t_ichigo_bondage_flag=0 then goto training_dialogue_anal_ichigo2_b
+if bondage_flag=0 then goto training_dialogue_anal_ichigo_02_b
 
 痛みに耐えるように、背中をグッと後ろへ反らす。
 
 するとピッタリフィットしたボンテージが、その柔肌へ食い込んでいった。
 
-label	training_dialogue_anal_ichigo2_b
+label	training_dialogue_anal_ichigo_02_b
 ####################ここまでボンデージ装着時テキスト
 
 ＠Itsuki
@@ -560,7 +560,7 @@ layer_fadeout	l_insert
 return
 
 #挿入ーアナル（3回目）------------------------------------------------
-label	training_dialogue_anal_ichigo3
+label	training_dialogue_anal_ichigo_03
 @remove_this_line_when_translating
 
 ＠Itsuki
@@ -746,13 +746,13 @@ voice_bg	"O90002"
 「あっ、あああっ！　ぱっ、パパァ！　いちご、なんだか…んくうっ！　変っ…ゾクゾクするよぉっ」
 
 ####################ここからボンデージ装着時テキスト
-if t_ichigo_bondage_flag=0 then goto training_dialogue_anal_ichigo3_a
+if bondage_flag=0 then goto training_dialogue_anal_ichigo_03_a
 
 鎖をギュッと掴み、プックリと赤く膨れた唇を開いて嬌声を上げる。
 
 二の腕に巻いたラバーの鉄部分が淡い光に照らされ、キラリと光った。
 
-label	training_dialogue_anal_ichigo3_a
+label	training_dialogue_anal_ichigo_03_a
 ####################ここまでボンデージ装着時テキスト
 
 @seh22
@@ -929,7 +929,7 @@ voice_bg	"O03965"
 layer_fadeout	l_insert
 return
 
-label	training_dialogue_anal_ichigo4
+label	training_dialogue_anal_ichigo_04
 @remove_this_line_when_translating
 
 #アナル（4回目）--------------------------------------------------
@@ -1023,7 +1023,7 @@ voice_bg	"O03970"
 俺の先走りだけで、ズルズルと怒張を飲み込んでいく。
 
 ####################ここからボンデージ装着時テキスト
-if t_ichigo_bondage_flag=0 then goto training_dialogue_anal_ichigo4_a
+if bondage_flag=0 then goto training_dialogue_anal_ichigo_04_a
 
 更に奥へ進めると、太ももの金具に触れた。
 
@@ -1037,7 +1037,7 @@ if t_ichigo_bondage_flag=0 then goto training_dialogue_anal_ichigo4_a
 
 腰を掴み直すと、俺はグッと腰を押し進めた。
 
-label	training_dialogue_anal_ichigo4_a
+label	training_dialogue_anal_ichigo_04_a
 ####################ここまでボンデージ装着時テキスト
 
 voice_bg	"O03967"
@@ -1212,7 +1212,7 @@ if _TRANSLATOR_OPTION_DISABLE_FLASHES=0 then screen_flash	500
 体を大きく揺らしながら、押しあがる快感に腸襞を震わせる。
 
 ####################ここからボンデージ装着時テキスト
-if t_ichigo_bondage_flag=0 then goto training_dialogue_anal_ichigo4_b
+if bondage_flag=0 then goto training_dialogue_anal_ichigo_04_b
 
 @SEH07
 その動きに鎖も大きく波打ち、耳障りな金属音を鳴らした。
@@ -1224,7 +1224,7 @@ if t_ichigo_bondage_flag=0 then goto training_dialogue_anal_ichigo4_b
 
 ホッと胸を撫で下ろし、またグッと奥まで突き上げていく。
 
-label	training_dialogue_anal_ichigo4_b
+label	training_dialogue_anal_ichigo_04_b
 ####################ここまでボンデージ装着時テキスト
 
 ＠Ichigo,O04460

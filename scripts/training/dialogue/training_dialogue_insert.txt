@@ -1,44 +1,31 @@
 
 macro	training_dialogue_insert
+skip_untranslated_training=0
 select_icon_init
 if training_chara=TRAINING_MIKAN	then gosub training_dialogue_insert_mikan
 if training_chara=TRAINING_ICHIGO	then gosub training_dialogue_insert_ichigo
 if training_chara=TRAINING_KARIN	then gosub training_dialogue_insert_karin
 window_close
+if skip_untranslated_training=1 then return
 endm
 
 label	training_dialogue_insert_mikan
-
-skip_untranslated_training=0
 if mikan_insert_count=0 then gosub	training_dialogue_insert_mikan_01
 if mikan_insert_count=1 then gosub	training_dialogue_insert_mikan_02
 if mikan_insert_count=2 then gosub	training_dialogue_insert_mikan_03
 if mikan_insert_count>2 then gosub	training_dialogue_insert_mikan_04
-
-if skip_untranslated_training=1 then return
-
 return
 
 label	training_dialogue_insert_ichigo
-
-skip_untranslated_training=0
 if t_ichigo_insert_cnt=0 then gosub training_dialogue_insert_ichigo_01
 if t_ichigo_insert_cnt=1 then gosub training_dialogue_insert_ichigo_02
 if t_ichigo_insert_cnt=2 then gosub training_dialogue_insert_ichigo_03
 if t_ichigo_insert_cnt>2 then gosub training_dialogue_insert_ichigo_04
-
-if skip_untranslated_training=1 then return
-
 return
 
 label	training_dialogue_insert_karin
-
-skip_untranslated_training=0
 if t_karin_insert_cnt=0 then gosub training_dialogue_insert_karin_01
 if t_karin_insert_cnt=1 then gosub training_dialogue_insert_karin_02
 if t_karin_insert_cnt=2 then gosub training_dialogue_insert_karin_03
 if t_karin_insert_cnt>2 then gosub training_dialogue_insert_karin_04
-
-if skip_untranslated_training=1 then return
-
 return

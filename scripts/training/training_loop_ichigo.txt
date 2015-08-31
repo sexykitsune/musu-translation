@@ -4,18 +4,21 @@ training_chara=TRAINING_ICHIGO
 @bgm10
 date_close
 @all_layerrelease
-
-#-- 初期化 --------------------------------------------------------------------
+#@training_paramget
 @training_voice_init
-t_ichigo_bondage_flag=0
-t_ichigo_damagefix=1.2
+bondage_flag=0
+megane_flag=0
+damagefix=1.2
+training_caress_count_l=0
+training_spank_count_l=0
+training_whip_count_l=0
+training_candle_count_l=0
 
 add_miryoku=0
 add_karada=0
 add_atama=0
 add_kokoro=0
 
-#-- ライフ -------------------------------------------------------------------
 tairyoku=ichigo_kenkou_max
 seishin=ichigo_kiryoku_max
 tairyoku_max=tairyoku
@@ -31,8 +34,8 @@ lifebar_open	life_tairyoku
 lifebar_open	life_seishin
 @reload_lifebar
 
-if ichigo_command_cnt<15 then voice "O03728"	#
-if ichigo_command_cnt>=15 then voice "O03732"	#
+if training_command_count_ichigo<15 then voice "O03728"	#
+if training_command_count_ichigo>=15 then voice "O03732"	#
 
 window_close
 
@@ -58,8 +61,8 @@ if _ITEM(206)=1 then select_icon_add	4,"system\iconselect\icon_vibe.png","大きな
 if _ITEM(205)=1 then select_icon_add	5,"system\iconselect\icon_analvibe.png","アナルバイブでアナルを開発する"
 if _ITEM(203)=1 then select_icon_add	7,"system\iconselect\icon_rousoku.png","蝋燭を使う"
 if _ITEM(200)=1 then select_icon_add	8,"system\iconselect\icon_muchi.png","鞭を使う"
-if _ITEM(304)=1 and t_ichigo_bondage_flag=0 then select_icon_add	9,"system\iconselect\icon_bondage.png","ボンデージ服を着せる"
-if _ITEM(304)=1 and t_ichigo_bondage_flag=1 then select_icon_add	9,"system\iconselect\icon_nude.png","裸にする"
+if _ITEM(304)=1 and bondage_flag=0 then select_icon_add	9,"system\iconselect\icon_bondage.png","ボンデージ服を着せる"
+if _ITEM(304)=1 and bondage_flag=1 then select_icon_add	9,"system\iconselect\icon_nude.png","裸にする"
 
 label t_ichigo_loop_a
 #コマンド選択
@@ -110,7 +113,7 @@ if command=8 then gosub t_ichigo_baramuchi		#バラ鞭
 
 if tairyoku<=0 then goto t_ichigo_end
 if seishin<=0 then goto t_ichigo_end
-if t_ichigo_damagefix<0.5 then t_ichigo_damagefix=0.5
+if damagefix<0.5 then damagefix=0.5
 
 #マゾになるか？
 if t_ichigo_maso_cnt=100 then @ichigo_masomode
@@ -129,7 +132,7 @@ se		0,"sound\se\プイッ.WAV",play_once
 @ichigo_motion_normal1
 @training_voice_aibu
 
-t_ichigo_damagefix=t_ichigo_damagefix-0.01
+damagefix=damagefix-0.01
 return
 
 #-- ■ちんぽ■ ----------------------------------------------------------------
@@ -147,7 +150,7 @@ if _COLOR=cl_pussy then gosub training_insert_ichigo		#挿入
 
 if _COLOR=cl_breast1 or _COLOR=cl_breast2 or _COLOR=cl_legs then goto t_ichigo_aibu
 
-t_ichigo_damagefix=t_ichigo_damagefix-0.1
+damagefix=damagefix-0.1
 
 window_close
 return
@@ -170,15 +173,15 @@ if _LAYER<>l_leg then @spanking_effect_small		# 鞭痕(小)
 t_ichigo_maso_cnt=t_ichigo_maso_cnt+1
 
 @ichigo_motion_pain1
-tairyoku=tairyoku-15*t_ichigo_damagefix
-seishin=seishin-20*t_ichigo_damagefix
+tairyoku=tairyoku-15*damagefix
+seishin=seishin-20*damagefix
 lifebar_setauto	life_tairyoku,tairyoku
 lifebar_setauto	life_seishin,seishin
 
 add_karada=add_karada+1
 add_miryoku=add_miryoku+1
 
-t_ichigo_damagefix=t_ichigo_damagefix-0.02
+damagefix=damagefix-0.02
 
 wait	500
 return
@@ -202,17 +205,17 @@ t_ichigo_muchi_cnt=t_ichigo_muchi_cnt+1
 t_ichigo_maso_cnt=t_ichigo_maso_cnt+1
 
 @ichigo_motion_pain1
-tairyoku=tairyoku-35*t_ichigo_damagefix
-seishin=seishin-20*t_ichigo_damagefix
-if _COLOR=cl_pussy then tairyoku=tairyoku-35*t_ichigo_damagefix
-if _COLOR=cl_pussy then seishin=seishin-20*t_ichigo_damagefix
+tairyoku=tairyoku-35*damagefix
+seishin=seishin-20*damagefix
+if _COLOR=cl_pussy then tairyoku=tairyoku-35*damagefix
+if _COLOR=cl_pussy then seishin=seishin-20*damagefix
 
 lifebar_setauto	life_tairyoku,tairyoku
 lifebar_setauto	life_seishin,seishin
 
 add_karada=add_karada+2
 add_miryoku=add_miryoku+2
-t_ichigo_damagefix=t_ichigo_damagefix-0.04
+damagefix=damagefix-0.04
 
 wait	500
 
@@ -256,11 +259,11 @@ t_ichigo_rousoku_cnt=t_ichigo_rousoku_cnt+1
 t_ichigo_maso_cnt=t_ichigo_maso_cnt+1
 
 @ichigo_motion_pain1
-tairyoku=tairyoku-20*t_ichigo_damagefix
-seishin=seishin-35*t_ichigo_damagefix
+tairyoku=tairyoku-20*damagefix
+seishin=seishin-35*damagefix
 
-if _COLOR=cl_pussy then tairyoku=tairyoku-20*t_ichigo_damagefix
-if _COLOR=cl_pussy then seishin=seishin-35*t_ichigo_damagefix
+if _COLOR=cl_pussy then tairyoku=tairyoku-20*damagefix
+if _COLOR=cl_pussy then seishin=seishin-35*damagefix
 
 lifebar_setauto	life_tairyoku,tairyoku
 lifebar_setauto	life_seishin,seishin
@@ -295,21 +298,16 @@ goto t_ichigo_loop
 
 #-- ■アナルバイブ■ -----------------------------------------------
 label t_ichigo_analvibe
-gosub	training_ichigo_analvibe
+gosub	training_analvibe_ichigo
 goto t_ichigo_loop
 
 #-- ■ボンデージ■ ---------------------------------------------------------
 label t_ichigo_bondage
 @training_anime_release
-if t_ichigo_bondage_flag=0 then t_ichigo_bondage_flag=1;goto t_ichigo_bondage_skip
-if t_ichigo_bondage_flag=1 then t_ichigo_bondage_flag=0
+if bondage_flag=0 then bondage_flag=1;goto t_ichigo_bondage_skip
+if bondage_flag=1 then bondage_flag=0
 label t_ichigo_bondage_skip
 @training_anime_load
-goto t_ichigo_loop
-
-#-- ■ビデオカメラ■ ---------------------------------------------------------
-label t_ichigo_video
-gosub	training_ichigo_video
 goto t_ichigo_loop
 
 label	training_fellatio_ichigo
@@ -363,40 +361,18 @@ seishin=seishin-40*t_ichigo_vibe_cnt
 @reload_lifebar
 return
 
-#move these out of the file eventualy
+label	training_analvibe_ichigo
+@training_dialogue_analvibe
+t_ichigo_analvibe_cnt=t_ichigo_analvibe_cnt+1
 
-macro	ichigo_motion_pain1
-@training_anime_motion_pain
-@motion_pain_effect_ichigo
-endm
+add_karada=3*t_ichigo_analvibe_cnt
+add_kokoro=5*t_ichigo_analvibe_cnt
+add_miryoku=10*t_ichigo_analvibe_cnt
 
-macro	motion_pain_effect_ichigo
-tairyoku=tairyoku-3*t_ichigo_damagefix
-seishin=seishin-5*t_ichigo_damagefix
+tairyoku=tairyoku-30*t_ichigo_analvibe_cnt
+seishin=seishin-40*t_ichigo_analvibe_cnt
 @reload_lifebar
-endm
-
-macro	ichigo_motion_insert1
-@training_anime_motion_insert
-@motion_insert_effect_ichigo
-endm
-
-macro	motion_insert_effect_ichigo
-tairyoku=tairyoku-10*t_ichigo_damagefix
-seishin=seishin-15*t_ichigo_damagefix
-@reload_lifebar
-endm
-
-macro	ichigo_motion_normal1
-@training_anime_motion_normal
-@motion_normal_effect_ichigo
-endm
-
-macro	motion_normal_effect_ichigo
-tairyoku=tairyoku-3*t_ichigo_damagefix
-seishin=seishin-5*t_ichigo_damagefix
-@reload_lifebar
-endm
+return
 
 #-- 気絶 --------------------------------------------------------------------
 label t_ichigo_end
@@ -422,8 +398,8 @@ label t_ichigo_exit
 select	sel,"End training","On second thought..."
 if sel=1 then goto t_ichigo_loop
 
-if ichigo_command_cnt<15 then voice "O03731"	#「はぁっ…………こんなこと……おかしいわよ……」
-if ichigo_command_cnt>=15 then voice "O03733"	#「っふ……なんで……わたし……こんなに……あぁっ……」
+if training_command_count_ichigo<15 then voice "O03731"	#「はぁっ…………こんなこと……おかしいわよ……」
+if training_command_count_ichigo>=15 then voice "O03733"	#「っふ……なんで……わたし……こんなに……あぁっ……」
 
 label t_ichigo_exit2
 
@@ -462,7 +438,7 @@ lifebar_close	life_kokoro
 wait	500
 #------------------------------------------------------------------------
 
-if add_miryoku>10 then ichigo_command_cnt=ichigo_command_cnt+1
+if add_miryoku>=10 then training_command_count_ichigo=training_command_count_ichigo+1
 if add_miryoku>0 then @ichigo_add_miryoku
 
 if ichigo_reception_level=1 and t_ichigo_fera_cnt>3 then gosub t_ichigo_up

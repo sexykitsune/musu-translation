@@ -1,66 +1,56 @@
 
 macro	training_dialogue_fellatio
+skip_untranslated_training=0
 select_icon_init
 if training_chara=TRAINING_MIKAN	then gosub training_dialogue_fellatio_mikan
 if training_chara=TRAINING_ICHIGO	then gosub training_dialogue_fellatio_ichigo
 if training_chara=TRAINING_KARIN	then gosub training_dialogue_fellatio_karin
 window_close
+if skip_untranslated_training=1 then return
+@training_anime_load
 endm
 
 label	training_dialogue_fellatio_mikan
-
 sel=0
-if _COLOR=cl_mouth then sel=0	#Œû
-if _COLOR=cl_face  then sel=1	#Šç
+if _COLOR=cl_mouth then sel=0
+if _COLOR=cl_face  then sel=1
 
-skip_untranslated_training=0
 if t_mikan_fellatio_cnt1=0 then gosub training_dialogue_fellatio_mikan_01
 if t_mikan_fellatio_cnt1=1 then gosub training_dialogue_fellatio_mikan_02
 if t_mikan_fellatio_cnt1=2 then gosub training_dialogue_fellatio_mikan_03
 if t_mikan_fellatio_cnt1>2 then gosub training_dialogue_fellatio_mikan_04
-
-if skip_untranslated_training=1 then return
-
 return
 
 macro	t_mikan_fera_sub
 if sel=1 then goto training_dialogue_fellatio_mikan_mouth
 if sel=0 then goto training_dialogue_fellatio_mikan_face
 
-#Œû‚Ì’†‚ÉË¸‚·‚é
 label	training_dialogue_fellatio_mikan_mouth
 if t_mikan_fellatio_cnt2=0 then gosub training_dialogue_fellatio_mikan_a01
 if t_mikan_fellatio_cnt2=1 then gosub training_dialogue_fellatio_mikan_a02
 if t_mikan_fellatio_cnt2=2 then gosub training_dialogue_fellatio_mikan_a03
 if t_mikan_fellatio_cnt2>2 then gosub training_dialogue_fellatio_mikan_a04
 t_mikan_fellatio_cnt2=t_mikan_fellatio_cnt2+1
-
 goto	training_dialogue_fellatio_mikan_skip
-#Šç‚ÉË¸‚·‚é
+
 label	training_dialogue_fellatio_mikan_face
 if t_mikan_fellatio_cnt3=0 then gosub training_dialogue_fellatio_mikan_b01
 if t_mikan_fellatio_cnt3=1 then gosub training_dialogue_fellatio_mikan_b02
 if t_mikan_fellatio_cnt3=2 then gosub training_dialogue_fellatio_mikan_b03
 if t_mikan_fellatio_cnt3>2 then gosub training_dialogue_fellatio_mikan_b04
 t_mikan_fellatio_cnt3=t_mikan_fellatio_cnt3+1
+
 label	training_dialogue_fellatio_mikan_skip
 endm
 
 label	training_dialogue_fellatio_ichigo
-
-skip_untranslated_training=0
 if t_ichigo_fera_cnt=0 then gosub training_dialogue_fellatio_ichigo_01
 if t_ichigo_fera_cnt=1 then gosub training_dialogue_fellatio_ichigo_02
 if t_ichigo_fera_cnt=2 then gosub training_dialogue_fellatio_ichigo_03
 if t_ichigo_fera_cnt>2 then gosub training_dialogue_fellatio_ichigo_04
-
-if skip_untranslated_training=1 then return
-
 return
 
 label	training_dialogue_fellatio_karin
-
-skip_untranslated_training=0
 if t_karin_fera_cnt=0 then gosub training_dialogue_bukkake_karin
 if t_karin_fera_cnt=1 then gosub training_dialogue_hairjob_karin
 if t_karin_fera_cnt=2 then gosub training_dialogue_nosehook_karin
@@ -69,8 +59,5 @@ if t_karin_fera_cnt=4 then gosub training_dialogue_fellatio_karin_02
 if t_karin_fera_cnt=5 then gosub training_dialogue_fellatio_karin_03
 if t_karin_fera_cnt=6 then gosub training_dialogue_fellatio_karin_04
 if t_karin_fera_cnt>6 then gosub training_dialogue_fellatio_karin_05
-
-if skip_untranslated_training=1 then return
-
 return
 
