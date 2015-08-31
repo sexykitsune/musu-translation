@@ -10,22 +10,22 @@ if skip_untranslated_training=1 then return
 endm
 
 label	training_dialogue_anal_mikan
-if t_mikan_anal_cnt=0 then gosub training_dialogue_anal_mikan_01
-if t_mikan_anal_cnt=1 then gosub training_dialogue_anal_mikan_02
-if t_mikan_anal_cnt=2 then gosub training_dialogue_anal_mikan_03
-if t_mikan_anal_cnt>2 then gosub training_dialogue_anal_mikan_04
+if training_anal_count=0 then gosub training_dialogue_anal_mikan_01
+if training_anal_count=1 then gosub training_dialogue_anal_mikan_02
+if training_anal_count=2 then gosub training_dialogue_anal_mikan_03
+if training_anal_count>2 then gosub training_dialogue_anal_mikan_04
 return
 
 label	training_dialogue_anal_ichigo
-if t_ichigo_anal_cnt=0 then gosub training_dialogue_anal_ichigo_01
-if t_ichigo_anal_cnt=1 then gosub training_dialogue_anal_ichigo_02
-if t_ichigo_anal_cnt=2 then gosub training_dialogue_anal_ichigo_03
-if t_ichigo_anal_cnt>2 then gosub training_dialogue_anal_ichigo_04
+if training_anal_count=0 then gosub training_dialogue_anal_ichigo_01
+if training_anal_count=1 then gosub training_dialogue_anal_ichigo_02
+if training_anal_count=2 then gosub training_dialogue_anal_ichigo_03
+if training_anal_count>2 then gosub training_dialogue_anal_ichigo_04
 return
 
 label	training_dialogue_anal_karin
-if t_karin_anal_cnt=0 then gosub training_dialogue_anal_karin_01
-if t_karin_anal_cnt=1 then gosub training_dialogue_anal_karin_02
-if t_karin_anal_cnt=2 then gosub training_dialogue_anal_karin_03
-if t_karin_anal_cnt>2 then gosub training_dialogue_anal_karin_04
+if training_anal_count=0 then gosub training_dialogue_anal_karin_01
+if training_anal_count=1 then gosub training_dialogue_anal_karin_02
+if training_anal_count=2 then gosub training_dialogue_anal_karin_03
+if training_anal_count>2 then gosub training_dialogue_anal_karin_04
 return

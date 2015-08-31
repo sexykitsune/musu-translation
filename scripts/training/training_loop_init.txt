@@ -1,0 +1,45 @@
+
+label	training_loop_init
+@bgm10
+date_close
+@all_layerrelease
+@training_voice_init
+
+#variable init
+training_bondage_flag=0
+training_megane_flag=0
+training_damagefix=training_damagefix_start
+training_caress_count_l=0
+training_spank_count_l=0
+training_whip_count_l=0
+training_candle_count_l=0
+
+add_miryoku=0
+add_karada=0
+add_atama=0
+add_kokoro=0
+
+#health init
+tairyoku_max=tairyoku
+seishin_max=seishin
+lifebar_set	life_tairyoku,tairyoku
+lifebar_setmax	life_tairyoku,tairyoku_max
+lifebar_set	life_seishin,seishin
+lifebar_setmax	life_seishin,seishin_max
+
+#animation init
+@training_anime_load
+lifebar_open	life_tairyoku
+lifebar_open	life_seishin
+@reload_lifebar
+
+if training_command_count<15 then @training_voice_start_low_command
+if training_command_count>=15 then @training_voice_start_hight_command
+
+window_close
+
+if training_chara=TRAINING_MIKAN	then voice_bg	"A04241"
+if training_chara=TRAINING_ICHIGO	then voice_bg	"O03965"
+if training_chara=TRAINING_KARIN	then voice_bg	"P04704"
+return
+

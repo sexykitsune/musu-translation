@@ -9,8 +9,8 @@ if skip_untranslated_training=1 then return
 endm
 
 label	training_dialogue_hardanal_mikan
-if t_mikan_hardanal_cnt=0 then gosub	training_dialogue_hardanal_mikan_01
-if t_mikan_hardanal_cnt=1 then gosub	training_dialogue_hardanal_mikan_02
-if t_mikan_hardanal_cnt=2 then gosub	training_dialogue_hardanal_mikan_03
-if t_mikan_hardanal_cnt>2 then gosub	training_dialogue_hardanal_mikan_04
+if training_hardanal_count=0 then gosub	training_dialogue_hardanal_mikan_01
+if training_hardanal_count=1 then gosub	training_dialogue_hardanal_mikan_02
+if training_hardanal_count=2 then gosub	training_dialogue_hardanal_mikan_03
+if training_hardanal_count>2 then gosub	training_dialogue_hardanal_mikan_04
 return

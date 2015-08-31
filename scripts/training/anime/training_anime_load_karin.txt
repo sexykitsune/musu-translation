@@ -79,26 +79,26 @@ layer_load_parts	l_mouth,8,"event\ev_kar_070\ev_kar_070_mouth9.png"
 layer_reference_set	l_mouth,l_head			# 頭のレイヤーに連結
 
 #かりんめがね
-if megane_flag=1 then layer_load		l_megane,"event\ev_kar_070\EV_KAR_070_megane.png"
-if megane_flag=1 then layer_reference_set	l_megane,l_head		# 頭のレイヤーに連結
+if training_megane_flag=1 then layer_load		l_megane,"event\ev_kar_070\EV_KAR_070_megane.png"
+if training_megane_flag=1 then layer_reference_set	l_megane,l_head		# 頭のレイヤーに連結
 
 #レイヤー20　前髪重ね
 #layer_load 		20,"event\ev_kar_070\ev_kar_070_hair_front.png"
 #layer_position_set 	20,-64,-48
 
 #レイヤー25　腕
-if bondage_flag=0 then layer_load l_arm,"event\ev_kar_070\ev_kar_070_arm.png"
-if bondage_flag=1 then layer_load l_arm,"event\ev_kar_070\ev_kar_070_arm_b.png"
+if training_bondage_flag=0 then layer_load l_arm,"event\ev_kar_070\ev_kar_070_arm.png"
+if training_bondage_flag=1 then layer_load l_arm,"event\ev_kar_070\ev_kar_070_arm_b.png"
 layer_position_set 	l_arm,-64,-48
 
 #レイヤー30　胴体
-if bondage_flag=0 then layer_load l_body,"event\ev_kar_070\ev_kar_070_body.png"
-if bondage_flag=1 then layer_load l_body,"event\ev_kar_070\ev_kar_070_body_b.png"
+if training_bondage_flag=0 then layer_load l_body,"event\ev_kar_070\ev_kar_070_body.png"
+if training_bondage_flag=1 then layer_load l_body,"event\ev_kar_070\ev_kar_070_body_b.png"
 layer_position_set 		l_body,-64,-48
 
 #レイヤー35 足
-if bondage_flag=0 then layer_load l_leg,"event\ev_kar_070\ev_kar_070_leg.png"
-if bondage_flag=1 then layer_load l_leg,"event\ev_kar_070\ev_kar_070_leg_b.png"
+if training_bondage_flag=0 then layer_load l_leg,"event\ev_kar_070\ev_kar_070_leg.png"
+if training_bondage_flag=1 then layer_load l_leg,"event\ev_kar_070\ev_kar_070_leg_b.png"
 layer_position_set 	l_leg,-64,-48
 
 #layer_movepass_clear	all

@@ -7,6 +7,10 @@ training_damagefix_start_mikan=1.0
 training_damagefix_start_ichigo=1.2
 training_damagefix_start_karin=1.2
 
+training_maso_check_mikan=-1
+training_maso_check_ichigo=100
+training_maso_check_karin=80
+
 #d for delta
 #tairyoku, seishin and damagefix are decrements. all others are increments
 motion_normal_tairyoku_d=3
@@ -37,8 +41,8 @@ caress_damagefix_d_ichigo=0.01
 caress_damagefix_d_karin=0.01
 
 #spank also includes motion_pain
-spank_tairyoku_d=10
-spank_seishin_d=15
+spank_tairyoku_d=15
+spank_seishin_d=20
 spank_miryoku_d=1
 spank_karada_d=1
 spank_atama_d=0
@@ -204,6 +208,10 @@ training_count_karin=0
 training_maso_count_mikan=0
 training_maso_count_ichigo=0
 training_maso_count_karin=0
+
+training_maso_flag_mikan=0
+training_maso_flag_ichigo=0
+training_maso_flag_karin=0
 
 training_faint_count_mikan=0
 training_faint_count_ichigo=0

@@ -1,0 +1,120 @@
+
+label	training_spanking
+@layercheck
+mousecursor_reset
+@muchi_effect
+if _LAYER=l_leg then @spanking_effect_big
+if _LAYER<>l_leg then @spanking_effect_small
+@training_voice_spanking
+@motion_effect_pain
+training_maso_count=training_maso_count+1
+training_spank_count=training_spank_count+1
+training_spank_count_l=training_spank_count_l+1
+
+tairyoku=tairyoku-spank_tairyoku_d*training_damagefix
+seishin=seishin-spank_seishin_d*training_damagefix
+
+add_miryoku=add_miryoku+spank_miryoku_d
+
+add_karada=add_karada+spank_karada_d
+add_atama=add_atama+spank_atama_d
+add_kokoro=add_kokoro+spank_kokoro_d
+
+training_damagefix=training_damagefix-spank_damagefix_d
+
+@reload_lifebar
+wait	500
+return
+
+label	training_whip
+@layercheck
+mousecursor_reset
+@muchi_effect
+if _LAYER=l_leg then @muchiato_effect_big
+if _LAYER<>l_leg then @muchiato_effect_small
+@training_voice_pain
+if _COLOR=cl_pussy then screen_vibration 500,16,16,16
+@motion_effect_pain
+training_maso_count=training_maso_count+1
+training_whip_count=training_whip_count+1
+training_whip_count_l=training_whip_count_l+1
+
+tairyoku=tairyoku-whip_tairyoku_d*training_damagefix
+seishin=seishin-whip_seishin_d*training_damagefix
+if _COLOR=cl_pussy then tairyoku=tairyoku-whip_tairyoku_d*training_damagefix
+if _COLOR=cl_pussy then seishin=seishin-whip_seishin_d*training_damagefix
+
+add_miryoku=add_miryoku+whip_miryoku_d
+
+add_karada=add_karada+whip_karada_d
+add_atama=add_atama+whip_atama_d
+add_kokoro=add_kokoro+whip_kokoro_d
+
+training_damagefix=training_damagefix-whip_damagefix_d
+
+@reload_lifebar
+wait	500
+
+if training_chara=TRAINING_ICHIGO	then voice_bg	"O03967"
+if training_chara=TRAINING_KARIN	then voice_bg	"P04706"
+#if training_chara=TRAINING_KARIN and _COLOR=cl_pussy then voice_bg	"P04710"
+
+passspeed=200
+@set_motion_speed
+return
+
+label	training_candle
+@layercheck
+mousecursor_reset
+@rousoku_effect
+@training_voice_hot
+if _COLOR=cl_pussy then screen_vibration 500,16,16,16
+
+for j=0 to 5
+rand rnd,0,128
+_x=_x+rnd-64
+rand rnd,0,128
+_y=_y+rnd-64
+
+if _LAYER=l_leg then @rousoku_effect_big
+if _LAYER<>l_leg then @rousoku_effect_small
+wait	50
+next
+
+@motion_effect_pain
+
+training_maso_count=training_maso_count+1
+training_candle_count=training_candle_count+1
+training_candle_count_l=training_candle_count_l+1
+
+tairyoku=tairyoku-candle_tairyoku_d*training_damagefix
+seishin=seishin-candle_seishin_d*training_damagefix
+if _COLOR=cl_pussy then tairyoku=tairyoku-candle_tairyoku_d*training_damagefix
+if _COLOR=cl_pussy then seishin=seishin-candle_seishin_d*training_damagefix
+
+add_miryoku=add_miryoku+candle_miryoku_d
+
+add_karada=add_karada+candle_karada_d
+add_atama=add_atama+candle_atama_d
+add_kokoro=add_kokoro+candle_kokoro_d
+
+training_damagefix=training_damagefix-candle_damagefix_d
+
+@reload_lifebar
+wait	500
+
+if training_chara=TRAINING_ICHIGO	then voice_bg	"O03967"
+if training_chara=TRAINING_ICHIGO and _COLOR=cl_pussy then voice_bg	"O03971"
+if training_chara=TRAINING_KARIN	then voice_bg	"P04706"
+if training_chara=TRAINING_KARIN and _COLOR=cl_pussy then voice_bg	"P04710"
+
+passspeed=200
+@set_motion_speed
+return
+
+
+macro	layercheck
+if training_chara<>TRAINING_ICHIGO and _LAYER < 25 then return
+if training_chara=TRAINING_ICHIGO and _LAYER < 21 then return
+if training_chara=TRAINING_ICHIGO and _LAYER > 29 then return
+endm

@@ -1,0 +1,28 @@
+
+label	training_caress
+if _COLOR=0 then return
+se 0,"sound\se\ƒvƒCƒb.WAV",play_once
+@motion_effect_normal
+@training_voice_caress
+training_caress_count=training_caress_count+1
+training_caress_count_l=training_caress_count_l+1
+
+add_miryoku=add_miryoku+caress_miryoku_d
+
+add_karada=add_karada+caress_karada_d
+add_atama=add_atama+caress_atama_d
+add_kokoro=add_kokoro+caress_kokoro_d
+
+training_damagefix=training_damagefix-caress_training_damagefix_d
+return
+
+label	training_penis
+if _COLOR=0 then return
+mousecursor_reset
+if _COLOR=cl_mouth	then gosub training_fellatio
+if _COLOR=cl_face	then gosub training_fellatio
+if _COLOR=cl_anal	then gosub training_anal
+if _COLOR=cl_pussy	then gosub training_insert
+if _COLOR=cl_breast1 or _COLOR=cl_breast2 or _COLOR=cl_legs then gosub training_caress
+window_close
+return

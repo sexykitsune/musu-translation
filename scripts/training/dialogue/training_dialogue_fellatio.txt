@@ -15,10 +15,10 @@ sel=0
 if _COLOR=cl_mouth then sel=0
 if _COLOR=cl_face  then sel=1
 
-if t_mikan_fellatio_cnt1=0 then gosub training_dialogue_fellatio_mikan_01
-if t_mikan_fellatio_cnt1=1 then gosub training_dialogue_fellatio_mikan_02
-if t_mikan_fellatio_cnt1=2 then gosub training_dialogue_fellatio_mikan_03
-if t_mikan_fellatio_cnt1>2 then gosub training_dialogue_fellatio_mikan_04
+if training_fellatio_count=0 then gosub training_dialogue_fellatio_mikan_01
+if training_fellatio_count=1 then gosub training_dialogue_fellatio_mikan_02
+if training_fellatio_count=2 then gosub training_dialogue_fellatio_mikan_03
+if training_fellatio_count>2 then gosub training_dialogue_fellatio_mikan_04
 return
 
 macro	t_mikan_fera_sub
@@ -26,38 +26,38 @@ if sel=1 then goto training_dialogue_fellatio_mikan_mouth
 if sel=0 then goto training_dialogue_fellatio_mikan_face
 
 label	training_dialogue_fellatio_mikan_mouth
-if t_mikan_fellatio_cnt2=0 then gosub training_dialogue_fellatio_mikan_a01
-if t_mikan_fellatio_cnt2=1 then gosub training_dialogue_fellatio_mikan_a02
-if t_mikan_fellatio_cnt2=2 then gosub training_dialogue_fellatio_mikan_a03
-if t_mikan_fellatio_cnt2>2 then gosub training_dialogue_fellatio_mikan_a04
-t_mikan_fellatio_cnt2=t_mikan_fellatio_cnt2+1
+if training_fellatio_mouth_count=0 then gosub training_dialogue_fellatio_mikan_a01
+if training_fellatio_mouth_count=1 then gosub training_dialogue_fellatio_mikan_a02
+if training_fellatio_mouth_count=2 then gosub training_dialogue_fellatio_mikan_a03
+if training_fellatio_mouth_count>2 then gosub training_dialogue_fellatio_mikan_a04
+training_fellatio_mouth_count=training_fellatio_mouth_count+1
 goto	training_dialogue_fellatio_mikan_skip
 
 label	training_dialogue_fellatio_mikan_face
-if t_mikan_fellatio_cnt3=0 then gosub training_dialogue_fellatio_mikan_b01
-if t_mikan_fellatio_cnt3=1 then gosub training_dialogue_fellatio_mikan_b02
-if t_mikan_fellatio_cnt3=2 then gosub training_dialogue_fellatio_mikan_b03
-if t_mikan_fellatio_cnt3>2 then gosub training_dialogue_fellatio_mikan_b04
-t_mikan_fellatio_cnt3=t_mikan_fellatio_cnt3+1
+if training_fellatio_face_count=0 then gosub training_dialogue_fellatio_mikan_b01
+if training_fellatio_face_count=1 then gosub training_dialogue_fellatio_mikan_b02
+if training_fellatio_face_count=2 then gosub training_dialogue_fellatio_mikan_b03
+if training_fellatio_face_count>2 then gosub training_dialogue_fellatio_mikan_b04
+training_fellatio_face_count=training_fellatio_face_count+1
 
 label	training_dialogue_fellatio_mikan_skip
 endm
 
 label	training_dialogue_fellatio_ichigo
-if t_ichigo_fera_cnt=0 then gosub training_dialogue_fellatio_ichigo_01
-if t_ichigo_fera_cnt=1 then gosub training_dialogue_fellatio_ichigo_02
-if t_ichigo_fera_cnt=2 then gosub training_dialogue_fellatio_ichigo_03
-if t_ichigo_fera_cnt>2 then gosub training_dialogue_fellatio_ichigo_04
+if training_fellatio_count=0 then gosub training_dialogue_fellatio_ichigo_01
+if training_fellatio_count=1 then gosub training_dialogue_fellatio_ichigo_02
+if training_fellatio_count=2 then gosub training_dialogue_fellatio_ichigo_03
+if training_fellatio_count>2 then gosub training_dialogue_fellatio_ichigo_04
 return
 
 label	training_dialogue_fellatio_karin
-if t_karin_fera_cnt=0 then gosub training_dialogue_bukkake_karin
-if t_karin_fera_cnt=1 then gosub training_dialogue_hairjob_karin
-if t_karin_fera_cnt=2 then gosub training_dialogue_nosehook_karin
-if t_karin_fera_cnt=3 then gosub training_dialogue_fellatio_karin_01
-if t_karin_fera_cnt=4 then gosub training_dialogue_fellatio_karin_02
-if t_karin_fera_cnt=5 then gosub training_dialogue_fellatio_karin_03
-if t_karin_fera_cnt=6 then gosub training_dialogue_fellatio_karin_04
-if t_karin_fera_cnt>6 then gosub training_dialogue_fellatio_karin_05
+if training_fellatio_count=0 then gosub training_dialogue_bukkake_karin
+if training_fellatio_count=1 then gosub training_dialogue_hairjob_karin
+if training_fellatio_count=2 then gosub training_dialogue_nosehook_karin
+if training_fellatio_count=3 then gosub training_dialogue_fellatio_karin_01
+if training_fellatio_count=4 then gosub training_dialogue_fellatio_karin_02
+if training_fellatio_count=5 then gosub training_dialogue_fellatio_karin_03
+if training_fellatio_count=6 then gosub training_dialogue_fellatio_karin_04
+if training_fellatio_count>6 then gosub training_dialogue_fellatio_karin_05
 return
 

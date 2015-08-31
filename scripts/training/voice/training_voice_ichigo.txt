@@ -25,21 +25,21 @@ va_os=va_os+1
 endm
 
 macro	training_voice_spanking_ichigo
-if t_ichigo_maso_flag=0 then voicetable	va_sp,"O04283","O04289","O04290","O04294","O04295","O04296"
-if t_ichigo_maso_flag=1 then voicetable	va_sp,"O04305","O04309","O04312","O04313","O04314","O04318","O04319","O04321"
+if training_maso_flag=0 then voicetable	va_sp,"O04283","O04289","O04290","O04294","O04295","O04296"
+if training_maso_flag=1 then voicetable	va_sp,"O04305","O04309","O04312","O04313","O04314","O04318","O04319","O04321"
 va_sp=va_sp+1
 endm
 
 macro	training_voice_pain_ichigo
-if t_ichigo_maso_flag=0 then voicetable	va_it,"O04156","O04160","O04161","O04162","O04166","O04167","O04168","O04169"
-if t_ichigo_maso_flag=1 then voicetable	va_it,"O04177","O04178","O04182","O04183","O04184","O04185","O04189","O04190","O04192"
+if training_maso_flag=0 then voicetable	va_it,"O04156","O04160","O04161","O04162","O04166","O04167","O04168","O04169"
+if training_maso_flag=1 then voicetable	va_it,"O04177","O04178","O04182","O04183","O04184","O04185","O04189","O04190","O04192"
 if _COLOR=cl_pussy then voicetable	va_it,"O03764","O03765","O03766","O03767"
 va_it=va_it+1
 endm
 
 macro	training_voice_hot_ichigo
-if t_ichigo_maso_flag=0 then voicetable	va_at,"O04241","O04205","O04206","O04207","O04211","O04212","O04213"
-if t_ichigo_maso_flag=1 then voicetable	va_at,"O04222","O04255","O04226","O04227","O04228","O04223","O04235"
+if training_maso_flag=0 then voicetable	va_at,"O04241","O04205","O04206","O04207","O04211","O04212","O04213"
+if training_maso_flag=1 then voicetable	va_at,"O04222","O04255","O04226","O04227","O04228","O04223","O04235"
 if _COLOR=cl_pussy then voicetable	va_at,"O03769","O03770","O03771","O03772","O03773"
 va_at=va_at+1
 endm

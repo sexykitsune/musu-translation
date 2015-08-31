@@ -1,65 +1,218 @@
 
 label	training_loop
-if training_chara=TRAINING_MIKAN	then gosub	training_loop_mikan
-if training_chara=TRAINING_ICHIGO	then gosub	training_loop_ichigo
-if training_chara=TRAINING_KARIN	then gosub	training_loop_karin
+gosub	training_loop_init
+
+label training_loop_main
+if tairyoku<=0 then goto training_loop_end
+if seishin<=0 then goto training_loop_end
+
+gosub	training_init_buttons
+
+label training_loop_a
+@get_mouseclick
+if _SELECT=-1 then gosub training_caress
+if tairyoku<=0 then goto training_loop_end
+if seishin<=0 then goto training_loop_end
+
+if _SELECT=-1 then goto training_loop_a
+if _SELECT= 0  then goto training_loop_exit
+command=_SELECT
+
+select_icon_init
+mousecursor_reset
+
+if training_chara=TRAINING_MIKAN	then goto training_loop_a_mikan
+if training_chara=TRAINING_ICHIGO	then goto training_loop_a_ichigo
+if training_chara=TRAINING_KARIN	then goto training_loop_a_karin
+
+label	training_loop_a_mikan
+if command=4 then goto training_loop_vibe
+if command=5 then goto training_loop_analpearl
+if command=6 then goto training_loop_hardanal
+if command=9 then goto training_loop_bondage
+if command=10 then goto training_loop_swimsuit
+goto	training_loop_a_exit
+
+label	training_loop_a_ichigo
+if command=4 then 	goto training_loop_vibe
+if command=5 then 	goto training_loop_analvibe
+if command=9 then 	goto training_loop_bondage
+goto	training_loop_a_exit
+
+label	training_loop_a_karin
+if command=4 then 	goto training_loop_vibe
+if command=5 then 	goto training_loop_analvibe
+if command=6 then 	goto training_loop_facemask
+if command=9 then 	goto training_loop_bondage
+if command=10 then	goto training_loop_megane
+if command=11 then	goto training_loop_video
+goto	training_loop_a_exit
+
+label	training_loop_a_exit
+
+select_icon_add		0,"system\iconselect\icon_back.png","アイコン選択に戻る"
+
+label training_loop_b
+select_icon_init
+select_icon_add		0,"system\iconselect\icon_back.png","アイコン選択に戻る"
+if command=2 then mousecursor_set "system\TrainingSystem\cur_nikubou.png",25,30
+if command=3 then mousecursor_set "system\TrainingSystem\cur_hand.png",25,30
+if command=7 then gosub training_loop_command_candle
+if command=8 then gosub training_loop_command_whip
+
+select_icon_init
+select_icon_add		0,"system\iconselect\icon_back.png","アイコン選択に戻る"
+
+@get_mouseclick
+if _SELECT=0 then goto training_loop_main
+
+if command=2 then gosub training_penis
+if command=3 then gosub training_spanking
+if command=7 then gosub training_candle
+if command=8 then gosub training_whip
+
+if tairyoku<=0 then goto training_loop_end
+if seishin<=0 then goto training_loop_end
+if training_damagefix<0.5 then training_damagefix=0.5
+
+@maso_check
+
+goto training_loop_b
+
+macro	maso_mode
+training_maso_flag=1
+training_caress_count_l=0
+training_spank_count_l=0
+training_whip_count_l=0
+training_candle_count_l=0
+endm
+
+macro	maso_check
+if training_maso_flag=0 and training_maso_count=training_maso_check then @maso_mode
+endm
+
+macro	get_mouseclick
+if training_chara=TRAINING_MIKAN	then select_mouseclick	"event\ev_mik_050\EV_MIK_050_mask.png"
+if training_chara=TRAINING_ICHIGO	then select_mouseclick	"event\ev_ich_140\ev_ich_140_mask.png"
+if training_chara=TRAINING_KARIN	then select_mouseclick	"event\ev_kar_070\EV_KAR_070_mask.png"
+endm
+
+label	training_loop_command_candle
+@bgm11
+mousecursor_set "system\TrainingSystem\cur_rousoku.png",100,160
+if training_candle_count>0 then return
+@training_dialogue_candle
+training_candle_count=training_candle_count+1
 return
 
-#pseudonyms
-macro	mikan_motion_pain1
-@motion_effect_pain
+label training_loop_command_whip
+@bgm11
+mousecursor_set "system\TrainingSystem\cur_muchi.png",420,40
+if training_whip_count>0 then goto training_loop_command_whip_skip
+@training_dialogue_whip
+training_whip_count=training_whip_count+1
+label	training_loop_command_whip_skip
+if training_chara<>TRAINING_KARIN then return
+#karin voice
+if training_whip_count_l=0 and training_whip_count=0 then voice "P03607";return
+if training_whip_count_l=0 and training_whip_count<50 then voice "P03608";return
+if training_whip_count_l=0 and training_whip_count<100 then voice "P03609";return
+if training_whip_count_l=0 then voice "P03610";return
+return
+
+#relay points
+label	training_loop_vibe
+gosub	training_vibe
+goto	training_loop_main
+
+label	training_loop_analpearl
+gosub	training_analpearl
+goto	training_loop_main
+
+label	training_loop_analvibe
+gosub	training_analvibe
+goto	training_loop_main
+
+label	training_loop_hardanal
+gosub	training_hardanal
+goto	training_loop_main
+
+label	training_loop_swimsuit
+gosub	training_swimsuit
+goto	training_loop_main
+
+label	training_loop_facemask
+gosub	training_facemask
+goto	training_loop_main
+
+label	training_loop_video
+gosub	training_video
+goto	training_loop_main
+
+label training_loop_bondage
+@training_anime_release
+if training_bondage_flag=0 then training_bondage_flag=1;goto training_loop_bondage_skip
+if training_bondage_flag=1 then training_bondage_flag=0
+label training_loop_bondage_skip
+@training_anime_load
+goto training_loop_main
+
+label training_loop_megane
+@training_anime_release
+if training_megane_flag=0 then training_megane_flag=1;goto training_loop_megane_skip
+if training_megane_flag=1 then training_megane_flag=0
+label training_loop_megane_skip
+@training_anime_load
+goto training_loop_main
+
+macro	zero_kenkou
+if training_chara=TRAINING_MIKAN	then mikan_kenkou=0
+if training_chara=TRAINING_ICHIGO	then ichigo_kenkou=0
+if training_chara=TRAINING_KARIN	then karin_kenkou=0
 endm
 
-macro	mikan_motion_insert1
-@motion_effect_insert
+macro	zero_kiryoku
+if training_chara=TRAINING_MIKAN	then mikan_kiryoku=0
+if training_chara=TRAINING_ICHIGO	then ichigo_kiryoku=0
+if training_chara=TRAINING_KARIN	then karin_kiryoku=0
 endm
 
-macro	mikan_motion_normal1
-@motion_effect_normal
-endm
-
-macro	ichigo_motion_pain1
-@motion_effect_pain
-endm
-
-macro	ichigo_motion_insert1
-@motion_effect_insert
-endm
-
-macro	ichigo_motion_normal1
-@motion_effect_normal
-endm
-
-macro	karin_motion_pain1
-@motion_effect_pain
-endm
-
-macro	karin_motion_insert1
-@motion_effect_insert
-endm
-
-macro	karin_motion_normal1
-@motion_effect_normal
-endm
-
-#generic versions
-macro	motion_effect_pain
-@training_anime_motion_pain
-tairyoku=tairyoku-3*damagefix
-seishin=seishin-5*damagefix
+label	training_loop_end
+@zero_kenkou
+@zero_kiryoku
 @reload_lifebar
-endm
+@training_dialogue_faint
 
-macro	motion_effect_insert
-@training_anime_motion_insert
-tairyoku=tairyoku-10*damagefix
-seishin=seishin-15*damagefix
-@reload_lifebar
-endm
+add_miryoku=add_miryoku/2
+add_karada=add_karada/2
+add_kokoro=add_kokoro/2
+add_atama=add_atama/2
 
-macro	motion_effect_normal
-@training_anime_motion_normal
-tairyoku=tairyoku-3*damagefix
-seishin=seishin-5*damagefix
-@reload_lifebar
-endm
+training_faint_count=training_faint_count+1
+
+goto	training_loop_exit2
+
+label training_loop_exit
+
+select	sel,"End training","On second thought..."
+if sel=1 then goto training_loop_main
+
+if training_command_count<15 then @training_voice_end_low_command
+if training_command_count>=15 then @training_voice_end_high_command
+
+label	training_loop_exit2
+
+select_icon_init
+window_close
+
+lifebar_close	life_tairyoku
+lifebar_close	life_seishin
+
+mousecursor_reset
+
+voice_bg_stop
+
+@training_anime_release
+
+gosub	training_end
+return

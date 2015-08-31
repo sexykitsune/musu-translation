@@ -9,13 +9,13 @@ if skip_untranslated_training=1 then return
 endm
 
 label	training_dialogue_analvibe_ichigo
-if t_ichigo_analvibe_cnt=0 then gosub training_dialogue_analvibe_ichigo_01
-if t_ichigo_analvibe_cnt=1 then gosub training_dialogue_analvibe_ichigo_02
-if t_ichigo_analvibe_cnt>1 then gosub training_dialogue_analvibe_ichigo_03
+if training_analvibe_count=0 then gosub training_dialogue_analvibe_ichigo_01
+if training_analvibe_count=1 then gosub training_dialogue_analvibe_ichigo_02
+if training_analvibe_count>1 then gosub training_dialogue_analvibe_ichigo_03
 return
 
 label	training_dialogue_analvibe_karin
-if t_karin_analvibe_cnt=0 then gosub training_dialogue_analvibe_karin_01
-if t_karin_analvibe_cnt=1 then gosub training_dialogue_analvibe_karin_02
-if t_karin_analvibe_cnt>1 then gosub training_dialogue_analvibe_karin_03
+if training_analvibe_count=0 then gosub training_dialogue_analvibe_karin_01
+if training_analvibe_count=1 then gosub training_dialogue_analvibe_karin_02
+if training_analvibe_count>1 then gosub training_dialogue_analvibe_karin_03
 return

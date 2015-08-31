@@ -1,0 +1,62 @@
+
+#pseudonyms
+macro	mikan_motion_pain1
+@motion_effect_pain
+endm
+
+macro	mikan_motion_insert1
+@motion_effect_insert
+endm
+
+macro	mikan_motion_normal1
+@motion_effect_normal
+endm
+
+macro	ichigo_motion_pain1
+@motion_effect_pain
+endm
+
+macro	ichigo_motion_insert1
+@motion_effect_insert
+endm
+
+macro	ichigo_motion_normal1
+@motion_effect_normal
+endm
+
+macro	karin_motion_pain1
+@motion_effect_pain
+endm
+
+macro	karin_motion_insert1
+@motion_effect_insert
+endm
+
+macro	karin_motion_normal1
+@motion_effect_normal
+endm
+
+#generic versions
+macro	motion_effect_pain
+@training_anime_motion_pain
+tairyoku=tairyoku-motion_pain_tairyoku_d*training_damagefix
+seishin=seishin-motion_pain_seishin_d*training_damagefix
+training_damagefix=training_damagefix-motion_pain_training_damagefix_d
+@reload_lifebar
+endm
+
+macro	motion_effect_insert
+@training_anime_motion_insert
+tairyoku=tairyoku-motion_insert_tairyoku_d*training_damagefix
+seishin=seishin-motion_insert_seishin_d*training_damagefix
+training_damagefix=training_damagefix-motion_insert_training_damagefix_d
+@reload_lifebar
+endm
+
+macro	motion_effect_normal
+@training_anime_motion_normal
+tairyoku=tairyoku-motion_normal_tairyoku_d*training_damagefix
+seishin=seishin-motion_normal_seishin_d*training_damagefix
+training_damagefix=training_damagefix-motion_normal_training_damagefix_d
+@reload_lifebar
+endm

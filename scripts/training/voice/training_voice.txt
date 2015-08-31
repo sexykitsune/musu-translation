@@ -20,7 +20,7 @@ cl_face			= 86
 
 endm
 
-macro	training_voice_aibu
+macro	training_voice_caress
 if _COLOR=cl_pussy then @training_voice_caress_pussy
 if _COLOR=cl_breast1 or _COLOR=cl_breast2 then @training_voice_caress_breasts
 if _COLOR=cl_anal then @training_voice_caress_anal
@@ -29,6 +29,10 @@ if _COLOR=cl_legs then @training_voice_caress_legs
 endm
 
 #pseudonyms
+macro	training_voice_aibu
+@training_voice_caress
+endm
+
 macro	mikan_voice_aibu_oppai
 @training_voice_caress_breasts
 endm
@@ -62,6 +66,30 @@ macro	mikan_voice_atsui
 endm
 
 #generic versions
+macro	training_voice_start_low_command
+if training_chara=TRAINING_MIKAN	then voice "A02544"	#「お兄ちゃん……優しくしてね……」
+if training_chara=TRAINING_ICHIGO	then voice "O03728"
+if training_chara=TRAINING_KARIN	then voice "P03596"
+endm
+
+macro	training_voice_start_hight_command
+if training_chara=TRAINING_MIKAN	then voice "A02546"	#「っ、ふ……お兄ちゃん……」
+if training_chara=TRAINING_ICHIGO	then voice "O03732"
+if training_chara=TRAINING_KARIN	then voice "P03598"
+endm
+
+macro	training_voice_end_low_command
+if training_chara=TRAINING_MIKAN	then voice "A02545"	#「……もっと、お兄ちゃんのお役に立てるようになれるといいな……頑張るね」
+if training_chara=TRAINING_ICHIGO	then voice "O03731"	#「はぁっ…………こんなこと……おかしいわよ……」
+if training_chara=TRAINING_KARIN	then voice "P03595"	#「はぁっ…………こんなこと……おかしいわよ……」
+endm
+
+macro	training_voice_end_hight_command
+if training_chara=TRAINING_MIKAN	then voice "A02547"	#「はぁ……っ……もっと頑張るから、また……みかんに、いっぱい……してね……」
+if training_chara=TRAINING_ICHIGO	then voice "O03733"	#「っふ……なんで……わたし……こんなに……あぁっ……」
+if training_chara=TRAINING_KARIN	then voice "P03597"	#「っふ……なんで……わたし……こんなに……あぁっ……」
+endm
+
 macro	training_voice_caress_breasts
 if training_chara=TRAINING_MIKAN	then @training_voice_caress_breasts_mikan
 if training_chara=TRAINING_ICHIGO	then @training_voice_caress_breasts_ichigo

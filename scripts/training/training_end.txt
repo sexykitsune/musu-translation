@@ -1,0 +1,111 @@
+
+label	training_end
+if add_miryoku>=10 then training_command_count=training_command_count+1
+
+if training_chara=TRAINING_MIKAN	then gosub	training_end_mikan
+if training_chara=TRAINING_ICHIGO	then gosub	training_end_ichigo
+if training_chara=TRAINING_KARIN	then gosub	training_end_karin
+return
+
+label	training_end_mikan
+@mikan_set
+lifebar_open	life_atama
+lifebar_open	life_karada
+lifebar_open	life_kokoro
+wait	500
+
+mikan_atama=mikan_atama+add_atama
+mikan_karada=mikan_karada+add_karada
+mikan_kokoro=mikan_kokoro+add_kokoro
+
+lifebar_setauto	life_karada,mikan_karada
+lifebar_setauto	life_kokoro,mikan_kokoro
+lifebar_setauto	life_karada,mikan_karada
+@mikan_check
+wait	1000
+
+lifebar_close	life_atama
+lifebar_close	life_karada
+lifebar_close	life_kokoro
+wait	500
+
+if add_miryoku>0 then @mikan_add_miryoku
+
+if mikan_reception_level=1 and training_fellatio_count>3 then gosub t_mikan_up
+if mikan_reception_level=2 and training_insert_count>3 then gosub t_mikan_up
+if mikan_reception_level=3 and training_hardanal_count>3 then gosub t_mikan_up
+return
+
+label	t_mikan_up
+@status_atamalevelup
+mikan_reception_level=mikan_reception_level+1
+return
+
+label	training_end_ichigo
+@ichigo_set
+lifebar_open	life_atama
+lifebar_open	life_karada
+lifebar_open	life_kokoro
+wait	500
+
+ichigo_atama=ichigo_atama+add_atama
+ichigo_karada=ichigo_karada+add_karada
+ichigo_kokoro=ichigo_kokoro+add_kokoro
+
+lifebar_setauto	life_karada,ichigo_karada
+lifebar_setauto	life_kokoro,ichigo_kokoro
+lifebar_setauto	life_karada,ichigo_karada
+@ichigo_check
+wait	1000
+
+lifebar_close	life_atama
+lifebar_close	life_karada
+lifebar_close	life_kokoro
+wait	500
+
+if add_miryoku>0 then @ichigo_add_miryoku
+
+if ichigo_reception_level=1 and training_fellatio_count>3 then gosub t_ichigo_up
+if ichigo_reception_level=2 and training_insert_count>3 then gosub t_ichigo_up
+if ichigo_reception_level=3 and training_maso_count>100 then gosub t_ichigo_up
+return
+
+label	t_ichigo_up
+@status_atamalevelup2
+ichigo_reception_level=ichigo_reception_level+1
+return
+
+label	training_end_karin
+@karin_set
+lifebar_open	life_atama
+lifebar_open	life_karada
+lifebar_open	life_kokoro
+wait	500
+
+karin_atama=karin_atama+add_atama
+karin_karada=karin_karada+add_karada
+karin_kokoro=karin_kokoro+add_kokoro
+
+lifebar_setauto	life_karada,karin_karada
+lifebar_setauto	life_kokoro,karin_kokoro
+lifebar_setauto	life_karada,karin_karada
+@karin_check
+wait	1000
+
+lifebar_close	life_atama
+lifebar_close	life_karada
+lifebar_close	life_kokoro
+wait	500
+
+if add_miryoku>0 then @karin_add_miryoku
+
+if karin_reception_level=1 and training_fellatio_count>3 then gosub t_karin_up
+if karin_reception_level=2 and training_insert_count>3 then gosub t_karin_up
+if karin_reception_level=3 and training_facemask_count>2 then gosub t_karin_up
+return
+
+label	t_karin_up
+@status_atamalevelup
+karin_reception_level=karin_reception_level+1
+return
+

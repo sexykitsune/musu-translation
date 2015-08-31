@@ -10,19 +10,19 @@ if skip_untranslated_training=1 then return
 endm
 
 label	training_dialogue_vibe_mikan
-if t_mikan_vibe_cnt=0 then gosub training_dialogue_vibe_mikan_01
-if t_mikan_vibe_cnt=1 then gosub training_dialogue_vibe_mikan_02
-if t_mikan_vibe_cnt>1 then gosub training_dialogue_vibe_mikan_03
+if training_vibe_count=0 then gosub training_dialogue_vibe_mikan_01
+if training_vibe_count=1 then gosub training_dialogue_vibe_mikan_02
+if training_vibe_count>1 then gosub training_dialogue_vibe_mikan_03
 return
 
 label	training_dialogue_vibe_ichigo
-if t_ichigo_vibe_cnt=0 then gosub training_dialogue_vibe_ichigo_01
-if t_ichigo_vibe_cnt=1 then gosub training_dialogue_vibe_ichigo_02
-if t_ichigo_vibe_cnt>1 then gosub training_dialogue_vibe_ichigo_03
+if training_vibe_count=0 then gosub training_dialogue_vibe_ichigo_01
+if training_vibe_count=1 then gosub training_dialogue_vibe_ichigo_02
+if training_vibe_count>1 then gosub training_dialogue_vibe_ichigo_03
 return
 
 label	training_dialogue_vibe_karin
-if t_karin_vibe_cnt=0 then gosub training_dialogue_vibe_karin_01
-if t_karin_vibe_cnt=1 then gosub training_dialogue_vibe_karin_02
-if t_karin_vibe_cnt>1 then gosub training_dialogue_vibe_karin_03
+if training_vibe_count=0 then gosub training_dialogue_vibe_karin_01
+if training_vibe_count=1 then gosub training_dialogue_vibe_karin_02
+if training_vibe_count>1 then gosub training_dialogue_vibe_karin_03
 return

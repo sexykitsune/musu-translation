@@ -4,24 +4,23 @@ label	training_in
 @bgm10
 training_chara=0
 @chara_init
-#いちごルート用
+
 if ichigo_event=14 then goto ichigo_09		#いちご9
-#ひかりルート用
 if _MONTH=9 and _DAY=29  and route_chara=4 then goto training_dialogue_in_hikari
 
-if training_count=0 then gosub	training_dialogue_in_1	#みかん2回目の調教
-if training_count=1 then gosub	training_dialogue_in_2	#みかん3回目の調教
-if training_count=2 then gosub	training_dialogue_in_5	#みかん4回目の調教
-if training_count=3 then gosub	training_dialogue_in_9	#みかん5回目の調教
-if training_count=4 then gosub	training_dialogue_in_7	#みかん6回目の調教
-if training_count=5 then gosub	training_dialogue_in_8	#みかん7回目の調教
-if training_count=6 then gosub	training_dialogue_in_3	#雫さらわれ後 いちごかりん選択調教
-if training_count=7 then gosub	training_dialogue_in_4	#雫さらわれ後 いちごかりん選択調教2
-if training_count=8 then gosub	training_dialogue_in_3	#雫さらわれ後 いちごかりん選択調教2
-if training_count=9 then gosub	training_dialogue_in_3	#雫さらわれ後 いちごかりん選択調教2
-if training_count>9 then gosub  training_in_hanyou
+if training_count_total=0 then gosub	training_dialogue_in_1	#みかん2回目の調教
+if training_count_total=1 then gosub	training_dialogue_in_2	#みかん3回目の調教
+if training_count_total=2 then gosub	training_dialogue_in_5	#みかん4回目の調教
+if training_count_total=3 then gosub	training_dialogue_in_9	#みかん5回目の調教
+if training_count_total=4 then gosub	training_dialogue_in_7	#みかん6回目の調教
+if training_count_total=5 then gosub	training_dialogue_in_8	#みかん7回目の調教
+if training_count_total=6 then gosub	training_dialogue_in_3	#雫さらわれ後 いちごかりん選択調教
+if training_count_total=7 then gosub	training_dialogue_in_4	#雫さらわれ後 いちごかりん選択調教2
+if training_count_total=8 then gosub	training_dialogue_in_3	#雫さらわれ後 いちごかりん選択調教2
+if training_count_total=9 then gosub	training_dialogue_in_3	#雫さらわれ後 いちごかりん選択調教2
+if training_count_total>9 then gosub  training_in_hanyou
 
-training_count=training_count+1
+training_count_total=training_count_total+1
 
 return
 

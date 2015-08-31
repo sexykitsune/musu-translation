@@ -9,7 +9,7 @@ if skip_untranslated_training=1 then return
 endm
 
 label	training_dialogue_facemask_karin
-if training_karin_facemask_cnt=0 then gosub training_dialogue_facemask_karin_01
-if training_karin_facemask_cnt=1 then gosub training_dialogue_facemask_karin_02
-if training_karin_facemask_cnt>1 then gosub training_dialogue_facemask_karin_03
+if training_facemask_count=0 then gosub training_dialogue_facemask_karin_01
+if training_facemask_count=1 then gosub training_dialogue_facemask_karin_02
+if training_facemask_count>1 then gosub training_dialogue_facemask_karin_03
 return

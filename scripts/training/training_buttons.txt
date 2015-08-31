@@ -1,0 +1,46 @@
+
+label	training_init_buttons
+
+passspeed=100
+@set_motion_speed
+window_close
+mousecursor_set "system\TrainingSystem\cur_aibu.png",25,30
+layer_lockmouse_set	l_eye,_ON
+										 select_icon_init
+										 select_icon_add 0,"system\iconselect\icon_quit.png","調教をやめる"
+										#select_icon_add 1,"system\iconselect\icon_aibu.png","愛撫する"
+										 select_icon_add 2,"system\iconselect\icon_nikubou.png","肉棒を使う"
+if _TRANSLATOR_OPTION_DISABLE_SM=0	then select_icon_add 3,"system\iconselect\icon_spanking.png","スパンキングする"
+if _ITEM(206)=1 					then select_icon_add 4,"system\iconselect\icon_vibe.png","大きなバイブでマンコを開発する"
+if _ITEM(203)=1						then select_icon_add 7,"system\iconselect\icon_rousoku.png","蝋燭を使う"
+if _ITEM(200)=1						then select_icon_add 8,"system\iconselect\icon_muchi.png","鞭を使う"
+
+if training_chara=TRAINING_MIKAN	then @training_init_buttons_mikan
+if training_chara=TRAINING_ICHIGO	then @training_init_buttons_ichigo
+if training_chara=TRAINING_KARIN	then @training_init_buttons_karin
+return
+
+macro	training_init_buttons_mikan
+if _ITEM(202)=1 					then select_icon_add 5,"system\iconselect\icon_analbeads.png","アナルビーズでアナルを開発する"
+if _ITEM(210)=1 					then select_icon_add 6,"system\iconselect\icon_analexpand.png","アナル拡張ベルトでアナルを開発する"
+if _ITEM(303)=1 and bondage_flag=0 	then select_icon_add 9,"system\iconselect\icon_bondage.png","ボンデージ服を着せる"
+if _ITEM(303)=1 and bondage_flag=1 	then select_icon_add 9,"system\iconselect\icon_nude.png","裸にする"
+if _ITEM(208)=1 					then select_icon_add 10,"system\iconselect\icon_schoolware.png","スクール水着を使う"
+endm
+
+macro	training_init_buttons_ichigo
+if _ITEM(205)=1 					then select_icon_add 5,"system\iconselect\icon_analvibe.png","アナルバイブでアナルを開発する"
+if _ITEM(304)=1 and bondage_flag=0	then select_icon_add 9,"system\iconselect\icon_bondage.png","ボンデージ服を着せる"
+if _ITEM(304)=1 and bondage_flag=1	then select_icon_add 9,"system\iconselect\icon_nude.png","裸にする"
+endm
+
+macro	training_init_buttons_karin
+if _ITEM(205)=1						then select_icon_add 5,"system\iconselect\icon_analvibe.png","アナルバイブでアナルを開発する"
+if _ITEM(211)=1						then select_icon_add 6,"system\iconselect\icon_facemask.png","フェイスクラッチマスクを使用する"
+if _ITEM(305)=1 and bondage_flag=0	then select_icon_add 9,"system\iconselect\icon_bondage.png","ボンデージ服を着せる"
+if _ITEM(305)=1 and bondage_flag=1	then select_icon_add 9,"system\iconselect\icon_nude.png","裸にする"
+if _ITEM(306)=1 and megane_flag=0	then select_icon_add 10,"system\iconselect\icon_glass.png","眼鏡をかける"
+if _ITEM(306)=1 and megane_flag=1	then select_icon_add 10,"system\iconselect\icon_glass.png","眼鏡を外す"
+if _ITEM(207)=1						then select_icon_add 11,"system\iconselect\icon_video.png","ビデオカメラを使う"
+endm
+
