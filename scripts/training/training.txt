@@ -1,15 +1,25 @@
+#File added by SexyKitsune
+# the main training file
+
+# entry point for this file
+# is called from main.txt
 label	training
 
-gosub	training_in
-@training_event_check
-label	training_debug_entry
-@training_paramget
+# training_count_total is increased in training_in
+# NOTE: training_count_total is increased before the training session while the individual counts are increased after the session
+gosub	training_in		# in training_in.txt
+@training_event_check	# checks for special events
+label	training_debug_entry	# used for my debugging
+@training_paramget				# in training_param.txt
 if training_chara=TRAINING_MIKAN	then gosub training_mikan
 if training_chara=TRAINING_ICHIGO	then gosub training_ichigo
 if training_chara=TRAINING_KARIN	then gosub training_karin
-@training_paramset
-return
+@training_paramset				# in training_param.txt
+return		# returns to main.txt or sk_debug.txt
 
+# checks for the first time training events
+# training_loop is in training_loop.txt
+# the training_dialogue_* are in the same named files in the dialogue folder
 label	training_mikan
 if training_count_mikan=0 then gosub	training_dialogue_mikan_01
 if training_count_mikan>0 then gosub	training_loop
@@ -29,6 +39,7 @@ if training_count_karin>0 then gosub	training_loop
 training_count_karin=training_count_karin+1
 return
 
+# macros
 macro	training_event_check
 if training_chara=TRAINING_MIKAN	then @training_event_check_mikan
 if training_chara=TRAINING_ICHIGO	then @training_event_check_ichigo

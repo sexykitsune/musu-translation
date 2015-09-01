@@ -1,3 +1,5 @@
+#File added by SexyKitsune
+# mikan's animated motions
 
 label	training_anime_motion_pain_mikan
 

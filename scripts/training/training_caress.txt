@@ -1,24 +1,35 @@
+#File added by SexyKitsune
+# caressing the musumes with your hand or penis
+# also the way to do fellatio, insert, or anal
 
+# training_caress and training_penis are the entry points
+# they are called from training_loop.txt
 label	training_caress
 if _COLOR=0 then return
 se 0,"sound\se\ƒvƒCƒb.WAV",play_once
-@motion_effect_normal
-@training_voice_caress
+# motion_effect also has its own stat gains and health loss
+@motion_effect_normal	# in training_misc.txt
+@training_voice_caress	# in voice/training_voice.txt
+
+# inc counters
 training_caress_count=training_caress_count+1
 training_caress_count_l=training_caress_count_l+1
 
+# stat gains
 add_miryoku=add_miryoku+caress_miryoku_d
 
 add_karada=add_karada+caress_karada_d
 add_atama=add_atama+caress_atama_d
 add_kokoro=add_kokoro+caress_kokoro_d
 
+# gain damage resistance
 training_damagefix=training_damagefix-caress_training_damagefix_d
 return
 
 label	training_penis
 if _COLOR=0 then return
 mousecursor_reset
+# these functions are in training_action_major.txt
 if _COLOR=cl_mouth	then gosub training_fellatio
 if _COLOR=cl_face	then gosub training_fellatio
 if _COLOR=cl_anal	then gosub training_anal

@@ -1,10 +1,17 @@
-# 調教前の選択メッセージ
+#File added by SexyKitsune
+# training intro
+# NOTE: this file does not correspondent to the file training_in.txt in the main branch
+#		that file was renamed to training_dialogue_in.txt and is in the dialogue folder
+
+# entry point for this file
+# is called from training.txt
 label	training_in
 
 @bgm10
 training_chara=0
 @chara_init
 
+# the training_dialogue_in_* functions are in dialogue/training_dialogue_in.txt
 if ichigo_event=14 then goto ichigo_09		#いちご9
 if _MONTH=9 and _DAY=29  and route_chara=4 then goto training_dialogue_in_hikari
 
@@ -18,13 +25,13 @@ if training_count_total=6 then gosub	training_dialogue_in_3	#雫さらわれ後 いちご
 if training_count_total=7 then gosub	training_dialogue_in_4	#雫さらわれ後 いちごかりん選択調教2
 if training_count_total=8 then gosub	training_dialogue_in_3	#雫さらわれ後 いちごかりん選択調教2
 if training_count_total=9 then gosub	training_dialogue_in_3	#雫さらわれ後 いちごかりん選択調教2
-if training_count_total>9 then gosub  training_in_hanyou
+if training_count_total>9 then gosub	training_in_hanyou
 
 training_count_total=training_count_total+1
 
 return
 
-label	training_in_hanyou
+label	training_in_hanyou	# could someone please tell me what hanyou translates to? my tranlation system does not work with romanji - SK
 
 rand	rnd,0,3
 if	rnd=0 then gosub training_dialogue_in_5
@@ -35,24 +42,15 @@ if	rnd=3 then gosub training_dialogue_in_8
 return
 
 macro	training_charasel
-#■（キャラ選択）
-#※かりんといちごを任されるまでは、『みかん』のみ。
-#※それ以降は、各種イベントテキストを参考に、出るキャラと出ないキャラが有り。
 
-#（１．みかんにする）
-#（２．かりんにする）
-#（３．いちごにする）
-
-#select	sel,"みかんにする","いちごにする","かりんにする"
 date_close
 window_close
-
 layer_load	60,"system\TrainingSystem\select_who.png"
 layer_move	60,1000,0,-128,0,0,passtype_tcb
 wait	500
 clearbutton
 
-#	# setbutton ボタン番号,X,Y,エフェクト
+# changes button icons depending on if SM is enabled
 if mikan_on=1 and _TRANSLATOR_OPTION_DISABLE_SM=0 then setbutton 1,290,96,0,"system\TrainingSystem\select_mikan.png","system\TrainingSystem\select_mikan.png"
 if ichigo_on=1 and _TRANSLATOR_OPTION_DISABLE_SM=0 then setbutton 2,32,96,0,"system\TrainingSystem\select_ichigo.png","system\TrainingSystem\select_ichigo.png"
 if karin_on=1 and _TRANSLATOR_OPTION_DISABLE_SM=0 then setbutton 3,540,96,0,"system\TrainingSystem\select_karin.png","system\TrainingSystem\select_karin.png"
@@ -73,6 +71,7 @@ layer_move	60,1000,0,0,0,-128,passtype_tcb
 wait	1000
 layer_release	60
 
+# used in ichigo's route
 ichigo_notraining_cnt=ichigo_notraining_cnt+1
 if sel=2 then ichigo_notraining_cnt=0
 

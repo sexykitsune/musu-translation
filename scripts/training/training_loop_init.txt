@@ -1,25 +1,35 @@
+#File added by SexyKitsune
+# the training event loop's initialization code
 
+# entry point for this file
+# is called from training_loop.txt
 label	training_loop_init
 @bgm10
 date_close
 @all_layerrelease
-@training_voice_init
 
-#variable init
+# init the voices and also gets the cl_* constants
+@training_voice_init	# in voice/training_voice.txt
+
+# init local variables
+# flags
 training_bondage_flag=0
 training_megane_flag=0
+# damagefix (a damage multipler)
 training_damagefix=training_damagefix_start
+# local counts (counts the number of time these action were taken in this session), reset by entering maso_mode
 training_caress_count_l=0
 training_spank_count_l=0
 training_whip_count_l=0
 training_candle_count_l=0
 
+# charm and other stats gained so far
 add_miryoku=0
 add_karada=0
 add_atama=0
 add_kokoro=0
 
-#health init
+# init the health bars
 tairyoku_max=tairyoku
 seishin_max=seishin
 lifebar_set	life_tairyoku,tairyoku
@@ -27,19 +37,23 @@ lifebar_setmax	life_tairyoku,tairyoku_max
 lifebar_set	life_seishin,seishin
 lifebar_setmax	life_seishin,seishin_max
 
-#animation init
-@training_anime_load
+# init the animation
+# NOTE: anime is short for animation (not japanese cartoons)
+@training_anime_load	# in anime/training_anime.txt
 lifebar_open	life_tairyoku
 lifebar_open	life_seishin
 @reload_lifebar
 
+# play a voice that depends on how many successful training session you have had with this musume
+# these macros are in voice/training_voice.txt
 if training_command_count<15 then @training_voice_start_low_command
 if training_command_count>=15 then @training_voice_start_hight_command
 
 window_close
 
+# start the background voice
 if training_chara=TRAINING_MIKAN	then voice_bg	"A04241"
 if training_chara=TRAINING_ICHIGO	then voice_bg	"O03965"
 if training_chara=TRAINING_KARIN	then voice_bg	"P04704"
-return
+return	# return to training_loop.txt
 

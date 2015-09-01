@@ -1,16 +1,22 @@
+#File added by SexyKitsune
+# handles the parameters and stats
 
+# loads the parameters and stats
 macro	training_paramget
 if training_chara=TRAINING_MIKAN	then @training_paramget_mikan
 if training_chara=TRAINING_ICHIGO	then @training_paramget_ichigo
 if training_chara=TRAINING_KARIN	then @training_paramget_karin
 endm
 
+# saves the stats
+# only counters and flags are saved
 macro	training_paramset
 if training_chara=TRAINING_MIKAN	then @training_paramset_mikan
 if training_chara=TRAINING_ICHIGO	then @training_paramset_ichigo
 if training_chara=TRAINING_KARIN	then @training_paramset_karin
 endm
 
+# mikan
 macro	training_paramget_mikan
 tairyoku=mikan_kenkou_max
 seishin=mikan_kiryoku_max
@@ -112,6 +118,7 @@ training_hardanal_count_mikan=training_hardanal_count
 training_swimsuit_count_mikan=training_swimsuit_count
 endm
 
+# ichigo
 macro	training_paramget_ichigo
 tairyoku=ichigo_kenkou_max
 seishin=ichigo_kiryoku_max
@@ -191,6 +198,7 @@ training_analvibe_count_ichigo=training_analvibe_count
 service_bloomers_count_ichigo=service_bloomers_count
 endm
 
+# karin
 macro	training_paramget_karin
 tairyoku=karin_kenkou_max
 seishin=karin_kiryoku_max

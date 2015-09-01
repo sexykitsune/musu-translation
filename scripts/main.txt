@@ -1,10 +1,20 @@
+#File modified by SexyKitsune
+# added some debug code and switched to my training system
+
 #main
 label	_main
 @bg_black
 
-@training_stats_init
+#SK MODIFICATION
+# zeros out the training stats
+# technically not needed since variables start at 0 any way
+# - SK
+@training_stats_init	# in define/training_config.inc
 
-gosub	sk_debug
+# my debugging code - SK
+gosub	sk_debug		# in sk/sk_debug.txt
+#SK END
+
 gosub	translator_intro
 
 label	main
@@ -357,8 +367,10 @@ if _MONTH=12 and _DAY=29 and route_chara=4 then goto main_satday_skip #‚Ğ‚©‚è‚¨‚
 
 if _MONTH=11 and _DAY=24 and route_chara=1 then goto main_satday_skip #‚İ‚©‚ñ‚ÆQ‚Ä‚¢‚éˆ×’²‹³–³‚µ
 
-
-gosub	training		#’²‹³
+#SK MODIFICATION
+# goes to the training subroutine
+gosub	training		# in training/training.txt
+#SK END
 
 gosub	hensai			#•ÔÏƒ`ƒFƒbƒN
 

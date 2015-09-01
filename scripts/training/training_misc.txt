@@ -1,5 +1,8 @@
+#File added by SexyKitsune
+# the misc file for all of the stuff that did not seem to belong anywere else
 
 #pseudonyms
+# these macros are used in the dialogue so the old names need to still work
 macro	mikan_motion_pain1
 @motion_effect_pain
 endm
@@ -37,6 +40,8 @@ macro	karin_motion_normal1
 endm
 
 #generic versions
+# did not seem to belong in the training_action_minor.txt or training_caress.txt so i just put them here
+# training_anime_motion macros are in anime/training_anime.txt
 macro	motion_effect_pain
 @training_anime_motion_pain
 tairyoku=tairyoku-motion_pain_tairyoku_d*training_damagefix

@@ -1,3 +1,5 @@
+#File added by SexyKitsune
+# karin's voice file
 
 macro	training_voice_caress_breasts_karin
 voicetable va_op,"P03809","P03810","P03811","P03812","P03813","P03814","P03815"
@@ -24,12 +26,15 @@ voicetable va_os,"P03826","P03827","P03828","P03829","P03830","P03831"
 va_os=va_os+1
 endm
 
+# karin's voice for these changes when she is in maso_mode
 macro	training_voice_spanking_karin
 if training_maso_flag=0 then voicetable	va_sp,"P04869","P04870","P04871","P04872","P04873","P04874","P04875","P04876","P04877","P04878","P04879","P04880","P04881"
 if training_maso_flag=1 then voicetable	va_sp,"P04882","P04883","P04884","P04885","P04886","P04887","P04888","P04889","P04890","P04891","P04892","P04893"
 va_sp=va_sp+1
 endm
 
+# unlike mikan, but like ichigo, karin has special voices for when you whip or candle her pussy
+# do to the way the voice and voicetable commands work, only the last voice or voicetable command executed will play a voice
 macro	training_voice_pain_karin
 if training_maso_flag=0 then voicetable	va_it,"P04898","P04899","P04900","P04901","P04905","P04906","P04907","P04908","P04912","P04913","P04914","P04915"
 if training_maso_flag=1 then voicetable	va_it,"P04919","P04920","P04921","P04922","P04926","P04927","P04928","P04929","P04933","P04934","P04935","P04936","P04937"

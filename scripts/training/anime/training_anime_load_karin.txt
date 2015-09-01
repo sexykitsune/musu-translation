@@ -1,3 +1,7 @@
+#File added by SexyKitsune
+# loads the animation for karin's training scene
+
+# besides converting from a macro to a subroutine and renaming of training_bondage_flag, this section of code is unchanged
 
 label	training_anime_load_karin
 window_close

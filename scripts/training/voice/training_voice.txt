@@ -1,6 +1,10 @@
+#File added by SexyKitsune
+# the main training voice file
 
+# initiates the variables used in the voice looping
 macro	training_voice_init
 
+# counters
 va_op=0	#voice aibu oppai/caress breasts
 va_ki=0	#voice aibu kiss/caress kiss
 va_ma=0	#voice aibu manko/caress pussy
@@ -10,6 +14,8 @@ va_it=0	#voice itai/pain
 va_at=0	#voice atsui/hot
 va_sp=0	#voice spanking
 
+# color (cl_) constants
+# used to determine what part of the musume was touched
 cl_pussy		= 130
 cl_breast1		= 145
 cl_breast2		= 69
@@ -29,6 +35,8 @@ if _COLOR=cl_legs then @training_voice_caress_legs
 endm
 
 #pseudonyms
+# left here so that the code will still work when i was switching from the romanji to english
+# is still here so that if i forgot something it will still work
 macro	training_voice_aibu
 @training_voice_caress
 endm
@@ -66,6 +74,10 @@ macro	mikan_voice_atsui
 endm
 
 #generic versions
+# these 4 macros are used for the voice at the start and end of the training session
+# the voice changes depending on how many good sessions you have had with that musume
+# (earning at least 10 charm at least 15 times) (?or was it 15 or more times?)
+# original comments with the transcript of the voice are left here
 macro	training_voice_start_low_command
 if training_chara=TRAINING_MIKAN	then voice "A02544"	#「お兄ちゃん……優しくしてね……」
 if training_chara=TRAINING_ICHIGO	then voice "O03728"
@@ -90,6 +102,7 @@ if training_chara=TRAINING_ICHIGO	then voice "O03733"	#「っふ……なんで�
 if training_chara=TRAINING_KARIN	then voice "P03597"	#「っふ……なんで……わたし……こんなに……あぁっ……」
 endm
 
+# these macros are in the files training_voice_*.txt
 macro	training_voice_caress_breasts
 if training_chara=TRAINING_MIKAN	then @training_voice_caress_breasts_mikan
 if training_chara=TRAINING_ICHIGO	then @training_voice_caress_breasts_ichigo

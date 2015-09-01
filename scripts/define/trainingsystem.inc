@@ -1,3 +1,5 @@
+#File modified by SexyKitsune
+# put reload_lifebar in this file
 #調教システムのサブルーチン
 
 #-- スパンキングエフェクト(小)------------------------------------------------
@@ -216,10 +218,14 @@ macro	all_layerrelease
 	next
 endm
 
+#SK MODIFICATION
+# some common code that was used A LOT
+# looked like it belonged in here anyway
 macro	reload_lifebar
 	lifebar_setauto	life_tairyoku,tairyoku
 	lifebar_setauto	life_seishin,seishin
 endm
+#SK END
 
 # macro to avoid untranslated training
 # 

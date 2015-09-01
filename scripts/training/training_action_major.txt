@@ -1,171 +1,231 @@
+#File added by SexyKitsune
+# major actions
 
+# all of the training_dialogue_* macros are in dialogue/training_dialogue_*.txt
+
+# NOTE: the game original had stat gains for major actions like
+# add_X=Y_X_d*training_Y_count with X being the stat and Y the action
+# but i changed it to
+# add_X=add_X+Y_X_d*training_Y_count meaning that you no longer lose all previous stat gain from that session
+
+
+# action fellatio
 label	training_fellatio
-@training_dialogue_fellatio
+@training_dialogue_fellatio		# in dialogue/*.txt
+# inc counter
 training_fellatio_count=training_fellatio_count+1
 
+# health loss
 tairyoku=tairyoku-fellatio_tairyoku_d*training_fellatio_count*training_damagefix
 seishin=seishin-fellatio_seishin_d*training_fellatio_count*training_damagefix
 @reload_lifebar
 
+# stat gains
 add_miryoku=add_miryoku+fellatio_miryoku_d*training_fellatio_count
 
 add_karada=add_karada+fellatio_karada_d*training_fellatio_count
 add_atama=add_atama+fellatio_atama_d*training_fellatio_count
 add_kokoro=add_kokoro+fellatio_kokoro_d*training_fellatio_count
 
+# gain damage resistance
 training_damagefix=training_damagefix-fellatio_damagefix_d
 return
 
+# action insert
 label	training_insert
-@training_dialogue_insert
+@training_dialogue_insert		# in dialogue/*.txt
+# inc counter
 training_insert_count=training_insert_count+1
 
+# health loss
 tairyoku=tairyoku-insert_tairyoku_d*training_insert_count*training_damagefix
 seishin=seishin-insert_seishin_d*training_insert_count*training_damagefix
 @reload_lifebar
 
+# stat gains
 add_miryoku=add_miryoku+insert_miryoku_d*training_insert_count
 
 add_karada=add_karada+insert_karada_d*training_insert_count
 add_atama=add_atama+insert_atama_d*training_insert_count
 add_kokoro=add_kokoro+insert_kokoro_d*training_insert_count
 
+# gain damage resistance
 training_damagefix=training_damagefix-insert_damagefix_d
 return
 
+# action anal
 label	training_anal
-@training_dialogue_anal
+@training_dialogue_anal		# in dialogue/*.txt
+# inc counter
 training_anal_count=training_anal_count+1
 
+# health loss
 tairyoku=tairyoku-anal_tairyoku_d*training_anal_count*training_damagefix
 seishin=seishin-anal_seishin_d*training_anal_count*training_damagefix
 @reload_lifebar
 
+# stat gains
 add_miryoku=add_miryoku+anal_miryoku_d*training_anal_count
 
 add_karada=add_karada+anal_karada_d*training_anal_count
 add_atama=add_atama+anal_atama_d*training_anal_count
 add_kokoro=add_kokoro+anal_kokoro_d*training_anal_count
 
+# gain damage resistance
 training_damagefix=training_damagefix-anal_damagefix_d
 return
 
+# action vibe
 label	training_vibe
-@training_dialogue_vibe
+@training_dialogue_vibe		# in dialogue/*.txt
+# inc counter
 training_vibe_count=training_vibe_count+1
 
+# health loss
 tairyoku=tairyoku-vibe_tairyoku_d*training_vibe_count*training_damagefix
 seishin=seishin-vibe_seishin_d*training_vibe_count*training_damagefix
 @reload_lifebar
 
+# stat gains
 add_miryoku=add_miryoku+vibe_miryoku_d*training_vibe_count
 
 add_karada=add_karada+vibe_karada_d*training_vibe_count
 add_atama=add_atama+vibe_atama_d*training_vibe_count
 add_kokoro=add_kokoro+vibe_kokoro_d*training_vibe_count
 
+# gain damage resistance
 training_damagefix=training_damagefix-vibe_damagefix_d
 return
 
+# action analpearl (also called analbeads)
 label	training_analpearl
-@training_dialogue_analpearl
+@training_dialogue_analpearl		# in dialogue/*.txt
+# inc counter
 training_analpearl_count=training_analpearl_count+1
 
+# health loss
 tairyoku=tairyoku-analpearl_tairyoku_d*training_analpearl_count*training_damagefix
 seishin=seishin-analpearl_seishin_d*training_analpearl_count*training_damagefix
 @reload_lifebar
 
+# stat gains
 add_miryoku=add_miryoku+analpearl_miryoku_d*training_analpearl_count
 
 add_karada=add_karada+analpearl_karada_d*training_analpearl_count
 add_atama=add_atama+analpearl_atama_d*training_analpearl_count
 add_kokoro=add_kokoro+analpearl_kokoro_d*training_analpearl_count
 
+# gain damage resistance
 training_damagefix=training_damagefix-analpearl_damagefix_d
 return
 
+# action analvibe
 label	training_analvibe
-@training_dialogue_analvibe
+@training_dialogue_analvibe		# in dialogue/*.txt
+# inc counter
 training_analvibe_count=training_analvibe_count+1
 
+# health loss
 tairyoku=tairyoku-analvibe_tairyoku_d*training_analvibe_count*training_damagefix
 seishin=seishin-analvibe_seishin_d*training_analvibe_count*training_damagefix
 @reload_lifebar
 
+# stat gains
 add_miryoku=add_miryoku+analvibe_miryoku_d*training_analvibe_count
 
 add_karada=add_karada+analvibe_karada_d*training_analvibe_count
 add_atama=add_atama+analvibe_atama_d*training_analvibe_count
 add_kokoro=add_kokoro+analvibe_kokoro_d*training_analvibe_count
 
+# gain damage resistance
 training_damagefix=training_damagefix-analvibe_damagefix_d
 return
 
+# action hardanal (also called anal expansion)
 label	training_hardanal
-@training_dialogue_hardanal
+@training_dialogue_hardanal		# in dialogue/*.txt
+# inc counter
 training_hardanal_count=training_hardanal_count+1
 
+# health loss
 tairyoku=tairyoku-hardanal_tairyoku_d*training_hardanal_count*training_damagefix
 seishin=seishin-hardanal_seishin_d*training_hardanal_count*training_damagefix
 @reload_lifebar
 
+# stat gains
 add_miryoku=add_miryoku+hardanal_miryoku_d*training_hardanal_count
 
 add_karada=add_karada+hardanal_karada_d*training_hardanal_count
 add_atama=add_atama+hardanal_atama_d*training_hardanal_count
 add_kokoro=add_kokoro+hardanal_kokoro_d*training_hardanal_count
 
+# gain damage resistance
 training_damagefix=training_damagefix-hardanal_damagefix_d
 return
 
+# action swimsuit (has too many aliases to list them here)
 label	training_swimsuit
-@training_dialogue_swimsuit
+@training_dialogue_swimsuit		# in dialogue/*.txt
+# inc counter
 training_swimsuit_count=training_swimsuit_count+1
 
+# health loss
 tairyoku=tairyoku-swimsuit_tairyoku_d*training_swimsuit_count*training_damagefix
 seishin=seishin-swimsuit_seishin_d*training_swimsuit_count*training_damagefix
 @reload_lifebar
 
+# stat gains
 add_miryoku=add_miryoku+swimsuit_miryoku_d*training_swimsuit_count
 
 add_karada=add_karada+swimsuit_karada_d*training_swimsuit_count
 add_atama=add_atama+swimsuit_atama_d*training_swimsuit_count
 add_kokoro=add_kokoro+swimsuit_kokoro_d*training_swimsuit_count
 
+# gain damage resistance
 training_damagefix=training_damagefix-swimsuit_damagefix_d
 return
 
+# action facemask
 label	training_facemask
-@training_dialogue_facemask
+@training_dialogue_facemask		# in dialogue/*.txt
+# inc counter
 training_facemask_count=training_facemask_count+1
 
+# health loss
 tairyoku=tairyoku-facemask_tairyoku_d*training_facemask_count*training_damagefix
 seishin=seishin-facemask_seishin_d*training_facemask_count*training_damagefix
 @reload_lifebar
 
+# stat gains
 add_miryoku=add_miryoku+facemask_miryoku_d*training_facemask_count
 
 add_karada=add_karada+facemask_karada_d*training_facemask_count
 add_atama=add_atama+facemask_atama_d*training_facemask_count
 add_kokoro=add_kokoro+facemask_kokoro_d*training_facemask_count
 
+# gain damage resistance
 training_damagefix=training_damagefix-facemask_damagefix_d
 return
 
+# action video
 label	training_video
-@training_dialogue_video
+@training_dialogue_video		# in dialogue/*.txt
+# inc counter
 training_video_count=training_video_count+1
 
+# health loss
 tairyoku=tairyoku-video_tairyoku_d*training_video_count*training_damagefix
 seishin=seishin-video_seishin_d*training_video_count*training_damagefix
 @reload_lifebar
 
+# stat gains
 add_miryoku=add_miryoku+video_miryoku_d*training_video_count
 
 add_karada=add_karada+video_karada_d*training_video_count
 add_atama=add_atama+video_atama_d*training_video_count
 add_kokoro=add_kokoro+video_kokoro_d*training_video_count
 
+# gain damage resistance
 training_damagefix=training_damagefix-video_damagefix_d
 return
 

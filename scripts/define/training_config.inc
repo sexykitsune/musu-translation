@@ -1,18 +1,24 @@
+#File added by SexyKitsune
+# these are the configuration parameters for the training system
 
+# constants to reduced the load on the constants 1,2 and 3
+# makes code more transparent
 TRAINING_MIKAN	=	1
 TRAINING_ICHIGO	=	2
 TRAINING_KARIN	=	3
 
-training_damagefix_start_mikan=1.0
+# starting value of training_damagefix for the musumes
+training_damagefix_start_mikan=1.0		# starts at 1.0 for now since mikan does not use the damagefix mechanism
 training_damagefix_start_ichigo=1.2
 training_damagefix_start_karin=1.2
 
-training_maso_check_mikan=-1
+# how many times you need to spank, whip or candle a musume for her to enter maso_mode
+training_maso_check_mikan=-1			# -1 since mikan does not use maso_mode
 training_maso_check_ichigo=100
 training_maso_check_karin=80
 
-#d for delta
-#tairyoku, seishin and damagefix are decrements. all others are increments
+# d for delta
+# tairyoku, seishin and damagefix are decrements. all others are increments
 motion_normal_tairyoku_d=3
 motion_normal_seishin_d=5
 motion_normal_damagefix_d_mikan=0
@@ -31,7 +37,7 @@ motion_insert_damagefix_d_mikan=0
 motion_insert_damagefix_d_ichigo=0
 motion_insert_damagefix_d_karin=0
 
-#caress also includes motion_normal
+# caress also calls motion_normal
 caress_miryoku_d=0
 caress_karada_d=0
 caress_atama_d=0
@@ -40,7 +46,7 @@ caress_damagefix_d_mikan=0
 caress_damagefix_d_ichigo=0.01
 caress_damagefix_d_karin=0.01
 
-#spank also includes motion_pain
+# spank also calls motion_pain
 spank_tairyoku_d=15
 spank_seishin_d=20
 spank_miryoku_d=1
@@ -51,7 +57,7 @@ spank_damagefix_d_mikan=0
 spank_damagefix_d_ichigo=0.02
 spank_damagefix_d_karin=0.02
 
-#whip also includes motion_pain
+# whip also calls motion_pain
 whip_tairyoku_d=35
 whip_seishin_d=20
 whip_miryoku_d=2
@@ -62,7 +68,7 @@ whip_damagefix_d_mikan=0
 whip_damagefix_d_ichigo=0.04
 whip_damagefix_d_karin=0.04
 
-#candle also includes motion_pain
+# candle also calls motion_pain
 candle_tairyoku_d=20
 candle_seishin_d=35
 candle_miryoku_d=3
@@ -92,6 +98,8 @@ insert_kokoro_d=0
 insert_damagefix_d_mikan=0
 insert_damagefix_d_ichigo=0.1
 insert_damagefix_d_karin=0.1
+
+# from here on each musume get her own set of parameters
 
 anal_tairyoku_d_mikan=70
 anal_seishin_d_mikan=90
@@ -141,6 +149,7 @@ vibe_atama_d_karin=0
 vibe_kokoro_d_karin=0
 vibe_damagefix_d_karin=0.1
 
+# also called analbeads
 analpearl_tairyoku_d_mikan=60
 analpearl_seishin_d_mikan=80
 analpearl_miryoku_d_mikan=20
@@ -165,6 +174,7 @@ analvibe_atama_d_karin=0
 analvibe_kokoro_d_karin=30
 analvibe_damagefix_d_karin=0.1
 
+# also called analexpantion
 hardanal_tairyoku_d_mikan=600
 hardanal_seishin_d_mikan=500
 hardanal_miryoku_d_mikan=40
@@ -173,6 +183,7 @@ hardanal_atama_d_mikan=0
 hardanal_kokoro_d_mikan=20
 hardanal_damagefix_d_mikan=0
 
+# has to many aliases to list all of them here
 swimsuit_tairyoku_d_mikan=500
 swimsuit_seishin_d_mikan=500
 swimsuit_miryoku_d_mikan=35
@@ -199,28 +210,39 @@ video_damagefix_d_karin=0.1
 
 @training_stats_init
 
+# zeroes out all of the stats, counters and flags
 macro	training_stats_init
+
+# number of times the musume has been trained
 training_count_total=0
 training_count_mikan=0
 training_count_ichigo=0
 training_count_karin=0
 
+# number of times has been spanked, whiped or candled
+# i might want to make facemask, analexpansion and swimsuit count also (need to check is karin's video is SM themed)
 training_maso_count_mikan=0
 training_maso_count_ichigo=0
 training_maso_count_karin=0
 
+# once a masochist always a masochist
 training_maso_flag_mikan=0
 training_maso_flag_ichigo=0
 training_maso_flag_karin=0
 
+# times you trainined the musume too hard and she passed out
 training_faint_count_mikan=0
 training_faint_count_ichigo=0
 training_faint_count_karin=0
 
+# times you did a good job training (earned at least 10 charm)
+# changes the voice at the start and end of the training setion
 training_command_count_mikan=0
 training_command_count_ichigo=0
 training_command_count_karin=0
 
+# time each action has been taken
+# minor actions
 training_caress_count_mikan=0
 training_caress_count_ichigo=0
 training_caress_count_karin=0
@@ -237,6 +259,7 @@ training_candle_count_mikan=0
 training_candle_count_ichigo=0
 training_candle_count_karin=0
 
+# major actions
 training_fellatio_count_mikan=0
 training_fellatio_mouth_count_mikan=0
 training_fellatio_face_count_mikan=0
@@ -266,6 +289,7 @@ training_swimsuit_count_mikan=0
 training_facemask_count_karin=0
 training_video_count_karin=0
 
+# service stuff that is connected to the training system
 service_bloomers_count_ichigo=0
 service_bunnygirl_count_karin=0
 endm

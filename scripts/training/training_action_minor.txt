@@ -1,3 +1,7 @@
+#File added by SexyKitsune
+# minor training actions (spanking, whip and candle)
+
+#these functions are called from training_loop.txt
 
 label	training_spanking
 @layercheck
@@ -5,21 +9,28 @@ mousecursor_reset
 @muchi_effect
 if _LAYER=l_leg then @spanking_effect_big
 if _LAYER<>l_leg then @spanking_effect_small
-@training_voice_spanking
-@motion_effect_pain
+
+# motion_effect also has its own stat gains and health loss
+@training_voice_spanking	# in training_misc.txt
+@motion_effect_pain			# in voice/training_voice.txt
+
+# inc counters
 training_maso_count=training_maso_count+1
 training_spank_count=training_spank_count+1
 training_spank_count_l=training_spank_count_l+1
 
+# health loss
 tairyoku=tairyoku-spank_tairyoku_d*training_damagefix
 seishin=seishin-spank_seishin_d*training_damagefix
 
+# stat gains
 add_miryoku=add_miryoku+spank_miryoku_d
 
 add_karada=add_karada+spank_karada_d
 add_atama=add_atama+spank_atama_d
 add_kokoro=add_kokoro+spank_kokoro_d
 
+# gain damage resistance
 training_damagefix=training_damagefix-spank_damagefix_d
 
 @reload_lifebar
@@ -32,31 +43,43 @@ mousecursor_reset
 @muchi_effect
 if _LAYER=l_leg then @muchiato_effect_big
 if _LAYER<>l_leg then @muchiato_effect_small
-@training_voice_pain
+
+# motion_effect also has its own stat gains and health loss
+@training_voice_pain	# in training_misc.txt
 if _COLOR=cl_pussy then screen_vibration 500,16,16,16
-@motion_effect_pain
+@motion_effect_pain		# in voice/training_voice.txt
+
+# inc counters
 training_maso_count=training_maso_count+1
 training_whip_count=training_whip_count+1
 training_whip_count_l=training_whip_count_l+1
 
+# health loss
 tairyoku=tairyoku-whip_tairyoku_d*training_damagefix
 seishin=seishin-whip_seishin_d*training_damagefix
+# double health loss for whipping her pussy (you sadist)
 if _COLOR=cl_pussy then tairyoku=tairyoku-whip_tairyoku_d*training_damagefix
 if _COLOR=cl_pussy then seishin=seishin-whip_seishin_d*training_damagefix
 
+# stat gains
 add_miryoku=add_miryoku+whip_miryoku_d
 
 add_karada=add_karada+whip_karada_d
 add_atama=add_atama+whip_atama_d
 add_kokoro=add_kokoro+whip_kokoro_d
 
+# gain damage resistance
 training_damagefix=training_damagefix-whip_damagefix_d
+# double increased pain tolerance?
+#if _COLOR=cl_pussy then training_damagefix=training_damagefix-whip_damagefix_d
 
 @reload_lifebar
 wait	500
 
+# play a backround voice
 if training_chara=TRAINING_ICHIGO	then voice_bg	"O03967"
 if training_chara=TRAINING_KARIN	then voice_bg	"P04706"
+# karin had a special voice for whipping her pussy, but it was commented out
 #if training_chara=TRAINING_KARIN and _COLOR=cl_pussy then voice_bg	"P04710"
 
 passspeed=200
@@ -67,7 +90,7 @@ label	training_candle
 @layercheck
 mousecursor_reset
 @rousoku_effect
-@training_voice_hot
+@training_voice_hot		# in voice/training_voice.txt
 if _COLOR=cl_pussy then screen_vibration 500,16,16,16
 
 for j=0 to 5
@@ -81,28 +104,37 @@ if _LAYER<>l_leg then @rousoku_effect_small
 wait	50
 next
 
-@motion_effect_pain
+# motion_effect also has its own stat gains and health loss
+@motion_effect_pain		# in training_misc.txt
 
+# inc counters
 training_maso_count=training_maso_count+1
 training_candle_count=training_candle_count+1
 training_candle_count_l=training_candle_count_l+1
 
+# health loss
 tairyoku=tairyoku-candle_tairyoku_d*training_damagefix
 seishin=seishin-candle_seishin_d*training_damagefix
+# double health loss for whipping her pussy (you sadist)
 if _COLOR=cl_pussy then tairyoku=tairyoku-candle_tairyoku_d*training_damagefix
 if _COLOR=cl_pussy then seishin=seishin-candle_seishin_d*training_damagefix
 
+# stat gains
 add_miryoku=add_miryoku+candle_miryoku_d
 
 add_karada=add_karada+candle_karada_d
 add_atama=add_atama+candle_atama_d
 add_kokoro=add_kokoro+candle_kokoro_d
 
+# gain damage resistance
 training_damagefix=training_damagefix-candle_damagefix_d
+# double increased pain tolerance?
+#if _COLOR=cl_pussy then training_damagefix=training_damagefix-candle_damagefix_d
 
 @reload_lifebar
 wait	500
 
+# play a backround voice
 if training_chara=TRAINING_ICHIGO	then voice_bg	"O03967"
 if training_chara=TRAINING_ICHIGO and _COLOR=cl_pussy then voice_bg	"O03971"
 if training_chara=TRAINING_KARIN	then voice_bg	"P04706"

@@ -1,3 +1,11 @@
+#File added by SexyKitsune
+# mikan's voice file
+
+# NOTE: i switched from the long block of if statments to using voicetable like ichigo and karin
+#		because of this the transcript of the voices are not retained here
+#		see an old version of this file to see what they are
+
+# NOTE: training_voice_spanking_mikan has been modified
 
 macro	training_voice_caress_breasts_mikan
 voicetable va_op,"A03592","A03593","A03594","A03595","A03596","A03597","A03598"
@@ -24,11 +32,19 @@ voicetable va_os,"A03609","A03610","A03611","A03612","A03613","A03614"
 va_os=va_os+1
 endm
 
+# the code that this macro original was, was very unusual
+# not all of the voices were being used (and not purposefully by commenting them out)
+# i tried to get it to work but i am not sure if some of these voices should not be used (need someone who knows japanese to listen to them)
+# check the old version of this file to see what the code original was
+
+# when the voice command is call multiple times, only the last call actually plays a voice
+# because of this, the old version of this macro did not play the first and the 4? preceding the last voices (meaning that the last voice, "A02273", did play)
+# we need a sadist to help with testing the game since i cryed while testing just this part
 macro	training_voice_spanking_mikan
 voicetable va_sp,"A02259","A02260","A02261","A02262","A02263","A02264","A02265","A02266","A02267","A02268","A02269","A02270","A02271","A02272","A02273"
 if va_sp=4 then voice_bg "A04247"
 va_sp=va_sp+1
-if va_sp>14 then va_sp=0
+if va_sp>14 then va_sp=0			# resets va_sp so that the voice_bg will play more than once per session (can be removed if the voice_bg says something that makes this not appropriate to play more than once)
 endm
 
 macro	training_voice_pain_mikan

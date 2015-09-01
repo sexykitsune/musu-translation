@@ -1,29 +1,52 @@
+#File added by SexyKitsune
+# the training event loop
 
+# entry point for this file
+# is called from training.txt
 label	training_loop
-gosub	training_loop_init
 
-label training_loop_main
+# moved all of the init code to training_loop_init
+gosub	training_loop_init	# in training_loop_init.txt
+
+label training_loop_main	# the loop label
+
+# checks for fainting
 if tairyoku<=0 then goto training_loop_end
 if seishin<=0 then goto training_loop_end
 
-gosub	training_init_buttons
+passspeed=100
+@set_motion_speed
+window_close
+mousecursor_set "system\TrainingSystem\cur_aibu.png",25,30
+layer_lockmouse_set	l_eye,_ON
+
+# loads the buttons
+gosub	training_init_buttons	# in training_buttons.txt
 
 label training_loop_a
 @get_mouseclick
-if _SELECT=-1 then gosub training_caress
+# if a button was not pressed then call training_caress
+if _SELECT=-1 then gosub training_caress	# in training_caress.txt
+
+# checks for fainting
 if tairyoku<=0 then goto training_loop_end
 if seishin<=0 then goto training_loop_end
 
 if _SELECT=-1 then goto training_loop_a
-if _SELECT= 0  then goto training_loop_exit
+if _SELECT= 0  then goto training_loop_exit		# selected the quit/exit button
 command=_SELECT
 
 select_icon_init
 mousecursor_reset
 
+# because some of the command numbers are used for different commands between the musumes
+# they need to have there own command number decoding block
 if training_chara=TRAINING_MIKAN	then goto training_loop_a_mikan
 if training_chara=TRAINING_ICHIGO	then goto training_loop_a_ichigo
 if training_chara=TRAINING_KARIN	then goto training_loop_a_karin
+
+# these labels are still in this file
+# do not confuse them with the similar labels without the _loop that are in training_action_major.txt
 
 label	training_loop_a_mikan
 if command=4 then goto training_loop_vibe
@@ -50,43 +73,55 @@ goto	training_loop_a_exit
 
 label	training_loop_a_exit
 
-select_icon_add		0,"system\iconselect\icon_back.png","アイコン選択に戻る"
+# might want to check to make sure that this last string was not butchered. the "�E" add the end might be a missing character or not supposed to be there
+select_icon_add		0,"system\iconselect\icon_back.png","アイコン選択に戻めE"
 
 label training_loop_b
 select_icon_init
-select_icon_add		0,"system\iconselect\icon_back.png","アイコン選択に戻る"
+select_icon_add		0,"system\iconselect\icon_back.png","アイコン選択に戻めE"
 if command=2 then mousecursor_set "system\TrainingSystem\cur_nikubou.png",25,30
 if command=3 then mousecursor_set "system\TrainingSystem\cur_hand.png",25,30
 if command=7 then gosub training_loop_command_candle
 if command=8 then gosub training_loop_command_whip
 
 select_icon_init
-select_icon_add		0,"system\iconselect\icon_back.png","アイコン選択に戻る"
+select_icon_add		0,"system\iconselect\icon_back.png","アイコン選択に戻めE"
 
 @get_mouseclick
-if _SELECT=0 then goto training_loop_main
+if _SELECT=0 then goto training_loop_main	# back button was selected
 
-if command=2 then gosub training_penis
-if command=3 then gosub training_spanking
+if command=2 then gosub training_penis		# in training_caress.txt
+if command=3 then gosub training_spanking	# these are in training_action_minor.txt
 if command=7 then gosub training_candle
 if command=8 then gosub training_whip
 
+# check for fainting
 if tairyoku<=0 then goto training_loop_end
 if seishin<=0 then goto training_loop_end
+# minimum damagefix of 0.5
 if training_damagefix<0.5 then training_damagefix=0.5
 
+# check to see if the musume becomes a masochist
 @maso_check
 
 goto training_loop_b
 
+# the musume becomes a masochist
 macro	maso_mode
+# set the maso_flag
 training_maso_flag=1
+# reset local couters
 training_caress_count_l=0
 training_spank_count_l=0
 training_whip_count_l=0
 training_candle_count_l=0
+# reset some of the voice counters
+va_sp=0
+va_it=0
+va_at=0
 endm
 
+# check to see if the musume becomes a masochist
 macro	maso_check
 if training_maso_flag=0 and training_maso_count=training_maso_check then @maso_mode
 endm
@@ -97,30 +132,37 @@ if training_chara=TRAINING_ICHIGO	then select_mouseclick	"event\ev_ich_140\ev_ic
 if training_chara=TRAINING_KARIN	then select_mouseclick	"event\ev_kar_070\EV_KAR_070_mask.png"
 endm
 
+# these code segments are for when you click the candle or whip button
 label	training_loop_command_candle
 @bgm11
 mousecursor_set "system\TrainingSystem\cur_rousoku.png",100,160
 if training_candle_count>0 then return
-@training_dialogue_candle
-training_candle_count=training_candle_count+1
+@training_dialogue_candle	# only call this once
+training_candle_count=training_candle_count+1	# showing the candle to the musume the first time counts as using it
+training_candle_count_l=training_candle_count_l+1
 return
 
 label training_loop_command_whip
 @bgm11
 mousecursor_set "system\TrainingSystem\cur_muchi.png",420,40
+if training_whip_count>0 and training_chara<>TRAINING_KARIN then return
 if training_whip_count>0 then goto training_loop_command_whip_skip
-@training_dialogue_whip
-training_whip_count=training_whip_count+1
+@training_dialogue_whip	# only call this once
 label	training_loop_command_whip_skip
-if training_chara<>TRAINING_KARIN then return
-#karin voice
-if training_whip_count_l=0 and training_whip_count=0 then voice "P03607";return
-if training_whip_count_l=0 and training_whip_count<50 then voice "P03608";return
-if training_whip_count_l=0 and training_whip_count<100 then voice "P03609";return
-if training_whip_count_l=0 then voice "P03610";return
+# karin has special voices that play when you select the candle for the first time in a session
+if training_chara<>TRAINING_KARIN then goto training_loop_command_whip_done
+if training_whip_count_l=0 and training_whip_count=0 then voice "P03607";goto training_loop_command_whip_done
+if training_whip_count_l=0 and training_whip_count<50 then voice "P03608";goto training_loop_command_whip_done
+if training_whip_count_l=0 and training_whip_count<100 then voice "P03609";goto training_loop_command_whip_done
+if training_whip_count_l=0 then voice "P03610";goto training_loop_command_whip_done
+
+label	training_loop_command_whip_done
+training_whip_count=training_whip_count+1	# showing the candle to the musume the first time counts as using it
+training_whip_count_l=training_whip_count_l+1
 return
 
-#relay points
+# relay points
+# these functions are in training_action_major.txt
 label	training_loop_vibe
 gosub	training_vibe
 goto	training_loop_main
@@ -149,6 +191,7 @@ label	training_loop_video
 gosub	training_video
 goto	training_loop_main
 
+# enter or exit bondage mode
 label training_loop_bondage
 @training_anime_release
 if training_bondage_flag=0 then training_bondage_flag=1;goto training_loop_bondage_skip
@@ -157,6 +200,7 @@ label training_loop_bondage_skip
 @training_anime_load
 goto training_loop_main
 
+# enter or exit megane mode
 label training_loop_megane
 @training_anime_release
 if training_megane_flag=0 then training_megane_flag=1;goto training_loop_megane_skip
@@ -165,6 +209,7 @@ label training_loop_megane_skip
 @training_anime_load
 goto training_loop_main
 
+# lose stamina and willpower in the simulation system when the musume faints
 macro	zero_kenkou
 if training_chara=TRAINING_MIKAN	then mikan_kenkou=0
 if training_chara=TRAINING_ICHIGO	then ichigo_kenkou=0
@@ -177,12 +222,15 @@ if training_chara=TRAINING_ICHIGO	then ichigo_kiryoku=0
 if training_chara=TRAINING_KARIN	then karin_kiryoku=0
 endm
 
+# the musume faints
 label	training_loop_end
+# lose stamina and willpower
 @zero_kenkou
 @zero_kiryoku
 @reload_lifebar
-@training_dialogue_faint
+@training_dialogue_faint	# in dialogue/training_dialouge.txt
 
+# only get half stat gains
 add_miryoku=add_miryoku/2
 add_karada=add_karada/2
 add_kokoro=add_kokoro/2
@@ -194,9 +242,12 @@ goto	training_loop_exit2
 
 label training_loop_exit
 
+# do you want to end the training
 select	sel,"End training","On second thought..."
 if sel=1 then goto training_loop_main
 
+# play a voice that depends on how many successful training session you have had with this musume
+# these macros are in voice/training_voice.txt
 if training_command_count<15 then @training_voice_end_low_command
 if training_command_count>=15 then @training_voice_end_high_command
 
@@ -214,5 +265,6 @@ voice_bg_stop
 
 @training_anime_release
 
-gosub	training_end
+# register stat gains and other clean up
+gosub	training_end	# in training_end.txt
 return

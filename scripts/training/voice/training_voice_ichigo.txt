@@ -1,3 +1,5 @@
+#File added by SexyKitsune
+# ichigo's voice file
 
 macro	training_voice_caress_breasts_ichigo
 voicetable va_op,"O03924","O03925","O03926","O03927","O03928","O03939","O03930"
@@ -24,12 +26,15 @@ voicetable va_os,"O03941","O03942","O03943","O03944","O03955","O03956"
 va_os=va_os+1
 endm
 
+# ichigo's voice for these changes when she is in maso_mode
 macro	training_voice_spanking_ichigo
 if training_maso_flag=0 then voicetable	va_sp,"O04283","O04289","O04290","O04294","O04295","O04296"
 if training_maso_flag=1 then voicetable	va_sp,"O04305","O04309","O04312","O04313","O04314","O04318","O04319","O04321"
 va_sp=va_sp+1
 endm
 
+# unlike mikan, ichigo has special voices for when you whip or candle her pussy
+# do to the way the voice and voicetable commands work, only the last voice or voicetable command executed will play a voice
 macro	training_voice_pain_ichigo
 if training_maso_flag=0 then voicetable	va_it,"O04156","O04160","O04161","O04162","O04166","O04167","O04168","O04169"
 if training_maso_flag=1 then voicetable	va_it,"O04177","O04178","O04182","O04183","O04184","O04185","O04189","O04190","O04192"

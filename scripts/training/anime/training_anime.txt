@@ -1,5 +1,9 @@
+#File added by SexyKitsune
+# main training animation file
+# NOTE: anime is used here as an abbreviation for animation (as it is used in Japanese)
 
 #pseudonyms
+# these macros are used in the dialogue so the old names need to still work
 macro	training_mikan_load
 @training_anime_load
 endm
@@ -13,6 +17,7 @@ macro	training_karin_load
 endm
 
 #generic macros
+# all the called macros are in the same named file
 macro training_anime_load
 if training_chara=TRAINING_MIKAN	then gosub training_anime_load_mikan
 if training_chara=TRAINING_ICHIGO	then gosub training_anime_load_ichigo

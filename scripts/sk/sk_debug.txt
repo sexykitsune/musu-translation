@@ -1,25 +1,37 @@
-#sexykitsune's debug stuff
+#File added by SexyKitsune
+# SexyKitsune's debug stuff
 
+# main entry point of this file
 label	sk_debug
 
+# a custom menu
 select sel,"main","training","debug training"
 if sel=0 then goto sk_done
-if sel=1 then goto sk_training_loop
+if sel=1 then goto sk_training
 if sel=2 then goto training_debug
+
+# repetitively calls training
+# this includes the training_in dialogue and does not add items, extra stamina and willpower or ichigo and karin
+label	sk_training
+
+# makes sure that mikan is available
+mikan_on=1
 
 label	sk_training_loop
 
-gosub	training
+gosub	training	# in training/training.txt
 
 goto	sk_training_loop
 
 
 label	training_debug
 
+# makes all of the character are available
 mikan_on=1
 ichigo_on=1
 karin_on=1
 
+# skips the first time scenes
 training_count_mikan=2
 training_count_ichigo=2
 training_count_karin=2
@@ -27,6 +39,7 @@ training_count_karin=2
 _TRANSLATOR_OPTION_DISABLE_SM=0
 _TRANSLATOR_OPTION_DISABLE_FLASHES=0
 
+# extra stamina and willpower
 mikan_kenkou_max 	= 5000
 mikan_kiryoku_max 	= 5000
 ichigo_kenkou_max 	= 5000
@@ -34,6 +47,7 @@ ichigo_kiryoku_max 	= 5000
 karin_kenkou_max 	= 5000
 karin_kiryoku_max 	= 5000
 
+# ALL ITEMS
 _ITEM(200)=1
 _ITEM(201)=1
 _ITEM(202)=1
@@ -60,10 +74,11 @@ label	training_debug_loop
 
 select sel,"Mikan","Ichigo","Karin"
 training_chara=sel+1
-gosub training_debug_entry
+gosub training_debug_entry	# in training/training.txt
 
 goto	training_debug_loop
 
 label	sk_done
 
+# returns to main.txt
 return

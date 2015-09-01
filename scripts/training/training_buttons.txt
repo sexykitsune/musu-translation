@@ -1,11 +1,12 @@
+#File added by SexyKitsune
+# the training buttons
 
+# entry point for this file
+# is called from training_loop.txt
 label	training_init_buttons
 
-passspeed=100
-@set_motion_speed
-window_close
-mousecursor_set "system\TrainingSystem\cur_aibu.png",25,30
-layer_lockmouse_set	l_eye,_ON
+# these buttons are common to all 3 musumes
+
 										 select_icon_init
 										 select_icon_add 0,"system\iconselect\icon_quit.png","調教をやめる"
 										#select_icon_add 1,"system\iconselect\icon_aibu.png","愛撫する"
@@ -20,6 +21,7 @@ if training_chara=TRAINING_ICHIGO	then @training_init_buttons_ichigo
 if training_chara=TRAINING_KARIN	then @training_init_buttons_karin
 return
 
+# these are the buttons that are not shared between all 3 musumes
 macro	training_init_buttons_mikan
 if _ITEM(202)=1 					then select_icon_add 5,"system\iconselect\icon_analbeads.png","アナルビーズでアナルを開発する"
 if _ITEM(210)=1 					then select_icon_add 6,"system\iconselect\icon_analexpand.png","アナル拡張ベルトでアナルを開発する"

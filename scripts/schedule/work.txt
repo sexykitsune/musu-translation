@@ -1,5 +1,8 @@
+#File renamed by SexyKitsune
+# was original work_mikan.txt
+# did not modify the file in any other way (besides adding these comments)
 #スケジュール実行中
-label	work
+label	work		# renamed file to match this label
 window_close
 #------------------------------------------------------------------------------
 #  フレームの読み込み

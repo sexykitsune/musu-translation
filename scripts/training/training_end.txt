@@ -1,5 +1,10 @@
+#File added by SexyKitsune
+# finish up the training session
 
+# entry point for this file
+# is called from training_loop.txt
 label	training_end
+# counts successful training sessions
 if add_miryoku>=10 then training_command_count=training_command_count+1
 
 if training_chara=TRAINING_MIKAN	then gosub	training_end_mikan
@@ -31,9 +36,9 @@ wait	500
 
 if add_miryoku>0 then @mikan_add_miryoku
 
-if mikan_reception_level=1 and training_fellatio_count>3 then gosub t_mikan_up
-if mikan_reception_level=2 and training_insert_count>3 then gosub t_mikan_up
-if mikan_reception_level=3 and training_hardanal_count>3 then gosub t_mikan_up
+if mikan_reception_level=1 and training_fellatio_count>=4 then gosub t_mikan_up
+if mikan_reception_level=2 and training_insert_count>=4 then gosub t_mikan_up
+if mikan_reception_level=3 and training_hardanal_count>=4 then gosub t_mikan_up	# might want this to be >=3 to match karin's requirement
 return
 
 label	t_mikan_up
@@ -65,9 +70,11 @@ wait	500
 
 if add_miryoku>0 then @ichigo_add_miryoku
 
-if ichigo_reception_level=1 and training_fellatio_count>3 then gosub t_ichigo_up
-if ichigo_reception_level=2 and training_insert_count>3 then gosub t_ichigo_up
-if ichigo_reception_level=3 and training_maso_count>100 then gosub t_ichigo_up
+# ichigo has prior experience so the training_fellatio_count>=4 could be changed to a >=3
+# or raise mikan and karin's to >=5
+if ichigo_reception_level=1 and training_fellatio_count>=4 then gosub t_ichigo_up
+if ichigo_reception_level=2 and training_insert_count>=4 then gosub t_ichigo_up
+if ichigo_reception_level=3 and training_maso_count>=100 then gosub t_ichigo_up
 return
 
 label	t_ichigo_up
@@ -99,9 +106,9 @@ wait	500
 
 if add_miryoku>0 then @karin_add_miryoku
 
-if karin_reception_level=1 and training_fellatio_count>3 then gosub t_karin_up
-if karin_reception_level=2 and training_insert_count>3 then gosub t_karin_up
-if karin_reception_level=3 and training_facemask_count>2 then gosub t_karin_up
+if karin_reception_level=1 and training_fellatio_count>=4 then gosub t_karin_up
+if karin_reception_level=2 and training_insert_count>=4 then gosub t_karin_up
+if karin_reception_level=3 and training_facemask_count>=3 then gosub t_karin_up	# might want this to be >=4 to match mikan's requirement
 return
 
 label	t_karin_up
