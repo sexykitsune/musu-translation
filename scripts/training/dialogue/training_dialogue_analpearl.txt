@@ -1,3 +1,5 @@
+#File added by SexyKitsune
+# analpearl dialogue (also called analbeads)
 
 macro	training_dialogue_analpearl
 skip_untranslated_training=0

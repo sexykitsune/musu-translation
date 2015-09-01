@@ -1,3 +1,7 @@
+#File modified and renamed by SexyKitsune
+# was original training_mikan_insert.txt
+
+#SK GLOBAL_RENAME training_mikan_insert_* to training_dialogue_insert_mikan_*
 
 # ‚İ‚©‚ñ‘}“ü‰‰ñ ############################################################
 label	training_dialogue_insert_mikan_01

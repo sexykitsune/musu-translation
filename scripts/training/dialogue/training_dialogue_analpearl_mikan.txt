@@ -1,3 +1,8 @@
+#File modified and renamed by SexyKitsune
+# was original training_mikan_anal_beads.txt
+
+#SK GLOBAL_RENAME training_mikan_analpearl_* to training_dialogue_analpearl_mikan_*
+
 #みかん　アナルパール
 
 #アナルパール　初回 ###########################################################
@@ -8,7 +13,7 @@ mousecursor_set "stg\analbeads.png",170,200
 #SCRIPT IGNORE END
 ##【00】
 #################ボンデージ部分ここから
-if bondage_flag=0 then goto training_dialogue_analpearl_mikan_01_a
+if training_bondage_flag=0 then goto training_dialogue_analpearl_mikan_01_a
 ＠Mikan,A03217
 「あぁん……、お兄ちゃん……、この服……、ボンデージ……きついよぉ……。　腕もこうされちゃうと……、なんだか息苦しいよぉ……」
 
@@ -84,7 +89,7 @@ if _TRANSLATOR_OPTION_DISABLE_FLASHES=0 then screen_flash	500
 「う……ううん……っ、もうちょっと、がんばる……からぁ……っ。　あぁぅ……っ、うくぅ……っ」
 
 #################ボンデージ部分ここから
-if bondage_flag=0 then goto training_dialogue_analpearl_mikan_01_b
+if training_bondage_flag=0 then goto training_dialogue_analpearl_mikan_01_b
 
 拘束されたみかんの体が、ベッドの上で痛みに震えている。
 
@@ -349,7 +354,7 @@ layer_load_overlap	l_insert,"event\ev_mik_050\EV_MIK_050_analbeads02.png"
 「ふぁっ！はぁああっ！くぅ、ん……ふぅっ……」
 
 #################ボンデージ部分ここから
-if bondage_flag=0 then goto training_dialogue_analpearl_mikan_02_a
+if training_bondage_flag=0 then goto training_dialogue_analpearl_mikan_02_a
 
 @SEH07
 じゃらりとみかんを繋ぐ鎖が鳴った。
@@ -566,7 +571,7 @@ if _TRANSLATOR_OPTION_DISABLE_FLASHES=0 then screen_flash	500
 耳に残るようなその声を、オレは聞いている。
 
 #################ボンデージ部分ここから
-if bondage_flag=0 then goto training_dialogue_analpearl_mikan_03_a
+if training_bondage_flag=0 then goto training_dialogue_analpearl_mikan_03_a
 
 @SEH07
 みかんを繋ぐ鎖がじゃらりと鳴り、その体ががくん、と弛緩した。

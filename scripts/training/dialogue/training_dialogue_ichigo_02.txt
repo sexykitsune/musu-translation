@@ -1,3 +1,8 @@
+#File modified and renamed by SexyKitsune
+# was original training_ichigo_02.txt
+
+#SK GLOBAL_RENAME training_ichigo_* to training_dialogue_ichigo_*
+
 label	training_dialogue_ichigo_02
 @bgm10
 

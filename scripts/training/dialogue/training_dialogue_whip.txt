@@ -1,3 +1,6 @@
+#File added by SexyKitsune
+# fainting dialogue
+# dialogue taken from training_mikan_02.txt, training_ichigo_03.txt and training_karin_02.txt
 
 macro	training_dialogue_whip
 select_icon_init
@@ -52,7 +55,7 @@ label	training_dialogue_whip_ichigo
 今にも逃げ出す覚悟はある、とばかりの態度に、思わず溜め息が漏れる。
 
 ####################ここからボンデージ装着時テキスト
-if bondage_flag=0 then goto training_dialogue_whip_ichigo2
+if training_bondage_flag=0 then goto training_dialogue_whip_ichigo2
 
 まあ鎖で首を繋がれたいちごに、それは出来ないけどな。
 

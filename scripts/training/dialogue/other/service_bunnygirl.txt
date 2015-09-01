@@ -1,11 +1,13 @@
+#File added by SexyKitsune
+# bunnygirl dialogue
 
 label	service_bunnygirl_karin
 
 skip_untranslated_training=0
-if service_bunnygirl_count_karin=0 then gosub service_bunnygirl_karin1
-if service_bunnygirl_count_karin=1 then gosub service_bunnygirl_karin2
-#if service_bunnygirl_count_karin=2 then gosub service_bunnygirl_karin3
-if service_bunnygirl_count_karin=2 then gosub service_bunnygirl_karin3;ITEM_DELETE 400
+if service_bunnygirl_count_karin=0 then gosub service_bunnygirl_karin_01
+if service_bunnygirl_count_karin=1 then gosub service_bunnygirl_karin_02
+#if service_bunnygirl_count_karin=2 then gosub service_bunnygirl_karin_03
+if service_bunnygirl_count_karin=2 then gosub service_bunnygirl_karin_03;ITEM_DELETE 400
 
 if skip_untranslated_training=1 then return
 service_bunnygirl_count_karin=service_bunnygirl_count_karin+1

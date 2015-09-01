@@ -1,5 +1,9 @@
-#みかん　アヌスに挿入
+#File modified and renamed by SexyKitsune
+# was original training_mikan_vibe.txt
 
+#SK GLOBAL_RENAME training_mikan_vibe_* to training_dialogue_vibe_mikan_*
+
+#みかん　アヌスに挿入
 
 #みかん　大きなバイブ　一段階目 ###############################################
 label	training_dialogue_vibe_mikan_01
@@ -9,7 +13,7 @@ mousecursor_set "event\ev_kar_070\ev_kar_070_vive.png",75,170
 #SCRIPT IGNORE END
 
 #################ボンデージ部分ここから
-if bondage_flag=0 then goto training_dialogue_vibe_mikan_01a
+if training_bondage_flag=0 then goto training_dialogue_vibe_mikan_01a
 ＠Mikan,A03361
 「ん、くぅんっ……これ……外して……っ。苦しいの、お兄ちゃん……っ」
 
@@ -235,7 +239,7 @@ mousecursor_set "event\ev_kar_070\ev_kar_070_vive.png",75,170
 #SCRIPT IGNORE END
 ##【00】
 #################ボンデージ部分ここから
-if bondage_flag=0 then goto training_dialogue_vibe_mikan_02a
+if training_bondage_flag=0 then goto training_dialogue_vibe_mikan_02a
 ＠Mikan,A03385
 「やっぱり、これ、恥ずかしいよ……時々息苦しくなっちゃうし…、ねえおにいちゃん……これ取って欲しいの……だめ？」
 
@@ -493,7 +497,7 @@ mousecursor_set "event\ev_kar_070\ev_kar_070_vive.png",75,170
 #SCRIPT IGNORE END
 
 #################ボンデージ部分ここから
-if bondage_flag=0 then goto training_dialogue_vibe_mikan_03a
+if training_bondage_flag=0 then goto training_dialogue_vibe_mikan_03a
 ＠Mikan,A03413
 「っ、くぅっ……ふぅ……」
 
@@ -598,7 +602,7 @@ voice_bg	"A90010"
 「はぁっ……くぅうんっ……　お兄ちゃん、みかんに恥ずかしい事言わせようとしてるぅっ……」
 
 #################ボンデージ部分ここから
-if bondage_flag=0 then goto training_dialogue_vibe_mikan_03b
+if training_bondage_flag=0 then goto training_dialogue_vibe_mikan_03b
 
 ぎしぎしとボンデージを軋ませながら、みかんが羞恥に身悶えしている。
 
@@ -830,7 +834,7 @@ passspeed=100
 反り返る体と一際高いアクメの声、抜けない程バイブを締め付け、みかんが果てる。
 
 #################ボンデージ部分ここから
-if bondage_flag=0 then goto training_dialogue_vibe_mikan_03c
+if training_bondage_flag=0 then goto training_dialogue_vibe_mikan_03c
 
 みかんの身体に食い込むボンデージが、大きく軋みを上げた。
 

@@ -310,7 +310,9 @@ if ichigo_atama_levelup_flag>0 then gosub	ichigo_atama_ep
 @lifebar_fullclose
 wait	500
 rand rnd,0,5
-if _ITEM(401)=1 and command=33 and rnd=0 then gosub service_bloomers_ichigo
+#SK MODIFICATION
+if _ITEM(401)=1 and command=33 and rnd=0 then gosub service_bloomers_ichigo		# renamed to service_bloomers_ichigo
+#SK END
 label	ichigo_schedule_skip
 
 # かりんのスケジュール実行--------------------------------------------
@@ -332,7 +334,9 @@ if karin_atama_levelup_flag>0 then gosub	karin_atama_ep
 @lifebar_fullclose
 wait	500
 rand rnd,0,5
-if _ITEM(400)=1 and command=33 and rnd=0 then gosub service_bunnygirl_karin
+#SK MODIFICATION
+if _ITEM(400)=1 and command=33 and rnd=0 then gosub service_bunnygirl_karin		# renamed to service_bunnygirl_karin
+#SK END
 label	karin_schedule_skip
 
 label	debug_skip02			#デバッグ用

@@ -1,3 +1,5 @@
+#File added by SexyKitsune
+# analvibe dialogue
 
 macro	training_dialogue_analvibe
 skip_untranslated_training=0

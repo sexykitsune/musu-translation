@@ -1,3 +1,6 @@
+#File added by SexyKitsune
+# candle dialogue
+# dialogue taken from training_mikan_02.txt, training_ichigo_03.txt and training_karin_02.txt
 
 macro	training_dialogue_candle
 select_icon_init

@@ -1,3 +1,7 @@
+#File modified and renamed by SexyKitsune
+# was original training_karin_facemask1.txt
+
+#SK GLOBAL_RENAME training_karin_facemask* to training_dialogue_facemask_karin_0*
 
 label	training_dialogue_facemask_karin_01
 @remove_this_line_when_translating

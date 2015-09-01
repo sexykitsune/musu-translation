@@ -1,3 +1,9 @@
+#File modified and renamed by SexyKitsune
+# was original training_mikan_anal.txt
+
+#SK GLOBAL_RENAME training_mikan_anal_* to training_dialogue_anal_mikan_*
+
+
 #TLSTATUS File is edited by RaurosFalls 10/09/14
 #みかん　アヌスに挿入
 
@@ -7,7 +13,7 @@ label	training_dialogue_anal_mikan_01
 #【00】
 #################ボンデージ部分ここから
 
-if bondage_flag=0 then goto training_dialogue_anal_mikan_01_a
+if training_bondage_flag=0 then goto training_dialogue_anal_mikan_01_a
 
 #「うぅん…、このお洋服、どうしてこんなにきついの…？　ねえお兄ちゃん」
 ＠Mikan,A03276
@@ -125,7 +131,7 @@ layer_reference_set	l_insert,l_leg		# 頭のレイヤーに連結
 #???イヤと言ったところで、みかんの逃げ場はない。
 
 #################ボンデージ部分ここまで
-if bondage_flag=0 then goto training_dialogue_anal_mikan_01_b
+if training_bondage_flag=0 then goto training_dialogue_anal_mikan_01_b
 
 ＠Mikan,A03286
 「そ、そんな……もう……挿れちゃうの……？」
@@ -430,7 +436,7 @@ layer_release		l_insert+1
 「Haa...haa... I'm, I'm...」
 
 #################ボンデージ部分ここから
-if bondage_flag=0 then goto training_dialogue_anal_mikan_02_a
+if training_bondage_flag=0 then goto training_dialogue_anal_mikan_02_a
 
 #「はぁ……はぁ……っ、痛かったよ……、みかん痛かったよぉ……！」
 ＠Mikan,A03310
@@ -643,7 +649,7 @@ se 2,"sound\se\SEH25_ピストン速い.wav",play_loop
 ジュッ、ニュグヂュッ！ジュブルッ！ジュプッ、ヂュッ！ジュムゥッ、ジュッ、ジュプルゥッ！
 
 ####ここからボンデージ部分
-if bondage_flag=0 then goto training_dialogue_anal_mikan_03_a
+if training_bondage_flag=0 then goto training_dialogue_anal_mikan_03_a
 鎖、皮の軋む音。
 
 label	training_dialogue_anal_mikan_03_a
@@ -723,7 +729,7 @@ label	training_dialogue_anal_mikan_04
 
 #【00】
 #####################ここからボンデージ部分
-if bondage_flag=0 then goto training_dialogue_anal_mikan_04_a
+if training_bondage_flag=0 then goto training_dialogue_anal_mikan_04_a
 @SEH07
 
 ＠Mikan,A03342

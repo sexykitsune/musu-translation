@@ -1,3 +1,5 @@
+#File added by SexyKitsune
+# insert dialogue
 
 macro	training_dialogue_insert
 skip_untranslated_training=0

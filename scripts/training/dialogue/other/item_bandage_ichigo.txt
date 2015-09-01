@@ -1,3 +1,7 @@
+#File moved by SexyKitsune
+# only changed what folder the file is in
+# not other changes were made
+
 label	item_ichigo_bansoukou
 
 #EV_ICH_100@@‚¢‚¿‚²ãJ‘npƒCƒxƒ“ƒg

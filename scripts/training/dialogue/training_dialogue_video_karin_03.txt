@@ -1,3 +1,8 @@
+#File modified and renamed by SexyKitsune
+# was original training_karin_video3.txt
+
+#SK GLOBAL_RENAME training_karin_video* to training_dialogue_video_karin_0*
+
 label	training_dialogue_video_karin_03
 @remove_this_line_when_translating
 

@@ -1,3 +1,7 @@
+#File modified and renamed by SexyKitsune
+# was original training_ichigo_anal_vibe.txt
+
+#SK GLOBAL_RENAME training_ichigo_analvibe* to training_dialogue_analvibe_ichigo_0*
 
 label	training_dialogue_analvibe_ichigo_01
 @remove_this_line_when_translating
@@ -93,7 +97,7 @@ voice_bg	"O03971"
 痛みに顔を歪めながら、苦しそうに息を吐き出し首を横へ振る。
 
 ####################ここからボンデージ装着時テキスト
-if ichigo_bondage_flag=0 then goto training_dialogue_analvibe_ichigo_01_a
+if training_bondage_flag=0 then goto training_dialogue_analvibe_ichigo_01_a
 
 鎖がガチャンと音を立て、宙で激しく波打った。
 
@@ -223,7 +227,7 @@ mousecursor_set "stg\analvive.png",40,100
 「ほら、いちご。もうちょっと足を開くんだ」
 
 ####################ここからボンデージ装着時テキスト
-if ichigo_bondage_flag=0 then goto training_dialogue_analvibe_ichigo_02_a
+if training_bondage_flag=0 then goto training_dialogue_analvibe_ichigo_02_a
 
 太ももを縛るラバーに手を這わせ、グッと左右に開かせる。
 
@@ -576,7 +580,7 @@ passspeed=200
 ベッドのスプリングを軋ませながら、いちごの背中がグッと仰け反った。
 
 ####################ここからボンデージ装着時テキスト
-if ichigo_bondage_flag=0 then goto training_dialogue_analvibe_ichigo_03_a
+if training_bondage_flag=0 then goto training_dialogue_analvibe_ichigo_03_a
 
 鎖が耳障りな金属音を鳴らし、ピンッと伸びて細い首を強く引いている。
 

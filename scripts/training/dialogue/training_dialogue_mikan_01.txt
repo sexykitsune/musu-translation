@@ -1,3 +1,8 @@
+#File modified and renamed by SexyKitsune
+# was original training_mikan_01.txt
+
+#SK GLOBAL_RENAME training_mikan_* to training_dialogue_mikan_*
+
 #TLSTATUS File is edited by RaurosFalls 16/08/14
 label	training_dialogue_mikan_01
 scene_start	"‚İ‚©‚ñˆ—‘r¸"

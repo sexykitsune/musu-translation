@@ -1,4 +1,9 @@
-label	service_bunnygirl_karin2
+#File modified and renamed by SexyKitsune
+# was original karin_service_bunnygirl2.txt
+
+#SK GLOBAL_RENAME settai_karin_bunny* to service_bunnygirl_karin_0*
+
+label	service_bunnygirl_karin_02
 @remove_this_line_when_translating
 
 #「かりんバニーガール接待」　二回目：EV_KAR_110_2

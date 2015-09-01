@@ -1,4 +1,9 @@
-label	service_bloomers_ichigo3
+#File modified and renamed by SexyKitsune
+# was original ichigo_service_bloomers3.txt
+
+#SK GLOBAL_RENAME settai_ichigo_buruma* to service_bloomers_ichigo_0*
+
+label	service_bloomers_ichigo_03
 @close_schedule
 #EV_ICH_170 いちごアイテムイベント・ブルマ
 #条件：2段階目を経験していること。アナルセックスのレベルがある程度上がっている　

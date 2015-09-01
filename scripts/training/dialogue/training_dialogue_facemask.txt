@@ -1,3 +1,8 @@
+#File added by SexyKitsune
+# facemask dialogue
+
+# facemask has its own scene
+# training_anime_resease needs to be called sometime after the skip_untranslated_training marco
 
 macro	training_dialogue_facemask
 skip_untranslated_training=0
@@ -5,7 +10,7 @@ select_icon_init
 if training_chara=TRAINING_KARIN	then gosub training_dialogue_facemask_karin
 window_close
 if skip_untranslated_training=1 then return
-@training_anime_load
+@training_anime_load	# re-enter the main training scene
 endm
 
 label	training_dialogue_facemask_karin

@@ -1,3 +1,8 @@
+#File modified and renamed by SexyKitsune
+# was original training_ichigo_fellatio4.txt
+
+#SK GLOBAL_RENAME training_ichigo_fera* to training_dialogue_fellatio_ichigo_0*
+
 label	training_dialogue_fellatio_ichigo_04
 @remove_this_line_when_translating
 @training_anime_release
@@ -15,8 +20,8 @@ scene_start	"いちごフェラチオ調教４"
 
 #■EVCG(EV_ICH_150-02：裏筋舐め)
 voice_bg	"O90004"
-if bondage_flag=0 then event	"event\ev_ich_150-02.png"
-if bondage_flag=1 then event	"event\ev_ich_151-02.png"
+if training_bondage_flag=0 then event	"event\ev_ich_150-02.png"
+if training_bondage_flag=1 then event	"event\ev_ich_151-02.png"
 
 ＠Ichigo,O02642
 「れろれろっ、はむっ……おチンチンの皮、ほとんどむけちゃってるね……チュ、ちゅぴっ……」
@@ -280,8 +285,8 @@ if bondage_flag=1 then event	"event\ev_ich_151-02.png"
 
 #03：咥えさせる←05：咥えさせる？
 #■EVCG(EV_ICH_150-05：咥えさせる)
-if bondage_flag=0 then event	"event\ev_ich_150-05.png"
-if bondage_flag=1 then event	"event\ev_ich_151-05.png"
+if training_bondage_flag=0 then event	"event\ev_ich_150-05.png"
+if training_bondage_flag=1 then event	"event\ev_ich_151-05.png"
 
 ＠Ichigo,O02679
 「じゅぶぶっ、ジュ、じゅぷ……んくっ、んふぅっ」
@@ -543,8 +548,8 @@ if bondage_flag=1 then event	"event\ev_ich_151-05.png"
 #//フラッシュ
 if _TRANSLATOR_OPTION_DISABLE_FLASHES=0 then screen_flash	1000
 voice_bg_stop
-if bondage_flag=0 then event	"event\ev_ich_150-06.png"
-if bondage_flag=1 then event	"event\ev_ich_151-06.png"
+if training_bondage_flag=0 then event	"event\ev_ich_150-06.png"
+if training_bondage_flag=1 then event	"event\ev_ich_151-06.png"
 
 ＠Ichigo,O02717
 「んくっ！　んぅうっ！　んふぅうっ……」
@@ -636,8 +641,8 @@ if bondage_flag=1 then event	"event\ev_ich_151-06.png"
 口を閉じたままで、膨らんだ頬が僅かに『大丈夫』と動いたように見えた。
 
 #■EVCG(EV_ICH_150-11：全部飲み干す)
-if bondage_flag=0 then event	"event\ev_ich_150-11.png"
-if bondage_flag=1 then event	"event\ev_ich_151-11.png"
+if training_bondage_flag=0 then event	"event\ev_ich_150-11.png"
+if training_bondage_flag=1 then event	"event\ev_ich_151-11.png"
 
 ＠Ichigo,O02728
 「んふぅうっ、んくっ……ん、ごくっ……」
@@ -672,8 +677,8 @@ if bondage_flag=1 then event	"event\ev_ich_151-11.png"
 口の端に垂れた雫も、丁寧に舌でぬぐい取っていた。
 
 #■EVCG(EV_ICH_150-12：あーんさせて確認・全部飲んでいる）
-if bondage_flag=0 then event	"event\ev_ich_150-12.png"
-if bondage_flag=1 then event	"event\ev_ich_151-12.png"
+if training_bondage_flag=0 then event	"event\ev_ich_150-12.png"
+if training_bondage_flag=1 then event	"event\ev_ich_151-12.png"
 
 ＠Ichigo,O02732
 「はふうぅっ……パパ、見て？　あ～ん」

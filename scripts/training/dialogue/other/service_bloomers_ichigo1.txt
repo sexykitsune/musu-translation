@@ -1,5 +1,9 @@
+#File modified and renamed by SexyKitsune
+# was original ichigo_service_bloomers1.txt
 
-label	service_bloomers_ichigo1
+#SK GLOBAL_RENAME settai_ichigo_buruma* to service_bloomers_ichigo_0*
+
+label	service_bloomers_ichigo_01
 @close_schedule
 #EV_ICH_170 いちごアイテムイベント・ブルマ
 #条件：体操服入手、挿入の調教レベルがある程度上がっている

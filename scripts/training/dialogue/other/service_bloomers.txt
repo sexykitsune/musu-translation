@@ -1,10 +1,12 @@
+#File added by SexyKitsune
+# bloomers dialogue
 
 label	service_bloomers_ichigo
 
 skip_untranslated_training=0
-if service_bloomers_count_ichigo=0 then gosub service_bloomers_ichigo1
-if service_bloomers_count_ichigo=1 then gosub service_bloomers_ichigo2
-if service_bloomers_count_ichigo=2 then gosub service_bloomers_ichigo3;ITEM_DELETE 401
+if service_bloomers_count_ichigo=0 then gosub service_bloomers_ichigo_01
+if service_bloomers_count_ichigo=1 then gosub service_bloomers_ichigo_02
+if service_bloomers_count_ichigo=2 then gosub service_bloomers_ichigo_03;ITEM_DELETE 401
 
 if skip_untranslated_training=1 then return
 service_bloomers_count_ichigo=service_bloomers_count_ichigo+1

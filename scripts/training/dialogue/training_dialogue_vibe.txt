@@ -1,3 +1,5 @@
+#File added by SexyKitsune
+# vibe dialogue
 
 macro	training_dialogue_vibe
 skip_untranslated_training=0

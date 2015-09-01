@@ -1,3 +1,8 @@
+#File modified and renamed by SexyKitsune
+# was original training_ichigo_fellatio2.txt
+
+#SK GLOBAL_RENAME training_ichigo_fera* to training_dialogue_fellatio_ichigo_0*
+
 label	training_dialogue_fellatio_ichigo_02
 @remove_this_line_when_translating
 @training_anime_release
@@ -13,8 +18,8 @@ scene_start	"いちごフェラチオ調教２"
 @bgm10
 
 #■EVCG(EV_ICH_150-00：不安＆興味)
-if bondage_flag=0 then event	"event\ev_ich_150-00.png"
-if bondage_flag=1 then event	"event\ev_ich_151-00.png"
+if training_bondage_flag=0 then event	"event\ev_ich_150-00.png"
+if training_bondage_flag=1 then event	"event\ev_ich_151-00.png"
 
 ＠Ichigo,O02443
 「頑張って舐めるね？　パパのおチンチン気持ちよくして……はふ、精液たっぷり出るように……」
@@ -35,7 +40,7 @@ if bondage_flag=1 then event	"event\ev_ich_151-00.png"
 ＠Ichigo,O02446
 「んぅ、はふぅっ……この先っぽが雁首で……えぇと、裏筋？　がこっち側……？　はぅ、んぅうっ……」
 
-if bondage_flag=0 then goto training_dialogue_fellatio_ichigo_02a
+if training_bondage_flag=0 then goto training_dialogue_fellatio_ichigo_02a
 #ボンデージここから##########################################################
 @seh07
 
@@ -102,8 +107,8 @@ label	training_dialogue_fellatio_ichigo_02a
 「うん、パパ……今度は、急に射精しないようにするからね？　れろっ、チュパッ……」
 
 #■EVCG(EV_ICH_150-01：舐め)
-if bondage_flag=0 then event	"event\ev_ich_150-01.png"
-if bondage_flag=1 then event	"event\ev_ich_151-01.png"
+if training_bondage_flag=0 then event	"event\ev_ich_150-01.png"
+if training_bondage_flag=1 then event	"event\ev_ich_151-01.png"
 voice_bg	"O90004"
 
 いちごは妙なプロ意識（？）を滲ませながら、オレのモノに挑みかかる。
@@ -170,8 +175,8 @@ voice_bg	"O90004"
 唾液でぬめる竿肌を皮ごとゆっくりしごきつつ、汗と淫臭の混ざる空気を、胸いっぱいに吸い込んでいた。
 
 #■EVCG(EV_ICH_150-02：裏筋舐め)
-if bondage_flag=0 then event	"event\ev_ich_150-02.png"
-if bondage_flag=1 then event	"event\ev_ich_151-02.png"
+if training_bondage_flag=0 then event	"event\ev_ich_150-02.png"
+if training_bondage_flag=1 then event	"event\ev_ich_151-02.png"
 voice_bg	"O90004"
 
 ＠Ichigo,O02461
@@ -400,8 +405,8 @@ voice_bg	"O90004"
 濡れた唇を鈴口に押し当てて、いちごは何度かキスを繰り返す。
 
 #■EVCG(EV_ICH_150-05：咥えさせる)
-if bondage_flag=0 then event	"event\ev_ich_150-05.png"
-if bondage_flag=1 then event	"event\ev_ich_151-05.png"
+if training_bondage_flag=0 then event	"event\ev_ich_150-05.png"
+if training_bondage_flag=1 then event	"event\ev_ich_151-05.png"
 
 ＠Ichigo,O02490
 「ンッ、チュプ、チュブブッ……んむぅっ……」
@@ -622,8 +627,8 @@ if bondage_flag=1 then event	"event\ev_ich_151-05.png"
 #■EVCG(EV_ICH_150-06：口内射精)
 if _TRANSLATOR_OPTION_DISABLE_FLASHES=0 then screen_flash	1000
 voice_bg_stop
-if bondage_flag=0 then event	"event\ev_ich_150-06.png"
-if bondage_flag=1 then event	"event\ev_ich_151-06.png"
+if training_bondage_flag=0 then event	"event\ev_ich_150-06.png"
+if training_bondage_flag=1 then event	"event\ev_ich_151-06.png"
 #//フラッシュ
 
 ＠Ichigo,O02520
@@ -694,8 +699,8 @@ if bondage_flag=1 then event	"event\ev_ich_151-06.png"
 どうやら、口を窄めるのがやっとの様子だった。
 
 #■EVCG(EV_ICH_150-07：飲めと命令・おいしくない
-if bondage_flag=0 then event	"event\ev_ich_150-07.png"
-if bondage_flag=1 then event	"event\ev_ich_151-07.png"
+if training_bondage_flag=0 then event	"event\ev_ich_150-07.png"
+if training_bondage_flag=1 then event	"event\ev_ich_151-07.png"
 
 ＠Ichigo,O02529
 「うぅっ……んぅううっ……んむ、うくぅ……」
@@ -756,8 +761,8 @@ if bondage_flag=1 then event	"event\ev_ich_151-07.png"
 喉は動いているのだが、唇からあふれかえる精液も、少しずつ増しているように見える。
 
 #■EVCG(EV_ICH_150-08：ガマンできなくてはき出しちゃう（CG終了）
-if bondage_flag=0 then event	"event\ev_ich_150-08.png"
-if bondage_flag=1 then event	"event\ev_ich_151-08.png"
+if training_bondage_flag=0 then event	"event\ev_ich_150-08.png"
+if training_bondage_flag=1 then event	"event\ev_ich_151-08.png"
 
 ＠Ichigo,O02537
 「うぅっ……う、んっ、ぅぷ……うばぁあっ……」

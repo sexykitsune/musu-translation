@@ -1,3 +1,7 @@
+#File modified and renamed by SexyKitsune
+# was original training_ichigo_fellatio1.txt
+
+#SK GLOBAL_RENAME training_ichigo_fera* to training_dialogue_fellatio_ichigo_0*
 
 label	training_dialogue_fellatio_ichigo_01
 @remove_this_line_when_translating
@@ -13,10 +17,10 @@ label	training_dialogue_fellatio_ichigo_01
 scene_start	"いちごフェラチオ調教１"
 @bgm10
 #■EVCG(EV_ICH_150-00：不安＆興味)
-if bondage_flag=0 then event	"event\ev_ich_150-00.png"
-if bondage_flag=1 then event	"event\ev_ich_151-00.png"
+if training_bondage_flag=0 then event	"event\ev_ich_150-00.png"
+if training_bondage_flag=1 then event	"event\ev_ich_151-00.png"
 
-if ichigo_bondage_flag=0 then goto training_dialogue_fellatio_ichigo_01a
+if training_bondage_flag=0 then goto training_dialogue_fellatio_ichigo_01a
 #ボンデージここから##########################################################
 @seh07
 ＠Ichigo,O02329
@@ -198,8 +202,8 @@ label	training_dialogue_fellatio_ichigo_01a
 「うん、いちご頑張るよ、パパ♪」
 
 #■EVCG(EV_ICH_150-01：舐め)
-if bondage_flag=0 then event	"event\ev_ich_150-01.png"
-if bondage_flag=1 then event	"event\ev_ich_151-01.png"
+if training_bondage_flag=0 then event	"event\ev_ich_150-01.png"
+if training_bondage_flag=1 then event	"event\ev_ich_151-01.png"
 voice_bg	"O90004"
 
 ＠Ichigo,O02351
@@ -546,8 +550,8 @@ voice_bg	"O90004"
 「うん、パパ……ちゅぴ、ちゅぱっ……筋ってここのところだよね？　れろれろっ、ペチャッ……」
 
 #■EVCG(EV_ICH_150-02：裏筋舐め
-if bondage_flag=0 then event	"event\ev_ich_150-02.png"
-if bondage_flag=1 then event	"event\ev_ich_151-02.png"
+if training_bondage_flag=0 then event	"event\ev_ich_150-02.png"
+if training_bondage_flag=1 then event	"event\ev_ich_151-02.png"
 
 ＠Ichigo,O02396
 「んむっ、ペロペロッ、ちゅぱ……れろれろ……」
@@ -759,8 +763,8 @@ if bondage_flag=1 then event	"event\ev_ich_151-02.png"
 
 #■EVCG(EV_ICH_150-03：射精
 @effect_iku
-if bondage_flag=0 then event	"event\ev_ich_150-03.png"
-if bondage_flag=1 then event	"event\ev_ich_151-03.png"
+if training_bondage_flag=0 then event	"event\ev_ich_150-03.png"
+if training_bondage_flag=1 then event	"event\ev_ich_151-03.png"
 
 ドクドクッ！　びゅくっ、ビュルルルッ！
 
@@ -810,8 +814,8 @@ if bondage_flag=1 then event	"event\ev_ich_151-03.png"
 まだ出し足りないのか、鈴口は上向きに放物線を描きながら、痙攣を繰り返していた。
 
 #■EVCG(EV_ICH_150-04：どろどろ（口に入ってますが飲んではいません・CG終了）
-if bondage_flag=0 then event	"event\ev_ich_150-04.png"
-if bondage_flag=1 then event	"event\ev_ich_151-04.png"
+if training_bondage_flag=0 then event	"event\ev_ich_150-04.png"
+if training_bondage_flag=1 then event	"event\ev_ich_151-04.png"
 
 ＠Ichigo,O02431
 「ぁふ……パパのおチンチン、イッちゃった……精液びゅーって、んっ、うくっ……」

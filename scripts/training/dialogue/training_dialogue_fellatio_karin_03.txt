@@ -1,3 +1,8 @@
+#File modified and renamed by SexyKitsune
+# was original training_karin_hairjob.txt
+
+#SK GLOBAL_RENAME training_karin_kamikoki to training_dialogue_hairjob_karin
+
 label	training_dialogue_hairjob_karin
 @remove_this_line_when_translating
 @training_anime_release
@@ -20,10 +25,10 @@ scene_start	"かりん髪コキ"
 
 オレはかりんの豊かな髪をひとふさ、ペニスに巻きつける。
 
-if bondage_flag=0 and t_karin_megane_flag=0 then event "event\EV_KAR_080-03.png"
-if bondage_flag=0 and t_karin_megane_flag=1 then event "event\EV_KAR_081-03.png"
-if bondage_flag=1 and t_karin_megane_flag=0 then event "event\EV_KAR_082-03.png"
-if bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083-03.png"
+if training_bondage_flag=0 and training_megane_flag=0 then event "event\EV_KAR_080-03.png"
+if training_bondage_flag=0 and training_megane_flag=1 then event "event\EV_KAR_081-03.png"
+if training_bondage_flag=1 and training_megane_flag=0 then event "event\EV_KAR_082-03.png"
+if training_bondage_flag=1 and training_megane_flag=1 then event "event\EV_KAR_083-03.png"
 
 ＠Karin,P04133
 「な、何してるのよ！？」
@@ -238,10 +243,10 @@ if bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083-03.png"
 「や、っ……ちょ、ちょっと！　髪にはかけないでよ！」
 
 @effect_iku
-if bondage_flag=0 and t_karin_megane_flag=0 then event "event\EV_KAR_080-04.png"
-if bondage_flag=0 and t_karin_megane_flag=1 then event "event\EV_KAR_081-04.png"
-if bondage_flag=1 and t_karin_megane_flag=0 then event "event\EV_KAR_082-04.png"
-if bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083-04.png"
+if training_bondage_flag=0 and training_megane_flag=0 then event "event\EV_KAR_080-04.png"
+if training_bondage_flag=0 and training_megane_flag=1 then event "event\EV_KAR_081-04.png"
+if training_bondage_flag=1 and training_megane_flag=0 then event "event\EV_KAR_082-04.png"
+if training_bondage_flag=1 and training_megane_flag=1 then event "event\EV_KAR_083-04.png"
 
 ＠Karin,P04159
 「っ、きゃあっ！」
@@ -254,10 +259,10 @@ if bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083-04.png"
 ＠Karin,P04160
 「……っ、ふ……うぅ、ひどい匂い……。それに、凄くドロドロしてる……ふぅっ……」
 
-if bondage_flag=0 and t_karin_megane_flag=0 then event "event\EV_KAR_080-05.png"
-if bondage_flag=0 and t_karin_megane_flag=1 then event "event\EV_KAR_081-05.png"
-if bondage_flag=1 and t_karin_megane_flag=0 then event "event\EV_KAR_082-05.png"
-if bondage_flag=1 and t_karin_megane_flag=1 then event "event\EV_KAR_083-05.png"
+if training_bondage_flag=0 and training_megane_flag=0 then event "event\EV_KAR_080-05.png"
+if training_bondage_flag=0 and training_megane_flag=1 then event "event\EV_KAR_081-05.png"
+if training_bondage_flag=1 and training_megane_flag=0 then event "event\EV_KAR_082-05.png"
+if training_bondage_flag=1 and training_megane_flag=1 then event "event\EV_KAR_083-05.png"
 
 ＠Karin,P04161
 「これが樹の、精液の匂い……」

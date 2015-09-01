@@ -1,3 +1,7 @@
+#File modified and renamed by SexyKitsune
+# was original training_ichigo_anal.txt
+
+#SK GLOBAL_RENAME training_ichigo_anal* to training_dialogue_anal_ichigo_0*
 
 macro	t_ichigo_nakachinpo_anal
 layer_load_overlap	l_insert,"event\EV_ICH_140\EV_ICH_140_anal01.png"
@@ -121,7 +125,7 @@ voice_bg	"O90002"
 亀頭の半分も入らないうちに、いちごは激しく首を振る。
 
 ####################ここからボンデージ装着時テキスト
-if bondage_flag=0 then goto training_dialogue_anal_ichigo_01_a
+if training_bondage_flag=0 then goto training_dialogue_anal_ichigo_01_a
 
 鎖はガチャンと大きな音を立て、彼女の首を傷つけようとした。
 
@@ -300,7 +304,7 @@ voice_bg	"O03967"
 呼吸したそうにパクパクと開閉を繰り返す菊門へ、先端の数ミリを滑り込ませる。
 
 ####################ここからボンデージ装着時テキスト
-if bondage_flag=0 then goto training_dialogue_anal_ichigo_02_a
+if training_bondage_flag=0 then goto training_dialogue_anal_ichigo_02_a
 
 陰部を隠しているラバーの紐が、怒張の大きさに合わせて押し開かれる。
 
@@ -346,7 +350,7 @@ voice_bg	"O90002"
 「はっ、はぁああああっ！　あぐっ！　ぅっ、ぅうぁああんっ！」
 
 ####################ここからボンデージ装着時テキスト
-if bondage_flag=0 then goto training_dialogue_anal_ichigo_02_b
+if training_bondage_flag=0 then goto training_dialogue_anal_ichigo_02_b
 
 痛みに耐えるように、背中をグッと後ろへ反らす。
 
@@ -746,7 +750,7 @@ voice_bg	"O90002"
 「あっ、あああっ！　ぱっ、パパァ！　いちご、なんだか…んくうっ！　変っ…ゾクゾクするよぉっ」
 
 ####################ここからボンデージ装着時テキスト
-if bondage_flag=0 then goto training_dialogue_anal_ichigo_03_a
+if training_bondage_flag=0 then goto training_dialogue_anal_ichigo_03_a
 
 鎖をギュッと掴み、プックリと赤く膨れた唇を開いて嬌声を上げる。
 
@@ -1023,7 +1027,7 @@ voice_bg	"O03970"
 俺の先走りだけで、ズルズルと怒張を飲み込んでいく。
 
 ####################ここからボンデージ装着時テキスト
-if bondage_flag=0 then goto training_dialogue_anal_ichigo_04_a
+if training_bondage_flag=0 then goto training_dialogue_anal_ichigo_04_a
 
 更に奥へ進めると、太ももの金具に触れた。
 
@@ -1212,7 +1216,7 @@ if _TRANSLATOR_OPTION_DISABLE_FLASHES=0 then screen_flash	500
 体を大きく揺らしながら、押しあがる快感に腸襞を震わせる。
 
 ####################ここからボンデージ装着時テキスト
-if bondage_flag=0 then goto training_dialogue_anal_ichigo_04_b
+if training_bondage_flag=0 then goto training_dialogue_anal_ichigo_04_b
 
 @SEH07
 その動きに鎖も大きく波打ち、耳障りな金属音を鳴らした。

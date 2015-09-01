@@ -1,3 +1,10 @@
+#File modified and renamed by SexyKitsune
+# was original training_in.txt
+# do not confuse with the file now named training_in.txt
+
+# training intro dialogue
+
+#SK GLOBAL_RENAME training_in_* to training_dialogue_in_*
 
 ###############################################################################
 #調教開始１
@@ -5,6 +12,7 @@
 #発生時期：３月８日の調教コマンド開始直前
 #------------------------------------------------------------
 label	training_dialogue_in_1
+
 
 #■BG（自室）
 @bg_itsuki_n

@@ -1,3 +1,5 @@
+#File added by SexyKitsune
+# anal dialogue
 
 macro	training_dialogue_anal
 skip_untranslated_training=0

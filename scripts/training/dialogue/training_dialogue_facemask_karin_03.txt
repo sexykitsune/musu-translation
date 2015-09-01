@@ -1,7 +1,12 @@
+#File modified and renamed by SexyKitsune
+# was original training_karin_facemask3.txt
+
+#SK GLOBAL_RENAME training_karin_facemask* to training_dialogue_facemask_karin_0*
+
 label	training_dialogue_facemask_karin_03
 @remove_this_line_when_translating
 
-if karin_dere_flag=1 then goto training_dialogue_facemask_karin_03b
+if karin_dere_flag=1 then goto training_dialogue_facemask_karin_03b		# is the dere_flage still in the game, or is it dead code?
 
 #「かりん口鼻虐」 三回目：EV_KAR_092
 #人物：かりん(ボンデージ、フェイスクラッチマスク）、樹（裸）

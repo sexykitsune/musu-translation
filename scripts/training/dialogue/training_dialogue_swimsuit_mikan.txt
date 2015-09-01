@@ -1,3 +1,9 @@
+#File modified and renamed by SexyKitsune
+# was original training_mikan_school_swimsuit.txt
+
+# swimsuit is also called school_swimsuit, schoolware and mizugi among other names
+
+#SK GLOBAL_RENAME mikan_training_schoolware_* to training_dialogue_swimsuit_mikan_*
 
 #ˆê’iŠK–Ú####################################################################
 label	training_dialogue_swimsuit_mikan_01
